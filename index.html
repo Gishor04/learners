@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="ta" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தினேஷ் லேணர்ஸ் - யாழ்ப்பாணம் | Dinesh Driving School (DMT: DS:385)</title>
+  <meta name="description" content="தினேஷ் லேணர்ஸ் / Dinesh Driving School / දිනේෂ් රියදුරු පාසල - யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம். Modern 3D Simulator, Dual-Control Fleet. DMT Reg: DS:385.">
+  
+  <!-- Google Fonts: English, Tamil & Sinhala Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#DC2626',
+              rose: '#E11D48',
+              blue: '#2563EB',
+              amber: '#F59E0B',
+              dark: '#0F172A',
+              card: '#1E293B'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Noto Sans Tamil', 'Noto Sans Sinhala', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Noto Sans Tamil', 'Noto Sans Sinhala', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-rose-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider" data-i18n="newBadge">புதியது 2026</span>
+        <span data-i18n="topNotice">📢 2026 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!</span>
+      </div>
+      <div class="hidden md:flex items-center gap-5 text-xs">
+        <span class="flex items-center gap-1.5 opacity-90"><i class="fa-regular fa-clock"></i> <span data-i18n="hoursText">திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00</span></span>
+        <a href="tel:0779227102" class="font-bold underline hover:text-amber-200 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-phone"></i> 077 9227 102
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- Iconic Red 'L' Learner Emblem -->
+        <div class="w-12 h-12 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-3xl font-sans tracking-tight group-hover:scale-105 transition-transform">
+          L
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heading" data-i18n="brandTitle">
+              தினேஷ் லேணர்ஸ்
+            </span>
+            <span class="text-[10px] bg-red-100 text-red-700 font-bold px-2 py-0.5 rounded-full border border-red-200">
+              DS:385
+            </span>
+          </div>
+          <span class="text-[11px] font-semibold text-slate-500 tracking-tight" data-i18n="brandSubtitle">
+            Dinesh Driving School • දිනේෂ් රියදුරු පාසල
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-700">
+        <a href="#home" class="text-red-600 hover:text-red-700 transition-colors" data-i18n="navHome">முகப்பு</a>
+        <a href="#zero-exp" class="text-amber-600 hover:text-amber-700 transition-colors flex items-center gap-1 font-bold">
+          <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+          <span>பயிற்சி சிறப்பம்சம்</span>
+        </a>
+        <a href="#courses" class="hover:text-red-600 transition-colors" data-i18n="navCourses">பயிற்சி வாகனங்கள்</a>
+        <a href="#simulator" class="hover:text-red-600 transition-colors flex items-center gap-1.5">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+          </span>
+          <span data-i18n="navSimulator">சிமுலேட்டர் நுட்பம்</span>
+        </a>
+        <a href="#gallery" class="hover:text-red-600 transition-colors" data-i18n="navGallery">நேரடி புகைப்படங்கள்</a>
+        <a href="#calculator" class="hover:text-red-600 transition-colors" data-i18n="navFees">கட்டண விபரம்</a>
+        <a href="#quiz" class="hover:text-red-600 transition-colors" data-i18n="navQuiz">வீதி சமிக்கைகள்</a>
+        <a href="#contact" class="hover:text-red-600 transition-colors" data-i18n="navContact">தொடர்பு</a>
+      </nav>
+
+      <!-- Header Action Buttons & 3-Language Selector -->
+      <div class="hidden sm:flex items-center gap-3">
+        
+        <!-- TRILINGUAL LANGUAGE SELECTOR -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-inner">
+          <button class="lang-select-btn px-3 py-1.5 rounded-lg bg-red-600 text-white font-bold text-xs shadow-md transition-all" data-lang="ta">
+            தமிழ் 🇱🇰
+          </button>
+          <button class="lang-select-btn px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 font-bold text-xs transition-all" data-lang="en">
+            English 🇬🇧
+          </button>
+          <button class="lang-select-btn px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 font-bold text-xs transition-all" data-lang="si">
+            සිංහල 🇱🇰
+          </button>
+        </div>
+
+        <!-- Direct Call -->
+        <a href="tel:0214327102" class="p-2.5 bg-slate-100 hover:bg-red-50 text-slate-700 hover:text-red-600 rounded-xl transition-colors border border-slate-200" title="Call Landline">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <!-- Admission CTA Button -->
+        <button class="open-enroll-modal bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-red-500/30 hover:shadow-red-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+          <i class="fa-solid fa-id-card"></i>
+          <span data-i18n="btnEnroll">இப்போதே பதிவு செய்</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button id="mobileMenuBtn" class="p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl space-y-4">
+      
+      <!-- Mobile Trilingual Selector -->
+      <div class="flex items-center justify-around bg-slate-100 p-1.5 rounded-xl border border-slate-200 text-xs font-bold">
+        <button class="lang-select-btn flex-1 py-1.5 rounded-lg bg-red-600 text-white text-center transition-all" data-lang="ta">
+          தமிழ்
+        </button>
+        <button class="lang-select-btn flex-1 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 text-center transition-all" data-lang="en">
+          English
+        </button>
+        <button class="lang-select-btn flex-1 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 text-center transition-all" data-lang="si">
+          සිංහල
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-3 font-semibold text-slate-700">
+        <a href="#home" class="mobile-nav-link text-red-600 hover:text-red-700" data-i18n="navHome">முகப்பு</a>
+        <a href="#zero-exp" class="mobile-nav-link text-amber-600 font-bold">பயிற்சி சிறப்பம்சம்</a>
+        <a href="#courses" class="mobile-nav-link hover:text-red-600" data-i18n="navCourses">பயிற்சி வாகனங்கள்</a>
+        <a href="#simulator" class="mobile-nav-link hover:text-red-600" data-i18n="navSimulator">சிமுலேட்டர் நுட்பம்</a>
+        <a href="#gallery" class="mobile-nav-link hover:text-red-600" data-i18n="navGallery">நேரடி புகைப்படங்கள்</a>
+        <a href="#calculator" class="mobile-nav-link hover:text-red-600" data-i18n="navFees">கட்டண விபரம்</a>
+        <a href="#quiz" class="mobile-nav-link hover:text-red-600" data-i18n="navQuiz">வீதி சமிக்கைகள்</a>
+        <a href="#contact" class="mobile-nav-link hover:text-red-600" data-i18n="navContact">தொடர்பு</a>
+      </nav>
+
+      <div class="pt-4 border-t border-slate-200 flex flex-col gap-2.5">
+        <a href="tel:0779227102" class="w-full py-2.5 text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl text-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-red-600"></i> 077 9227 102
+        </a>
+        <button class="open-enroll-modal w-full py-3 bg-red-600 text-white font-bold rounded-xl text-sm shadow-md flex items-center justify-center gap-2">
+          <i class="fa-solid fa-id-card"></i> <span data-i18n="btnEnroll">இப்போதே பதிவு செய்</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH REAL IMAGES -->
+  <section id="home" class="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-white via-rose-50/40 to-slate-100">
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-red-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-32 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Hero Content & CTAs -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+          
+          <!-- Govt DMT Badge Pill -->
+          <div class="inline-flex items-center gap-2 bg-white/90 border border-red-200 px-3.5 py-1.5 rounded-full shadow-sm text-xs font-bold text-red-700">
+            <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+            <span data-i18n="heroPill">🚀 யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்</span>
+          </div>
+
+          <!-- Main Headline with Gradient Accent -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] font-heading">
+            <span data-i18n="heroTitlePrefix">நம்பிக்கையுடன் </span>
+            <span class="text-gradient-fire underline decoration-red-400 decoration-wavy decoration-2" data-i18n="heroTitleHighlight">சாரதி அனுமதிப்பத்திரம்</span>
+            <span data-i18n="heroTitleSuffix"> பெறுங்கள்!</span>
+          </h1>
+
+          <!-- Subtitle / Tagline -->
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal" data-i18n="heroDesc">
+            தினேஷ் லேணர்ஸ் (DMT DS:385) – நவீன கம்ப்யூட்டர் 3D சிமுலேட்டர் மற்றும் இரட்டை பிரேக் வாகனங்கள் மூலம் பாதுகாப்பான, தொழில்முறை சாரதிப் பயிற்சி. 100% பரீட்சை வெற்றி உத்தரவாதம்!
+          </p>
+
+          <!-- Key highlights bullet tags -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs font-semibold text-slate-700">
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-gamepad text-indigo-500"></i> <span data-i18n="heroTagSim">நவீன 3D சிமுலேட்டர்</span>
+            </span>
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-car text-red-500"></i> <span data-i18n="heroTagDual">இரட்டை பிரேக் வாகனங்கள்</span>
+            </span>
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-user-tie text-emerald-500"></i> <span data-i18n="heroTagLady">பெண் பயிற்றுநர்கள் வசதி</span>
+            </span>
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-calendar-check text-amber-500"></i> <span data-i18n="heroTagDays">7 நாட்களும் (காலை 7 - மாலை 7)</span>
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button class="open-enroll-modal w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-700 hover:to-rose-800 text-white font-extrabold rounded-2xl shadow-xl shadow-red-500/30 hover:shadow-red-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 text-base">
+              <i class="fa-solid fa-steering-wheel"></i>
+              <span data-i18n="btnHeroTrial">இலவச சிமுலேட்டர் சோதனை</span>
+            </button>
+            
+            <a href="https://wa.me/94779227102?text=Hello%20Dinesh%20Learners!%20I%20am%20interested%20in%20driving%20classes." target="_blank" class="w-full sm:w-auto px-7 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-2xl shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 text-base">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span data-i18n="btnHeroWhatsapp">WhatsApp-ல் உரையாட</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges & Contact Mini Strip -->
+          <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500">
+            <div class="flex items-center gap-2 font-medium">
+              <i class="fa-solid fa-location-dot text-red-500"></i>
+              <span data-i18n="heroLocation">YMCA கட்டடம், கண்டி வீதி, யாழ்ப்பாணம்</span>
+            </div>
+            <div class="flex items-center gap-2 font-medium">
+              <i class="fa-solid fa-phone text-blue-500"></i>
+              <span>021 4327 102 / 077 9227 102</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: REAL HERO VISUAL CARD (Logitech Simulator & Real Banner) -->
+        <div class="lg:col-span-6 relative">
+          
+          <div class="relative bg-white rounded-3xl p-3 sm:p-4 shadow-2xl border-2 border-red-200 hover-glow-red transition-all">
+            
+            <!-- Real Official Banner -->
+            <div class="relative rounded-2xl overflow-hidden shadow-inner border border-slate-200 group bg-slate-900 mb-3">
+              <img src="assets/banner.jpg" alt="Dinesh Learners Jaffna Official Banner" class="w-full h-auto object-contain rounded-xl group-hover:scale-[1.01] transition-transform duration-500">
+              <div class="absolute top-2 left-2 bg-slate-900/90 text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/20">
+                Official DMT: DS:385
+              </div>
+            </div>
+
+            <!-- Real Logitech Simulator Cockpit Photo Preview -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] bg-slate-950 border border-slate-200 group shadow-md">
+              <img src="assets/simulator-cockpit.jpg" alt="Real Logitech Driving Simulator at Dinesh Learners" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] bg-red-600 font-bold px-2 py-0.5 rounded text-white uppercase">Real Lab Photo</span>
+                  <p class="font-black text-sm text-white mt-1">Logitech G29 Virtual Cockpit Rig</p>
+                  <p class="text-[11px] text-slate-300">Racing Bucket Seat • Force Feedback Wheel • 6-Speed Shifter</p>
+                </div>
+                <span class="w-9 h-9 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center text-white">
+                  <i class="fa-solid fa-gamepad"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Card -->
+            <div class="animate-float absolute -bottom-4 -left-3 bg-white p-3 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 z-30">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white text-base shadow-md">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider" data-i18n="cardPassTitle">பரீட்சை சாதனை</p>
+                <p class="text-xs font-extrabold text-slate-900" data-i18n="cardPassSub">99.4% முதல் முறை தேர்ச்சி</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL BEGINNERS SECTION: "டிரைவிங் துளியும் தெரியாதவர்களுக்கான விசேட பயிற்சி" -->
+  <section id="zero-exp" class="py-16 sm:py-20 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-white relative overflow-hidden shadow-xl">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Catchy USP Content -->
+        <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider border border-white/30">
+            <i class="fa-solid fa-sparkles text-yellow-200"></i>
+            <span data-i18n="zeroExpBadge">💡 டிரைவிங் துளியும் தெரியாதவர்களுக்கான விசேட பயிற்சி!</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-tight" data-i18n="zeroExpTitle">
+            டிரைவிங் தெரியவில்லையா? பயம் வேண்டாம் – இங்கு வந்து இலகுவாகப் பழகுங்கள்!
+          </h2>
+
+          <p class="text-white/95 text-sm sm:text-base leading-relaxed max-w-2xl" data-i18n="zeroExpDesc">
+            ஸ்டீயரிங் தொட்டதே இல்லையா? கிளட்ச், கியர் சமநிலை தெரியாதா? விபத்து பயமின்றி எமது நேரடி 3D காக்பிட் சிமுலேட்டரில் பூஜ்ஜியத்தில் இருந்து ஆரம்பியுங்கள். முழுமையான தன்னம்பிக்கை வந்த பிறகு நிஜ வீதிக்குச் செல்லலாம்!
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
+            <div class="bg-black/20 backdrop-blur p-3.5 rounded-2xl border border-white/20 text-left">
+              <span class="text-lg">🔰</span>
+              <h4 class="font-bold text-sm text-white mt-1" data-i18n="zeroExpP1Title">பூஜ்ஜிய அனுபவத்தோடு வரலாம்</h4>
+              <p class="text-[11px] text-white/80 mt-0.5" data-i18n="zeroExpP1Desc">முன்பின் கார் ஓட்டிய பழக்கம் இல்லாவிட்டாலும் தொடக்கத்திலிருந்து கற்பிக்கிறோம்.</p>
+            </div>
+            <div class="bg-black/20 backdrop-blur p-3.5 rounded-2xl border border-white/20 text-left">
+              <span class="text-lg">🕹️</span>
+              <h4 class="font-bold text-sm text-white mt-1" data-i18n="zeroExpP2Title">சிமுலேட்டரில் அச்சமில்லா பயிற்சி</h4>
+              <p class="text-[11px] text-white/80 mt-0.5" data-i18n="zeroExpP2Desc">எஞ்சின் நின்றுவிடும் அல்லது விபத்து ஏற்படும் என்ற பயமே கிடையாது.</p>
+            </div>
+            <div class="bg-black/20 backdrop-blur p-3.5 rounded-2xl border border-white/20 text-left">
+              <span class="text-lg">🚦</span>
+              <h4 class="font-bold text-sm text-white mt-1" data-i18n="zeroExpP3Title">நேரடி வகுப்பறை சமிக்கை பயிற்சி</h4>
+              <p class="text-[11px] text-white/80 mt-0.5" data-i18n="zeroExpP3Desc">உண்மையான வீதி சமிக்கை பலகைகளுடன் எழுத்து பரீட்சைக்கு முழு பயிற்சி.</p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button class="open-enroll-modal px-6 py-3 bg-white text-red-600 hover:bg-slate-100 font-black rounded-xl text-sm shadow-xl hover:scale-105 transition-all inline-flex items-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>இன்றே இலவச அறிமுக வகுப்பில் இணையுங்கள்!</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Real Classroom & Simulator Photos collage -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white/30 group">
+            <img src="assets/classroom-theory.jpg" alt="Dinesh Learners Real Classroom" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-2 bg-black/70 text-white text-[10px] font-bold text-center">
+              Real Theory Classroom
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white/30 group">
+            <img src="assets/simulator-room.jpg" alt="Real 3D Simulator Lab" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-2 bg-black/70 text-white text-[10px] font-bold text-center">
+              Real 3D Simulator Lab
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIVE STATS BANNER -->
+  <section class="bg-slate-900 text-white py-10 relative overflow-hidden border-y border-slate-800">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-60"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+        
+        <div class="pt-4 md:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-rose-400 font-heading">
+            15,000+
+          </p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-300 mt-1.5" data-i18n="statStudents">வெற்றிபெற்ற மாணவர்கள்</p>
+        </div>
+
+        <div class="pt-4 md:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-heading">
+            99.4%
+          </p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-300 mt-1.5" data-i18n="statPassRate">முதல் முறை தேர்ச்சி விகிதம்</p>
+        </div>
+
+        <div class="pt-4 md:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400 font-heading">
+            18+
+          </p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-300 mt-1.5" data-i18n="statExperience">வருட அனுபவம் & நற்பெயர்</p>
+        </div>
+
+        <div class="pt-4 md:pt-0">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading">
+            DS:385
+          </p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-300 mt-1.5" data-i18n="statDmt">அரசாங்க பதிவு எண்</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL ACADEMY TOUR GALLERY (REAL PHOTOS SHOWCASE) -->
+  <section id="gallery" class="py-16 sm:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-red-600 uppercase bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200" data-i18n="galleryPill">
+          நேரடி புகைப்படங்கள்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="galleryTitle">
+          எமது நேரடி பயிற்சி வளாகப் புகைப்படங்கள்
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="gallerySubtitle">
+          யாழ்ப்பாணம் YMCA-ல் அமைந்துள்ள எமது உண்மையான 3D சிமுலேட்டர் லேப், வகுப்பறை மற்றும் நுழைவாயில்!
+        </p>
+      </div>
+
+      <!-- Gallery Grid of 6 Real Photos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Photo 1: Branch Entrance -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="assets/branch-entrance.jpg" alt="Dinesh Learners YMCA Jaffna Branch Entrance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              YMCA Jaffna Branch
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g1Caption">யாழ்ப்பாணம் YMCA-ல் அமைந்துள்ள எமது பிரதான நுழைவாயில்</h4>
+            <p class="text-xs text-slate-500 mt-1">கண்டி வீதி, பழைய பூங்கா முன்பாக, YMCA கட்டடம்</p>
+          </div>
+        </div>
+
+        <!-- Photo 2: Full Simulator Room -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="assets/simulator-room.jpg" alt="Dinesh Learners Simulator Room and Waiting Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              3D Simulator Room
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g2Caption">முழுமையான 3D சிமுலேட்டர் அறை & காத்திருப்பு பகுதி</h4>
+            <p class="text-xs text-slate-500 mt-1">DMT Road Signs & Markings விசேட கற்றல் பலகை</p>
+          </div>
+        </div>
+
+        <!-- Photo 3: Logitech Cockpit -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="assets/simulator-cockpit.jpg" alt="Logitech G29 Racing Cockpit Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-indigo-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              Cockpit Hardware
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g3Caption">Logitech G29 விர்ச்சுவல் காக்பிட் & ஸ்டீயரிங் சிமுலேட்டர்</h4>
+            <p class="text-xs text-slate-500 mt-1">உண்மையான கிளட்ச், பிரேக், கியர் & பந்தய இருக்கை</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Theory Classroom -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="assets/classroom-theory.jpg" alt="Dinesh Learners Road Signs Theory Classroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              Theory Classroom
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g4Caption">DMT வீதி சமிக்கைகள் கொண்ட மாதிரி வகுப்பறை</h4>
+            <p class="text-xs text-slate-500 mt-1">அபாய எச்சரிக்கை & கட்டாய சமிக்கை பலகைகளுடன் வகுப்பு</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Mechanical Suspension Board -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="assets/simulator-seat.jpg" alt="Mechanical Suspension and Steering Learning Station" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              Mechanical Learning
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g5Caption">வாகன இயந்திரவியல் (Double Wishbone Suspension) கற்றல் பலகை</h4>
+            <p class="text-xs text-slate-500 mt-1">வாகன உள் பாகங்கள் மற்றும் ஸ்டீயரிங் தொழில்நுட்பம்</p>
+          </div>
+        </div>
+
+        <!-- Photo 6: Official Banner -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-900 flex items-center justify-center p-2">
+            <img src="assets/banner.jpg" alt="Dinesh Learners Official Govt Registered Banner" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-rose-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+              DMT Reg: DS:385
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g6Caption">அரசாங்க அங்கீகாரம் பெற்ற உத்தியோகபூர்வ பதாகை</h4>
+            <p class="text-xs text-slate-500 mt-1">யாழ்ப்பாணத்தின் முன்னணி அரசு பதிவுபெற்ற சாரதிப் பள்ளி</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSES & FLEET SECTION -->
+  <section id="courses" class="py-16 sm:py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-red-600 uppercase bg-red-100/80 px-3.5 py-1.5 rounded-full border border-red-200">
+          Our Training Fleet
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-heading" data-i18n="courseSectionTitle">
+          எமது பயிற்சிப் பிரிவுகள் & வாகனங்கள்
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base" data-i18n="courseSectionSubtitle">
+          மோட்டார் பைக் முதல் பஸ் வரை அனைத்து வகை வாகனங்களுக்கும் பயிற்சி வழங்கப்படுகிறது.
+        </p>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <button class="course-filter-tab bg-red-600 text-white shadow-lg shadow-red-500/25 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="all" data-i18n="tabAll">
+            அனைத்தும்
+          </button>
+          <button class="course-filter-tab bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="car" data-i18n="tabCar">
+            கார் (Dual-Control)
+          </button>
+          <button class="course-filter-tab bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="bike" data-i18n="tabBike">
+            மோட்டார் பைக்
+          </button>
+          <button class="course-filter-tab bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="tuktuk" data-i18n="tabTuk">
+            முச்சக்கரவண்டி
+          </button>
+          <button class="course-filter-tab bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="heavy" data-i18n="tabBus">
+            கனரக பஸ் & லொறி
+          </button>
+          <button class="course-filter-tab bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all" data-filter="simulator" data-i18n="tabSim">
+            நவீன சிமுலேட்டர்
+          </button>
+        </div>
+      </div>
+
+      <!-- Courses Grid -->
+      <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Dual-Control Car (Manual & Auto) -->
+        <div class="course-card flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover-glow-red transition-all" data-category="car">
+          <div class="relative h-52 overflow-hidden bg-slate-900 group">
+            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=600&q=80" alt="Car Driving Course" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              Class B (Light Vehicle)
+            </span>
+            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur text-slate-900 text-xs font-bold px-2.5 py-1 rounded-md shadow">
+              Auto / Manual
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="c1Title">கார் சாரதிப் பயிற்சி (Dual Control)</h3>
+                <span class="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-md">Popular</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1" data-i18n="c1Sub">Car Driving Course (Manual & Auto Transmission)</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="c1Desc">
+                இரட்டை பிரேக் மற்றும் கிளட்ச் பாதுகாப்புடன் கூடிய சொகுசு கார்கள். வீதி ஓட்டுதல், ரிவர்ஸ், பேரலல் பார்கிங், மற்றும் DMT பரீட்சைக்கான விசேட பயிற்சி.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c1f1">Suzuki Alto & WagonR இரட்டை பிரேக் கார்கள்</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c1f2">பெண் பயிற்சியாளர்கள் (Lady Instructors) வசதி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c1f3">DMT மாதிரி மைதான ஒத்திகை பயிற்சி</span></li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400" data-i18n="feeStartFrom">கட்டணம்</span>
+                <p class="text-lg font-black text-slate-900">LKR 26,000</p>
+              </div>
+              <button class="open-enroll-modal px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow-md transition-colors" data-course="Car (Auto/Manual)" data-i18n="btnRegisterCourse">
+                பதிவு செய்க
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Real 3D Simulator (Using Real Cockpit Photo!) -->
+        <div class="course-card flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 text-white rounded-3xl overflow-hidden border border-slate-800 shadow-xl hover-glow-blue transition-all" data-category="simulator">
+          <div class="relative h-52 overflow-hidden bg-slate-950 group">
+            <img src="assets/simulator-cockpit.jpg" alt="Real 3D Simulator Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            <span class="absolute top-4 left-4 bg-cyan-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+              ⚡ Real Hardware Rig
+            </span>
+            <span class="absolute top-4 right-4 bg-indigo-900/80 backdrop-blur text-indigo-200 text-xs font-bold px-2.5 py-1 rounded-md border border-indigo-700">
+              Logitech G29
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white font-heading" data-i18n="c2Title">நவீன 3D சிமுலேட்டர் பயிற்சி</h3>
+                <span class="text-xs font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-800 px-2 py-0.5 rounded">High Tech</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1" data-i18n="c2Sub">3D Driving Simulator Cockpit Training</p>
+              <p class="text-sm text-slate-300 mt-3 leading-relaxed" data-i18n="c2Desc">
+                வீதிக்கு செல்லும் முன் ஸ்டீயரிங் கட்டுப்பாடு, கியர் மாற்றம், இரவு நேரம், மழை, மற்றும் திடீர் தடைகளை விபத்து பயமின்றி மெய்நிகர் வடிவில் கற்பிக்கப்படுகிறது.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs font-medium text-slate-300">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-i18n="c2f1">விபத்து அச்சம் மற்றும் பயத்தைப் போக்கும் பயிற்சி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-i18n="c2f2">உண்மையான ஸ்டீயரிங், பெடல் & கியர் உணர்வு</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-i18n="c2f3">ஆரம்ப மாணவர்களுக்கு இலவச டெமோ அமர்வு</span></li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400">Demo</span>
+                <p class="text-lg font-black text-cyan-400">Free Trial</p>
+              </div>
+              <button class="open-enroll-modal px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-extrabold rounded-xl shadow-md transition-colors" data-course="3D Driving Simulator" data-i18n="btnRegisterCourse">
+                பதிவு செய்க
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Motorcycle & Scooter -->
+        <div class="course-card flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover-glow-red transition-all" data-category="bike">
+          <div class="relative h-52 overflow-hidden bg-slate-900 group">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Motorcycle Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              Class A / A1 (Motorcycle)
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="c3Title">மோட்டார் சைக்கிள் & ஸ்கூட்டர்</h3>
+                <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Geared & Auto</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1" data-i18n="c3Sub">Motorbike & Scooter Practical Training</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="c3Desc">
+                கிளட்ச் சமநிலை, வளைவுகளில் இலகுவாக திரும்புதல், மற்றும் DMT பரீட்சைக்கான '8' வடிவ களப் பயிற்சி முழுமையாக பயிற்றுவிக்கப்படும்.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c3f1">DMT '8' ட்ராக் மாதிரி மைதான பயிற்சி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c3f2">ஸ்கூட்டர் மற்றும் கியர் பைக்குகள் கிடைக்கும்</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c3f3">வேகமான அனுமதிப்பத்திர செயல்முறை</span></li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400" data-i18n="feeStartFrom">கட்டணம்</span>
+                <p class="text-lg font-black text-slate-900">LKR 12,000</p>
+              </div>
+              <button class="open-enroll-modal px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow-md transition-colors" data-course="Motorcycle" data-i18n="btnRegisterCourse">
+                பதிவு செய்க
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Three-Wheeler (Tuk Tuk) -->
+        <div class="course-card flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover-glow-red transition-all" data-category="tuktuk">
+          <div class="relative h-52 overflow-hidden bg-slate-900 group">
+            <img src="https://images.unsplash.com/photo-1569931727731-b844960309c6?auto=format&fit=crop&w=600&q=80" alt="Three Wheeler Tuk Tuk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              Class B1 (Three Wheeler)
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="c4Title">முச்சக்கரவண்டி (Tuk-Tuk)</h3>
+                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Commercial</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1" data-i18n="c4Sub">Three-Wheeler (Tuk-Tuk) Driving License</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="c4Desc">
+                யாழ்ப்பாணத்தின் நகர மற்றும் நெரிசல் வீதிகளில் பாதுகாப்பாக ஓட்டுவதற்கான தனிப்பயனாக்கப்பட்ட முச்சக்கரவண்டி பயிற்சி.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c4f1">ஹாண்டில்பார் கட்டுப்பாடு & கியர் மாற்றம்</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c4f2">ரிவர்ஸ் பார்கிங் & குறுகிய வீதி ஓட்ட பயிற்சி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c4f3">வணிக சாரதி அனுமதிப்பத்திர வழிகாட்டல்</span></li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400" data-i18n="feeStartFrom">கட்டணம்</span>
+                <p class="text-lg font-black text-slate-900">LKR 14,000</p>
+              </div>
+              <button class="open-enroll-modal px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow-md transition-colors" data-course="Three Wheeler" data-i18n="btnRegisterCourse">
+                பதிவு செய்க
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: Heavy Passenger Bus & Lorry -->
+        <div class="course-card flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover-glow-red transition-all" data-category="heavy">
+          <div class="relative h-52 overflow-hidden bg-slate-900 group">
+            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Heavy Bus and Lorry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              Class D / CE (Heavy Vehicles)
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="c5Title">கனரக பஸ் & லொறி பயிற்சி</h3>
+                <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">Heavy Fleet</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1" data-i18n="c5Sub">Commercial Bus & Truck Driver Training</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed" data-i18n="c5Desc">
+                வெளிநாட்டு வேலைவாய்ப்புகள் மற்றும் உள்ளூர் போக்குவரத்து நிறுவனங்களுக்கான தொழில்முறை கனரக வாகன சாரதிப் பயிற்சி.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs font-medium text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c5f1">ஏர் பிரேக் (Air Brake) தொழில்நுட்ப பயிற்சி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c5f2">நீண்ட தூர நெடுஞ்சாலை ஓட்டுநர் பயிற்சி</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> <span data-i18n="c5f3">மத்திய கிழக்கு & சர்வதேச தகுதிக்கான வழிகாட்டல்</span></li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400" data-i18n="feeStartFrom">கட்டணம்</span>
+                <p class="text-lg font-black text-slate-900">LKR 38,000</p>
+              </div>
+              <button class="open-enroll-modal px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow-md transition-colors" data-course="Heavy Bus" data-i18n="btnRegisterCourse">
+                பதிவு செய்க
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: Combo Package (Car + Bike + Medical) -->
+        <div class="course-card flex flex-col bg-gradient-to-br from-red-600 to-rose-700 text-white rounded-3xl overflow-hidden shadow-xl hover-glow-red transition-all" data-category="car">
+          <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-fire text-amber-300"></i> <span data-i18n="c6Badge">சிறந்த சேமிப்பு காம்போ</span>
+              </div>
+              <h3 class="text-2xl font-black mt-4 font-heading" data-i18n="c6Title">முழுமையான காம்போ பேக்கேஜ்</h3>
+              <p class="text-xs text-red-100 mt-1" data-i18n="c6Sub">Car (Dual) + Motorbike + Theory & Medical Test</p>
+              <p class="text-sm text-white/90 mt-3 leading-relaxed" data-i18n="c6Desc">
+                ஒரே பதிவில் கார் மற்றும் பைக் இரண்டிற்கும் அனுமதிப்பத்திரம் பெறுங்கள். மருத்துவ சான்றிதழ் உதவி, சிமுலேட்டர் இலவசம்!
+              </p>
+              <div class="mt-6 space-y-2.5 text-xs font-semibold">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-300"></i> <span data-i18n="c6f1">Car Manual/Auto + Motorbike License</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-300"></i> <span data-i18n="c6f2">4 இலவச 3D சிமுலேட்டர் அமர்வுகள்</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-300"></i> <span data-i18n="c6f3">DMT மருத்துவப் பரீட்சை வழிகாட்டல்</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-300"></i> <span data-i18n="c6f4">2 தவணைகளில் கட்டணம் செலுத்தும் வசதி</span></div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/20 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-red-200" data-i18n="feeStartFrom">கட்டணம்</span>
+                <p class="text-2xl font-black text-amber-300">LKR 35,000</p>
+              </div>
+              <button class="open-enroll-modal px-5 py-2.5 bg-white text-red-700 hover:bg-slate-100 text-xs font-extrabold rounded-xl shadow-lg transition-all" data-course="Car + Bike Combo" data-i18n="btnBookCombo">
+                இப்போதே முன்பதிவு
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3D SIMULATOR TECH SHOWCASE (WITH REAL PHOTOS OF THE JAFFNA SIMULATOR LAB) -->
+  <section id="simulator" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Simulator Info -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-cyan-950/80 border border-cyan-500/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-cyan-400">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Logitech G29 Force-Feedback Simulator Cockpit</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-tight" data-i18n="simTitle">
+            யாழ்ப்பாணத்தின் முதல் அதிநவீன 3D சிமுலேட்டர் பயிற்சி!
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="simDesc">
+            வீதிக்குச் செல்வதற்கு முன் விபத்து அச்சமின்றி, இரவு நேரம், மழைக்காலம், மற்றும் சவாலான வீதிச் சூழல்களை 3D மெய்நிகர் சிமுலேட்டரில் கற்றுக்கொள்ளுங்கள்.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="bg-slate-800/80 backdrop-blur p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+              <div class="w-9 h-9 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <h4 class="font-bold text-sm text-white" data-i18n="simB1Title">பூஜ்ஜிய விபத்து அபாயம்</h4>
+              <p class="text-xs text-slate-400" data-i18n="simB1Desc">பயமின்றி கிளட்ச், கியர் மற்றும் ஸ்டீயரிங் திருப்பங்களைக் கற்கலாம்.</p>
+            </div>
+
+            <div class="bg-slate-800/80 backdrop-blur p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+              </div>
+              <h4 class="font-bold text-sm text-white" data-i18n="simB2Title">பல்வேறு வானிலை சூழல்கள்</h4>
+              <p class="text-xs text-slate-400" data-i18n="simB2Desc">மழை, பனிமூட்டம், மற்றும் இரவு நேர வீதிகளை நேரடியாக உணரலாம்.</p>
+            </div>
+
+            <div class="bg-slate-800/80 backdrop-blur p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+              <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h4 class="font-bold text-sm text-white" data-i18n="simB3Title">கம்ப்யூட்டர் பகுப்பாய்வு</h4>
+              <p class="text-xs text-slate-400" data-i18n="simB3Desc">பிரேக் வேகம் மற்றும் எதிர்வினை நேரத்தை கணினி வரைபடம் காட்டும்.</p>
+            </div>
+
+            <div class="bg-slate-800/80 backdrop-blur p-4 rounded-2xl border border-slate-700/80 space-y-1.5">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h4 class="font-bold text-sm text-white" data-i18n="simB4Title">இலவச சோதனை அமர்வு</h4>
+              <p class="text-xs text-slate-400" data-i18n="simB4Desc">எமது மாணவர்களுக்கு கட்டணமின்றி சிமுலேட்டர் வழங்கப்படுகிறது.</p>
+            </div>
+
+          </div>
+
+          <div class="pt-4">
+            <button class="open-enroll-modal px-7 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-cyan-500/20 hover:scale-[1.02] transition-all flex items-center gap-2 text-sm" data-course="3D Driving Simulator">
+              <i class="fa-solid fa-play"></i> <span data-i18n="btnSimDemo">இலவச சிமுலேட்டர் அமர்வை முன்பதிவு செய்</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Real Simulator Room Photo Display -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="relative rounded-3xl overflow-hidden border border-slate-700 bg-slate-950 p-2 shadow-2xl group">
+            <img src="assets/simulator-room.jpg" alt="Actual Dinesh Learners 3D Simulator Room" class="w-full h-80 object-cover rounded-2xl group-hover:scale-102 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-5 left-5 right-5 bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700 flex items-center justify-between">
+              <div>
+                <p class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Live Simulator Lab</p>
+                <p class="text-sm font-bold text-white">YMCA Building 1st Floor • Jaffna</p>
+              </div>
+              <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/30">
+                Active & Running
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative">
+              <img src="assets/simulator-cockpit.jpg" alt="Logitech Steering" class="w-full h-32 object-cover">
+              <span class="absolute bottom-1 left-2 text-[10px] bg-black/70 px-2 py-0.5 rounded text-white font-bold">Force Feedback Wheel</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative">
+              <img src="assets/simulator-seat.jpg" alt="Suspension Board" class="w-full h-32 object-cover">
+              <span class="absolute bottom-1 left-2 text-[10px] bg-black/70 px-2 py-0.5 rounded text-white font-bold">Mechanical Suspension Board</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COURSE FEE CALCULATOR -->
+  <section id="calculator" class="py-16 sm:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200" data-i18n="calcPill">
+          வெளிப்படையான கட்டணங்கள்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="calcTitle">
+          கட்டண கணிப்பான் & திட்டங்கள்
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="calcSubtitle">
+          உங்கள் தேவைகேற்ப வாகனங்களை தெரிவு செய்து உடனடி கட்டண விபரத்தை பெற்றுக்கொள்ளுங்கள்.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Controls Column -->
+          <div class="lg:col-span-7 space-y-5">
+            
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2" data-i18n="calcStep1">
+                1. முதன்மை வாகனம் தெரிவு (Select Vehicle)
+              </label>
+              <select id="calcVehicle" class="w-full bg-white border border-slate-300 rounded-2xl px-4 py-3 text-sm font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all shadow-sm">
+                <option value="car_manual">🚗 Car - Manual Transmission (Dual Control)</option>
+                <option value="car_auto">🚗 Car - Automatic Transmission</option>
+                <option value="bike">🏍️ Motorcycle / Scooter (Class A/A1)</option>
+                <option value="tuktuk">🛺 Three-Wheeler Tuk-Tuk (Class B1)</option>
+                <option value="bus">🚌 Heavy Vehicle - Bus & Lorry (Class D/CE)</option>
+              </select>
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div class="space-y-3 pt-2">
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider" data-i18n="calcStep2">
+                2. கூடுதல் சேவைகள் (Optional Add-ons)
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-red-400 transition-colors">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" id="calcMedical" checked class="w-4 h-4 text-red-600 rounded focus:ring-red-500">
+                  <span class="text-xs sm:text-sm font-semibold text-slate-800" data-i18n="calcOptMedical">DMT மருத்துவ சான்றிதழ் உதவி (Medical Test)</span>
+                </div>
+                <span class="text-xs font-bold text-slate-500">+ LKR 3,500</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-red-400 transition-colors">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" id="calcSimulator" checked class="w-4 h-4 text-red-600 rounded focus:ring-red-500">
+                  <span class="text-xs sm:text-sm font-semibold text-slate-800" data-i18n="calcOptSim">4x தீவிர 3D சிமுலேட்டர் அமர்வுகள்</span>
+                </div>
+                <span class="text-xs font-bold text-slate-500">+ LKR 3,000</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-red-400 transition-colors">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" id="calcFastTrack" class="w-4 h-4 text-red-600 rounded focus:ring-red-500">
+                  <span class="text-xs sm:text-sm font-semibold text-slate-800" data-i18n="calcOptFast">Fast-Track விசேட விரைவுப் பயிற்சி (VIP Batch)</span>
+                </div>
+                <span class="text-xs font-bold text-slate-500">+ LKR 5,000</span>
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Total Calculation Card -->
+          <div class="lg:col-span-5 bg-white rounded-2xl p-6 border border-red-200 shadow-xl space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <span class="text-xs font-bold text-slate-500 uppercase" data-i18n="calcSelectedLabel">தேர்வு செய்யப்பட்ட விபரம்</span>
+              <span id="calcVehicleName" class="text-xs font-extrabold text-red-600">கார் (Manual)</span>
+            </div>
+
+            <div>
+              <span class="text-xs font-medium text-slate-500" data-i18n="calcTotalLabel">மதிப்பீட்டுக் கட்டணம்:</span>
+              <p id="calcTotalPrice" class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-heading mt-1">
+                LKR 34,500
+              </p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span id="calcLessonCount" class="text-xs font-bold text-emerald-700">19 பயிற்சி அமர்வுகள்</span>
+              </div>
+            </div>
+
+            <!-- Installment Plan breakdown -->
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80 space-y-2 text-xs">
+              <p class="font-extrabold text-slate-700 uppercase tracking-wider text-[11px]" data-i18n="calcInstLabel">எளிய 2 கட்ட தவணை வசதி:</p>
+              <div class="flex justify-between font-medium text-slate-600">
+                <span data-i18n="calcInst1Label">1ம் தவணை (பதிவின் போது):</span>
+                <span id="calcInst1" class="font-bold text-slate-900">LKR 17,250</span>
+              </div>
+              <div class="flex justify-between font-medium text-slate-600">
+                <span data-i18n="calcInst2Label">2ம் தவணை (பரீட்சைக்கு முன்):</span>
+                <span id="calcInst2" class="font-bold text-slate-900">LKR 17,250</span>
+              </div>
+            </div>
+
+            <!-- Book CTA -->
+            <button class="open-enroll-modal w-full py-3.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold rounded-xl shadow-lg shadow-red-500/25 transition-all text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-receipt"></i> <span data-i18n="btnBookThisPlan">இந்தத் திட்டத்தில் பதியவும்</span>
+            </button>
+            <p class="text-[11px] text-center text-slate-400" data-i18n="calcNoHidden">மறைமுகக் கட்டணங்கள் எதுவும் இல்லை • DMT DS:385</p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE ROAD SIGNS QUIZ (WITH REAL CLASSROOM IMAGE!) -->
+  <section id="quiz" class="py-16 sm:py-24 bg-slate-100 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-extrabold tracking-widest text-emerald-600 uppercase bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200" data-i18n="quizPill">
+          DMT எழுத்துப்பரீட்சை மாதிரி வினாக்கள்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="quizTitle">
+          சாரதி பரீட்சை வீதி சமிக்கை வினாடி வினா
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="quizSubtitle">
+          DMT எழுத்துப்பரீட்சைக்கு தயாராகுங்கள்! எளிய முறையில் சமிக்கைகளை கற்றுக்கொள்ளுங்கள்.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+        
+        <!-- Left: Real Classroom Preview -->
+        <div class="lg:col-span-5 bg-white p-3 rounded-3xl border border-slate-200 shadow-md">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 mb-3">
+            <img src="assets/classroom-theory.jpg" alt="Actual Classroom Theory Board at Dinesh Learners" class="w-full h-full object-cover">
+          </div>
+          <div class="p-2 text-center">
+            <p class="text-xs font-bold text-slate-800">எமது நேரடி தியரி வகுப்பறை</p>
+            <p class="text-[11px] text-slate-500">அனைத்து வீதி சமிக்கைகளையும் நேரடியாகக் கற்றுக்கொள்ளுங்கள்</p>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Quiz Card -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
+          
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <span id="quizQNum" class="text-xs font-extrabold text-red-600 uppercase tracking-wider">வினா 1 / 3</span>
+            <span class="text-xs font-bold text-slate-400" data-i18n="quizRuleBadge">இலங்கை போக்குவரத்து விதிகள்</span>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center flex items-center justify-center min-h-[140px]">
+            <div id="quizSignSvg"></div>
+          </div>
+
+          <h3 id="quizQuestionTitle" class="text-base sm:text-lg font-bold text-slate-900 text-center">
+            முக்கோண வடிவ எச்சரிக்கை சமிக்கை என்ன உணர்த்துகிறது?
+          </h3>
+
+          <div id="quizOptionsContainer" class="space-y-3"></div>
+
+          <div id="quizFeedback" class="hidden"></div>
+
+          <div class="pt-2">
+            <button id="quizNextBtn" class="hidden w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2">
+              <span data-i18n="quizNextBtn">அடுத்த வினா (Next Question)</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4-STEP ROADMAP -->
+  <section class="py-16 sm:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-extrabold tracking-widest text-red-600 uppercase bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200" data-i18n="stepPill">
+          படிமுறை வழிகாட்டல்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="stepTitle">
+          சாரதி அனுமதிப்பத்திரம் பெறும் எளிய படிமுறைகள்
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="stepSubtitle">
+          பதிவு முதல் லைசென்ஸ் கைக்கு வரும் வரை தினேஷ் லேணர்ஸ் உங்கள் பக்கத்தில் நிற்கும்!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative group hover:border-red-400 transition-all">
+          <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black flex items-center justify-center text-lg shadow-md mb-4 font-heading">1</span>
+          <h3 class="font-bold text-base text-slate-900" data-i18n="s1Title">1. பதிவு & மருத்துவப் பரீட்சை</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed" data-i18n="s1Desc">
+            அடையாள அட்டைப் பிரதியுடன் இலகுவாக இணையுங்கள். DMT மருத்துவச் சான்றிதழை எமது வழிகாட்டலுடன் பெறுங்கள்.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative group hover:border-cyan-400 transition-all">
+          <span class="w-10 h-10 rounded-xl bg-cyan-600 text-white font-black flex items-center justify-center text-lg shadow-md mb-4 font-heading">2</span>
+          <h3 class="font-bold text-base text-slate-900" data-i18n="s2Title">2. எழுத்துப் பரீட்சை & L-அனுமதி</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed" data-i18n="s2Desc">
+            வீதிச் சமிக்கை மாதிரி வினாத்தாள்கள் மற்றும் வகுப்புகளுடன் எழுத்துப் பரீட்சையில் முதல் முறையிலேயே வெற்றிபெறுங்கள்.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative group hover:border-amber-400 transition-all">
+          <span class="w-10 h-10 rounded-xl bg-amber-600 text-white font-black flex items-center justify-center text-lg shadow-md mb-4 font-heading">3</span>
+          <h3 class="font-bold text-base text-slate-900" data-i18n="s3Title">3. சிமுலேட்டர் & நேரடிப் பயிற்சி</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed" data-i18n="s3Desc">
+            3D சிமுலேட்டரில் ஆரம்பித்து, இரட்டை பிரேக் வாகனங்கள் மூலம் யாழ்ப்பாண வீதிகளில் நிஜ ஓட்டுனர் பயிற்சியைப் பெறுங்கள்.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative group hover:border-emerald-400 transition-all">
+          <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center text-lg shadow-md mb-4 font-heading">4</span>
+          <h3 class="font-bold text-base text-slate-900" data-i18n="s4Title">4. DMT ட்ரையல் & லைசென்ஸ்!</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed" data-i18n="s4Desc">
+            அரசாங்க மோட்டார் வாகன திணைக்கள மாதிரி மைதானத்தில் இறுதிப் பயிற்சி பெற்று, உறுதியான வெற்றியை அடையுங்கள்!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE DINESH LEARNERS -->
+  <section id="whyus" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-extrabold tracking-widest text-red-600 uppercase bg-red-100 px-3.5 py-1.5 rounded-full border border-red-200" data-i18n="whyPill">
+          எமது சிறப்புகள்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="whyTitle">
+          ஏன் தினேஷ் லேணர்ஸ்-ஐ தெரிவு செய்ய வேண்டும்?
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="whySubtitle">
+          நம்பகமான அனுபவம், நவீன வசதிகள் மற்றும் முழுமையான மாணவர் பாதுகாப்பு!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w1Title">நவீன 3D சிமுலேட்டர்</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w1Desc">
+            யாழ்ப்பாணத்திலேயே முதன்முறையாக கம்ப்யூட்டர் சிமுலேட்டர் மூலம் ஆபத்தில்லாத, மெய்நிகர் ஓட்டுனர் பயிற்சி அனுபவம்.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-person-chalkboard"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w2Title">அங்கீகரிக்கப்பட்ட பயிற்றுநர்கள்</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w2Desc">
+            மோட்டார் போக்குவரத்து திணைக்களத்தின் (DMT) முழுமையான அங்கீகாரம் மற்றும் 15+ வருட கற்பித்தல் அனுபவம் கொண்ட நிபுணர்கள்.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-person-dress"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w3Title">Lady Instructors வசதி</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w3Desc">
+            பெண்கள் மற்றும் மாணவிகள் எவ்வித தயக்கமுமின்றி நிதானமாக கற்றுக்கொள்ள அனுபவமுள்ள பெண் பயிற்சியாளர்கள் உள்ளனர்.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w4Title">வாரம் 7 நாட்களும் (காலை 7 - மாலை 7)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w4Desc">
+            பல்கலைக்கழக மாணவர்கள், உத்தியோகத்தர்கள் மற்றும் தொழிலதிபர்களுக்கான நெகிழ்வான பயிற்சி நேர தெரிவுகள்.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-car-tunnel"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w5Title">முழுமையான Dual Control கார்கள்</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w5Desc">
+            Dual-Pedal பிரேக் சிஸ்டம் கொண்ட புதிய கார்கள் மூலம் 100% பாதுகாப்பான வீதிப் பயிற்சி உறுதி செய்யப்படுகிறது.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900" data-i18n="w6Title">மையப் பகுதி அமைவிடம் (YMCA Jaffna)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="w6Desc">
+            யாழ்ப்பாண கண்டி வீதி பழைய பூங்கா முன்பாக, பேருந்து மற்றும் புகையிரத நிலையங்களுக்கு மிக அருகாமையில் அமைந்துள்ளது.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS FROM JAFFNA STUDENTS -->
+  <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-extrabold tracking-widest text-red-400 uppercase bg-red-950 px-3.5 py-1.5 rounded-full border border-red-800" data-i18n="revPill">
+          மாணவர் அனுபவம்
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading" data-i18n="reviewTitle">
+          எமது மாணவர்களின் அனுபவப் பகிர்வு
+        </h2>
+        <p class="text-slate-400 text-sm" data-i18n="reviewSubtitle">
+          தினேஷ் லேணர்ஸ் மூலம் முதலாவது முயற்சியிலேயே சாரதி அனுமதிப்பத்திரம் பெற்ற யாழ்ப்பாண மாணவர்கள்.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-slate-800/80 backdrop-blur rounded-3xl p-6 border border-slate-700 space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic" data-i18n="r1Text">
+            "சிமுலேட்டரில் முதல்ல பிராக்டிஸ் பண்ணியதால மெயின் ரோட்ல கார் ஓட்டும்போது எந்த பயமும் இல்லை. டிரையல் டெஸ்ட்ல முதல் அட்டெம்ப்ட்லயே பாஸ் பண்ணிட்டேன்! தினேஷ் சாருக்கு மிக்க நன்றி!"
+          </p>
+          <div class="pt-2 flex items-center gap-3 border-t border-slate-700/60">
+            <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center font-bold text-white text-sm">
+              சு
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white" data-i18n="r1Name">சுரேஷ் பாபு</h4>
+              <p class="text-[11px] text-slate-400" data-i18n="r1Place">நவாலி, யாழ்ப்பாணம் • Car + Bike</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 backdrop-blur rounded-3xl p-6 border border-slate-700 space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic" data-i18n="r2Text">
+            "பெண்களுக்கு லேடி இன்ஸ்ட்ரக்டர் இருந்தது ரொம்ப வசதியா இருந்தது. பொறுமையா கத்துக்கொடுத்தாங்க. நேரம் காலையில 7 மணிக்கே இருக்கறதால காலேஜ் போறதுக்கு முன்னாடியே கிளாஸ் முடிஞ்சிடும்."
+          </p>
+          <div class="pt-2 flex items-center gap-3 border-t border-slate-700/60">
+            <div class="w-10 h-10 rounded-full bg-rose-600 flex items-center justify-center font-bold text-white text-sm">
+              பி
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white" data-i18n="r2Name">பிரியங்கா கே.</h4>
+              <p class="text-[11px] text-slate-400" data-i18n="r2Place">நல்லூர், யாழ்ப்பாணம் • Car Auto</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 backdrop-blur rounded-3xl p-6 border border-slate-700 space-y-4">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic" data-i18n="r3Text">
+            "ஹெவி வெஹிக்கிள் பஸ் லைசென்ஸ் எடுத்தேன். ஏர் பிரேக், ரிவர்சிங் எல்லாம் தெளிவா சொல்லி தந்தாங்க. வெளிநாட்டு வேலைக்கு அப்ளை பண்ணுறதுக்கு உடனே கைக்கு லைசென்ஸ் கிடைச்சிடுச்சு."
+          </p>
+          <div class="pt-2 flex items-center gap-3 border-t border-slate-700/60">
+            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">
+              ஜே
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-white" data-i18n="r3Name">ஜெகதீஸ் ஆர்.</h4>
+              <p class="text-[11px] text-slate-400" data-i18n="r3Place">சாவகச்சேரி • Heavy Bus Class D</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & LOCATION HUB (FEATURING REAL BRANCH ENTRANCE PHOTO) -->
+  <section id="contact" class="py-16 sm:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-extrabold tracking-widest text-red-600 uppercase bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200" data-i18n="contactPill">
+          தொடர்புகளுக்கு
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-heading" data-i18n="contactTitle">
+          நேரில் வாருங்கள் அல்லது தொடர்புகொள்ளுங்கள்
+        </h2>
+        <p class="text-slate-600 text-sm" data-i18n="contactSubtitle">
+          உங்கள் சாரதி கனவை நனவாக்க தினேஷ் லேணர்ஸ் குழுவினர் எப்போதும் உதவத் தயாராக உள்ளனர்.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-center gap-4 hover:border-red-400 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase" data-i18n="cPhoneLabel">தொலைபேசி எண்கள் (Call Us)</p>
+              <div class="text-base font-extrabold text-slate-900 mt-0.5 space-x-2">
+                <a href="tel:0214327102" class="hover:text-red-600">021 4327 102</a>
+                <span>/</span>
+                <a href="tel:0779227102" class="hover:text-red-600">077 9227 102</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-200 flex items-center gap-4 hover:border-emerald-400 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl shrink-0">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="flex-1">
+              <p class="text-xs font-bold text-emerald-800 uppercase" data-i18n="cWaLabel">WhatsApp நேரடி அரட்டை</p>
+              <p class="text-sm font-extrabold text-emerald-950 mt-0.5">+94 77 922 7102</p>
+            </div>
+            <a href="https://wa.me/94779227102" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow transition-colors" data-i18n="cWaBtn">
+              Chat Now
+            </a>
+          </div>
+
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl shrink-0 mt-1">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase" data-i18n="cLocLabel">முகவரி (Branch Location)</p>
+              <p class="text-sm font-bold text-slate-900 mt-1 leading-relaxed" data-i18n="addressText">
+                இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழைய பூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase" data-i18n="cHoursLabel">செயற்பாட்டு நேரம் (Operating Hours)</p>
+              <p class="text-sm font-bold text-slate-900 mt-0.5" data-i18n="hoursText">திங்கள் - ஞாயிறு: காலை 7.00 - மாலை 7.00</p>
+              <p class="text-xs text-emerald-600 font-semibold mt-0.5" data-i18n="cHoursSub">வாரத்தின் 7 நாட்களும் திறந்திருக்கும்</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Map Iframe & Real Entrance Photo -->
+        <div class="lg:col-span-7 bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-md">
+          <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-crosshairs text-red-500"></i>
+              <span class="text-xs font-bold">Kandy Road • Opposite Old Park • YMCA Jaffna</span>
+            </div>
+            <a href="https://maps.google.com/?q=YMCA+Jaffna" target="_blank" class="text-xs text-cyan-400 hover:underline font-bold flex items-center gap-1">
+              Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="w-full h-80 sm:h-96">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.003923363375!2d80.0185!3d9.6644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe53f1f33a925f%3A0x6b4ef8d4b3b18544!2sYMCA%20Jaffna!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 bg-white rounded-lg border-2 border-red-600 flex items-center justify-center font-black text-red-600 text-lg">
+              L
+            </div>
+            <span class="text-lg font-black text-white font-heading" data-i18n="brandTitle">தினேஷ் லேணர்ஸ்</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            DMT Reg: DS:385 • <span data-i18n="heroPill">யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்.</span>
+          </p>
+          <p class="text-slate-500 font-semibold" data-i18n="ownerText">உரிமையாளர்: க. தினேஷ்</p>
+        </div>
+
+        <div class="space-y-2">
+          <p class="font-bold text-white text-sm" data-i18n="footerQuickLinks">பயிற்சி வாகனங்கள்</p>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#courses" class="hover:text-white transition-colors" data-i18n="tabCar">கார் (Dual-Control)</a></li>
+            <li><a href="#courses" class="hover:text-white transition-colors" data-i18n="tabBike">மோட்டார் பைக் & ஸ்கூட்டர்</a></li>
+            <li><a href="#courses" class="hover:text-white transition-colors" data-i18n="tabTuk">முச்சக்கரவண்டி (Tuk Tuk)</a></li>
+            <li><a href="#courses" class="hover:text-white transition-colors" data-i18n="tabBus">கனரக பஸ் & லொறி</a></li>
+            <li><a href="#simulator" class="hover:text-cyan-400 transition-colors" data-i18n="tabSim">3D விர்ச்சுவல் சிமுலேட்டர்</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <p class="font-bold text-white text-sm" data-i18n="footerSupport">மாணவர் உதவிகள்</p>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#calculator" class="hover:text-white transition-colors" data-i18n="navFees">கட்டண கணிப்பான்</a></li>
+            <li><a href="#quiz" class="hover:text-white transition-colors" data-i18n="navQuiz">வீதி சமிக்கை வினாடி வினா</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors" data-i18n="navGallery">நேரடி புகைப்படங்கள்</a></li>
+            <li><a href="#zero-exp" class="hover:text-white transition-colors" data-i18n="zeroExpBadge">டிரைவிங் தெரியாதவர்களுக்கான பயிற்சி</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <p class="font-bold text-white text-sm" data-i18n="footerContact">தொடர்புகளுக்கு</p>
+          <p class="text-xs text-slate-300" data-i18n="addressText">இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (YMCA கட்டடம்)</p>
+          <p class="text-xs text-white font-bold">Tel: 021 4327 102 / 077 9227 102</p>
+          <div class="pt-2 flex items-center gap-3">
+            <a href="https://wa.me/94779227102" target="_blank" class="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="tel:0779227102" class="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
+        <p data-i18n="footerRights">© 2026 Dinesh Learners (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+        <p class="text-xs" data-i18n="footerLocation">யாழ்ப்பாணம் • Sri Lanka</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION WIDGETS -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <a href="tel:0779227102" class="w-13 h-13 p-3.5 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-2xl flex items-center justify-center text-lg hover:scale-110 active:scale-95 transition-all" title="Direct Phone Call">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://wa.me/94779227102?text=Hello%20Dinesh%20Learners!%20I%20would%20like%20to%20enroll%20for%20driving%20classes." target="_blank" class="w-13 h-13 p-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all relative" title="Chat on WhatsApp">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50"></span>
+      <i class="fa-brands fa-whatsapp relative z-10"></i>
+    </a>
+  </div>
+
+  <!-- ONLINE ADMISSION / TRIAL MODAL DIALOG -->
+  <div id="enrollModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative animate-float-delayed max-h-[92vh] overflow-y-auto">
+      
+      <div class="bg-gradient-to-r from-red-600 to-rose-600 p-6 text-white relative">
+        <button class="close-enroll-modal absolute top-5 right-5 w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white text-sm transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="inline-flex items-center gap-1.5 bg-white/20 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider mb-2">
+          <span>DMT: DS:385 • Jaffna</span>
+        </div>
+        <h3 class="text-xl font-black font-heading" data-i18n="modalTitle">புதிய மாணவர் சேர்க்கை & முன்பதிவு</h3>
+        <p class="text-xs text-red-100 mt-1" data-i18n="modalSub">விபரங்களைப் பூர்த்தி செய்யுங்கள், எமது குழுவினர் உடனடியாக தொடர்புகொள்வர்.</p>
+      </div>
+
+      <form id="enrollForm" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="mNameLabel">முழுப் பெயர் (Full Name)*</label>
+          <input type="text" id="modalName" required placeholder="Name" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="mPhoneLabel">WhatsApp / தொலைபேசி எண்*</label>
+          <input type="tel" id="modalPhone" required placeholder="077 XXXXXXX" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="mCourseLabel">பயிற்சி வாகனம் (Course)*</label>
+          <select id="modalCourseSelect" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+            <option value="Car (Dual-Control)">🚗 Car (Manual / Auto Dual Control)</option>
+            <option value="Motorcycle (Class A)">🏍️ Motorcycle / Scooter</option>
+            <option value="Three-Wheeler (Tuk Tuk)">🛺 Three Wheeler (Tuk Tuk)</option>
+            <option value="Heavy Bus & Lorry">🚌 Heavy Bus & Lorry (Class D/CE)</option>
+            <option value="Car + Bike Combo">🔥 Car + Bike Combo Package</option>
+            <option value="3D Driving Simulator">🕹️ 3D Virtual Simulator Trial</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="mSlotLabel">விருப்பமான பயிற்சி நேரம் (Preferred Slot)</label>
+          <select id="modalTimeSlot" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+            <option value="Morning (7:00 AM - 10:00 AM)" data-i18n="mSlotOpt1">காலை (Morning 7:00 AM - 10:00 AM)</option>
+            <option value="Mid-day (10:00 AM - 2:00 PM)" data-i18n="mSlotOpt2">நண்பகல் (Mid-day 10:00 AM - 2:00 PM)</option>
+            <option value="Evening (3:00 PM - 7:00 PM)" data-i18n="mSlotOpt3">மாலை (Evening 3:00 PM - 7:00 PM)</option>
+            <option value="Weekend (Sat / Sun)" data-i18n="mSlotOpt4">வார இறுதி (Weekend Only)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-i18n="mNoteLabel">மேலதிக விபரங்கள் (Optional)</label>
+          <textarea id="modalNote" rows="2" placeholder="..." class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-medium focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold rounded-xl shadow-lg shadow-red-500/30 text-sm transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span data-i18n="mSubmitBtn">பதிவை உறுதிசெய்து WhatsApp-ல் அனுப்ப</span>
+        </button>
+
+        <p class="text-[11px] text-center text-slate-400" data-i18n="mFootNote">
+          YMCA Building, Kandy Road, Jaffna.
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
