@@ -39,6 +39,11 @@ const translations = {
     noticeMedDesc: "மருத்துவ சான்றுதலுக்கான ஒழுங்கு படுத்தல்கள்.",
     noticeInstallmentTitle: "தவணை முறை கட்டண வசதி",
     noticeInstallmentDesc: "கட்டணங்கள் தவனை முறையில் செலுத்தும் வசதி!",
+    noticeGovApproved: "அரச அங்கீகாரம் பெற்றது",
+    noticeTechFeature: "3D சிமுலேட்டர் + Dual-Control",
+    noticeExamFeature: "100% DMT வழிகாட்டல்",
+    noticeMedFeature: "விரைவான நடைமுறைகள்",
+    noticeInstallmentFeature: "இலகு தவணைகள் • Easy Installments",
     noticeContactText: "🚗 TP. 0779227102 (whatsapp) தொடர்பு கொள்ளவும். நன்றி🙏",
     noticeWaBtn: "077 9227 102 (WhatsApp)",
     noticeCallBtn: "077 9227 102",
@@ -256,6 +261,16 @@ const translations = {
     quizNextBtn: "அடுத்த வினா (Next Question)",
     quizClassroomTitle: "எமது நேரடி தியரி வகுப்பறை",
     quizClassroomSub: "அனைத்து வீதி சமிக்கைகளையும் நேரடியாகக் கற்றுக்கொள்ளுங்கள்",
+    examGateBadge: "மாணவர் பிரத்தியேக அனுமதி • Candidate Login",
+    examPortalTitle: "சாரதிப் பரீட்சை மாதிரி வினாத்தாள் தளம்",
+    examPortalSub: "DMT எழுத்துப்பரீட்சை மாதிரி வினாக்களை பயிற்சி செய்ய உங்கள் மாணவர் உள்நுழைவு விபரங்களை உள்ளிட்டு உள்நுழையவும்.",
+    examEmailLabel: "மாணவர் மின்னஞ்சல் (Candidate Email)*",
+    examPassLabel: "கடவுச்சொல் (Password)*",
+    examSignInBtn: "வினாத்தாளைத் திறக்க (Unlock Questions)",
+    examHelpText: "தினேஷ் லேணர்ஸ் மாணவர்களுக்கான விசேட எழுத்துப்பரீட்சை மாதிரி வினாத்தாள் தளம்.",
+    examInvalidCreds: "மின்னஞ்சல் அல்லது கடவுச்சொல் தவறானது!",
+    examSessionActive: "பயிற்சி அமர்வு செயலில் உள்ளது",
+    examLogoutBtn: "வெளியேறு",
     
     // 4-Step Roadmap
     stepPill: "படிமுறை வழிகாட்டல்",
@@ -293,12 +308,15 @@ const translations = {
     reviewSubtitle: "தினேஷ் லேணர்ஸ் மூலம் முதலாவது முயற்சியிலேயே சாரதி அனுமதிப்பத்திரம் பெற்ற யாழ்ப்பாண மாணவர்கள்.",
     r1Text: "\"சிமுலேட்டரில் முதல்ல பிராக்டிஸ் பண்ணியதால மெயின் ரோட்ல கார் ஓட்டும்போது எந்த பயமும் இல்லை. டிரையல் டெஸ்ட்ல முதல் அட்டெம்ப்ட்லயே பாஸ் பண்ணிட்டேன்! தினேஷ் சாருக்கு மிக்க நன்றி!\"",
     r1Name: "சுரேஷ் பாபு",
+    r1Initial: "சு",
     r1Place: "நவாலி, யாழ்ப்பாணம் • Car + Bike",
     r2Text: "\"பெண்களுக்கு லேடி இன்ஸ்ட்ரக்டர் இருந்தது ரொம்ப வசதியா இருந்தது. பொறுமையா கத்துக்கொடுத்தாங்க. நேரம் காலையில 7 மணிக்கே இருக்கறதால காலேஜ் போறதுக்கு முன்னாடியே கிளாஸ் முடிஞ்சிடும்.\"",
     r2Name: "பிரியங்கா கே.",
+    r2Initial: "பி",
     r2Place: "நல்லூர், யாழ்ப்பாணம் • Car Auto",
     r3Text: "\"ஹெவி வெஹிக்கிள் பஸ் லைசென்ஸ் எடுத்தேன். ஏர் பிரேக், ரிவர்சிங் எல்லாம் தெளிவா சொல்லி தந்தாங்க. வெளிநாட்டு வேலைக்கு அப்ளை பண்ணுறதுக்கு உடனே கைக்கு லைசென்ஸ் கிடைச்சிடுச்சு.\"",
     r3Name: "ஜெகதீஸ் ஆர்.",
+    r3Initial: "ஜே",
     r3Place: "சாவகச்சேரி • Heavy Bus Class D",
     
     // Contact Section
@@ -415,6 +433,11 @@ const translations = {
     noticeMedDesc: "Full arrangements and guidance for Medical Certificates.",
     noticeInstallmentTitle: "Easy Installment Facility",
     noticeInstallmentDesc: "Convenient payment facility with easy installment options!",
+    noticeGovApproved: "Government Approved",
+    noticeTechFeature: "3D Simulator + Dual-Control Fleet",
+    noticeExamFeature: "100% DMT Guidance",
+    noticeMedFeature: "Fast Procedures",
+    noticeInstallmentFeature: "Easy Flexible Installments",
     noticeContactText: "🚗 TP: 0779227102 (WhatsApp) - Please feel free to contact us. Thank you!🙏",
     noticeWaBtn: "077 9227 102 (WhatsApp)",
     noticeCallBtn: "077 9227 102",
@@ -632,6 +655,16 @@ const translations = {
     quizNextBtn: "Next Question",
     quizClassroomTitle: "Our Theory Classroom",
     quizClassroomSub: "Master all road signs and DMT regulations directly",
+    examGateBadge: "Candidate Exam Portal • Restricted Access",
+    examPortalTitle: "DMT Driving Exam Model Questions & Quiz",
+    examPortalSub: "Sign in with your candidate credentials to access official DMT exam questions and interactive practice quizzes.",
+    examEmailLabel: "Candidate Email Address*",
+    examPassLabel: "Password*",
+    examSignInBtn: "Unlock Questions & Quiz",
+    examHelpText: "Exclusive exam preparation question portal for Dinesh Learners enrolled students.",
+    examInvalidCreds: "Invalid candidate email or password!",
+    examSessionActive: "Exam Session Active",
+    examLogoutBtn: "Sign Out",
     
     // 4-Step Roadmap
     stepPill: "Step-by-Step Path",
@@ -669,12 +702,15 @@ const translations = {
     reviewSubtitle: "Real stories from Jaffna students who passed their driving license trials on their very first attempt.",
     r1Text: "\"Practicing on the 3D simulator first eliminated all my fear before driving on the main road. I passed my trial test on the first attempt! Huge thanks to Dinesh Sir!\"",
     r1Name: "Suresh Babu",
+    r1Initial: "S",
     r1Place: "Navaly, Jaffna • Car + Bike",
     r2Text: "\"Having a lady instructor made learning so comfortable and stress-free. Starting at 7:00 AM let me finish my classes before heading to campus.\"",
     r2Name: "Priyanka K.",
+    r2Initial: "P",
     r2Place: "Nallur, Jaffna • Car Auto",
     r3Text: "\"I took the heavy bus driving course. The air brake and reversing training were taught in detail. I got my commercial license and applied for overseas employment immediately.\"",
     r3Name: "Jegathees R.",
+    r3Initial: "J",
     r3Place: "Chavakachcheri • Heavy Bus Class D",
     
     // Contact Section
@@ -791,6 +827,11 @@ const translations = {
     noticeMedDesc: "වෛද්‍ය සහතික ලබාගැනීම සඳහා විශේෂ කටයුතු සම්පාදනය.",
     noticeInstallmentTitle: "වාරික ක්‍රමයට ගෙවීමේ පහසුකම",
     noticeInstallmentDesc: "ගාස්තු පහසු වාරික ක්‍රමයට ගෙවීමේ විශේෂ පහසුකම!",
+    noticeGovApproved: "රජයේ අනුමතයි",
+    noticeTechFeature: "3D සිමියුලේටර් + Dual-Control",
+    noticeExamFeature: "100% DMT මගපෙන්වීම",
+    noticeMedFeature: "ක්ෂණික ක්‍රියාදාමය",
+    noticeInstallmentFeature: "පහසු නම්‍යශීලී වාරික",
     noticeContactText: "🚗 දුරකථන: 0779227102 (WhatsApp) මගින් සම්බන්ධ වන්න. ස්තූතියි!🙏",
     noticeWaBtn: "077 9227 102 (WhatsApp)",
     noticeCallBtn: "077 9227 102",
@@ -1008,6 +1049,16 @@ const translations = {
     quizNextBtn: "මීළඟ ප්‍රශ්නය (Next Question)",
     quizClassroomTitle: "අපගේ න්‍යායාත්මක පන්ති කාමරය",
     quizClassroomSub: "සියලුම මාර්ග සංඥා සහ DMT නීති සෘජුවම ඉගෙන ගන්න",
+    examGateBadge: "ශිෂ්‍ය සීමිත ප්‍රවේශය • Candidate Login",
+    examPortalTitle: "රියදුරු විභාග ආදර්ශ ප්‍රශ්න පත්‍රය",
+    examPortalSub: "DMT ලිඛිත විභාග ප්‍රශ්න පුහුණු වීමට ඔබගේ ශිෂ්‍ය පිවිසුම් තොරතුරු ඇතුළත් කරන්න.",
+    examEmailLabel: "ශිෂ්‍ය විද්‍යුත් තැපෑල (Email)*",
+    examPassLabel: "මුරපදය (Password)*",
+    examSignInBtn: "ප්‍රශ්න පත්‍රය විවෘත කරන්න",
+    examHelpText: "දිනේෂ් ලර්නර්ස් සිසුන් සඳහාම වෙන්වූ විශේෂ විභාග ප්‍රශ්න පත්‍ර පුහුණු අංශය.",
+    examInvalidCreds: "විද්‍යුත් තැපෑල හෝ මුරපදය වැරදියි!",
+    examSessionActive: "විභාග සැසිය ක්‍රියාත්මකයි",
+    examLogoutBtn: "ඉවත් වන්න",
     
     // 4-Step Roadmap
     stepPill: "පියවරෙන් පියවර මගපෙන්වීම",
@@ -1045,12 +1096,15 @@ const translations = {
     reviewSubtitle: "පළමු වරම රියදුරු බලපත්‍රය ලබාගත් යාපනයේ සිසුන්ගේ අත්දැකීම්.",
     r1Text: "\"මුලින්ම සිමියුලේටරයේ පුහුණු වූ නිසා ප්‍රධාන පාරේ කාර් එක එලවද්දි කිසිම බයක් දැනුනෙ නෑ. පළමු වරම ට්‍රයල් එක පාස් වුණා! දිනේෂ් සර්ට බොහොම ස්තූතියි!\"",
     r1Name: "සුරේෂ් බාබු",
+    r1Initial: "සු",
     r1Place: "නවාලි, යාපනය • Car + Bike",
     r2Text: "\"කාන්තා උපදේශිකාවක් සිටීම මට ලොකු පහසුවක් වුණා. උදේ 7ට පන්ති තිබුණ නිසා කැම්පස් යන්න කලින් පුහුණුව අවසන් කරගන්න පුළුවන් වුණා.\"",
     r2Name: "ප්‍රියංකා කේ.",
+    r2Initial: "ප්‍රි",
     r2Place: "නල්ලූර්, යාපනය • Car Auto",
     r3Text: "\"මම බර වාහන බස් ලයිසන් එක ගත්තා. එයාර් බ්‍රේක් සහ රිවර්ස් ගැන පැහැදිලිව කියා දුන්නා. විදේශ රැකියාවකට අයදුම් කිරීමට ඉක්මනින් ලයිසන් එක ලැබුණා.\"",
     r3Name: "ජෙගදීස් ආර්.",
+    r3Initial: "ජෙ",
     r3Place: "චාවකච්චේරි • Heavy Bus Class D",
     
     // Contact Section
@@ -1285,6 +1339,7 @@ let quizScore = 0;
 document.addEventListener("DOMContentLoaded", () => {
   setupLanguageSwitcher();
   setupFeeCalculator();
+  setupExamPortal();
   setupQuiz();
   setupFilterTabs();
   setupEnrollModal();
@@ -1449,10 +1504,82 @@ function updateFeeCalculation() {
   if (vehicleNameEl) vehicleNameEl.textContent = chosenName;
 }
 
+// Candidate Exam Questions & Practice Portal (Protected with Cryptographic SHA-256 Auth)
+function setupExamPortal() {
+  const loginGate = document.getElementById("examLoginGate");
+  const unlockedCard = document.getElementById("examUnlockedCard");
+  const form = document.getElementById("examLoginForm");
+  const emailInput = document.getElementById("examLoginEmail");
+  const passInput = document.getElementById("examLoginPassword");
+  const errorBox = document.getElementById("examLoginError");
+  const errorText = document.getElementById("examLoginErrorText");
+  const togglePassBtn = document.getElementById("toggleExamPassBtn");
+  const logoutBtn = document.getElementById("examLogoutBtn");
+
+  function updateExamPortalState() {
+    const isLogged = sessionStorage.getItem("dinesh_exam_logged") === "true";
+    if (isLogged) {
+      if (loginGate) loginGate.classList.add("hidden");
+      if (unlockedCard) unlockedCard.classList.remove("hidden");
+      renderQuizQuestion();
+    } else {
+      if (loginGate) loginGate.classList.remove("hidden");
+      if (unlockedCard) unlockedCard.classList.add("hidden");
+    }
+  }
+
+  // Toggle password visibility
+  if (togglePassBtn && passInput) {
+    togglePassBtn.addEventListener("click", () => {
+      const isPass = passInput.type === "password";
+      passInput.type = isPass ? "text" : "password";
+      togglePassBtn.innerHTML = isPass ? '<i class="fa-regular fa-eye-slash text-sm"></i>' : '<i class="fa-regular fa-eye text-sm"></i>';
+    });
+  }
+
+  // Handle Form Submission
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const inputEmail = (emailInput ? emailInput.value : "").trim().toLowerCase();
+      const inputPass = (passInput ? passInput.value : "").trim();
+
+      const calculatedHash = await computeSha256(inputEmail + ":" + inputPass);
+
+      if (calculatedHash === SECURE_EXAM_AUTH_HASH) {
+        sessionStorage.setItem("dinesh_exam_logged", "true");
+        if (errorBox) errorBox.classList.add("hidden");
+        updateExamPortalState();
+        const successMsg = currentLang === 'ta' ? "வெற்றி! மாதிரி வினாத்தாள் திறக்கப்பட்டது." : (currentLang === 'si' ? "සාර්ථකයි! විභාග ප්‍රශ්න පත්‍රය විවෘත විය." : "Success! Model exam questions unlocked.");
+        showToast(successMsg);
+      } else {
+        if (errorBox) {
+          errorBox.classList.remove("hidden");
+          if (errorText) {
+            errorText.textContent = currentLang === 'ta' ? "மின்னஞ்சல் அல்லது கடவுச்சொல் தவறானது!" : (currentLang === 'si' ? "විද්‍යුත් තැපෑල හෝ මුරපදය වැරදියි!" : "Invalid candidate email or password!");
+          }
+        }
+      }
+    });
+  }
+
+  // Handle Logout
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      sessionStorage.removeItem("dinesh_exam_logged");
+      if (passInput) passInput.value = "";
+      updateExamPortalState();
+      const logoutMsg = currentLang === 'ta' ? "வினாத்தாள் அமர்விலிருந்து வெளியேறியுள்ளீர்கள்." : (currentLang === 'si' ? "විභාග සැසියෙන් ඉවත් විය." : "Signed out from exam session.");
+      showToast(logoutMsg);
+    });
+  }
+
+  // Initial State Check
+  updateExamPortalState();
+}
+
 // Road Signs Interactive Quiz
 function setupQuiz() {
-  renderQuizQuestion();
-
   const nextBtn = document.getElementById("quizNextBtn");
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
@@ -1780,9 +1907,10 @@ function showToast(message) {
 // OFFICIAL ADMIN PORTAL & DASHBOARD (SECURE SHA-256 ENCRYPTED AUTH)
 // =========================================================================
 
-// One-way SHA-256 cryptographic digest.
+// One-way SHA-256 cryptographic digests.
 // Neither email nor password appears in plain text anywhere in the codebase!
-const SECURE_ADMIN_AUTH_HASH = "684d645c385e4f5ed47fa4d4b5068c8271fb492bec2de16668e58675776de3d0";
+const SECURE_ADMIN_AUTH_HASH = "86e8f08367d7ea37c788a85035398e7564fb4f3578cc704ea9a33f4daf3199cf";
+const SECURE_EXAM_AUTH_HASH = "f755a1dee29e880253839a6abf56efdadff9ce03dd637d90d028d6ca0b9a60d3";
 
 async function computeSha256(str) {
   const enc = new TextEncoder();
