@@ -41,11 +41,15 @@ html[lang="en"], body.lang-en {
 html[lang="ta"] .font-heading, body.lang-ta .font-heading {
   font-family: 'Noto Sans Tamil', 'Outfit', sans-serif;
   letter-spacing: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 html[lang="si"] .font-heading, body.lang-si .font-heading {
   font-family: 'Noto Sans Sinhala', 'Outfit', sans-serif;
   letter-spacing: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 /* Strictly enforce no underlines on decorative elements */

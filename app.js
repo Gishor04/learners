@@ -53,7 +53,7 @@ const translations = {
     modalNoticeClose: "மூடுக",
     
     // Hero Section
-    heroPill: "யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்",
+    heroPill: "DMT DS:385 • யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்",
     heroTitlePrefix: "நம்பிக்கையுடன் ",
     heroTitleHighlight: "சாரதி அனுமதிப்பத்திரம்",
     heroTitleSuffix: " பெறுங்கள்!",
@@ -408,7 +408,7 @@ const translations = {
     modalNoticeClose: "Close",
     
     // Hero Section
-    heroPill: "Jaffna's Leading Modern Driving Academy",
+    heroPill: "DMT DS:385 • Jaffna's Premier Modern Driving Academy",
     heroTitlePrefix: "Master the Road & Get Your ",
     heroTitleHighlight: "Driving License",
     heroTitleSuffix: " with Confidence!",
@@ -763,7 +763,7 @@ const translations = {
     modalNoticeClose: "වසන්න",
     
     // Hero Section
-    heroPill: "යාපනයේ අංක 1 නවීන රියදුරු පුහුණු පාසල",
+    heroPill: "DMT DS:385 • යාපනයේ ප්‍රමුඛතම නවීන රියදුරු පුහුණු පාසල",
     heroTitlePrefix: "විශ්වාසයෙන් යුතුව ",
     heroTitleHighlight: "රියදුරු බලපත්‍රය",
     heroTitleSuffix: " ලබාගන්න!",
@@ -1266,9 +1266,9 @@ function applyTranslations() {
   document.querySelectorAll(".lang-select-btn").forEach(btn => {
     const btnLang = btn.getAttribute("data-lang");
     if (btnLang === currentLang) {
-      btn.className = "lang-select-btn px-3 py-1.5 rounded-lg bg-red-600 text-white font-bold text-xs shadow-md transition-all";
+      btn.className = "lang-select-btn px-2.5 sm:px-3 py-1 rounded-lg bg-red-600 text-white font-extrabold text-xs shadow-sm transition-all";
     } else {
-      btn.className = "lang-select-btn px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 font-bold text-xs transition-all";
+      btn.className = "lang-select-btn px-2 sm:px-2.5 py-1 rounded-lg text-slate-700 hover:bg-slate-200 font-bold text-xs transition-all";
     }
   });
 
