@@ -88,6 +88,10 @@
       <!-- Desktop Nav Menu -->
       <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-700">
         <a href="#home" class="text-red-600 hover:text-red-700 transition-colors" data-i18n="navHome">முகப்பு</a>
+        <a href="#front-details" class="text-red-600 hover:text-red-700 transition-colors flex items-center gap-1 font-bold">
+          <i class="fa-solid fa-bullhorn text-xs"></i>
+          <span data-i18n="navNotice">விசேட விபரம்</span>
+        </a>
         <a href="#zero-exp" class="text-amber-600 hover:text-amber-700 transition-colors flex items-center gap-1.5 font-bold">
           <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
           <span data-i18n="navZeroExp">பயிற்சி சிறப்பம்சம்</span>
@@ -165,6 +169,10 @@
 
       <nav class="flex flex-col space-y-3 font-semibold text-slate-700">
         <a href="#home" class="mobile-nav-link text-red-600 hover:text-red-700" data-i18n="navHome">முகப்பு</a>
+        <a href="#front-details" class="mobile-nav-link text-red-600 font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-bullhorn text-xs"></i>
+          <span data-i18n="navNotice">விசேட விபரம்</span>
+        </a>
         <a href="#zero-exp" class="mobile-nav-link text-amber-600 font-bold" data-i18n="navZeroExp">பயிற்சி சிறப்பம்சம்</a>
         <a href="#courses" class="mobile-nav-link hover:text-red-600" data-i18n="navCourses">பயிற்சி வாகனங்கள்</a>
         <a href="#simulator" class="mobile-nav-link hover:text-red-600" data-i18n="navSimulator">சிமுலேட்டர் நுட்பம்</a>
@@ -200,12 +208,17 @@
         <!-- Left Column: Hero Content & CTAs -->
         <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
           
-          <!-- Govt DMT Badge Pill & Real Estate Venture Badge -->
+          <!-- Govt DMT Badge Pill, Customer Announcement & Real Estate Venture Badge -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
             <div class="inline-flex items-center gap-2 bg-white/90 border border-red-200 px-3.5 py-1.5 rounded-full shadow-sm text-xs font-bold text-red-700">
               <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
               <span data-i18n="heroPill">யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்</span>
             </div>
+            <a href="#front-details" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-rose-600 text-white border border-red-500 px-3.5 py-1.5 rounded-full shadow-sm text-xs font-black hover:scale-[1.03] transition-all">
+              <i class="fa-solid fa-bullhorn animate-pulse text-amber-300"></i>
+              <span data-i18n="heroNoticePill">🚗 அன்பார்ந்த வாடிக்கையாளர் விசேட அறிவித்தல்</span>
+              <i class="fa-solid fa-arrow-down text-[10px]"></i>
+            </a>
             <a href="#real-estate" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-50 to-rose-50 border border-amber-300 px-3 py-1.5 rounded-full shadow-sm text-xs font-bold text-amber-800 hover:border-amber-500 hover:scale-[1.03] transition-all">
               <i class="fa-solid fa-house-chimney text-amber-600"></i>
               <span data-i18n="reBadgeShort">தினேஷ் ரியல் எஸ்டேட் (Buy & Sell)</span>
@@ -314,6 +327,178 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- FRONT VIP CUSTOMER NOTICE & SPECIAL DETAILS (100% TRILINGUAL: TAMIL | ENGLISH | SINHALA) -->
+  <section id="front-details" class="relative -mt-6 sm:-mt-8 mb-12 sm:mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
+    <div class="bg-gradient-to-br from-white via-rose-50/50 to-amber-50/30 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border-2 border-red-500/25 relative overflow-hidden backdrop-blur-md">
+      <!-- Ambient Decorative Circles -->
+      <div class="absolute -right-16 -top-16 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-16 -bottom-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <!-- Top Announcement Header & Quick Direct Contact Buttons -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 pb-6 border-b border-red-200/60">
+        <div class="space-y-2 max-w-3xl">
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-rose-600 text-white text-xs font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+            <span class="animate-pulse text-sm">📢</span>
+            <span data-i18n="noticeBadge">விசேட அறிவித்தல் • SPECIAL NOTICE</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight font-heading leading-tight" data-i18n="noticeGreeting">
+            🚗 டினேஸ் லேணர்ஸ் யாழ்ப்பாணம் அன்பார்ந்த வாடிக்கையாரே!
+          </h2>
+          <p class="text-sm sm:text-base font-bold text-red-600 flex items-center gap-2" data-i18n="noticeSub">
+            இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!
+          </p>
+        </div>
+        
+        <!-- Quick Action Contact Pills -->
+        <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+          <a href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்." target="_blank" class="px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-2xl shadow-lg shadow-emerald-600/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2.5 text-sm">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span data-i18n="noticeWaBtn">077 9227 102 (WhatsApp)</span>
+          </a>
+          <a href="tel:0779227102" class="px-5 py-3.5 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-2xl shadow-lg shadow-red-600/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span data-i18n="noticeCallBtn">077 9227 102</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature Grid: 4 Core Customer Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-6">
+        
+        <!-- Feature 1: Modern Tech Training -->
+        <div class="bg-white rounded-2xl p-5 border border-red-100 shadow-sm hover:shadow-lg hover:border-red-300 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-50 border border-red-200 text-red-600 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🚗
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 mb-2 font-heading" data-i18n="noticeTechTitle">
+              விசேட தொழில்நுட்ப பயிற்சி
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium" data-i18n="noticeTechDesc">
+              இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-bold text-red-600">
+            <i class="fa-solid fa-check-circle text-xs"></i>
+            <span>3D Simulator + Dual-Control</span>
+          </div>
+        </div>
+
+        <!-- Feature 2: Exam Assistance -->
+        <div class="bg-white rounded-2xl p-5 border border-amber-100 shadow-sm hover:shadow-lg hover:border-amber-300 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🚗
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 mb-2 font-heading" data-i18n="noticeExamTitle">
+              பரீட்சை விசேட ஒழுங்குபடுத்தல்கள்
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium" data-i18n="noticeExamDesc">
+              பரீட்சை எழுத முடியாதவர்களுக்கு விசேட ஒழுங்கு படுத்தல்கள்.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-bold text-amber-600">
+            <i class="fa-solid fa-graduation-cap text-xs"></i>
+            <span>100% DMT வழிகாட்டல்</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: Medical Certificate Assistance -->
+        <div class="bg-white rounded-2xl p-5 border border-blue-100 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🚗
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 mb-2 font-heading" data-i18n="noticeMedTitle">
+              மருத்துவ சான்றிதழ் உதவி
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium" data-i18n="noticeMedDesc">
+              மருத்துவ சான்றுதலுக்கான ஒழுங்கு படுத்தல்கள்.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-bold text-blue-600">
+            <i class="fa-solid fa-notes-medical text-xs"></i>
+            <span>விரைவான நடைமுறைகள்</span>
+          </div>
+        </div>
+
+        <!-- Feature 4: Installment Payment Option -->
+        <div class="bg-gradient-to-br from-amber-500/10 via-orange-500/10 to-red-500/10 rounded-2xl p-5 border-2 border-amber-400 shadow-sm hover:shadow-lg hover:border-amber-500 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-md">
+              🎉
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 mb-2 font-heading" data-i18n="noticeInstallmentTitle">
+              தவணை முறை கட்டண வசதி
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-800 leading-relaxed font-bold" data-i18n="noticeInstallmentDesc">
+              கட்டணங்கள் தவனை முறையில் செலுத்தும் வசதி!
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-amber-200 flex items-center gap-1.5 text-[11px] font-black text-amber-700">
+            <i class="fa-solid fa-circle-check text-xs"></i>
+            <span>இலகு தவணைகள் • Easy Installments</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Real Estate & Single Address Spotlight Strip -->
+      <div class="mt-6 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 rounded-2xl p-5 sm:p-6 text-white shadow-xl border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="space-y-2.5 max-w-3xl">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-extrabold text-[11px] border border-amber-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-house-chimney text-xs"></i>
+              <span data-i18n="noticeReTag">ஒரே முகவரியில் ரியல் எஸ்டேட்</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-red-600/30 text-red-200 font-bold text-[10px] border border-red-500/30">
+              Government Approved
+            </span>
+          </div>
+
+          <h4 class="text-lg sm:text-xl font-black text-amber-400 font-heading leading-snug" data-i18n="noticeReTitle">
+            டினேஸ் ரியல் எஸ்டேட்: காணி, வீடு வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள் ஒரே முகவரியில்!
+          </h4>
+          
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal" data-i18n="noticeReDesc">
+            டினேஸ் ரியல் எஸ்டேட் காணி, வீடு வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள் ஒரே முகவரியில் TP. 0779227102.
+          </p>
+
+          <div class="pt-2 flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-amber-200/90 font-medium">
+            <div class="flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-red-400"></i>
+              <strong class="text-white" data-i18n="noticeAddressLabel">முகவரி:</strong>
+              <span class="text-amber-100 font-bold" data-i18n="noticeAddressText">இல -107A1/1 கண்டி வீதி கச்சேரிடி பழைய பூங்கா முன்பா 1ம் மாடி யாழ்</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i class="fa-solid fa-phone text-emerald-400"></i>
+              <span>TP: <strong class="text-white font-black tracking-wide">077 9227 102</strong></span>
+            </div>
+            <div class="flex items-center gap-1 text-slate-300 font-bold">
+              <span data-i18n="noticeThankYou">நன்றி🙏</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a href="#real-estate" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-amber-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+            <i class="fa-solid fa-building"></i>
+            <span data-i18n="btnNoticeRe">ரியல் எஸ்டேட் விபரம்</span>
+          </a>
+          <button class="open-enroll-modal px-5 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-red-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+            <i class="fa-solid fa-user-plus"></i>
+            <span data-i18n="btnEnroll">இப்போதே பதிவு செய்</span>
+          </button>
+          <button class="open-notice-modal p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:scale-[1.02] transition-all text-xs font-bold" title="View Full Details Card">
+            <i class="fa-solid fa-expand"></i>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1808,6 +1993,92 @@
           நேரில் வர: இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழையபூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)
         </p>
       </form>
+
+    </div>
+  </div>
+
+  <!-- SPECIAL VIP CUSTOMER NOTICE POPUP MODAL -->
+  <div id="noticeModal" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative max-h-[92vh] overflow-y-auto">
+      
+      <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 p-6 text-white relative">
+        <button class="close-notice-modal absolute top-5 right-5 w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white text-sm transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="inline-flex items-center gap-1.5 bg-white/20 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider mb-2">
+          <span>📢 DMT: DS:385 • JAFFNA</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black font-heading" data-i18n="modalNoticeTitle">
+          🚗 டினேஸ் லேணர்ஸ் விசேட அறிவித்தல்
+        </h3>
+        <p class="text-xs text-amber-100 font-semibold mt-1" data-i18n="noticeSub">
+          இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!
+        </p>
+      </div>
+
+      <div class="p-6 space-y-4">
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="text-xl">🚗</span>
+            <div class="flex-1 text-xs">
+              <strong class="text-slate-900 block text-sm" data-i18n="noticeGreeting">🚗 டினேஸ் லேணர்ஸ் யாழ்ப்பாணம் அன்பார்ந்த வாடிக்கையாரே!</strong>
+              <p class="text-slate-600 mt-1" data-i18n="noticeTechDesc">இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2 border-t border-slate-200/60">
+            <span class="text-xl">🚗</span>
+            <div class="flex-1 text-xs">
+              <strong class="text-slate-900 block" data-i18n="noticeExamTitle">பரீட்சை விசேட ஒழுங்குபடுத்தல்கள்</strong>
+              <p class="text-slate-600 mt-0.5" data-i18n="noticeExamDesc">பரீட்சை எழுத முடியாதவர்களுக்கு விசேட ஒழுங்கு படுத்தல்கள்.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2 border-t border-slate-200/60">
+            <span class="text-xl">🚗</span>
+            <div class="flex-1 text-xs">
+              <strong class="text-slate-900 block" data-i18n="noticeMedTitle">மருத்துவ சான்றிதழ் உதவி</strong>
+              <p class="text-slate-600 mt-0.5" data-i18n="noticeMedDesc">மருத்துவ சான்றுதலுக்கான ஒழுங்கு படுத்தல்கள்.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2 border-t border-slate-200/60">
+            <span class="text-xl">🎉</span>
+            <div class="flex-1 text-xs">
+              <strong class="text-amber-800 font-black block" data-i18n="noticeInstallmentTitle">தவணை முறை கட்டண வசதி</strong>
+              <p class="text-slate-700 font-bold mt-0.5" data-i18n="noticeInstallmentDesc">கட்டணங்கள் தவனை முறையில் செலுத்தும் வசதி!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Estate Box -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="text-base">🏡</span>
+            <span class="text-xs font-black text-amber-900 uppercase tracking-wide" data-i18n="noticeReTag">ஒரே முகவரியில் ரியல் எஸ்டேட்</span>
+          </div>
+          <p class="text-xs text-amber-950 font-bold leading-relaxed" data-i18n="noticeReDesc">
+            டினேஸ் ரியல் எஸ்டேட் காணி, வீடு வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள் ஒரே முகவரியில் TP. 0779227102.
+          </p>
+          <p class="text-[11px] text-slate-700 pt-1 border-t border-amber-200/60">
+            <strong data-i18n="noticeAddressLabel">முகவரி:</strong> <span data-i18n="noticeAddressText">இல -107A1/1 கண்டி வீதி கச்சேரிடி பழைய பூங்கா முன்பா 1ம் மாடி யாழ்</span>
+          </p>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்." target="_blank" class="flex-1 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md flex items-center justify-center gap-2 text-xs">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span data-i18n="noticeWaBtn">077 9227 102 (WhatsApp)</span>
+          </a>
+          <a href="tel:0779227102" class="flex-1 py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md flex items-center justify-center gap-2 text-xs">
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span data-i18n="noticeCallBtn">077 9227 102</span>
+          </a>
+          <button class="close-notice-modal py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors" data-i18n="modalNoticeClose">
+            மூடுக
+          </button>
+        </div>
+      </div>
 
     </div>
   </div>
