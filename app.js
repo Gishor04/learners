@@ -342,6 +342,16 @@ const translations = {
     reFooterBrand: "தினேஷ் ரியல் எஸ்டேட்",
     reFooterDesc: "அரச அங்கீகாரம் பெற்ற முதற்தர ரியல் எஸ்டேட். வீடு, காணி, வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள்.",
 
+    // Admin Portal
+    adminPortalBtn: "நிர்வாகம்",
+    adminLoginTitle: "நிர்வாகி உள்நுழைவு (Admin Sign In)",
+    adminSubtitle: "டினேஸ் லேணர்ஸ் நிர்வாகக் கட்டுப்பாட்டகம் (DMT DS:385)",
+    adminEmailLabel: "மின்னஞ்சல் (Email)",
+    adminPassLabel: "கடவுச்சொல் (Password)",
+    adminSignInBtn: "உள்நுழைக",
+    adminLogoutBtn: "வெளியேறு (Logout)",
+    adminPanelTitle: "டினேஸ் லேணர்ஸ் & ரியல் எஸ்டேட் நிர்வாகக் கட்டுப்பாட்டகம்",
+
     // Modal
     modalTitle: "புதிய மாணவர் சேர்க்கை & முன்பதிவு",
     modalSub: "விபரங்களைப் பூர்த்தி செய்யுங்கள், எமது குழுவினர் உடனடியாக தொடர்புகொள்வர்.",
@@ -696,6 +706,16 @@ const translations = {
     reBtnCall: "Call: 077 9227 102",
     reFooterBrand: "Dinesh Real Estate",
     reFooterDesc: "Government Approved Premier Real Estate Agency. Buy and sell homes, lands, and businesses with peace of mind.",
+
+    // Admin Portal
+    adminPortalBtn: "Admin",
+    adminLoginTitle: "Admin Sign In",
+    adminSubtitle: "Dinesh Learners Admin Portal (DMT DS:385)",
+    adminEmailLabel: "Admin Email Address",
+    adminPassLabel: "Password",
+    adminSignInBtn: "Sign In to Admin Panel",
+    adminLogoutBtn: "Logout",
+    adminPanelTitle: "Dinesh Learners & Real Estate Admin Dashboard",
 
     // Modal
     modalTitle: "Student Admission & Course Booking",
@@ -1052,6 +1072,16 @@ const translations = {
     reFooterBrand: "දිනේෂ් රියල් එස්ටේට්",
     reFooterDesc: "රජයේ අනුමත ප්‍රමුඛතම දේපළ වෙළඳාම් ආයතනය. නිවාස සහ ඉඩම් මිලදී ගැනීමට සහ විකිණීමට විශ්වාසයෙන් පියනගන්න.",
 
+    // Admin Portal
+    adminPortalBtn: "පරිපාලක",
+    adminLoginTitle: "පරිපාලක පිවිසුම",
+    adminSubtitle: "දිනේෂ් ලර්නර්ස් පරිපාලක පුවරුව (DMT DS:385)",
+    adminEmailLabel: "විද්‍යුත් තැපෑල (Email)",
+    adminPassLabel: "මුරපදය (Password)",
+    adminSignInBtn: "ඇතුල් වන්න",
+    adminLogoutBtn: "ඉවත් වන්න",
+    adminPanelTitle: "දිනේෂ් ලර්නර්ස් පරිපාලක පුවරුව",
+
     // Modal
     modalTitle: "නව සිසුන් ලියාපදිංචි කිරීම",
     modalSub: "ඔබගේ තොරතුරු පහතින් ඇතුළත් කරන්න, අපගේ කණ්ඩායම ඔබ හා සම්බන්ධ වනු ඇත.",
@@ -1226,6 +1256,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFilterTabs();
   setupEnrollModal();
   setupNoticeModal();
+  setupAdminPortal();
   setupMobileMenu();
   setupSmoothScrolling();
   applyTranslations(); // Set initial language state
@@ -1635,6 +1666,17 @@ function setupEnrollModal() {
 
       const waMessage = `${greeting}%0A%0A👤 *${pName}:* ${encodeURIComponent(name)}%0A📞 *${pPhone}:* ${encodeURIComponent(phone)}%0A🚗 *${pCourse}:* ${encodeURIComponent(course)}%0A⏰ *${pTime}:* ${encodeURIComponent(slot)}%0A📝 *${pNote}:* ${encodeURIComponent(note)}%0A%0AThank you!`;
 
+      // Save record in Admin Panel database (localStorage)
+      saveAdmissionRecord({
+        name,
+        phone,
+        course,
+        slot,
+        note,
+        date: new Date().toLocaleDateString('en-GB') + ' ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+        status: 'New'
+      });
+
       showToast(toastMsg);
 
       setTimeout(() => {
@@ -1699,4 +1741,475 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
   }, 3500);
+}
+
+// =========================================================================
+// OFFICIAL ADMIN PORTAL & DASHBOARD (dinesh@gmail.com / DS385)
+// =========================================================================
+
+const ADMIN_CREDENTIALS = {
+  email: "dinesh@gmail.com",
+  password: "DS385"
+};
+
+// Seed student records for initial state
+const INITIAL_SAMPLE_ADMISSIONS = [
+  {
+    id: "ADM-101",
+    date: "30/10/2026 09:30 AM",
+    name: "எஸ். சிவகுமார் (S. Sivakumaran)",
+    phone: "0771234567",
+    course: "Car (Dual-Control)",
+    slot: "காலை (Morning 7am-10am)",
+    note: "Alto Automatic கார் பயிற்சி. மாலை நேரம் வசதியா என கேட்கப்பட்டது.",
+    status: "New"
+  },
+  {
+    id: "ADM-102",
+    date: "29/10/2026 04:15 PM",
+    name: "டி. பிரியா (T. Priya)",
+    phone: "0778901234",
+    course: "3D Driving Simulator",
+    slot: "மாலை (Evening 3pm-7pm)",
+    note: "ஆரம்ப அச்சம் நீங்க 3D சிமுலேட்டர் டெமோ வகுப்பு கேட்கிறார்.",
+    status: "Contacted"
+  },
+  {
+    id: "ADM-103",
+    date: "28/10/2026 11:20 AM",
+    name: "எம். கபிலன் (M. Kabilan)",
+    phone: "0765432109",
+    course: "Three-Wheeler (Tuk Tuk)",
+    slot: "நண்பகல் (Mid-day 10am-2pm)",
+    note: "முச்சக்கரவண்டி உரிமம். முன்பணம் செலுத்திவிட்டார்.",
+    status: "Confirmed"
+  }
+];
+
+function getStoredAdmissions() {
+  const data = localStorage.getItem("dinesh_admissions");
+  if (!data) {
+    localStorage.setItem("dinesh_admissions", JSON.stringify(INITIAL_SAMPLE_ADMISSIONS));
+    return INITIAL_SAMPLE_ADMISSIONS;
+  }
+  try {
+    return JSON.parse(data);
+  } catch (e) {
+    return INITIAL_SAMPLE_ADMISSIONS;
+  }
+}
+
+function saveAdmissionRecord(record) {
+  const current = getStoredAdmissions();
+  const newRecord = {
+    id: "ADM-" + Math.floor(100 + Math.random() * 900),
+    ...record
+  };
+  current.unshift(newRecord);
+  localStorage.setItem("dinesh_admissions", JSON.stringify(current));
+  
+  // If admin panel is currently open, re-render
+  const adminPanel = document.getElementById("adminPanelModal");
+  if (adminPanel && !adminPanel.classList.contains("hidden")) {
+    renderAdminDashboard();
+  }
+}
+
+let currentAdminFilter = "all";
+let adminClockInterval = null;
+
+function setupAdminPortal() {
+  const signInModal = document.getElementById("adminSignInModal");
+  const adminPanel = document.getElementById("adminPanelModal");
+  const openButtons = document.querySelectorAll(".open-admin-modal");
+  const closeSignInBtn = document.getElementById("closeAdminSignInBtn");
+  const signInForm = document.getElementById("adminSignInForm");
+  const emailInput = document.getElementById("adminEmailInput");
+  const passInput = document.getElementById("adminPassInput");
+  const togglePassBtn = document.getElementById("toggleAdminPassBtn");
+  const errorBox = document.getElementById("adminLoginError");
+  const closePanelBtn = document.getElementById("closeAdminPanelBtn");
+  const logoutBtn = document.getElementById("adminLogoutBtn");
+  const manualAddForm = document.getElementById("adminManualAddForm");
+  const exportCsvBtn = document.getElementById("adminExportCsvBtn");
+  const printBtn = document.getElementById("adminPrintBtn");
+  const searchInput = document.getElementById("adminSearchInput");
+
+  // Open Admin Entry point (either Login Modal or Dashboard)
+  openButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isLoggedIn = sessionStorage.getItem("dinesh_admin_logged") === "true";
+      if (isLoggedIn) {
+        openAdminDashboard();
+      } else {
+        openAdminSignIn();
+      }
+    });
+  });
+
+  function openAdminSignIn() {
+    if (!signInModal) return;
+    if (errorBox) errorBox.classList.add("hidden");
+    if (emailInput && !emailInput.value) emailInput.value = "dinesh@gmail.com";
+    if (passInput) passInput.value = "";
+    signInModal.classList.remove("hidden");
+    signInModal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+    setTimeout(() => { if (passInput) passInput.focus(); }, 100);
+  }
+
+  function closeAdminSignIn() {
+    if (!signInModal) return;
+    signInModal.classList.add("hidden");
+    signInModal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  if (closeSignInBtn) {
+    closeSignInBtn.addEventListener("click", closeAdminSignIn);
+  }
+
+  if (signInModal) {
+    signInModal.addEventListener("click", (e) => {
+      if (e.target === signInModal) closeAdminSignIn();
+    });
+  }
+
+  // Toggle Password Show/Hide
+  if (togglePassBtn && passInput) {
+    togglePassBtn.addEventListener("click", () => {
+      const isPass = passInput.type === "password";
+      passInput.type = isPass ? "text" : "password";
+      togglePassBtn.innerHTML = isPass ? '<i class="fa-solid fa-eye-slash text-sm"></i>' : '<i class="fa-solid fa-eye text-sm"></i>';
+    });
+  }
+
+  // Sign In Form Submission
+  if (signInForm) {
+    signInForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const inputEmail = (emailInput?.value || "").trim().toLowerCase();
+      const inputPass = (passInput?.value || "").trim();
+
+      if (inputEmail === ADMIN_CREDENTIALS.email.toLowerCase() && inputPass === ADMIN_CREDENTIALS.password) {
+        // Successful login
+        sessionStorage.setItem("dinesh_admin_logged", "true");
+        if (errorBox) errorBox.classList.add("hidden");
+        closeAdminSignIn();
+        showToast("வணக்கம் நட. தினேஷ்! நிர்வாகக் கட்டுப்பாட்டகம் திறக்கப்படுகிறது...");
+        setTimeout(() => {
+          openAdminDashboard();
+        }, 300);
+      } else {
+        // Failed login
+        if (errorBox) {
+          errorBox.classList.remove("hidden");
+          const errorText = document.getElementById("adminLoginErrorText");
+          if (errorText) {
+            errorText.textContent = "தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்! (dinesh@gmail.com / DS385)";
+          }
+        }
+      }
+    });
+  }
+
+  // Admin Dashboard Open
+  function openAdminDashboard() {
+    if (!adminPanel) return;
+    adminPanel.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+    renderAdminDashboard();
+    startAdminClock();
+  }
+
+  function closeAdminDashboard() {
+    if (!adminPanel) return;
+    adminPanel.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+    if (adminClockInterval) clearInterval(adminClockInterval);
+  }
+
+  if (closePanelBtn) {
+    closePanelBtn.addEventListener("click", closeAdminDashboard);
+  }
+
+  // Logout
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      if (confirm("நிர்வாகக் கணக்கிலிருந்து வெளியேற விரும்புகிறீர்களா? (Logout from Admin Panel?)")) {
+        sessionStorage.removeItem("dinesh_admin_logged");
+        closeAdminDashboard();
+        showToast("நிர்வாகக் கணக்கிலிருந்து வெற்றிகரமாக வெளியேறியாச்சு (Logged out)");
+      }
+    });
+  }
+
+  // Live Clock
+  function startAdminClock() {
+    const clockEl = document.getElementById("adminClock");
+    if (!clockEl) return;
+    function update() {
+      const now = new Date();
+      clockEl.textContent = now.toLocaleDateString('en-GB') + ' • ' + now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+    }
+    update();
+    if (adminClockInterval) clearInterval(adminClockInterval);
+    adminClockInterval = setInterval(update, 1000);
+  }
+
+  // Tab Switching
+  const tabButtons = document.querySelectorAll(".admin-tab-btn");
+  const tabContents = document.querySelectorAll(".admin-tab-content");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetTab = btn.getAttribute("data-tab");
+      
+      tabButtons.forEach(b => {
+        b.classList.remove("active", "bg-red-600", "text-white");
+        b.classList.add("text-slate-700", "hover:bg-slate-100");
+      });
+      btn.classList.add("active", "bg-red-600", "text-white");
+      btn.classList.remove("text-slate-700", "hover:bg-slate-100");
+
+      tabContents.forEach(content => {
+        if (content.id === targetTab) {
+          content.classList.remove("hidden");
+        } else {
+          content.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Filter Buttons
+  const filterButtons = document.querySelectorAll(".admin-filter-btn");
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => {
+        b.classList.remove("active", "bg-slate-900", "text-white");
+        b.classList.add("bg-slate-100", "text-slate-700");
+      });
+      btn.classList.add("active", "bg-slate-900", "text-white");
+      btn.classList.remove("bg-slate-100", "text-slate-700");
+      currentAdminFilter = btn.getAttribute("data-filter") || "all";
+      renderAdmissionsTable();
+    });
+  });
+
+  // Search filter
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      renderAdmissionsTable();
+    });
+  }
+
+  // Manual Add Student Form Submit
+  if (manualAddForm) {
+    manualAddForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("manualStudentName")?.value || "";
+      const phone = document.getElementById("manualStudentPhone")?.value || "";
+      const course = document.getElementById("manualStudentCourse")?.value || "Car";
+      const slot = document.getElementById("manualStudentSlot")?.value || "Morning";
+      const note = document.getElementById("manualStudentNote")?.value || "";
+
+      saveAdmissionRecord({
+        name,
+        phone,
+        course,
+        slot,
+        note,
+        date: new Date().toLocaleDateString('en-GB') + ' ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+        status: "New"
+      });
+
+      manualAddForm.reset();
+      showToast("புதிய மாணவர் சேர்க்கை வெற்றிகரமாகப் பதிவானது!");
+      
+      // Switch back to Admissions Tab
+      const admissionsTabBtn = document.querySelector('.admin-tab-btn[data-tab="tabAdmissions"]');
+      if (admissionsTabBtn) admissionsTabBtn.click();
+    });
+  }
+
+  // Export to CSV
+  if (exportCsvBtn) {
+    exportCsvBtn.addEventListener("click", () => {
+      const records = getStoredAdmissions();
+      let csv = "ID,Date,Name,Phone,Course,Slot,Status,Note\n";
+      records.forEach(r => {
+        const row = [
+          `"${r.id || ''}"`,
+          `"${r.date || ''}"`,
+          `"${(r.name || '').replace(/"/g, '""')}"`,
+          `"${r.phone || ''}"`,
+          `"${r.course || ''}"`,
+          `"${r.slot || ''}"`,
+          `"${r.status || ''}"`,
+          `"${(r.note || '').replace(/"/g, '""')}"`
+        ];
+        csv += row.join(",") + "\n";
+      });
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `Dinesh_Learners_Admissions_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("CSV கோப்பு பதிவிறக்கம் செய்யப்பட்டது!");
+    });
+  }
+
+  // Print Report
+  if (printBtn) {
+    printBtn.addEventListener("click", () => {
+      window.print();
+    });
+  }
+}
+
+function renderAdminDashboard() {
+  const records = getStoredAdmissions();
+  
+  // Counters
+  const totalCountEl = document.getElementById("statTotalAdmissions");
+  const simCountEl = document.getElementById("statSimulatorAdmissions");
+  const badgeCountEl = document.getElementById("admissionsBadgeCount");
+
+  if (totalCountEl) totalCountEl.textContent = records.length;
+  if (badgeCountEl) badgeCountEl.textContent = records.length;
+
+  const simCount = records.filter(r => (r.course || "").toLowerCase().includes("simul")).length;
+  if (simCountEl) simCountEl.textContent = simCount;
+
+  renderAdmissionsTable();
+}
+
+function renderAdmissionsTable() {
+  const tableBody = document.getElementById("adminAdmissionsTableBody");
+  const emptyState = document.getElementById("adminEmptyState");
+  if (!tableBody) return;
+
+  const records = getStoredAdmissions();
+  const searchInput = document.getElementById("adminSearchInput");
+  const query = (searchInput?.value || "").toLowerCase().trim();
+
+  const filtered = records.filter(r => {
+    // Course filter
+    if (currentAdminFilter !== "all") {
+      if (!(r.course || "").toLowerCase().includes(currentAdminFilter.toLowerCase())) {
+        return false;
+      }
+    }
+    // Search query
+    if (query) {
+      const matchName = (r.name || "").toLowerCase().includes(query);
+      const matchPhone = (r.phone || "").toLowerCase().includes(query);
+      const matchCourse = (r.course || "").toLowerCase().includes(query);
+      if (!matchName && !matchPhone && !matchCourse) return false;
+    }
+    return true;
+  });
+
+  tableBody.innerHTML = "";
+
+  if (filtered.length === 0) {
+    if (emptyState) emptyState.classList.remove("hidden");
+    return;
+  } else {
+    if (emptyState) emptyState.classList.add("hidden");
+  }
+
+  filtered.forEach((r, idx) => {
+    const tr = document.createElement("tr");
+    tr.className = "hover:bg-slate-50 transition-colors";
+
+    // Status pill style
+    let statusClass = "bg-amber-100 text-amber-800 border-amber-300";
+    let statusLabel = "புதியது (New)";
+    if (r.status === "Contacted") {
+      statusClass = "bg-blue-100 text-blue-800 border-blue-300";
+      statusLabel = "தொடர்பு கொள்ளப்பட்டது";
+    } else if (r.status === "Confirmed") {
+      statusClass = "bg-emerald-100 text-emerald-800 border-emerald-300";
+      statusLabel = "சேர்க்கை உறுதி";
+    }
+
+    // Clean phone for whatsapp
+    const cleanPhone = (r.phone || "").replace(/[^0-9]/g, "");
+    let waPhone = cleanPhone;
+    if (waPhone.startsWith("0")) waPhone = "94" + waPhone.substring(1);
+    if (!waPhone.startsWith("94") && waPhone.length === 9) waPhone = "94" + waPhone;
+
+    tr.innerHTML = `
+      <td class="py-3 px-4 text-slate-500 whitespace-nowrap">
+        <span class="font-bold text-slate-800">${r.date || ''}</span>
+        <span class="block text-[10px] text-slate-400">${r.id || ''}</span>
+      </td>
+      <td class="py-3 px-4 font-bold text-slate-900">${r.name || ''}</td>
+      <td class="py-3 px-4 whitespace-nowrap">
+        <a href="tel:${r.phone || ''}" class="font-bold text-blue-600 hover:underline flex items-center gap-1">
+          <i class="fa-solid fa-phone text-[10px]"></i> ${r.phone || ''}
+        </a>
+      </td>
+      <td class="py-3 px-4 font-semibold text-slate-800">${r.course || ''}</td>
+      <td class="py-3 px-4 text-slate-600 text-[11px]">${r.slot || ''}</td>
+      <td class="py-3 px-4 text-slate-500 max-w-xs truncate" title="${r.note || ''}">${r.note || '-'}</td>
+      <td class="py-3 px-4 whitespace-nowrap">
+        <select class="admin-status-select px-2.5 py-1 rounded-full text-[11px] font-bold border ${statusClass} focus:outline-none cursor-pointer" data-id="${r.id}">
+          <option value="New" ${r.status === "New" ? "selected" : ""}>புதியது (New)</option>
+          <option value="Contacted" ${r.status === "Contacted" ? "selected" : ""}>தொடர்பு கொள்ளப்பட்டது</option>
+          <option value="Confirmed" ${r.status === "Confirmed" ? "selected" : ""}>சேர்க்கை உறுதி (Confirmed)</option>
+        </select>
+      </td>
+      <td class="py-3 px-4 text-center whitespace-nowrap">
+        <div class="inline-flex items-center gap-1.5">
+          <a href="https://wa.me/${waPhone}?text=வணக்கம்%20${encodeURIComponent(r.name || '')}!%20டினேஸ்%20லேணர்ஸ்%20(DMT%20DS:385)%20சாரதிப்%20பயிற்சி%20நிலையத்திலிருந்து%20தொடர்புகொள்கிறோம்." target="_blank" class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors" title="WhatsApp Message">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </a>
+          <a href="tel:${r.phone || ''}" class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors" title="Call Student">
+            <i class="fa-solid fa-phone text-xs"></i>
+          </a>
+          <button class="admin-delete-btn w-7 h-7 rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center transition-colors" data-id="${r.id}" title="Delete Record">
+            <i class="fa-solid fa-trash-can text-xs"></i>
+          </button>
+        </div>
+      </td>
+    `;
+    tableBody.appendChild(tr);
+  });
+
+  // Attach status change listener
+  document.querySelectorAll(".admin-status-select").forEach(select => {
+    select.addEventListener("change", (e) => {
+      const id = e.target.getAttribute("data-id");
+      const newVal = e.target.value;
+      const all = getStoredAdmissions();
+      const item = all.find(x => x.id === id);
+      if (item) {
+        item.status = newVal;
+        localStorage.setItem("dinesh_admissions", JSON.stringify(all));
+        showToast("நிலை புதுப்பிக்கப்பட்டது!");
+        renderAdmissionsTable();
+      }
+    });
+  });
+
+  // Attach delete listener
+  document.querySelectorAll(".admin-delete-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const id = btn.getAttribute("data-id");
+      if (confirm("இந்த மாணவர் பதிவை நிச்சயமாக நீக்க விரும்புகிறீர்களா?")) {
+        let all = getStoredAdmissions();
+        all = all.filter(x => x.id !== id);
+        localStorage.setItem("dinesh_admissions", JSON.stringify(all));
+        showToast("பதிவு நீக்கப்பட்டது.");
+        renderAdminDashboard();
+      }
+    });
+  });
 }
