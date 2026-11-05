@@ -280,7 +280,7 @@ const translations = {
     cHoursLabel: "செயற்பாட்டு நேரம் (Operating Hours)",
     cHoursSub: "வாரத்தின் 7 நாட்களும் திறந்திருக்கும்",
     ownerText: "உரிமையாளர்: நட. தினேஷ்",
-    mapLocationText: "கண்டி வீதி • பழைய பூங்கா முன்பாக • YMCA யாழ்ப்பாணம்",
+    mapLocationText: "கண்டி வீதி • பழையபூங்கா முன்பாக • YMCA யாழ்ப்பாணம் (1ம் மாடி)",
     callUsText: "அழைக்க: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "பயிற்சி வாகனங்கள்",
     footerSupport: "மாணவர் உதவிகள்",
@@ -328,7 +328,7 @@ const translations = {
     mSlotOpt4: "வார இறுதி (Weekend Only)",
     mNoteLabel: "மேலதிக விபரங்கள் (Optional)",
     mSubmitBtn: "பதிவை உறுதிசெய்து WhatsApp-ல் அனுப்ப",
-    mFootNote: "நேரில் வர: YMCA கட்டடம், கண்டி வீதி, யாழ்ப்பாணம்."
+    mFootNote: "நேரில் வர: இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழையபூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)"
   },
   
   en: {
@@ -608,7 +608,7 @@ const translations = {
     cHoursLabel: "Operating Hours",
     cHoursSub: "Open 7 Days a Week",
     ownerText: "Proprietor: N. Dinesh",
-    mapLocationText: "Kandy Road • Opposite Old Park • YMCA Jaffna",
+    mapLocationText: "Kandy Road • Opposite Old Park • YMCA Jaffna (1st Floor)",
     callUsText: "Call: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "Training Fleet",
     footerSupport: "Student Resources",
@@ -656,7 +656,7 @@ const translations = {
     mSlotOpt4: "Weekend Only (Sat / Sun)",
     mNoteLabel: "Any Questions / Notes (Optional)",
     mSubmitBtn: "Confirm & Send via WhatsApp",
-    mFootNote: "Visit us at YMCA Building, Kandy Road, Jaffna."
+    mFootNote: "Visit us: No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)"
   },
   
   si: {
@@ -936,7 +936,7 @@ const translations = {
     cHoursLabel: "විවෘත වේලාවන්",
     cHoursSub: "සතියේ දින 7 ම විවෘතයි",
     ownerText: "අයිතිකරු: එන්. දිනේෂ්",
-    mapLocationText: "නුවර පාර • පැරණි උද්‍යානය ඉදිරිපිට • YMCA යාපනය",
+    mapLocationText: "නුවර පාර • පැරණි උද්‍යානය ඉදිරිපිට • YMCA යාපනය (1 වන මහල)",
     callUsText: "අමතන්න: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "පුහුණු පාඨමාලා",
     footerSupport: "ශිෂ්‍ය සහාය",
@@ -984,7 +984,7 @@ const translations = {
     mSlotOpt4: "සති අන්තයේ පමණි",
     mNoteLabel: "අමතර සටහන් (විකල්ප)",
     mSubmitBtn: "තහවුරු කර WhatsApp මගින් එවන්න",
-    mFootNote: "YMCA ගොඩනැගිල්ල, නුවර පාර, යාපනය."
+    mFootNote: "පැමිණෙන්න: අංක 107A, 1/1, නුවර පාර, යාපනය. (පැරණි උද්‍යානය ඉදිරිපිට, YMCA ගොඩනැගිල්ල, 1 වන මහල)"
   }
 };
 
