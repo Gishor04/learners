@@ -20,6 +20,22 @@ interface AwardItem {
   externalLink?: string;
 }
 
+interface AwardCeremonyVideo {
+  id: "bgia" | "imc";
+  tabLabel: string;
+  badgeTa: string;
+  badgeEn: string;
+  badgeSi: string;
+  titleTa: string;
+  titleEn: string;
+  titleSi: string;
+  descTa: string;
+  descEn: string;
+  descSi: string;
+  src: string;
+  poster: string;
+}
+
 interface CommunityVideo {
   id: string;
   labelTa: string;
@@ -38,9 +54,73 @@ interface CommunityVideo {
 export default function AwardsSection() {
   const { lang, t, openEnrollModal } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<AwardItem | null>(null);
-  const [activeCommunityVid, setActiveCommunityVid] = useState<string>("interfaith");
+  const [activeAwardVid, setActiveAwardVid] = useState<"bgia" | "imc">("bgia");
+  const [activeCommunityVid, setActiveCommunityVid] = useState<string>("nallur");
+
+  const awardCeremonyVideos: AwardCeremonyVideo[] = [
+    {
+      id: "bgia",
+      tabLabel: "🏆 BGIA 2026 Gala Video",
+      badgeTa: "🏆 BGIA 2026 சர்வதேச வணிக விருது விழா",
+      badgeEn: "🏆 Business Global International Award Gala",
+      badgeSi: "🏆 BGIA 2026 ජාත්‍යන්තර සම්මාන රාත්‍රිය",
+      titleTa: "Business Global International Award (BGIA 2026) விழா மேடை",
+      titleEn: "Business Global International Award (BGIA 2026) Gala Ceremony",
+      titleSi: "Business Global International Award (BGIA 2026) සම්මාන උළෙල",
+      descTa: "யாழ்ப்பாணம் திவ்யா மஹால் மண்டபத்தில் நடைபெற்ற சர்வதேச BGIA 2026 வணிக விருது விழாவில் சிறந்த தொழில்முனைவு மற்றும் சாரதிப் பயிற்சி சேவைக்காக தினேஷ் அவர்களுக்கு வழங்கப்பட்ட சர்வதேச கௌரவிப்பு நேரடி வீடியோ.",
+      descEn: "Prestigious stage honor presented to Mr. Dinesh at Divya Mahal, Jaffna by the Business Global International Award Organization (BGIA 2026).",
+      descSi: "යාපනය දිව්‍යා මහල් හි පැවති BGIA 2026 ජාත්‍යන්තර සම්මාන උළෙලේදී දිනේෂ් ලර්නර්ස් වෙත පිරිනැමුණු විශේෂ ගෞරව සම්මානය.",
+      src: "/assets/dinesh-bgia-award-ceremony.mp4",
+      poster: "/assets/bgia-global-award-ceremony.jpg"
+    },
+    {
+      id: "imc",
+      tabLabel: "🥇 IMC Merit Award Stage Video",
+      badgeTa: "🥇 International Merit Campus மேடை விழா",
+      badgeEn: "🥇 International Merit Campus Gala Video",
+      badgeSi: "🥇 International Merit Campus සම්මාන උළෙල",
+      titleTa: "International Merit Campus - சமூக சேவகர் விருது மேடை தருணம்",
+      titleEn: "International Merit Award Ceremony - Stage Honor for Mr. Dinesh",
+      titleSi: "International Merit Campus - දිනේෂ් මහතා සම්මානයෙන් පිදුම් ලැබූ අවස්ථාව",
+      descTa: "International Merit Campus பிரம்மாண்ட மேடையில் திரு. தினேஷ் அவர்கள் கலந்துகொண்டு சமூக சேவகர் கௌரவத்தை ஏற்றுக்கொண்ட நேரடி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descEn: "Live stage celebration honoring Mr. Dinesh at the International Merit Campus gala ceremony for outstanding social work.",
+      descSi: "International Merit Campus සම්මාන රාත්‍රියේදී දිනේෂ් මහතා ගෞරව සම්මානයෙන් පිදුම් ලැබූ සජීවී දර්ශනය.",
+      src: "/assets/dinesh-imc-award-ceremony.mp4",
+      poster: "/assets/poster-imc-award-ceremony.jpg"
+    }
+  ];
+
+  const currentAwardVid = awardCeremonyVideos.find((v) => v.id === activeAwardVid) || awardCeremonyVideos[0];
 
   const communityVideos: CommunityVideo[] = [
+    {
+      id: "nallur",
+      labelTa: "🛕 நல்லூர் கார்த்திகை உபயம்",
+      labelEn: "🛕 Nallur Temple Ubayam",
+      labelSi: "🛕 නල්ලූර් කෝවිල් දානය",
+      titleTa: "நல்லூர் கந்தன் 18ம் நாள் கார்த்திகைத் திருவிழா அன்னதான உபயம்",
+      titleEn: "Nallur Kandaswamy Kovil Festival Annadhanam Community Service",
+      titleSi: "නල්ලූර් කන්දස්වාමි කෝවිල් උත්සව ප්‍රජා දානමය සේවාව",
+      descTa: "நல்லூர் கந்தசுவாமி ஆலய கார்த்திகைத் திருவிழாவில் பக்தர்களுக்கான தாகசாந்தி மற்றும் அன்னதான உபயம் வழங்கிய தருணம் (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descEn: "Devotional community service and refreshment distribution during the holy Nallur Kandaswamy Kovil Festival in Jaffna.",
+      descSi: "නල්ලූර් කෝවිල් මංගල්‍යයේදී බැතිමතුන් සඳහා සිදුකළ දානමය සත්කාරය.",
+      src: "/assets/dinesh-nallur-kandhan-community-service.mp4",
+      poster: "/assets/poster-nallur-kandhan.jpg"
+    },
+    {
+      id: "cricket-trophy",
+      labelTa: "🏆 கிரிக்கெட் வெற்றிக்கிண்ணம்",
+      labelEn: "🏆 Cricket Trophy Presentation",
+      labelSi: "🏆 ක්‍රිකට් කුසලාන ප්‍රදානය",
+      titleTa: "யாழ் மாவட்ட கிரிக்கெட் சாம்பியன்ஷிப் வெற்றிக்கிண்ணம் வழங்கல்",
+      titleEn: "Jaffna District Cricket Championship Trophy Presentation on Field",
+      titleSi: "යාපනය ක්‍රිකට් ශූරතාවලියේ ජයග්‍රාහී කුසලාන ප්‍රදානය",
+      descTa: "விளையாட்டு மைதானத்தில் வெற்றிபெற்ற இளம் வீரர்களுக்கு தினேஷ் லேணர்ஸ் சார்பில் சாம்பியன்ஷிப் வெற்றிக்கிண்ணம் வழங்கி கௌரவிக்கப்பட்ட தருணம்.",
+      descEn: "On-field championship trophy presentation by Dinesh Learners celebrating victorious youth cricket teams.",
+      descSi: "ක්‍රීඩාංගනයේදී ජයග්‍රාහී තරුණ ක්‍රීඩකයන්ට කුසලාන ප්‍රදානය කළ අවස්ථාව.",
+      src: "/assets/dinesh-cricket-championship-presentation.mp4",
+      poster: "/assets/poster-cricket-championship.jpg"
+    },
     {
       id: "interfaith",
       labelTa: "🕊️ மதநல்லிணக்க நிகழ்வு",
@@ -56,10 +136,10 @@ export default function AwardsSection() {
       poster: "/assets/poster-interfaith-event.jpg"
     },
     {
-      id: "sports",
-      labelTa: "🏏 கிரிக்கெட் போட்டி அனுசரணை",
-      labelEn: "🏏 Sports Sponsorship",
-      labelSi: "🏏 ක්‍රීඩා අනුග්‍රාහකත්වය",
+      id: "sports-jubilee",
+      labelTa: "🏏 உதய ஒளி கிரிக்கெட் அனுசரணை",
+      labelEn: "🏏 Udhaya Oli Jubilee",
+      labelSi: "🏏 උදය ඔලි සංවත්සරය",
       titleTa: "நாவலடி உதய ஒளி சனசமூக நிலையம் 80வது ஆண்டு கிரிக்கெட் துடுப்பாட்டப் போட்டி",
       titleEn: "Udhaya Oli 80th Jubilee Cricket Tournament Official Sponsorship",
       titleSi: "උදය ඔලි 80 වන සංවත්සර ක්‍රිකට් තරගාවලියේ නිල අනුග්‍රාහකත්වය",
@@ -216,25 +296,53 @@ export default function AwardsSection() {
 
         {/* FEATURE 1: Dedicated Award Ceremony Stage Video Player */}
         <div className="mb-14 bg-gradient-to-b from-slate-900 to-slate-950 rounded-3xl border border-amber-500/30 p-4 sm:p-6 lg:p-8 shadow-2xl shadow-amber-500/5">
+          {/* Award Video Selector Tabs */}
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-amber-500/20">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+              <span className="text-xs font-extrabold uppercase tracking-wider text-amber-400">
+                {lang === "ta" ? "அதிகாரபூர்வ விருது விழா வீடியோக்கள்" : lang === "si" ? "නිල සම්මාන උළෙල වීඩියෝ" : "Official Award Gala Videos"}
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {awardCeremonyVideos.map((av) => (
+                <button
+                  key={av.id}
+                  onClick={() => setActiveAwardVid(av.id)}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+                    activeAwardVid === av.id
+                      ? "bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 shadow-lg shadow-amber-500/20"
+                      : "bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700"
+                  }`}
+                >
+                  <i className="fa-solid fa-trophy text-[10px]"></i>
+                  <span>{av.tabLabel}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Video Player Box */}
             <div className="lg:col-span-7">
               <div className="relative rounded-2xl overflow-hidden aspect-video bg-black border border-amber-500/40 shadow-2xl group">
                 <video
+                  key={currentAwardVid.src}
                   controls
                   playsInline
                   preload="metadata"
-                  poster="/assets/bgia-global-award-ceremony.jpg"
+                  poster={currentAwardVid.poster}
                   className="w-full h-full object-contain bg-black"
                 >
-                  <source src="/assets/dinesh-bgia-award-ceremony.mp4" type="video/mp4" />
+                  <source src={currentAwardVid.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
 
                 <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-amber-500/40 text-[11px] font-extrabold text-amber-300 flex items-center gap-1.5 pointer-events-none">
                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                  <span>{t.awardVideoBadge}</span>
+                  <span>{lang === "ta" ? currentAwardVid.badgeTa : lang === "si" ? currentAwardVid.badgeSi : currentAwardVid.badgeEn}</span>
                 </div>
               </div>
             </div>
@@ -242,15 +350,15 @@ export default function AwardsSection() {
             {/* Video Details Description */}
             <div className="lg:col-span-5 space-y-5">
               <div className="inline-block bg-amber-500/20 text-amber-300 px-3 py-1 rounded-xl text-xs font-black border border-amber-500/30">
-                🏆 Stage Ceremony • Divya Mahal, Jaffna
+                🏆 Stage Gala Ceremony
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-black text-white font-heading leading-tight">
-                {t.awardVideoTitle}
+                {lang === "ta" ? currentAwardVid.titleTa : lang === "si" ? currentAwardVid.titleSi : currentAwardVid.titleEn}
               </h3>
 
               <p className="text-slate-300 text-sm leading-relaxed">
-                {t.awardVideoDesc}
+                {lang === "ta" ? currentAwardVid.descTa : lang === "si" ? currentAwardVid.descSi : currentAwardVid.descEn}
               </p>
 
               <div className="space-y-3 pt-2">
@@ -259,8 +367,8 @@ export default function AwardsSection() {
                     <i className="fa-solid fa-award"></i>
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-white">Business Global International Award</h5>
-                    <p className="text-[11px] text-slate-400">யாழ்ப்பாணத்தில் தலைசிறந்த தொழில் ஆளுமைக்கான சர்வதேச அங்கீகாரம்.</p>
+                    <h5 className="text-xs font-bold text-white">Verified Excellence Award</h5>
+                    <p className="text-[11px] text-slate-400">யாழ்ப்பாணத்தில் தலைசிறந்த தொழில் ஆளுமை மற்றும் பொதுநல சேவைக்கான உயரிய அங்கீகாரம்.</p>
                   </div>
                 </div>
 
@@ -270,7 +378,7 @@ export default function AwardsSection() {
                   </div>
                   <div>
                     <h5 className="text-xs font-bold text-white">Dedicated Community Service</h5>
-                    <p className="text-[11px] text-slate-400">இலவச DMT மருத்துவம் மற்றும் பொது மக்கள் சேவைகளுக்கான விசேட கௌரவிப்பு.</p>
+                    <p className="text-[11px] text-slate-400">இலவச DMT மருத்துவம், இளைஞர் விளையாட்டு அனுசரணை மற்றும் மதநல்லிணக்க பணிகள்.</p>
                   </div>
                 </div>
               </div>
@@ -318,7 +426,7 @@ export default function AwardsSection() {
                 <button
                   key={cv.id}
                   onClick={() => setActiveCommunityVid(cv.id)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                     activeCommunityVid === cv.id
                       ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black shadow-lg"
                       : "bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700"

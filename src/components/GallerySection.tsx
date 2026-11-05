@@ -1,10 +1,42 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function GallerySection() {
   const { lang, t } = useLanguage();
+  const [selectedPracticeVid, setSelectedPracticeVid] = useState<"exam" | "fleet">("exam");
+
+  const practiceVideos = {
+    exam: {
+      src: "/assets/dinesh-practical-exam-pass-students.mp4",
+      poster: "/assets/poster-practical-exam-pass.jpg",
+      badgeTa: "🎉 செய்முறைப் பரீட்சை வெற்றி • Trial Pass Batch",
+      badgeEn: "🎉 Practical Trial Exam Passing Batch",
+      badgeSi: "🎉 ප්‍රායෝගික පරීක්ෂණ සමත් සිසුන්",
+      titleTa: "செய்முறைப் பரீட்சையில் தோற்றிய மாணவர்கள் வெற்றித் தருணம்",
+      titleEn: "Dinesh Learners Candidates Passing Practical Driving Trials",
+      titleSi: "ප්‍රායෝගික රියදුරු පරීක්ෂණය සාර්ථකව සමත් වූ සිසුන්",
+      descTa: "தினேஷ் லேணர்ஸ் செய்முறைப் பரீட்சையில் தோற்றி அனுமதிப்பத்திரம் பெற்ற மாணவர்கள் மற்றும் பயிற்றுநர்களின் வாழ்த்துத் தருணம் (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descEn: "Celebration of our students successfully passing the DMT practical driving examination with confidence.",
+      descSi: "DMT ප්‍රායෝගික රියදුරු පරීක්ෂණය සාර්ථකව සමත් වූ සිසුන්ගේ සතුටුදායක අවස්ථාව."
+    },
+    fleet: {
+      src: "/assets/dinesh-learners-training-video.mp4",
+      poster: "/assets/real-van.jpg",
+      badgeTa: "🚗 வாகனப் பயிற்சி • Live Road Practice",
+      badgeEn: "🚗 Fleet Practical Road Training",
+      badgeSi: "🚗 ප්‍රායෝගික මාර්ග පුහුණුව",
+      titleTa: "நேரடி வீதிப் பயிற்சி மற்றும் அகாதமி வகுப்புகள்",
+      titleEn: "Practical Road Driving and Dual-Control Fleet Coaching",
+      titleSi: "ද්විත්ව පාලන වාහන මගින් සැබෑ මාර්ග පුහුණුව",
+      descTa: "இரட்டை பிரேக் கொண்ட வாகனங்கள் மூலம் அனுபவமிக்க பயிற்றுநர்களின் வழிகாட்டலில் பாதுகாப்பான பயிற்சி.",
+      descEn: "Comprehensive practical road training ensuring student safety, clutch mastery, and highway confidence.",
+      descSi: "පළපුරුදු උපදේශකවරුන් යටතේ ආරක්ෂිත මාර්ග පුහුණුව."
+    }
+  };
+
+  const currentVid = practiceVideos[selectedPracticeVid];
 
   return (
     <section id="gallery" className="py-16 sm:py-24 bg-white relative">
@@ -28,29 +60,57 @@ export default function GallerySection() {
           {/* Video: Practical Academy Road Training Video Player */}
           <div className="md:col-span-2 bg-slate-900 rounded-3xl overflow-hidden border border-red-500/40 shadow-xl group hover-glow-red transition-all flex flex-col">
             
+            {/* Quick Toggle for Practical Videos */}
+            <div className="p-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between flex-wrap gap-2">
+              <span className="text-xs font-bold text-red-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-circle-play text-red-500"></i>
+                <span>{lang === "ta" ? currentVid.badgeTa : lang === "si" ? currentVid.badgeSi : currentVid.badgeEn}</span>
+              </span>
+
+              <div className="flex gap-1.5 text-[11px] font-bold">
+                <button
+                  onClick={() => setSelectedPracticeVid("exam")}
+                  className={`px-3 py-1 rounded-lg transition-all ${
+                    selectedPracticeVid === "exam" ? "bg-red-600 text-white shadow" : "bg-slate-800 text-slate-400 hover:text-white"
+                  }`}
+                >
+                  🎉 {lang === "ta" ? "பரீட்சை வெற்றி" : "Exam Pass Batch"}
+                </button>
+                <button
+                  onClick={() => setSelectedPracticeVid("fleet")}
+                  className={`px-3 py-1 rounded-lg transition-all ${
+                    selectedPracticeVid === "fleet" ? "bg-red-600 text-white shadow" : "bg-slate-800 text-slate-400 hover:text-white"
+                  }`}
+                >
+                  🚗 {lang === "ta" ? "வீதிப் பயிற்சி" : "Road Practice"}
+                </button>
+              </div>
+            </div>
+
             <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
               <video
+                key={currentVid.src}
                 controls
                 playsInline
                 preload="metadata"
-                poster="/assets/simulator-live-training.jpg"
+                poster={currentVid.poster}
                 className="w-full h-full object-contain bg-black"
               >
-                <source src="/assets/dinesh-learners-training-video.mp4" type="video/mp4" />
+                <source src={currentVid.src} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 pointer-events-none">
+              <span className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1.5 pointer-events-none">
                 <i className="fa-solid fa-video"></i>
-                <span>{t.galleryVideoBadge}</span>
+                <span>{lang === "ta" ? currentVid.badgeTa : lang === "si" ? currentVid.badgeSi : currentVid.badgeEn}</span>
               </span>
             </div>
 
             <div className="p-4 flex-1 flex flex-col justify-between bg-slate-900 text-white">
               <h4 className="font-extrabold text-sm sm:text-base text-white">
-                {t.galleryVideoCaption}
+                {lang === "ta" ? currentVid.titleTa : lang === "si" ? currentVid.titleSi : currentVid.titleEn}
               </h4>
               <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                {t.galleryVideoSub}
+                {lang === "ta" ? currentVid.descTa : lang === "si" ? currentVid.descSi : currentVid.descEn}
               </p>
             </div>
           </div>
