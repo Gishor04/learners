@@ -114,7 +114,7 @@ export default function SimulatorSection() {
                   playsInline
                   autoPlay={false}
                   preload="metadata"
-                  poster="/assets/simulator-live-training.jpg"
+                  poster="/assets/dinesh-3d-girl-simulator-poster.jpg"
                   className="w-full h-full object-contain bg-black"
                 >
                   <source src={simVideo.src} type="video/mp4" />
