@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function SimulatorSection() {
   const { lang, t, openEnrollModal } = useLanguage();
-  const [activeVideo, setActiveVideo] = useState<"girl" | "award" | "clip2" | "clip3" | "clip4" | "tour">("girl");
+  const [activeVideo, setActiveVideo] = useState<"girl" | "clip2" | "clip3" | "clip4" | "tour">("girl");
 
   const videoList = [
     {
@@ -19,18 +19,6 @@ export default function SimulatorSection() {
       descTa: "கணினி 3D சிமுலேட்டரில் பெண் மாணவர் பயமின்றி ஸ்டீயரிங் மற்றும் கியர் சமநிலையை கற்கும் அசல் பயிற்சி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
       descEn: "Live showcase of a student comfortably operating steering and gear shifting inside our 3D simulator rig.",
       descSi: "අපගේ 3D සිමියුලේටරය තුළ සිසුවියක රිය පැදවීමේ මුලික කරුණු ප්‍රගුණ කරන ආකාරය."
-    },
-    {
-      id: "award" as const,
-      tabLabel: "🏆 BGIA Award Video",
-      titleTa: "🏆 BGIA 2026 சர்வதேச வணிக விருது விழா (Global Award Video)",
-      titleEn: "🏆 Business Global International Award (BGIA 2026) Ceremony",
-      titleSi: "🏆 BGIA 2026 ජාත්‍යන්තර සම්මාන උළෙල",
-      badge: "International Award 2026",
-      src: "/assets/dinesh-global-award-video.mp4",
-      descTa: "தினேஷ் லேணர்ஸ் மற்றும் ரியல் எஸ்டேட் நிறுவனத்தின் சிறந்த சேவைக்காக வழங்கப்பட்ட சர்வதேச BGIA 2026 கௌரவிப்பு விழா நேரடி வீடியோ.",
-      descEn: "Prestigious recognition from the Business Global International Award Organization (BGIA 2026) honoring Dinesh Learners.",
-      descSi: "දිනේෂ් ලර්නර්ස් සහ රියල් එස්ටේට් ආයතනය වෙත පිරිනැමුණු BGIA 2026 ජාත්‍යන්තර විශිෂ්ටතා සම්මානය."
     },
     {
       id: "clip2" as const,
@@ -233,12 +221,12 @@ export default function SimulatorSection() {
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div className="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">
                 <img
-                  src="/assets/bgia-global-award-ceremony.jpg"
-                  alt="BGIA 2026 Business Global International Award"
+                  src="/assets/simulator-live-training.jpg"
+                  alt="3D Simulator Live Training"
                   className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute bottom-1 left-2 text-[10px] bg-amber-500 font-black text-slate-950 px-2 py-0.5 rounded shadow">
-                  🏆 BGIA Award
+                <span className="absolute bottom-1 left-2 text-[10px] bg-cyan-500 font-black text-slate-950 px-2 py-0.5 rounded shadow">
+                  🎮 Live Simulator
                 </span>
               </div>
               <div className="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">

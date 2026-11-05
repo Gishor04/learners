@@ -7,6 +7,7 @@ import CustomerNotice from "@/components/CustomerNotice";
 import ZeroExperience from "@/components/ZeroExperience";
 import TrainingFleet from "@/components/TrainingFleet";
 import SimulatorSection from "@/components/SimulatorSection";
+import AwardsSection from "@/components/AwardsSection";
 import GallerySection from "@/components/GallerySection";
 import FeeCalculator from "@/components/FeeCalculator";
 import RoadSignsQuiz from "@/components/RoadSignsQuiz";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <ZeroExperience />
       <TrainingFleet />
       <SimulatorSection />
+      <AwardsSection />
       <GallerySection />
       <FeeCalculator />
       <RoadSignsQuiz />

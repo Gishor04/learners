@@ -123,6 +123,12 @@ export default function Header() {
               </span>
               <span>{t.navSimulator}</span>
             </a>
+            <a
+              href="#awards"
+              className="hover:text-amber-600 transition-colors flex items-center gap-1 text-amber-700 bg-amber-50 hover:bg-amber-100 px-2 py-0.5 rounded-lg border border-amber-200/80 font-bold"
+            >
+              <span>🏆 {t.navAwards}</span>
+            </a>
             <a href="#gallery" className="hover:text-red-600 transition-colors">
               {t.navGallery}
             </a>
@@ -270,6 +276,13 @@ export default function Header() {
                 className="hover:text-red-600"
               >
                 {t.navSimulator}
+              </a>
+              <a
+                href="#awards"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-amber-700 font-bold hover:text-amber-800 flex items-center gap-1.5 bg-amber-50 px-2 py-1 rounded-lg border border-amber-200"
+              >
+                <span>🏆 {t.navAwards}</span>
               </a>
               <a
                 href="#gallery"
