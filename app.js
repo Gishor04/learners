@@ -13,6 +13,7 @@ const translations = {
     brandTitle: "தினேஷ் லேணர்ஸ்",
     brandSubtitle: "தினேஷ் சாரதிப் பயிற்சி நிலையம் • யாழ்ப்பாணம் (DMT: DS:385)",
     navHome: "முகப்பு",
+    navNotice: "விசேட விபரம்",
     navZeroExp: "பயிற்சி சிறப்பம்சம்",
     navCourses: "பயிற்சி வாகனங்கள்",
     navSimulator: "சிமுலேட்டர் நுட்பம்",
@@ -24,6 +25,32 @@ const translations = {
     navContact: "தொடர்பு",
     btnCall: "அழைக்க: 077 9227 102",
     btnEnroll: "இப்போதே பதிவு செய்",
+    
+    // Front Customer Announcement & Special Details (User Request)
+    heroNoticePill: "🚗 அன்பார்ந்த வாடிக்கையாளர் விசேட அறிவித்தல்",
+    noticeBadge: "விசேட அறிவித்தல் • SPECIAL NOTICE",
+    noticeGreeting: "🚗 டினேஸ் லேணர்ஸ் யாழ்ப்பாணம் அன்பார்ந்த வாடிக்கையாரே!",
+    noticeSub: "இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!",
+    noticeTechTitle: "விசேட தொழில்நுட்ப பயிற்சி",
+    noticeTechDesc: "இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!",
+    noticeExamTitle: "பரீட்சை விசேட ஒழுங்குபடுத்தல்கள்",
+    noticeExamDesc: "பரீட்சை எழுத முடியாதவர்களுக்கு விசேட ஒழுங்கு படுத்தல்கள்.",
+    noticeMedTitle: "மருத்துவ சான்றிதழ் உதவி",
+    noticeMedDesc: "மருத்துவ சான்றுதலுக்கான ஒழுங்கு படுத்தல்கள்.",
+    noticeInstallmentTitle: "தவணை முறை கட்டண வசதி",
+    noticeInstallmentDesc: "கட்டணங்கள் தவனை முறையில் செலுத்தும் வசதி!",
+    noticeContactText: "🚗 TP. 0779227102 (whatsapp) தொடர்பு கொள்ளவும். நன்றி🙏",
+    noticeWaBtn: "077 9227 102 (WhatsApp)",
+    noticeCallBtn: "077 9227 102",
+    noticeReTag: "ஒரே முகவரியில் ரியல் எஸ்டேட்",
+    noticeReTitle: "டினேஸ் ரியல் எஸ்டேட்: காணி, வீடு வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள் ஒரே முகவரியில்!",
+    noticeReDesc: "டினேஸ் ரியல் எஸ்டேட் காணி, வீடு வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள் ஒரே முகவரியில் TP. 0779227102.",
+    noticeAddressLabel: "முகவரி:",
+    noticeAddressText: "இல -107A1/1 கண்டி வீதி கச்சேரிடி பழைய பூங்கா முன்பா 1ம் மாடி யாழ்",
+    noticeThankYou: "நன்றி🙏",
+    btnNoticeRe: "ரியல் எஸ்டேட் விபரம்",
+    modalNoticeTitle: "🚗 டினேஸ் லேணர்ஸ் விசேட அறிவித்தல்",
+    modalNoticeClose: "மூடுக",
     
     // Hero Section
     heroPill: "யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்",
@@ -309,7 +336,7 @@ const translations = {
     rePhoneLabel: "தொடர்பு எண்கள்:",
     rePhoneValue: "021 4327 102 / 077 9227 102",
     reAddressLabel: "முகவரி:",
-    reAddressValue: "இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழையபூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)",
+    reAddressValue: "இல -107A1/1 கண்டி வீதி, கச்சேரிடி, பழைய பூங்கா முன்பா, 1ம் மாடி, யாழ். TP: 077 9227 102",
     reBtnWa: "WhatsApp-ல் தொடர்பு கொள்ள",
     reBtnCall: "அழைக்க: 077 9227 102",
     reFooterBrand: "தினேஷ் ரியல் எஸ்டேட்",
@@ -328,7 +355,7 @@ const translations = {
     mSlotOpt4: "வார இறுதி (Weekend Only)",
     mNoteLabel: "மேலதிக விபரங்கள் (Optional)",
     mSubmitBtn: "பதிவை உறுதிசெய்து WhatsApp-ல் அனுப்ப",
-    mFootNote: "நேரில் வர: இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழையபூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)"
+    mFootNote: "நேரில் வர: இல -107A1/1 கண்டி வீதி, கச்சேரிடி, பழைய பூங்கா முன்பா, 1ம் மாடி, யாழ். TP: 077 9227 102"
   },
   
   en: {
@@ -341,6 +368,7 @@ const translations = {
     brandTitle: "Dinesh Learners",
     brandSubtitle: "Dinesh Driving School • Jaffna (DMT: DS:385)",
     navHome: "Home",
+    navNotice: "Special Notice",
     navZeroExp: "Beginner Training",
     navCourses: "Vehicles & Courses",
     navSimulator: "3D Simulator",
@@ -352,6 +380,32 @@ const translations = {
     navContact: "Contact",
     btnCall: "Call: 077 9227 102",
     btnEnroll: "Enroll Now",
+    
+    // Front Customer Announcement & Special Details (User Request)
+    heroNoticePill: "🚗 Special Notice | Dear Valued Customers!",
+    noticeBadge: "SPECIAL NOTICE & ANNOUNCEMENT",
+    noticeGreeting: "🚗 Dear Valued Customers of Dinesh Learners Jaffna!",
+    noticeSub: "First time in Sri Lanka: Driving training equipped with advanced modern technology!",
+    noticeTechTitle: "Advanced Tech Driving Training",
+    noticeTechDesc: "For the first time in Sri Lanka, Driving Training equipped with special modern technology!",
+    noticeExamTitle: "Special Exam Assistance",
+    noticeExamDesc: "Special arrangements and guidance for those unable to write exams.",
+    noticeMedTitle: "Medical Certificate Assistance",
+    noticeMedDesc: "Full arrangements and guidance for Medical Certificates.",
+    noticeInstallmentTitle: "Easy Installment Facility",
+    noticeInstallmentDesc: "Convenient payment facility with easy installment options!",
+    noticeContactText: "🚗 TP: 0779227102 (WhatsApp) - Please feel free to contact us. Thank you!🙏",
+    noticeWaBtn: "077 9227 102 (WhatsApp)",
+    noticeCallBtn: "077 9227 102",
+    noticeReTag: "Real Estate at the Same Address",
+    noticeReTitle: "Dinesh Real Estate: Lands, Houses & Businesses - Buy & Sell with Confidence!",
+    noticeReDesc: "Dinesh Real Estate: Lands, Houses, and Businesses - Buy and Sell with trust under one single address. TP. 0779227102.",
+    noticeAddressLabel: "Address:",
+    noticeAddressText: "No. 107A1/1, Kandy Road, Kachcheriyadi, Opposite Old Park, 1st Floor, Jaffna",
+    noticeThankYou: "Thank you!🙏",
+    btnNoticeRe: "Explore Real Estate",
+    modalNoticeTitle: "🚗 Dinesh Learners Special Announcement",
+    modalNoticeClose: "Close",
     
     // Hero Section
     heroPill: "Jaffna's Leading Modern Driving Academy",
@@ -637,7 +691,7 @@ const translations = {
     rePhoneLabel: "Phone Lines:",
     rePhoneValue: "021 4327 102 / 077 9227 102",
     reAddressLabel: "Office Address:",
-    reAddressValue: "No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)",
+    reAddressValue: "No. 107A1/1, Kandy Road, Kachcheriyadi, Opposite Old Park, 1st Floor, Jaffna. TP: 077 9227 102",
     reBtnWa: "Chat with Real Estate Desk",
     reBtnCall: "Call: 077 9227 102",
     reFooterBrand: "Dinesh Real Estate",
@@ -656,7 +710,7 @@ const translations = {
     mSlotOpt4: "Weekend Only (Sat / Sun)",
     mNoteLabel: "Any Questions / Notes (Optional)",
     mSubmitBtn: "Confirm & Send via WhatsApp",
-    mFootNote: "Visit us: No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)"
+    mFootNote: "Visit us: No. 107A1/1, Kandy Road, Kachcheriyadi, Opposite Old Park, 1st Floor, Jaffna. TP: 077 9227 102"
   },
   
   si: {
@@ -669,6 +723,7 @@ const translations = {
     brandTitle: "දිනේෂ් රියදුරු පාසල",
     brandSubtitle: "දිනේෂ් ලර්නර්ස් • යාපනය (DMT: DS:385)",
     navHome: "මුල් පිටුව",
+    navNotice: "විශේෂ විස්තර",
     navZeroExp: "ආරම්භක පුහුණුව",
     navCourses: "පුහුණු පාඨමාලා",
     navSimulator: "3D සිමියුලේටරය",
@@ -680,6 +735,32 @@ const translations = {
     navContact: "සම්බන්ධ වන්න",
     btnCall: "අමතන්න: 077 9227 102",
     btnEnroll: "දැන්ම ලියාපදිංචි වන්න",
+    
+    // Front Customer Announcement & Special Details (User Request)
+    heroNoticePill: "🚗 විශේෂ නිවේදනය | හිතවත් පාරිභෝගිකයිනි!",
+    noticeBadge: "විශේෂ නිවේදනය • SPECIAL NOTICE",
+    noticeGreeting: "🚗 දිනේෂ් ලර්නර්ස් යාපනය - හිතවත් පාරිභෝගිකයිනි!",
+    noticeSub: "ශ්‍රී ලංකාවේ ප්‍රථම වතාවට නවීන තාක්ෂණය සහිත විශේෂ රියදුරු පුහුණුව!",
+    noticeTechTitle: "විශේෂ තාක්ෂණික රියදුරු පුහුණුව",
+    noticeTechDesc: "ශ්‍රී ලංකාවේ ප්‍රථම වතාවට විශේෂ තාක්ෂණය සහිත රියදුරු පුහුණුව!",
+    noticeExamTitle: "විභාග විශේෂ විධිවිධාන",
+    noticeExamDesc: "විභාග ලිවීමට අපහසු අය සඳහා විශේෂ විධිවිධාන හා මගපෙන්වීම්.",
+    noticeMedTitle: "වෛද්‍ය සහතික පහසුකම්",
+    noticeMedDesc: "වෛද්‍ය සහතික ලබාගැනීම සඳහා විශේෂ කටයුතු සම්පාදනය.",
+    noticeInstallmentTitle: "වාරික ක්‍රමයට ගෙවීමේ පහසුකම",
+    noticeInstallmentDesc: "ගාස්තු පහසු වාරික ක්‍රමයට ගෙවීමේ විශේෂ පහසුකම!",
+    noticeContactText: "🚗 දුරකථන: 0779227102 (WhatsApp) මගින් සම්බන්ධ වන්න. ස්තූතියි!🙏",
+    noticeWaBtn: "077 9227 102 (WhatsApp)",
+    noticeCallBtn: "077 9227 102",
+    noticeReTag: "එකම ලිපිනයෙන් දේපළ වෙළඳාම",
+    noticeReTitle: "දිනේෂ් දේපළ වෙළඳාම: ඉඩම්, නිවාස, ව්‍යාපාර මිලදී ගැනීමට සහ විකිණීමට විශ්වාසයෙන් පියනගන්න!",
+    noticeReDesc: "දිනේෂ් දේපළ වෙළඳාම: ඉඩම්, නිවාස, ව්‍යාපාර මිලදී ගැනීමට සහ විකිණීමට විශ්වාසයෙන් පියනගන්න එකම ලිපිනයෙන් TP. 0779227102.",
+    noticeAddressLabel: "ලිපිනය:",
+    noticeAddressText: "අංක 107A1/1, නුවර පාර, කච්චේරියඩිය, පැරණි උද්‍යානය ඉදිරිපිට, 1 වන මහල, යාපනය",
+    noticeThankYou: "ස්තූතියි!🙏",
+    btnNoticeRe: "දේපළ වෙළඳාම බලන්න",
+    modalNoticeTitle: "🚗 දිනේෂ් රියදුරු පාසලේ විශේෂ නිවේදනය",
+    modalNoticeClose: "වසන්න",
     
     // Hero Section
     heroPill: "යාපනයේ අංක 1 නවීන රියදුරු පුහුණු පාසල",
@@ -965,7 +1046,7 @@ const translations = {
     rePhoneLabel: "දුරකථන අංක:",
     rePhoneValue: "021 4327 102 / 077 9227 102",
     reAddressLabel: "ලිපිනය:",
-    reAddressValue: "අංක 107A, 1/1, නුවර පාර, යාපනය. (පැරණි උද්‍යානය ඉදිරිපිට, YMCA ගොඩනැගිල්ල, 1 වන මහල)",
+    reAddressValue: "අංක 107A1/1, නුවර පාර, කච්චේරියඩිය, පැරණි උද්‍යානය ඉදිරිපිට, 1 වන මහල, යාපනය. දුරකථන: 077 9227 102",
     reBtnWa: "WhatsApp මගින් සම්බන්ධ වන්න",
     reBtnCall: "අමතන්න: 077 9227 102",
     reFooterBrand: "දිනේෂ් රියල් එස්ටේට්",
@@ -980,11 +1061,11 @@ const translations = {
     mSlotLabel: "කැමති වේලාව",
     mSlotOpt1: "උදෑසන (පෙ.ව. 7:00 - පෙ.ව. 10:00)",
     mSlotOpt2: "දවල් (පෙ.ව. 10:00 - ප.ව. 2:00)",
-    mSlotOpt3: "සවස (ප.ව. 3:00 - ප.ව. 7:00)",
+    mSlotOpt3: "සවස (පව. 3:00 - ප.ව. 7:00)",
     mSlotOpt4: "සති අන්තයේ පමණි",
     mNoteLabel: "අමතර සටහන් (විකල්ප)",
     mSubmitBtn: "තහවුරු කර WhatsApp මගින් එවන්න",
-    mFootNote: "පැමිණෙන්න: අංක 107A, 1/1, නුවර පාර, යාපනය. (පැරණි උද්‍යානය ඉදිරිපිට, YMCA ගොඩනැගිල්ල, 1 වන මහල)"
+    mFootNote: "පැමිණෙන්න: අංක 107A1/1, නුවර පාර, කච්චේරියඩිය, පැරණි උද්‍යානය ඉදිරිපිට, 1 වන මහල, යාපනය. දුරකථන: 077 9227 102"
   }
 };
 
@@ -1144,6 +1225,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupQuiz();
   setupFilterTabs();
   setupEnrollModal();
+  setupNoticeModal();
   setupMobileMenu();
   setupSmoothScrolling();
   applyTranslations(); // Set initial language state
@@ -1441,6 +1523,40 @@ function setupFilterTabs() {
         }
       });
     });
+  });
+}
+
+// Special Customer Announcement Modal
+function setupNoticeModal() {
+  const modal = document.getElementById("noticeModal");
+  const openButtons = document.querySelectorAll(".open-notice-modal");
+  const closeButtons = document.querySelectorAll(".close-notice-modal");
+
+  if (!modal) return;
+
+  openButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    });
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    });
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
   });
 }
 
