@@ -1,5 +1,8 @@
-/* Dinesh Learners & Driving School - Modern UI Styles with Clean Trilingual Typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --primary: #DC2626;
@@ -9,7 +12,6 @@
   --emerald: #10B981;
 }
 
-/* Global Device & Layout Reset for Seamless Mobile & Desktop Experience */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -69,7 +71,6 @@ html[lang="si"] .font-heading, body.lang-si .font-heading {
   overflow-wrap: break-word;
 }
 
-/* Strictly enforce no underlines on decorative elements */
 .no-underline {
   text-decoration: none !important;
 }
@@ -160,11 +161,7 @@ html[lang="si"] .font-heading, body.lang-si .font-heading {
   background: #dc2626;
 }
 
-/* ==========================================================================
-   MOBILE & TOUCH ENHANCEMENTS (Android & iPhone / iOS Optimization)
-   ========================================================================== */
-
-/* 1. Prevent iOS Safari auto-zoom on input focus (minimum 16px font-size on mobile) */
+/* Mobile & Touch Enhancements */
 @media screen and (max-width: 768px) {
   input[type="text"],
   input[type="tel"],
@@ -176,7 +173,6 @@ html[lang="si"] .font-heading, body.lang-si .font-heading {
   }
 }
 
-/* 2. iPhone Safe Area Support (Notches, Dynamic Island & Home Bar) */
 @supports (padding: max(0px)) {
   .safe-header {
     padding-top: max(0px, env(safe-area-inset-top));
@@ -192,21 +188,10 @@ html[lang="si"] .font-heading, body.lang-si .font-heading {
   }
 }
 
-/* 3. Smooth touch scrolling on mobile modals and horizontal tables */
 .overflow-y-auto, .overflow-x-auto {
   -webkit-overflow-scrolling: touch;
 }
 
-/* 4. Touch-friendly target sizing */
 button, a, input, select {
   touch-action: manipulation;
-}
-
-/* 5. Mobile announcement bar ticker animation if text is long */
-@media screen and (max-width: 640px) {
-  .mobile-ticker-wrap {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
 }

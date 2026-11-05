@@ -26,16 +26,25 @@
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structure (Next.js App Router)
 
 ```
 learners/
-├── index.html              # Main HTML5 Homepage (Tailwind CSS, FontAwesome, Google Fonts)
-├── app.js                  # 100% Trilingual Dictionary (ta, en, si), Fee Calculator & Quiz Logic
-├── style.css               # Glassmorphism, animations & typography styles
-├── vercel.json             # Vercel deployment configuration
-├── assets/
-│   └── banner.jpg          # High-resolution official Dinesh Learners banner
+├── public/
+│   └── assets/             # High-resolution official Dinesh Learners banners, real photos & videos
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx      # Root HTML layout with Google Fonts & FontAwesome CDN
+│   │   ├── page.tsx        # Next.js Root Homepage composing all sections & modals
+│   │   └── globals.css     # Tailwind CSS directives, glassmorphism & device responsiveness
+│   ├── components/         # Modular React components (Header, Hero, Calculator, Quiz, Fleet, Modals)
+│   ├── context/            # React LanguageContext with trilingual state & modal triggers
+│   └── data/               # 100% Trilingual Dictionary (ta, en, si), Base Prices & Quiz Questions
+├── next.config.mjs         # Next.js configuration
+├── tailwind.config.js      # Custom theme colors & font families
+├── postcss.config.js       # Tailwind PostCSS configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Node.js dependencies & build scripts
 └── README.md               # Project documentation
 ```
 
