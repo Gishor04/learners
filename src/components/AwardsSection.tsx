@@ -22,7 +22,9 @@ interface AwardItem {
 
 interface AwardCeremonyVideo {
   id: "bgia" | "imc";
-  tabLabel: string;
+  tabTa: string;
+  tabEn: string;
+  tabSi: string;
   badgeTa: string;
   badgeEn: string;
   badgeSi: string;
@@ -60,7 +62,9 @@ export default function AwardsSection() {
   const awardCeremonyVideos: AwardCeremonyVideo[] = [
     {
       id: "bgia",
-      tabLabel: "🏆 BGIA 2026 Gala Video",
+      tabTa: "🏆 BGIA 2026 விருது விழா",
+      tabEn: "🏆 BGIA 2026 Gala Video",
+      tabSi: "🏆 BGIA 2026 සම්මාන උළෙල",
       badgeTa: "🏆 BGIA 2026 சர்வதேச வணிக விருது விழா",
       badgeEn: "🏆 Business Global International Award Gala",
       badgeSi: "🏆 BGIA 2026 ජාත්‍යන්තර සම්මාන රාත්‍රිය",
@@ -75,14 +79,16 @@ export default function AwardsSection() {
     },
     {
       id: "imc",
-      tabLabel: "🥇 IMC Merit Award Stage Video",
+      tabTa: "🥇 IMC Merit விருது விழா",
+      tabEn: "🥇 IMC Merit Award Stage Video",
+      tabSi: "🥇 IMC Merit සම්මාන උළෙල",
       badgeTa: "🥇 International Merit Campus மேடை விழா",
       badgeEn: "🥇 International Merit Campus Gala Video",
       badgeSi: "🥇 International Merit Campus සම්මාන උළෙල",
       titleTa: "International Merit Campus - சமூக சேவகர் விருது மேடை தருணம்",
       titleEn: "International Merit Award Ceremony - Stage Honor for Mr. Dinesh",
       titleSi: "International Merit Campus - දිනේෂ් මහතා සම්මානයෙන් පිදුම් ලැබූ අවස්ථාව",
-      descTa: "International Merit Campus பிரம்மாண்ட மேடையில் திரு. தினேஷ் அவர்கள் கலந்துகொண்டு சமூக சேவகர் கௌரவத்தை ஏற்றுக்கொண்ட நேரடி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descTa: "International Merit Campus பிரம்மாண்ட மேடையில் திரு. தினேஷ் அவர்கள் கலந்துகொண்டு சமூக சேவகர் கௌரவத்தை ஏற்றுக்கொண்ட நேரடி வீடியோ.",
       descEn: "Live stage celebration honoring Mr. Dinesh at the International Merit Campus gala ceremony for outstanding social work.",
       descSi: "International Merit Campus සම්මාන රාත්‍රියේදී දිනේෂ් මහතා ගෞරව සම්මානයෙන් පිදුම් ලැබූ සජීවී දර්ශනය.",
       src: "/assets/dinesh-imc-award-ceremony.mp4",
@@ -101,7 +107,7 @@ export default function AwardsSection() {
       titleTa: "நல்லூர் கந்தன் 18ம் நாள் கார்த்திகைத் திருவிழா அன்னதான உபயம்",
       titleEn: "Nallur Kandaswamy Kovil Festival Annadhanam Community Service",
       titleSi: "නල්ලූර් කන්දස්වාමි කෝවිල් උත්සව ප්‍රජා දානමය සේවාව",
-      descTa: "நல்லூர் கந்தசுவாமி ஆலய கார்த்திகைத் திருவிழாவில் பக்தர்களுக்கான தாகசாந்தி மற்றும் அன்னதான உபயம் வழங்கிய தருணம் (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descTa: "நல்லூர் கந்தசுவாமி ஆலய கார்த்திகைத் திருவிழாவில் பக்தர்களுக்கான தாகசாந்தி மற்றும் அன்னதான உபயம் வழங்கிய தருணம்.",
       descEn: "Devotional community service and refreshment distribution during the holy Nallur Kandaswamy Kovil Festival in Jaffna.",
       descSi: "නල්ලූර් කෝවිල් මංගල්‍යයේදී බැතිමතුන් සඳහා සිදුකළ දානමය සත්කාරය.",
       src: "/assets/dinesh-nallur-kandhan-community-service.mp4",
@@ -129,7 +135,7 @@ export default function AwardsSection() {
       titleTa: "செட்டித்தெரு மெதடிஸ்ட் மிசன் பாடசாலை மதநல்லிணக்க நிகழ்வு",
       titleEn: "Interfaith Harmony Event at Settitheru Methodist Mission Tamil School",
       titleSi: "සෙට්ටිතෙරු මෙතෝදිස්ත මිෂන් දෙමළ පාසලේ ආගමික සහජීවන උළෙල",
-      descTa: "மதநல்லிணக்க விசேட நிகழ்வில் நெல்சன் லேணர்ஸ் உரிமையாளர் திரு. தினேஷ் அவர்கள் சிறப்பு விருந்தினராகக் கலந்துகொண்ட நேரடி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descTa: "மதநல்லிணக்க விசேட நிகழ்வில் நெல்சன் லேணர்ஸ் உரிமையாளர் திரு. தினேஷ் அவர்கள் சிறப்பு விருந்தினராகக் கலந்துகொண்ட நேரடி வீடியோ.",
       descEn: "Honorable presence of Mr. Dinesh as Chief Guest at the Interfaith Harmony Celebration at Settitheru Methodist Mission School.",
       descSi: "ආගමික සහජීවන වැඩසටහනේ ප්‍රධාන ආරාධිත අමුත්තා ලෙස දිනේෂ් මහතා සහභාගී වූ අවස්ථාව.",
       src: "/assets/dinesh-interfaith-community-event.mp4",
@@ -317,7 +323,7 @@ export default function AwardsSection() {
                   }`}
                 >
                   <i className="fa-solid fa-trophy text-[10px]"></i>
-                  <span>{av.tabLabel}</span>
+                  <span>{lang === "ta" ? av.tabTa : lang === "si" ? av.tabSi : av.tabEn}</span>
                 </button>
               ))}
             </div>
@@ -350,7 +356,7 @@ export default function AwardsSection() {
             {/* Video Details Description */}
             <div className="lg:col-span-5 space-y-5">
               <div className="inline-block bg-amber-500/20 text-amber-300 px-3 py-1 rounded-xl text-xs font-black border border-amber-500/30">
-                🏆 Stage Gala Ceremony
+                🏆 {lang === "ta" ? "விருது விழா மேடை" : lang === "si" ? "සම්මාන උළෙල වේදිකාව" : "Stage Gala Ceremony"}
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-black text-white font-heading leading-tight">
@@ -367,8 +373,8 @@ export default function AwardsSection() {
                     <i className="fa-solid fa-award"></i>
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-white">Verified Excellence Award</h5>
-                    <p className="text-[11px] text-slate-400">யாழ்ப்பாணத்தில் தலைசிறந்த தொழில் ஆளுமை மற்றும் பொதுநல சேவைக்கான உயரிய அங்கீகாரம்.</p>
+                    <h5 className="text-xs font-bold text-white">{lang === "ta" ? "சரிபார்க்கப்பட்ட சிறப்பு விருது" : lang === "si" ? "විශිෂ්ටතා සම්මානය" : "Verified Excellence Award"}</h5>
+                    <p className="text-[11px] text-slate-400">{lang === "ta" ? "யாழ்ப்பாணத்தில் தலைசிறந்த தொழில் ஆளுமை மற்றும் பொதுநல சேவைக்கான உயரிய அங்கீகாரம்." : lang === "si" ? "යාපනයේ විශිෂ්ටතම ව්‍යාපාරික නායකත්වය සහ ප්‍රජා සේවය වෙනුවෙන් පිරිනැමුණු උසස් ඇගයීම." : "Prestigious recognition honoring exceptional business leadership and public community service in Jaffna."}</p>
                   </div>
                 </div>
 
@@ -377,8 +383,8 @@ export default function AwardsSection() {
                     <i className="fa-solid fa-hand-holding-heart"></i>
                   </div>
                   <div>
-                    <h5 className="text-xs font-bold text-white">Dedicated Community Service</h5>
-                    <p className="text-[11px] text-slate-400">இலவச DMT மருத்துவம், இளைஞர் விளையாட்டு அனுசரணை மற்றும் மதநல்லிணக்க பணிகள்.</p>
+                    <h5 className="text-xs font-bold text-white">{lang === "ta" ? "அர்ப்பணிப்புமிக்க மக்கள் சேவை" : lang === "si" ? "කැපවූ ප්‍රජා සේවාව" : "Dedicated Community Service"}</h5>
+                    <p className="text-[11px] text-slate-400">{lang === "ta" ? "இலவச DMT மருத்துவம், இளைஞர் விளையாட்டு அனுசரணை மற்றும் மதநல்லிணக்க பணிகள்." : lang === "si" ? "නොමිලේ DMT වෛද්‍ය සහාය, තරුණ ක්‍රීඩා අනුග්‍රාහකත්වය සහ ආගමික සහජීවන සේවා." : "Free DMT medical checkup assistance, youth sports sponsorships, and active interfaith harmony initiatives."}</p>
                   </div>
                 </div>
               </div>
@@ -399,7 +405,7 @@ export default function AwardsSection() {
                   className="px-5 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl text-xs shadow transition-all flex items-center gap-2"
                 >
                   <i className="fa-brands fa-youtube"></i>
-                  <span>YouTube Channel</span>
+                  <span>{lang === "ta" ? "YouTube சேனல்" : lang === "si" ? "YouTube නාලිකාව" : "YouTube Channel"}</span>
                 </a>
               </div>
             </div>
@@ -413,7 +419,7 @@ export default function AwardsSection() {
             <div>
               <span className="text-xs font-black text-cyan-400 uppercase tracking-wider flex items-center gap-1.5">
                 <i className="fa-solid fa-users"></i>
-                <span>சமூகப் பங்களிப்பு • Community Impact Videos</span>
+                <span>{lang === "ta" ? "சமூகப் பங்களிப்பு & மக்கள் பணிகள்" : lang === "si" ? "ප්‍රජා සේවා සහ සමාජ සත්කාර" : "Community Welfare & Social Impact"}</span>
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
                 {lang === "ta" ? "மதநல்லிணக்கம் & மக்கள் சேவை நிகழ்வுகள்" : lang === "si" ? "ප්‍රජා සේවා සහ ආගමික සහජීවන වැඩසටහන්" : "Community Welfare & Interfaith Harmony Sessions"}
@@ -462,11 +468,6 @@ export default function AwardsSection() {
 
             {/* Active Video Details */}
             <div className="lg:col-span-5 space-y-3">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-lg text-xs font-bold">
-                <i className="fa-solid fa-volume-xmark"></i>
-                <span>சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்</span>
-              </div>
-
               <h4 className="text-lg sm:text-xl font-black text-white">
                 {lang === "ta" ? currentComVid.titleTa : lang === "si" ? currentComVid.titleSi : currentComVid.titleEn}
               </h4>
@@ -515,7 +516,7 @@ export default function AwardsSection() {
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                       <span className="bg-white/90 text-slate-950 text-xs font-black px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
                         <i className="fa-solid fa-expand"></i>
-                        <span>பெரிதாக்க (Zoom)</span>
+                        <span>{lang === "ta" ? "பெரிதாக்க" : lang === "si" ? "විශාල කරන්න" : "Zoom"}</span>
                       </span>
                     </div>
                   </div>
@@ -535,7 +536,7 @@ export default function AwardsSection() {
                 <div className="pt-4 mt-2 border-t border-slate-800/80 flex items-center justify-between">
                   <span className="text-[11px] font-bold text-amber-400 flex items-center gap-1">
                     <i className="fa-solid fa-circle-check text-xs text-emerald-400"></i>
-                    <span>சரிபார்க்கப்பட்டது (Verified)</span>
+                    <span>{lang === "ta" ? "சரிபார்க்கப்பட்டது (Verified)" : lang === "si" ? "තහවුරු කර ඇත (Verified)" : "Verified"}</span>
                   </span>
 
                   {item.isInnovation && item.externalLink ? (
@@ -547,11 +548,11 @@ export default function AwardsSection() {
                       className="inline-flex items-center gap-1 text-[11px] font-black bg-red-600 hover:bg-red-500 text-white px-2.5 py-1 rounded-lg transition-colors shadow"
                     >
                       <i className="fa-brands fa-youtube"></i>
-                      <span>YouTube வீடியோ</span>
+                      <span>{lang === "ta" ? "YouTube வீடியோ" : lang === "si" ? "YouTube වීඩියෝව" : "YouTube Video"}</span>
                     </a>
                   ) : (
                     <span className="text-[11px] text-slate-500 group-hover:text-slate-300 transition-colors flex items-center gap-1 font-semibold">
-                      <span>விபரம் பார்க்க</span>
+                      <span>{lang === "ta" ? "விபரம் பார்க்க" : lang === "si" ? "විස්තර බලන්න" : "View Details"}</span>
                       <i className="fa-solid fa-arrow-right text-[10px]"></i>
                     </span>
                   )}
@@ -612,7 +613,7 @@ export default function AwardsSection() {
                     className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-xl text-xs shadow-md transition-colors"
                   >
                     <i className="fa-brands fa-youtube"></i>
-                    <span>YouTube சேனலில் நேரடி விளக்கம் காண</span>
+                    <span>{lang === "ta" ? "YouTube சேனலில் விளக்கம் காண" : lang === "si" ? "YouTube නාලිකාවෙන් නරඹන්න" : "Watch on YouTube Channel"}</span>
                   </a>
                 </div>
               )}

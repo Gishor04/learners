@@ -12,7 +12,7 @@ export default function SimulatorSection() {
     titleTa: "🎮 3D பெண் சிமுலேட்டர் நேரடி பயிற்சி (3D Driving Simulator Demo)",
     titleEn: "🎮 3D Virtual Driving Simulator Live Student Demo",
     titleSi: "🎮 3D සිමියුලේටර් සජීවී පුහුණුව",
-    descTa: "கணினி 3D சிமுலேட்டரில் பெண் மாணவர் பயமின்றி ஸ்டீயரிங் மற்றும் கிளட்ச் கட்டுப்பாட்டை கற்கும் அசல் நேரடி பயிற்சி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+    descTa: "கணினி 3D சிமுலேட்டரில் பெண் மாணவர் பயமின்றி ஸ்டீயரிங் மற்றும் கிளட்ச் கட்டுப்பாட்டை கற்கும் அசல் நேரடி பயிற்சி வீடியோ.",
     descEn: "Live showcase of a student comfortably operating steering, pedals, and gear shifting inside our high-tech 3D simulator cockpit.",
     descSi: "අපගේ 3D සිමියුලේටරය තුළ සිසුවියක රිය පැදවීමේ මුලික කරුණු ප්‍රගුණ කරන ආකාරය."
   };

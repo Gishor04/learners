@@ -17,7 +17,7 @@ export default function GallerySection() {
       titleTa: "செய்முறைப் பரீட்சையில் தோற்றிய மாணவர்கள் வெற்றித் தருணம்",
       titleEn: "Dinesh Learners Candidates Passing Practical Driving Trials",
       titleSi: "ප්‍රායෝගික රියදුරු පරීක්ෂණය සාර්ථකව සමත් වූ සිසුන්",
-      descTa: "தினேஷ் லேணர்ஸ் செய்முறைப் பரீட்சையில் தோற்றி அனுமதிப்பத்திரம் பெற்ற மாணவர்கள் மற்றும் பயிற்றுநர்களின் வாழ்த்துத் தருணம் (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+      descTa: "தினேஷ் லேணர்ஸ் செய்முறைப் பரீட்சையில் தோற்றி அனுமதிப்பத்திரம் பெற்ற மாணவர்கள் மற்றும் பயிற்றுநர்களின் வாழ்த்துத் தருணம்.",
       descEn: "Celebration of our students successfully passing the DMT practical driving examination with confidence.",
       descSi: "DMT ප්‍රායෝගික රියදුරු පරීක්ෂණය සාර්ථකව සමත් වූ සිසුන්ගේ සතුටුදායක අවස්ථාව."
     },
@@ -74,7 +74,7 @@ export default function GallerySection() {
                     selectedPracticeVid === "exam" ? "bg-red-600 text-white shadow" : "bg-slate-800 text-slate-400 hover:text-white"
                   }`}
                 >
-                  🎉 {lang === "ta" ? "பரீட்சை வெற்றி" : "Exam Pass Batch"}
+                  🎉 {lang === "ta" ? "பரீட்சை வெற்றி" : lang === "si" ? "විභාගය සමත් සිසුන්" : "Exam Pass Batch"}
                 </button>
                 <button
                   onClick={() => setSelectedPracticeVid("fleet")}
@@ -82,7 +82,7 @@ export default function GallerySection() {
                     selectedPracticeVid === "fleet" ? "bg-red-600 text-white shadow" : "bg-slate-800 text-slate-400 hover:text-white"
                   }`}
                 >
-                  🚗 {lang === "ta" ? "வீதிப் பயிற்சி" : "Road Practice"}
+                  🚗 {lang === "ta" ? "வீதிப் பயிற்சி" : lang === "si" ? "මාර්ග පුහුණුව" : "Road Practice"}
                 </button>
               </div>
             </div>
