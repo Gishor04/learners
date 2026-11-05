@@ -23,6 +23,10 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
                 <span>{t.heroPill}</span>
               </div>
+              <div className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-300 px-3 py-1 rounded-full shadow-xs text-xs font-black text-amber-900">
+                <span>🏆</span>
+                <span>BGIA 2026 Global Award Winner</span>
+              </div>
               <a
                 href="#front-details"
                 className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-rose-600 text-white px-3 py-1 rounded-full text-xs font-black shadow-xs hover:scale-[1.03] transition-all"
@@ -75,7 +79,7 @@ export default function Hero() {
               </button>
               
               <a
-                href="https://wa.me/94779227102?text=Hello%20Dinesh%20Learners!%20I%20am%20interested%20in%20driving%20classes."
+                href="https://wa.me/94775189963?text=Hello%20Dinesh%20Learners!%20I%20am%20interested%20in%20driving%20classes."
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-lg shadow-emerald-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-sm"
@@ -93,12 +97,12 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <a
-                  href="tel:0779227102"
+                  href="tel:0775189963"
                   className="flex items-center gap-1 font-bold text-slate-800 hover:text-red-600 transition-colors bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs"
                   title="Mobile / WhatsApp"
                 >
                   <i className="fa-solid fa-mobile-screen text-emerald-600 text-xs"></i>
-                  <span>077 9227 102</span>
+                  <span>077 518 9963</span>
                 </a>
                 <a
                   href="tel:0214327102"

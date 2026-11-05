@@ -52,7 +52,7 @@ export default function Footer() {
                 <i className="fa-solid fa-envelope text-rose-400"></i> nelsonrealestate@gmail.com
               </li>
               <li className="text-slate-300 flex items-center gap-1">
-                <i className="fa-solid fa-phone text-amber-400"></i> 077 9227 102
+                <i className="fa-solid fa-phone text-amber-400"></i> 077 518 9963
               </li>
               <li className="pt-1">
                 <a href="#real-estate" className="text-amber-400 hover:text-amber-300 font-bold inline-flex items-center gap-1">
@@ -81,7 +81,7 @@ export default function Footer() {
             <p className="text-xs text-white font-bold">{t.callUsText}</p>
             <div className="pt-2 flex items-center gap-2.5">
               <a
-                href="https://wa.me/94779227102"
+                href="https://wa.me/94775189963"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"
@@ -108,7 +108,7 @@ export default function Footer() {
                 <i className="fa-brands fa-youtube"></i>
               </a>
               <a
-                href="tel:0779227102"
+                href="tel:0775189963"
                 className="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors"
                 title="Call"
               >

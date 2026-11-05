@@ -26,11 +26,11 @@ export default function Header() {
               <span>{t.hoursText}</span>
             </span>
             <a
-              href="tel:0779227102"
+              href="tel:0775189963"
               className="font-bold hover:text-amber-200 transition-colors flex items-center gap-1"
               title="Mobile & WhatsApp"
             >
-              <i className="fa-solid fa-mobile-screen text-[11px]"></i> 077 9227 102
+              <i className="fa-solid fa-mobile-screen text-[11px]"></i> 077 518 9963
             </a>
             <span className="opacity-60 text-[10px]">/</span>
             <a
@@ -176,12 +176,12 @@ export default function Header() {
 
             {/* Direct Call Button (Desktop) */}
             <a
-              href="tel:0779227102"
+              href="tel:0775189963"
               className="hidden sm:flex p-2 sm:px-3 sm:py-2 bg-slate-100 hover:bg-red-50 text-slate-700 hover:text-red-600 rounded-xl transition-colors border border-slate-200 text-xs font-bold items-center gap-1.5 shrink-0"
-              title="Call 077 9227 102"
+              title="Call 077 518 9963"
             >
               <i className="fa-solid fa-phone text-red-600 text-xs"></i>
-              <span className="hidden 2xl:inline">077 9227 102</span>
+              <span className="hidden 2xl:inline">077 518 9963</span>
             </a>
 
             {/* Admission CTA Button */}
@@ -311,10 +311,10 @@ export default function Header() {
 
             <div className="pt-4 border-t border-slate-200 flex flex-col gap-2.5">
               <a
-                href="tel:0779227102"
+                href="tel:0775189963"
                 className="w-full py-2.5 text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl text-sm flex items-center justify-center gap-2"
               >
-                <i className="fa-solid fa-phone text-red-600"></i> 077 9227 102
+                <i className="fa-solid fa-phone text-red-600"></i> 077 518 9963
               </a>
               <button
                 onClick={() => {

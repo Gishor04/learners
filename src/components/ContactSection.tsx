@@ -35,7 +35,7 @@ export default function ContactSection() {
                 <div className="text-base font-extrabold text-slate-900 mt-0.5 space-x-2">
                   <a href="tel:0214327102" className="hover:text-red-600">021 4327 102</a>
                   <span>/</span>
-                  <a href="tel:0779227102" className="hover:text-red-600">077 9227 102</a>
+                  <a href="tel:0775189963" className="hover:text-red-600">077 518 9963</a>
                 </div>
               </div>
             </div>
@@ -46,10 +46,10 @@ export default function ContactSection() {
               </div>
               <div className="flex-1">
                 <p className="text-xs font-bold text-emerald-800 uppercase">{t.cWaLabel}</p>
-                <p className="text-sm font-extrabold text-emerald-950 mt-0.5">+94 77 922 7102</p>
+                <p className="text-sm font-extrabold text-emerald-950 mt-0.5">+94 77 518 9963</p>
               </div>
               <a
-                href="https://wa.me/94779227102"
+                href="https://wa.me/94775189963"
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow transition-colors"

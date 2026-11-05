@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function GallerySection() {
   const { lang, t } = useLanguage();
-  const [selectedVideo, setSelectedVideo] = useState<"girl" | "tour">("girl");
+  const [selectedVideo, setSelectedVideo] = useState<"girl" | "award" | "tour">("girl");
 
   return (
     <section id="gallery" className="py-16 sm:py-24 bg-white relative">
@@ -26,16 +26,22 @@ export default function GallerySection() {
         {/* Gallery Grid: Featured Video + Real Academy Photos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          {/* Video 1: Featured Live Training Video Player */}
+          {/* Video 1: Featured Live Training & Award Video Player */}
           <div className="md:col-span-2 bg-slate-900 rounded-3xl overflow-hidden border border-red-500/40 shadow-xl group hover-glow-red transition-all flex flex-col">
             
             {/* Quick Toggle for Video */}
-            <div className="p-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+            <div className="p-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between flex-wrap gap-2">
               <span className="text-xs font-bold text-red-400 flex items-center gap-1.5">
                 <i className="fa-solid fa-circle-play text-red-500"></i>
-                <span>{selectedVideo === "girl" ? "3D Girl Simulator Video" : "Academy Training Video"}</span>
+                <span>
+                  {selectedVideo === "girl"
+                    ? "3D Girl Demo Video"
+                    : selectedVideo === "award"
+                    ? "🏆 BGIA Global Award Ceremony Video"
+                    : "Academy Training Tour"}
+                </span>
               </span>
-              <div className="flex gap-2 text-[11px] font-bold">
+              <div className="flex gap-1.5 text-[11px] font-bold">
                 <button
                   onClick={() => setSelectedVideo("girl")}
                   className={`px-2.5 py-1 rounded-lg transition-all ${
@@ -45,12 +51,20 @@ export default function GallerySection() {
                   3D Girl Demo
                 </button>
                 <button
+                  onClick={() => setSelectedVideo("award")}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    selectedVideo === "award" ? "bg-amber-500 text-slate-950 font-black shadow-md" : "bg-slate-800 text-slate-400 hover:text-white"
+                  }`}
+                >
+                  🏆 Award Video
+                </button>
+                <button
                   onClick={() => setSelectedVideo("tour")}
                   className={`px-2.5 py-1 rounded-lg transition-all ${
                     selectedVideo === "tour" ? "bg-red-600 text-white" : "bg-slate-800 text-slate-400 hover:text-white"
                   }`}
                 >
-                  Full Academy Tour
+                  Academy Tour
                 </button>
               </div>
             </div>
@@ -61,13 +75,19 @@ export default function GallerySection() {
                 controls
                 playsInline
                 preload="metadata"
-                poster="/assets/simulator-live-training.jpg"
+                poster={
+                  selectedVideo === "award"
+                    ? "/assets/bgia-global-award-ceremony.jpg"
+                    : "/assets/simulator-live-training.jpg"
+                }
                 className="w-full h-full object-contain bg-black"
               >
                 <source
                   src={
                     selectedVideo === "girl"
                       ? "/assets/dinesh-3d-girl-driving-simulator.mp4"
+                      : selectedVideo === "award"
+                      ? "/assets/dinesh-global-award-video.mp4"
                       : "/assets/dinesh-learners-training-video.mp4"
                   }
                   type="video/mp4"
@@ -76,24 +96,56 @@ export default function GallerySection() {
               </video>
               <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 pointer-events-none">
                 <i className="fa-solid fa-video"></i>
-                <span>{selectedVideo === "girl" ? "3D பெண் சிமுலேட்டர் நேரடி பயிற்சி" : t.galleryVideoBadge}</span>
+                <span>
+                  {selectedVideo === "girl"
+                    ? "3D பெண் சிமுலேட்டர் நேரடி பயிற்சி"
+                    : selectedVideo === "award"
+                    ? "🏆 BGIA 2026 சர்வதேச விருது விழா"
+                    : t.galleryVideoBadge}
+                </span>
               </span>
             </div>
             <div className="p-4 flex-1 flex flex-col justify-between bg-slate-900 text-white">
               <h4 className="font-extrabold text-sm sm:text-base text-white">
                 {selectedVideo === "girl"
                   ? (lang === "ta" ? "🎮 3D கணினி சிமுலேட்டரில் பெண் மாணவரின் நேரடி பயிற்சி" : lang === "si" ? "3D සිමියුලේටර් සජීවී පුහුණුව" : "3D Virtual Simulator Live Student Demo Session")
+                  : selectedVideo === "award"
+                  ? (lang === "ta" ? "🏆 Business Global International Award (BGIA 2026) கௌரவிப்பு" : lang === "si" ? "BGIA 2026 ජාත්‍යන්තර සම්මාන උළෙල" : "Business Global International Award (BGIA 2026) Ceremony")
                   : t.galleryVideoCaption}
               </h4>
               <p className="text-xs text-slate-300 mt-1 leading-relaxed">
                 {selectedVideo === "girl"
                   ? (lang === "ta" ? "ஸ்டீயரிங் மற்றும் கிளட்ச் கட்டுப்பாட்டை அச்சமின்றி பழகும் நேரடி கணினி 3D சிமுலேட்டர் காட்சி." : lang === "si" ? "සුක්කානම් පාලනය පිළිබඳ සජීවී අත්දැකීම." : "Direct view of high-precision steering and brake handling inside the virtual cockpit.")
+                  : selectedVideo === "award"
+                  ? (lang === "ta" ? "தினேஷ் லேணர்ஸ் மற்றும் ரியல் எஸ்டேட் சிறந்த கல்வி மற்றும் தொழில் சேவைக்கான சர்வதேச கௌரவிப்பு விருது." : lang === "si" ? "විශිෂ්ට සේවය වෙනුවෙන් පිරිනැමුණු සම්මානය." : "International recognition for excellence in driver training and verified property services.")
                   : t.galleryVideoSub}
               </p>
             </div>
           </div>
 
-          {/* Photo: Lanka Ashok Leyland Heavy Bus (New User Upload) */}
+          {/* Photo: BGIA 2026 International Award Stage (New Upload) */}
+          <div className="bg-slate-50 rounded-3xl overflow-hidden border-2 border-amber-400/80 shadow-md group hover-glow-red transition-all flex flex-col">
+            <div className="relative h-60 overflow-hidden bg-slate-900">
+              <img
+                src="/assets/bgia-global-award-ceremony.jpg"
+                alt="Business Global International Award BGIA 2026 Dinesh Learners"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[11px] font-black px-2.5 py-1 rounded-full shadow">
+                🏆 BGIA 2026 விருது
+              </span>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between">
+              <h4 className="font-black text-sm text-slate-900">
+                {lang === "ta" ? "சர்வதேச BGIA 2026 கௌரவ விருது" : lang === "si" ? "BGIA 2026 ජාත්‍යන්තර සම්මානය" : "Business Global International Award (BGIA)"}
+              </h4>
+              <p className="text-xs text-slate-600 mt-1">
+                {lang === "ta" ? "யாழ்ப்பாணத்தின் முன்னணி நிறுவனமாக கௌரவிக்கப்பட்ட சர்வதேச விருது விழா மேடை தருணம்." : lang === "si" ? "විශිෂ්ටතා සම්මාන උළෙලේදී." : "Stage ceremony of Business Global International Award Organization (BGIA 2026)."}
+              </p>
+            </div>
+          </div>
+
+          {/* Photo: Lanka Ashok Leyland Heavy Bus */}
           <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
             <div className="relative h-60 overflow-hidden bg-slate-900">
               <img
@@ -220,24 +272,6 @@ export default function GallerySection() {
             <div className="p-4 flex-1 flex flex-col justify-between">
               <h4 className="font-bold text-sm text-slate-900">{t.g6Caption}</h4>
               <p className="text-xs text-slate-500 mt-1">{t.g6Sub}</p>
-            </div>
-          </div>
-
-          {/* Photo 7: Theory Classroom */}
-          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
-            <div className="relative h-60 overflow-hidden bg-slate-900">
-              <img
-                src="/assets/classroom-theory.jpg"
-                alt="Dinesh Learners Road Signs Classroom"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span className="absolute top-3 left-3 bg-cyan-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                {t.g7Badge}
-              </span>
-            </div>
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <h4 className="font-bold text-sm text-slate-900">{t.g7Caption}</h4>
-              <p className="text-xs text-slate-500 mt-1">{t.g7Sub}</p>
             </div>
           </div>
 

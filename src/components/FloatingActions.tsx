@@ -29,20 +29,20 @@ export default function FloatingActions() {
 
       {/* Call */}
       <a
-        href="tel:0779227102"
+        href="tel:0775189963"
         className="w-11 h-11 bg-rose-600 hover:bg-rose-700 text-white rounded-full shadow-xl flex items-center justify-center text-base hover:scale-110 active:scale-95 transition-all"
-        title="Direct Phone Call: 077 9227 102"
+        title="Direct Phone Call: 077 518 9963"
       >
         <i className="fa-solid fa-phone"></i>
       </a>
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/94779227102?text=Hello%20Dinesh%20Learners!%20I%20would%20like%20to%20enroll%20for%20driving%20classes."
+        href="https://wa.me/94775189963?text=Hello%20Dinesh%20Learners!%20I%20would%20like%20to%20enroll%20for%20driving%20classes."
         target="_blank"
         rel="noreferrer"
         className="w-13 h-13 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all relative"
-        title="Chat on WhatsApp (+94 77 922 7102)"
+        title="Chat on WhatsApp (+94 77 518 9963)"
       >
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50"></span>
         <i className="fa-brands fa-whatsapp relative z-10"></i>

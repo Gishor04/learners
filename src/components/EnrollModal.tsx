@@ -54,7 +54,7 @@ export default function EnrollModal() {
     showToast("முன்பதிவு தயார்! WhatsApp திறக்கப்படுகிறது...");
 
     // Open WhatsApp
-    window.open(`https://wa.me/94779227102?text=${msg}`, "_blank");
+    window.open(`https://wa.me/94775189963?text=${msg}`, "_blank");
   };
 
   return (

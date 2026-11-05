@@ -31,7 +31,7 @@ export default function CustomerNotice() {
           {/* Quick Action Contact Pills: Responsive 2x2 on mobile, flex on desktop */}
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap lg:flex-nowrap items-center gap-2 w-full lg:w-auto shrink-0">
             <a
-              href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்."
+              href="https://wa.me/94775189963?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்."
               target="_blank"
               rel="noreferrer"
               className="px-3 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md shadow-emerald-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 text-xs"
@@ -40,7 +40,7 @@ export default function CustomerNotice() {
               <span>{t.noticeWaBtn}</span>
             </a>
             <a
-              href="tel:0779227102"
+              href="tel:0775189963"
               className="px-3 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md shadow-red-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 text-xs"
               title="Mobile Call"
             >
@@ -186,7 +186,7 @@ export default function CustomerNotice() {
           </div>
           <div className="flex items-center gap-2.5 shrink-0 w-full md:w-auto">
             <a
-              href="https://wa.me/94779227102?text=வணக்கம்%20தினேஷ்%20ரியல்%20எஸ்டேட்!%20நான்%20காணி%20/%20வீடு%20வாங்க%20/%20விற்க%20விரும்புகிறேன்."
+              href="https://wa.me/94775189963?text=வணக்கம்%20தினேஷ்%20ரியல்%20எஸ்டேட்!%20நான்%20காணி%20/%20வீடு%20வாங்க%20/%20விற்க%20விரும்புகிறேன்."
               target="_blank"
               rel="noreferrer"
               className="flex-1 md:flex-none px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-xs flex items-center justify-center gap-1.5 text-xs transition-colors"

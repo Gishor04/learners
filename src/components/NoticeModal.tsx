@@ -98,7 +98,7 @@ export default function NoticeModal() {
 
           <div className="pt-2 flex flex-col sm:flex-row gap-3">
             <a
-              href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்."
+              href="https://wa.me/94775189963?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்."
               target="_blank"
               rel="noreferrer"
               className="flex-1 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md flex items-center justify-center gap-2 text-xs"
@@ -107,7 +107,7 @@ export default function NoticeModal() {
               <span>{t.noticeWaBtn}</span>
             </a>
             <a
-              href="tel:0779227102"
+              href="tel:0775189963"
               className="flex-1 py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md flex items-center justify-center gap-2 text-xs"
             >
               <i className="fa-solid fa-phone text-xs"></i>

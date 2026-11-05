@@ -21,7 +21,7 @@
 - **3D Virtual Cockpit Simulator:** Jaffna's first simulator for fear-free steering, clutch, weather & hazard perception.
 - **Interactive Fee Estimator:** Dynamic price calculator with optional add-ons and transparent 2-installment plan.
 - **Sri Lanka DMT Road Signs Mock Quiz:** Interactive quiz with instant visual feedback and highway code explanations.
-- **Online Admission & WhatsApp Direct Integration:** Booking form generates formatted messages directly to WhatsApp (`+94 77 922 7102`).
+- **Online Admission & WhatsApp Direct Integration:** Booking form generates formatted messages directly to WhatsApp (`+94 77 518 9963`).
 - **Interactive Location Hub:** Embedded Google Map for YMCA Jaffna on Kandy Road opposite Old Park.
 
 ---
@@ -54,5 +54,5 @@ learners/
 
 - **Proprietor:** K. Dinesh (உரிமையாளர்: க. தினேஷ்)
 - **Address:** No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)
-- **Phone:** 021 4327 102 / 077 9227 102
+- **Phone:** 021 4327 102 / 077 518 9963
 - **Operating Hours:** Monday to Sunday (All 7 Days): 7:00 AM – 7:00 PM

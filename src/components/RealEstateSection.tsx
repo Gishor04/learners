@@ -142,7 +142,7 @@ export default function RealEstateSection() {
                   </div>
                   <div>
                     <p className="text-slate-400 font-semibold">{t.rePhoneLabel}</p>
-                    <p className="text-white font-black text-sm mt-0.5">021 4327 102 &nbsp;|&nbsp; 077 9227 102</p>
+                    <p className="text-white font-black text-sm mt-0.5">021 4327 102 &nbsp;|&nbsp; 077 518 9963</p>
                   </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function RealEstateSection() {
                   </div>
                   <div className="flex-1">
                     <p className="text-slate-400 font-semibold">{t.reWaInquiryLabel}</p>
-                    <p className="text-emerald-400 font-black text-sm mt-0.5">+94 77 922 7102</p>
+                    <p className="text-emerald-400 font-black text-sm mt-0.5">+94 77 518 9963</p>
                   </div>
                 </div>
 
@@ -172,7 +172,7 @@ export default function RealEstateSection() {
               {/* Call to Actions */}
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://wa.me/94779227102?text=வணக்கம்%20தினேஷ்%20ரியல்%20எஸ்டேட்!%20நான்%20யாழ்ப்பாணத்தில்%20வீடு%20/%20காணி%20வாங்க%20/%20விற்க%20விரும்புகிறேன்."
+                  href="https://wa.me/94775189963?text=வணக்கம்%20தினேஷ்%20ரியல்%20எஸ்டேட்!%20நான்%20யாழ்ப்பாணத்தில்%20வீடு%20/%20காணி%20வாங்க%20/%20விற்க%20விரும்புகிறேன்."
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1 py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-center shadow-lg shadow-emerald-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-xs"
@@ -181,7 +181,7 @@ export default function RealEstateSection() {
                   <span>{t.reBtnWa}</span>
                 </a>
                 <a
-                  href="tel:0779227102"
+                  href="tel:0775189963"
                   className="py-3.5 px-5 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl text-center shadow-lg shadow-rose-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-xs"
                 >
                   <i className="fa-solid fa-phone"></i>
