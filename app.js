@@ -4,15 +4,16 @@ let currentLang = 'ta'; // Default language
 
 const translations = {
   ta: {
-    // Top Bar
+    // Top Announcement Bar
     topNotice: "📢 2026 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!",
     hoursText: "திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00",
     newBadge: "புதியது 2026",
     
-    // Header & Brand
+    // Header & Navigation
     brandTitle: "தினேஷ் லேணர்ஸ்",
-    brandSubtitle: "Dinesh Driving School • දිනේෂ් රියදුරු පාසල",
+    brandSubtitle: "தினேஷ் சாரதிப் பயிற்சி நிலையம் • யாழ்ப்பாணம் (DMT: DS:385)",
     navHome: "முகப்பு",
+    navZeroExp: "பயிற்சி சிறப்பம்சம்",
     navCourses: "பயிற்சி வாகனங்கள்",
     navSimulator: "சிமுலேட்டர் நுட்பம்",
     navGallery: "நேரடி புகைப்படங்கள்",
@@ -23,8 +24,8 @@ const translations = {
     btnCall: "அழைக்க: 077 9227 102",
     btnEnroll: "இப்போதே பதிவு செய்",
     
-    // Hero
-    heroPill: "🚀 யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்",
+    // Hero Section
+    heroPill: "யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்",
     heroTitlePrefix: "நம்பிக்கையுடன் ",
     heroTitleHighlight: "சாரதி அனுமதிப்பத்திரம்",
     heroTitleSuffix: " பெறுங்கள்!",
@@ -36,6 +37,9 @@ const translations = {
     btnHeroTrial: "இலவச சிமுலேட்டர் சோதனை",
     btnHeroWhatsapp: "WhatsApp-ல் உரையாட",
     heroLocation: "YMCA கட்டடம், கண்டி வீதி, யாழ்ப்பாணம்",
+    heroLabBadge: "நேரடி ஆய்வகப் புகைப்படம்",
+    heroLabRig: "Logitech G29 விர்ச்சுவல் காக்பிட்",
+    heroLabFeatures: "பந்தய இருக்கை • Force Feedback ஸ்டீயரிங் • 6-Speed கியர்",
     cardFleetTitle: "இரட்டை பிரேக் பாதுகாப்பு வாகனங்கள்",
     cardFleetSub: "Auto & Manual கார்கள் • சான்றிதழ் பெற்ற பயிற்றுநர்கள்",
     cardHighTech: "நவீன தொழில்நுட்பம்",
@@ -44,44 +48,50 @@ const translations = {
     cardPassSub: "99.4% முதல் முறை தேர்ச்சி",
     
     // Zero Driving Experience USP Section
-    zeroExpBadge: "💡 டிரைவிங் துளியும் தெரியாதவர்களுக்கான விசேட பயிற்சி!",
+    zeroExpBadge: "டிரைவிங் துளியும் தெரியாதவர்களுக்கான விசேட பயிற்சி!",
     zeroExpTitle: "டிரைவிங் தெரியவில்லையா? பயம் வேண்டாம் – இங்கு வந்து இலகுவாகப் பழகுங்கள்!",
     zeroExpDesc: "ஸ்டீயரிங் தொட்டதே இல்லையா? கிளட்ச், கியர் சமநிலை தெரியாதா? விபத்து பயமின்றி எமது நேரடி 3D காக்பிட் சிமுலேட்டரில் பூஜ்ஜியத்தில் இருந்து ஆரம்பியுங்கள். முழுமையான தன்னம்பிக்கை வந்த பிறகு நிஜ வீதிக்குச் செல்லலாம்!",
     zeroExpP1Title: "பூஜ்ஜிய அனுபவத்தோடு வரலாம்",
-    zeroExpP1Desc: "முன்பின் கார் ஓட்டிய பழக்கம் இல்லாவிட்டாலும், தொடக்கப் பாடங்களை பொறுமையாக கற்பிக்கிறோம்.",
+    zeroExpP1Desc: "முன்பின் கார் ஓட்டிய பழக்கம் இல்லாவிட்டாலும் தொடக்கத்திலிருந்து கற்பிக்கிறோம்.",
     zeroExpP2Title: "சிமுலேட்டரில் அச்சமில்லா பயிற்சி",
-    zeroExpP2Desc: "வீதியில் எஞ்சின் நின்றுவிடும் (Engine Stall) அல்லது விபத்து ஏற்படும் என்ற பயமே இங்கு கிடையாது.",
+    zeroExpP2Desc: "எஞ்சின் நின்றுவிடும் அல்லது விபத்து ஏற்படும் என்ற பயமே கிடையாது.",
     zeroExpP3Title: "நேரடி வகுப்பறை சமிக்கை பயிற்சி",
-    zeroExpP3Desc: "உண்மையான வீதி சமிக்கை பலகைகளுடன் (Signboards) எழுத்து பரீட்சைக்கு முழு பயிற்சி.",
+    zeroExpP3Desc: "உண்மையான வீதி சமிக்கை பலகைகளுடன் எழுத்து பரீட்சைக்கு முழு பயிற்சி.",
+    btnZeroExpTrial: "இன்றே இலவச அறிமுக வகுப்பில் இணையுங்கள்!",
+    labTheoryLabel: "தியரி வகுப்பறை",
+    labSimLabel: "3D சிமுலேட்டர் கூடம்",
     
-    // Stats
+    // Stats Section
     statStudents: "வெற்றிபெற்ற மாணவர்கள்",
     statPassRate: "முதல் முறை தேர்ச்சி விகிதம்",
     statExperience: "வருட அனுபவம் & நற்பெயர்",
     statDmt: "அரசாங்க பதிவு எண்",
     
-    // Heritage Banner Section
-    heritageBadge: "அரசாங்க பதிவு பெற்ற சாரதிப் பயிற்சி நிலையம்",
-    heritageTitle: "தினேஷ் லேணர்ஸ் - யாழ்ப்பாணம்",
-    heritageSub: "Dinesh Driving School • දිනේෂ් රියදුරු පුහුණු පාසල",
-    heritageTagline: "நவீன தொழில் நுட்ப முறையில் சாரதிப் பயிற்சி வழங்கப்படுகிறது.",
-    heritageDesc: "யாழ்ப்பாணத்தின் முன்னணி சாரதிப் பயிற்சி நிலையம். நவீன 3D சிமுலேட்டர், இருவழி பிரேக் பொருத்தப்பட்ட புதிய கார்கள், முச்சக்கரவண்டி, மோட்டார் பைக் மற்றும் கனரக வாகனங்களுக்கான முழுமையான பயிற்சி வழங்கப்படுகிறது.",
-    heritageHours: "திங்கள் - ஞாயிறு: காலை 7.00 - மாலை 7.00",
-    heritageOwner: "உரிமையாளர்: க. தினேஷ்",
-    heritageAddress: "இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழைய பூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)",
-    
-    // Real Gallery Section
+    // Gallery Section
     galleryPill: "நேரடி புகைப்படங்கள்",
     galleryTitle: "எமது நேரடி பயிற்சி வளாகப் புகைப்படங்கள்",
     gallerySubtitle: "யாழ்ப்பாணம் YMCA-ல் அமைந்துள்ள எமது உண்மையான 3D சிமுலேட்டர் லேப், வகுப்பறை மற்றும் நுழைவாயில்!",
+    g1Badge: "YMCA யாழ்ப்பாணக் கிளை",
     g1Caption: "யாழ்ப்பாணம் YMCA-ல் அமைந்துள்ள எமது பிரதான நுழைவாயில்",
+    g1Loc: "கண்டி வீதி, பழைய பூங்கா முன்பாக, YMCA கட்டடம்",
+    g2Badge: "3D சிமுலேட்டர் அறை",
     g2Caption: "முழுமையான 3D சிமுலேட்டர் அறை & காத்திருப்பு பகுதி",
+    g2Sub: "DMT Road Signs & Markings விசேட கற்றல் பலகை",
+    g3Badge: "காக்பிட் உபகரணங்கள்",
     g3Caption: "Logitech G29 விர்ச்சுவல் காக்பிட் & ஸ்டீயரிங் சிமுலேட்டர்",
+    g3Sub: "உண்மையான கிளட்ச், பிரேக், கியர் & பந்தய இருக்கை",
+    g4Badge: "தியரி வகுப்பறை",
     g4Caption: "DMT வீதி சமிக்கைகள் கொண்ட மாதிரி வகுப்பறை",
+    g4Sub: "அபாய எச்சரிக்கை & கட்டாய சமிக்கை பலகைகளுடன் வகுப்பு",
+    g5Badge: "இயந்திரவியல் கற்றல்",
     g5Caption: "வாகன இயந்திரவியல் (Double Wishbone Suspension) கற்றல் பலகை",
+    g5Sub: "வாகன உள் பாகங்கள் மற்றும் ஸ்டீயரிங் தொழில்நுட்பம்",
+    g6Badge: "அரசு பதிவு: DS:385",
     g6Caption: "அரசாங்க அங்கீகாரம் பெற்ற உத்தியோகபூர்வ பதாகை",
+    g6Sub: "யாழ்ப்பாணத்தின் முன்னணி அரசு பதிவுபெற்ற சாரதிப் பள்ளி",
     
-    // Course Fleet Section
+    // Courses & Fleet Section
+    coursePill: "பயிற்சி வாகனங்கள்",
     courseSectionTitle: "எமது பயிற்சிப் பிரிவுகள் & வாகனங்கள்",
     courseSectionSubtitle: "மோட்டார் பைக் முதல் பஸ் வரை அனைத்து வகை வாகனங்களுக்கும் பயிற்சி வழங்கப்படுகிறது.",
     tabAll: "அனைத்தும்",
@@ -140,9 +150,26 @@ const translations = {
     btnRegisterCourse: "பதிவு செய்க",
     btnBookCombo: "இப்போதே முன்பதிவு",
     
+    // Badges inside course cards
+    badgeClassB: "Class B (இலகு வாகனம்)",
+    badgeGear: "Auto / Manual",
+    badgePopular: "பிரபலம்",
+    badgeRealHardware: "நேரடி வன்பொருள் சிமுலேட்டர்",
+    badgeLogitech: "Logitech G29",
+    badgeHighTech: "உயர் தொழில்நுட்பம்",
+    badgeDemo: "டெமோ",
+    badgeFreeTrial: "இலவச சோதனை",
+    badgeClassA: "Class A / A1 (மோட்டார் பைக்)",
+    badgeGearedAuto: "கியர் & ஆட்டோ",
+    badgeClassB1: "Class B1 (முச்சக்கரவண்டி)",
+    badgeCommercial: "வர்த்தகம்",
+    badgeClassD: "Class D / CE (கனரக வாகனம்)",
+    badgeHeavyFleet: "கனரக வாகனங்கள்",
+    
     // Simulator Section
     simTitle: "யாழ்ப்பாணத்தின் முதல் அதிநவீன 3D சிமுலேட்டர் பயிற்சி!",
     simDesc: "வீதிக்குச் செல்வதற்கு முன் விபத்து அச்சமின்றி, இரவு நேரம், மழைக்காலம், மற்றும் சவாலான வீதிச் சூழல்களை 3D மெய்நிகர் சிமுலேட்டரில் கற்றுக்கொள்ளுங்கள்.",
+    simCockpitBadge: "Logitech G29 விர்ச்சுவல் காக்பிட் சிமுலேட்டர்",
     simB1Title: "பூஜ்ஜிய விபத்து அபாயம்",
     simB1Desc: "பயமின்றி கிளட்ச், கியர் மற்றும் ஸ்டீயரிங் திருப்பங்களைக் கற்கலாம்.",
     simB2Title: "பல்வேறு வானிலை சூழல்கள்",
@@ -152,6 +179,11 @@ const translations = {
     simB4Title: "இலவச சோதனை அமர்வு",
     simB4Desc: "எமது மாணவர்களுக்கு கட்டணமின்றி சிமுலேட்டர் வழங்கப்படுகிறது.",
     btnSimDemo: "இலவச சிமுலேட்டர் அமர்வை முன்பதிவு செய்",
+    simLabLive: "செயற்பாட்டில் உள்ள சிமுலேட்டர் கூடம்",
+    simLabLocation: "YMCA கட்டடம் 1ம் மாடி • யாழ்ப்பாணம்",
+    simActiveStatus: "செயற்பாட்டில் உள்ளது",
+    simWheelTag: "Force Feedback ஸ்டீயரிங்",
+    simSuspensionTag: "இயந்திரவியல் கற்றல் பலகை",
     
     // Fee Calculator
     calcPill: "வெளிப்படையான கட்டணங்கள்",
@@ -176,6 +208,8 @@ const translations = {
     quizSubtitle: "DMT எழுத்துப்பரீட்சைக்கு தயாராகுங்கள்! எளிய முறையில் சமிக்கைகளை கற்றுக்கொள்ளுங்கள்.",
     quizRuleBadge: "இலங்கை போக்குவரத்து விதிகள்",
     quizNextBtn: "அடுத்த வினா (Next Question)",
+    quizClassroomTitle: "எமது நேரடி தியரி வகுப்பறை",
+    quizClassroomSub: "அனைத்து வீதி சமிக்கைகளையும் நேரடியாகக் கற்றுக்கொள்ளுங்கள்",
     
     // 4-Step Roadmap
     stepPill: "படிமுறை வழிகாட்டல்",
@@ -233,11 +267,13 @@ const translations = {
     cHoursLabel: "செயற்பாட்டு நேரம் (Operating Hours)",
     cHoursSub: "வாரத்தின் 7 நாட்களும் திறந்திருக்கும்",
     ownerText: "உரிமையாளர்: க. தினேஷ்",
+    mapLocationText: "கண்டி வீதி • பழைய பூங்கா முன்பாக • YMCA யாழ்ப்பாணம்",
+    callUsText: "அழைக்க: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "பயிற்சி வாகனங்கள்",
     footerSupport: "மாணவர் உதவிகள்",
     footerContact: "தொடர்புகளுக்கு",
-    footerRights: "© 2026 Dinesh Learners (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
-    footerLocation: "யாழ்ப்பாணம் • Sri Lanka",
+    footerRights: "© 2026 தினேஷ் லேணர்ஸ் (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+    footerLocation: "யாழ்ப்பாணம் • இலங்கை",
     
     // Modal
     modalTitle: "புதிய மாணவர் சேர்க்கை & முன்பதிவு",
@@ -256,15 +292,16 @@ const translations = {
   },
   
   en: {
-    // Top Bar
+    // Top Announcement Bar
     topNotice: "📢 2026 Driving Batches Now Enrolling! Modern 3D Simulator & Practical Dual-Control Fleet | Book Now!",
     hoursText: "Monday - Sunday: 7:00 AM - 7:00 PM",
     newBadge: "NEW 2026",
     
-    // Header & Brand
+    // Header & Navigation
     brandTitle: "Dinesh Learners",
     brandSubtitle: "Dinesh Driving School • Jaffna (DMT: DS:385)",
     navHome: "Home",
+    navZeroExp: "Beginner Training",
     navCourses: "Vehicles & Courses",
     navSimulator: "3D Simulator",
     navGallery: "Real Photos",
@@ -275,12 +312,12 @@ const translations = {
     btnCall: "Call: 077 9227 102",
     btnEnroll: "Enroll Now",
     
-    // Hero
-    heroPill: "🚀 Jaffna's Leading Modern Driving Academy",
+    // Hero Section
+    heroPill: "Jaffna's Leading Modern Driving Academy",
     heroTitlePrefix: "Master the Road & Get Your ",
     heroTitleHighlight: "Driving License",
     heroTitleSuffix: " with Confidence!",
-    heroDesc: "Dinesh Learners (DMT DS:385) provides advanced computer 3D simulator training and practical dual-pedal vehicle lessons. 100% trial success guidance with certified instructors in Jaffna.",
+    heroDesc: "Dinesh Learners (DMT DS:385) provides advanced computer 3D simulator training and practical dual-control vehicle lessons. 100% trial success guidance with certified instructors in Jaffna.",
     heroTagSim: "3D VR Simulator",
     heroTagDual: "Dual-Control Fleet",
     heroTagLady: "Lady Instructors Available",
@@ -288,6 +325,9 @@ const translations = {
     btnHeroTrial: "Book Free Simulator Trial",
     btnHeroWhatsapp: "Chat on WhatsApp",
     heroLocation: "YMCA Building, Kandy Road, Jaffna",
+    heroLabBadge: "Real Lab Photo",
+    heroLabRig: "Logitech G29 Virtual Cockpit Rig",
+    heroLabFeatures: "Racing Bucket Seat • Force Feedback Wheel • 6-Speed Shifter",
     cardFleetTitle: "Dual-Control Safety Fleet",
     cardFleetSub: "Auto & Manual Cars • Certified Instructors",
     cardHighTech: "High-Tech",
@@ -296,7 +336,7 @@ const translations = {
     cardPassSub: "99.4% First-Time Pass",
     
     // Zero Driving Experience USP Section
-    zeroExpBadge: "💡 Zero Driving Experience? Learn Easily From Scratch!",
+    zeroExpBadge: "Zero Driving Experience? Learn Easily From Scratch!",
     zeroExpTitle: "Never Driven Before? No Fear – Learn With 100% Confidence!",
     zeroExpDesc: "Never touched a steering wheel before? Scared of stalling or accidents on busy roads? Learn risk-free in our authentic 3D virtual cockpit simulator and real theory classroom before ever hitting the road. We teach you patiently step-by-step from zero!",
     zeroExpP1Title: "Start From Absolute Scratch",
@@ -305,39 +345,45 @@ const translations = {
     zeroExpP2Desc: "No risk of accidents, scratches or stalling in traffic while mastering clutch and gears.",
     zeroExpP3Title: "Official Theory Classroom",
     zeroExpP3Desc: "Learn all road signs and mechanical basics in our fully equipped Jaffna classroom.",
+    btnZeroExpTrial: "Join Free Introductory Session Today!",
+    labTheoryLabel: "Real Theory Classroom",
+    labSimLabel: "Real 3D Simulator Lab",
     
-    // Stats
-    statStudents: "Passed Students",
+    // Stats Section
+    statStudents: "Successful Students",
     statPassRate: "First-Time Pass Rate",
     statExperience: "Years Experience & Trust",
     statDmt: "Govt DMT License",
     
-    // Heritage Banner Section
-    heritageBadge: "Government Registered Driving School",
-    heritageTitle: "Dinesh Learners - Jaffna",
-    heritageSub: "Dinesh Driving School • දිනේෂ් රියදුරු පුහුණු පාසල",
-    heritageTagline: "Modern Technology Based Driving Training Provided.",
-    heritageDesc: "Jaffna's premier driving academy. Comprehensive practical training on modern 3D simulators, dual-control cars, three-wheelers, motorbikes and commercial heavy passenger vehicles.",
-    heritageHours: "Monday - Sunday: 7:00 AM - 7:00 PM",
-    heritageOwner: "Proprietor: K. Dinesh",
-    heritageAddress: "No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)",
-    
-    // Real Gallery Section
+    // Gallery Section
     galleryPill: "Real Photos",
     galleryTitle: "Real Academy & Training Facilities Gallery",
     gallerySubtitle: "Authentic photographs of our 3D simulator lab, classroom, and YMCA Jaffna branch entrance!",
+    g1Badge: "YMCA Jaffna Branch",
     g1Caption: "Main Entrance at YMCA Jaffna (Kandy Road)",
+    g1Loc: "Kandy Road, Opposite Old Park, YMCA Building",
+    g2Badge: "3D Simulator Room",
     g2Caption: "Full 3D Simulator Lab & Student Waiting Area",
+    g2Sub: "DMT Road Signs & Markings Official Study Board",
+    g3Badge: "Cockpit Hardware",
     g3Caption: "Logitech G29 Force-Feedback Cockpit with Racing Seat",
+    g3Sub: "Realistic Clutch, Brake, Shifter & Bucket Seat",
+    g4Badge: "Theory Classroom",
     g4Caption: "Theory Classroom with Real Road Signs Wall Chart",
+    g4Sub: "Danger Warning & Regulatory Road Sign Boards",
+    g5Badge: "Mechanical Education",
     g5Caption: "Mechanical Education Board (Double Wishbone & Steering)",
+    g5Sub: "Internal Suspension Mechanics & Steering Systems",
+    g6Badge: "DMT Reg: DS:385",
     g6Caption: "Official Government Approved Registration Banner",
+    g6Sub: "Jaffna's Premier Govt Certified Driving Academy",
     
-    // Course Fleet Section
+    // Courses & Fleet Section
+    coursePill: "Our Training Fleet",
     courseSectionTitle: "Our Training Categories & Fleet",
     courseSectionSubtitle: "Comprehensive licensing courses from motorbikes to heavy passenger buses.",
     tabAll: "All Courses",
-    tabCar: "Car (Auto/Manual)",
+    tabCar: "Car (Dual-Control)",
     tabBike: "Motorcycle",
     tabTuk: "Three Wheeler",
     tabBus: "Heavy Bus & Lorry",
@@ -392,9 +438,26 @@ const translations = {
     btnRegisterCourse: "Enroll Now",
     btnBookCombo: "Book Combo Plan",
     
+    // Badges inside course cards
+    badgeClassB: "Class B (Light Vehicle)",
+    badgeGear: "Auto / Manual",
+    badgePopular: "Popular",
+    badgeRealHardware: "Real Hardware Rig",
+    badgeLogitech: "Logitech G29",
+    badgeHighTech: "High Tech",
+    badgeDemo: "Demo",
+    badgeFreeTrial: "Free Trial",
+    badgeClassA: "Class A / A1 (Motorcycle)",
+    badgeGearedAuto: "Geared & Auto",
+    badgeClassB1: "Class B1 (Three Wheeler)",
+    badgeCommercial: "Commercial",
+    badgeClassD: "Class D / CE (Heavy Vehicles)",
+    badgeHeavyFleet: "Heavy Fleet",
+    
     // Simulator Section
     simTitle: "Jaffna's Pioneer in 3D Driving Simulator Tech!",
     simDesc: "Learn clutch balancing, hazard perception, night & rain driving in a realistic risk-free 3D cockpit before hitting the real Jaffna roads.",
+    simCockpitBadge: "Logitech G29 Force-Feedback Simulator Cockpit",
     simB1Title: "Zero Accident Risk",
     simB1Desc: "Learn steering, clutch and gear changes without anxiety.",
     simB2Title: "Multiple Weather Conditions",
@@ -404,6 +467,11 @@ const translations = {
     simB4Title: "Free Demo Session",
     simB4Desc: "Included completely free with all full courses.",
     btnSimDemo: "Book Free Simulator Demo Session",
+    simLabLive: "Live Simulator Lab",
+    simLabLocation: "YMCA Building 1st Floor • Jaffna",
+    simActiveStatus: "Active & Running",
+    simWheelTag: "Force Feedback Wheel",
+    simSuspensionTag: "Mechanical Suspension Board",
     
     // Fee Calculator
     calcPill: "Transparent Pricing",
@@ -428,6 +496,8 @@ const translations = {
     quizSubtitle: "Test your traffic knowledge for the official DMT written exam with interactive questions.",
     quizRuleBadge: "Sri Lanka Highway Code",
     quizNextBtn: "Next Question",
+    quizClassroomTitle: "Our Theory Classroom",
+    quizClassroomSub: "Master all road signs and DMT regulations directly",
     
     // 4-Step Roadmap
     stepPill: "Step-by-Step Path",
@@ -485,6 +555,8 @@ const translations = {
     cHoursLabel: "Operating Hours",
     cHoursSub: "Open 7 Days a Week",
     ownerText: "Proprietor: K. Dinesh",
+    mapLocationText: "Kandy Road • Opposite Old Park • YMCA Jaffna",
+    callUsText: "Call: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "Training Fleet",
     footerSupport: "Student Resources",
     footerContact: "Contact Info",
@@ -508,13 +580,16 @@ const translations = {
   },
   
   si: {
+    // Top Announcement Bar
     topNotice: "📢 2026 නව රියදුරු පුහුණු පාඨමාලා ආරම්භ විය! නවීන 3D සිමියුලේටර් සහ ප්‍රායෝගික පුහුණුව | අදම ලියාපදිංචි වන්න!",
     hoursText: "සඳුදා - ඉරිදා: පෙ.ව. 7:00 - ප.ව. 7:00",
     newBadge: "නව 2026",
     
+    // Header & Navigation
     brandTitle: "දිනේෂ් රියදුරු පාසල",
-    brandSubtitle: "Dinesh Driving School • யாழ்ப்பாணம் (DMT: DS:385)",
+    brandSubtitle: "දිනේෂ් ලර්නර්ස් • යාපනය (DMT: DS:385)",
     navHome: "මුල් පිටුව",
+    navZeroExp: "ආරම්භක පුහුණුව",
     navCourses: "පුහුණු පාඨමාලා",
     navSimulator: "3D සිමියුලේටරය",
     navGallery: "සැබෑ ඡායාරූප",
@@ -525,7 +600,8 @@ const translations = {
     btnCall: "අමතන්න: 077 9227 102",
     btnEnroll: "දැන්ම ලියාපදිංචි වන්න",
     
-    heroPill: "🚀 යාපනයේ අංක 1 නවීන රියදුරු පුහුණු පාසල",
+    // Hero Section
+    heroPill: "යාපනයේ අංක 1 නවීන රියදුරු පුහුණු පාසල",
     heroTitlePrefix: "විශ්වාසයෙන් යුතුව ",
     heroTitleHighlight: "රියදුරු බලපත්‍රය",
     heroTitleSuffix: " ලබාගන්න!",
@@ -537,6 +613,9 @@ const translations = {
     btnHeroTrial: "නොමිලේ සිමියුලේටර් අත්හදාබැලීමක්",
     btnHeroWhatsapp: "WhatsApp මගින් විමසන්න",
     heroLocation: "YMCA ගොඩනැගිල්ල, නුවර පාර, යාපනය",
+    heroLabBadge: "සැබෑ විද්‍යාගාර ඡායාරූපය",
+    heroLabRig: "Logitech G29 වර්චුවල් රේසිං සිමියුලේටරය",
+    heroLabFeatures: "රේසිං ආසනය • Force Feedback ස්ටියරින් • 6-Speed ගියර්",
     cardFleetTitle: "ද්විත්ව පාලන ආරක්ෂිත වාහන",
     cardFleetSub: "Auto & Manual කාර් • සහතිකලත් උපදේශකවරුන්",
     cardHighTech: "නවීන තාක්ෂණය",
@@ -544,7 +623,8 @@ const translations = {
     cardPassTitle: "විභාග වාර්තාව",
     cardPassSub: "99.4% පළමු වර සමත්වීම",
     
-    zeroExpBadge: "💡 රිය පැදවීම නොදන්නා අයට මුල සිට විශේෂ පුහුණුව!",
+    // Zero Driving Experience USP Section
+    zeroExpBadge: "රිය පැදවීම නොදන්නා අයට මුල සිට විශේෂ පුහුණුව!",
     zeroExpTitle: "රිය පැදවීමට බියද? බිය නොවන්න - පහසුවෙන්ම මෙහිදී පුහුණු වන්න!",
     zeroExpDesc: "කවදාවත් ස්ටියරින් වීල් එකක් අල්ලා නැද්ද? ක්ලච්, ගියර් පාලනය නොදන්නේද? කෙලින්ම මහපාරට නොගොස් අපගේ සැබෑ 3D සිමියුලේටරය මගින් මුල සිටම බියකින් තොරව ඉගෙන ගන්න!",
     zeroExpP1Title: "කිසිදු පූර්ව දැනුමක් අවශ්‍ය නැත",
@@ -553,31 +633,41 @@ const translations = {
     zeroExpP2Desc: "අනතුරු අවදානමක් හෝ එන්ජිම නතරවීමේ බියක් මෙහිදී නැත.",
     zeroExpP3Title: "පන්ති කාමරයේ සැබෑ සංඥා පුහුණුව",
     zeroExpP3Desc: "සැබෑ මාර්ග සංඥා පුවරු මගින් ලිඛිත විභාගයට පූර්ණ සූදානම.",
+    btnZeroExpTrial: "අදම නොමිලේ ආරම්භක පන්තියට එක්වන්න!",
+    labTheoryLabel: "න්‍යායාත්මක පන්ති කාමරය",
+    labSimLabel: "3D සිමියුලේටර් විද්‍යාගාරය",
     
+    // Stats Section
     statStudents: "සමත් වූ සිසුන් ගණන",
     statPassRate: "පළමු වර සමත්වීමේ ප්‍රතිශතය",
     statExperience: "වසරක විශ්වාසනීය පළපුරුද්ද",
     statDmt: "රජයේ ලියාපදිංචි අංකය",
     
-    heritageBadge: "රජයේ ලියාපදිංචි රියදුරු පුහුණු පාසල",
-    heritageTitle: "දිනේෂ් රියදුරු පාසල - යාපනය",
-    heritageSub: "Dinesh Driving School • தினேஷ் லேணர்ஸ்",
-    heritageTagline: "නවීන තාක්ෂණික ක්‍රමවේදයට රියදුරු පුහුණුව ලබාදේ.",
-    heritageDesc: "යාපනයේ ප්‍රමුඛතම රියදුරු පුහුණු පාසල. නවීන 3D සිමියුලේටර්, ද්විත්ව තිරිංග සහිත නවීන මෝටර් රථ, ත්‍රිරෝද රථ, යතුරුපැදි සහ බර වාහන සඳහා සම්පූර්ණ පුහුණුව.",
-    heritageHours: "සඳුදා - ඉරිදා: පෙ.ව. 7.00 - ප.ව. 7.00",
-    heritageOwner: "අයිතිකරු: කේ. දිනේෂ්",
-    heritageAddress: "අංක 107A, 1/1, නුවර පාර, යාපනය. (පැරණි උද්‍යානය ඉදිරිපිට, YMCA ගොඩනැගිල්ල, 1 වන මහල)",
-    
+    // Gallery Section
     galleryPill: "සැබෑ ඡායාරූප",
     galleryTitle: "අපගේ සැබෑ පුහුණු පරිශ්‍රයේ ඡායාරූප",
     gallerySubtitle: "යාපනය YMCA හි පිහිටි අපගේ සැබෑ 3D සිමියුලේටර් විද්‍යාගාරය සහ පන්ති කාමරය!",
+    g1Badge: "YMCA යාපනය ශාඛාව",
     g1Caption: "යාපනය YMCA ප්‍රධාන පිවිසුම",
+    g1Loc: "නුවර පාර, පැරණි උද්‍යානය ඉදිරිපිට, YMCA ගොඩනැගිල්ල",
+    g2Badge: "3D සිමියුලේටර් කාමරය",
     g2Caption: "සම්පූර්ණ 3D සිමියුලේටර් කාමරය සහ රැඳී සිටින ප්‍රදේශය",
+    g2Sub: "DMT මාර්ග සංඥා සහ ලකුණු නිල අධ්‍යයන පුවරුව",
+    g3Badge: "උපකරණ පද්ධතිය",
     g3Caption: "Logitech G29 විර්චුවල් රේසිං සිමියුලේටරය",
+    g3Sub: "සැබෑ ක්ලච්, බ්‍රේක්, ගියර් සහ රේසිං ආසනය",
+    g4Badge: "න්‍යායාත්මක පන්ති කාමරය",
     g4Caption: "මාර්ග සංඥා සහිත සැබෑ පන්ති කාමරය",
+    g4Sub: "අන්තරාය අනතුරු ඇඟවීම් සහ නියාමන මාර්ග සංඥා පුවරු",
+    g5Badge: "යාන්ත්‍රික ඉගැන්වීම",
     g5Caption: "යාන්ත්‍රික ඉගැන්වීම් පුවරුව (Double Wishbone Suspension)",
+    g5Sub: "අභ්‍යන්තර සස්පෙන්ෂන් යාන්ත්‍රණය සහ ස්ටියරින් තාක්ෂණය",
+    g6Badge: "රජයේ ලියාපදිංචි: DS:385",
     g6Caption: "රජයේ අනුමත නිල ලියාපදිංචි පුවරුව",
+    g6Sub: "යාපනයේ ප්‍රමුඛතම රජයේ සහතිකලත් රියදුරු පාසල",
     
+    // Courses & Fleet Section
+    coursePill: "පුහුණු වාහන පෙළ",
     courseSectionTitle: "අපගේ පුහුණු පාඨමාලා සහ වාහන",
     courseSectionSubtitle: "යතුරුපැදි සිට බර වාහන බස් සහ ලොරි දක්වා සියලුම කාණ්ඩ සඳහා පුහුණුව ලබාදේ.",
     tabAll: "සියල්ල",
@@ -587,6 +677,7 @@ const translations = {
     tabBus: "බර වාහන (බස්/ලොරි)",
     tabSim: "3D සිමියුලේටරය",
     
+    // Course Cards
     c1Title: "මෝටර් රථ රියදුරු පුහුණුව (Dual Control)",
     c1Sub: "Manual & Auto Transmission",
     c1Desc: "ද්විත්ව තිරිංග ආරක්ෂාව සහිත නවීන කාර්. මහා මාර්ගයේ ධාවනය, ආපසු ගැනීම, පාකිං සහ DMT ආදර්ශ පරීක්ෂණ පුහුණුව.",
@@ -635,8 +726,26 @@ const translations = {
     btnRegisterCourse: "ලියාපදිංචි වන්න",
     btnBookCombo: "පැකේජය තෝරන්න",
     
+    // Badges inside course cards
+    badgeClassB: "Class B (සැහැල්ලු වාහන)",
+    badgeGear: "Auto / Manual",
+    badgePopular: "ජනප්‍රිය",
+    badgeRealHardware: "සැබෑ සිමියුලේටරය",
+    badgeLogitech: "Logitech G29",
+    badgeHighTech: "නවීන තාක්ෂණය",
+    badgeDemo: "ආදර්ශ",
+    badgeFreeTrial: "නොමිලේ අත්හදාබැලීමක්",
+    badgeClassA: "Class A / A1 (යතුරුපැදි)",
+    badgeGearedAuto: "ගියර් සහ ඔටෝ",
+    badgeClassB1: "Class B1 (ත්‍රිරෝද රථ)",
+    badgeCommercial: "වාණිජ",
+    badgeClassD: "Class D / CE (බර වාහන)",
+    badgeHeavyFleet: "බර වාහන පෙළ",
+    
+    // Simulator Section
     simTitle: "යාපනයේ ප්‍රථම උසස් 3D රියදුරු සිමියුලේටර් පුහුණුව!",
     simDesc: "මහා මාර්ගයට පිවිසීමට පෙර අනතුරු බියකින් තොරව රාත්‍රී කාලය, වැසි කාලය සහ දුෂ්කර මාර්ග තත්ත්වයන් 3D සිමියුලේටරය මගින් පුහුණු වන්න.",
+    simCockpitBadge: "Logitech G29 Force-Feedback සිමියුලේටරය",
     simB1Title: "අනතුරු අවදානමක් නැත",
     simB1Desc: "බියකින් තොරව ක්ලච්, ගියර් සහ හැරවීම් ඉගෙන ගත හැක.",
     simB2Title: "විවිධ කාලගුණ තත්ත්වයන්",
@@ -646,7 +755,13 @@ const translations = {
     simB4Title: "නොමිලේ ආදර්ශ සැසියක්",
     simB4Desc: "අපගේ සිසුන් සඳහා නොමිලේ පිරිනැමේ.",
     btnSimDemo: "නොමිලේ සිමියුලේටර් සැසියක් වෙන්කරගන්න",
+    simLabLive: "ක්‍රියාකාරී සිමියුලේටර් විද්‍යාගාරය",
+    simLabLocation: "YMCA ගොඩනැගිල්ල 1 වන මහල • යාපනය",
+    simActiveStatus: "දැනට ක්‍රියාත්මකයි",
+    simWheelTag: "Force Feedback ස්ටියරින් වීල්",
+    simSuspensionTag: "යාන්ත්‍රික ඉගැන්වීම් පුවරුව",
     
+    // Fee Calculator
     calcPill: "පාරදෘශ්‍ය ගාස්තු",
     calcTitle: "අන්තර්ක්‍රියාකාරී ගාස්තු ගණකය",
     calcSubtitle: "ඔබට අවශ්‍ය වාහන තෝරා ක්ෂණික ගාස්තු විස්තර සහ පහසු වාරික ක්‍රම ලබාගන්න.",
@@ -663,12 +778,16 @@ const translations = {
     btnBookThisPlan: "මෙම පැකේජය වෙන්කරගන්න",
     calcNoHidden: "සැඟවුණු ගාස්තු නොමැත • DMT DS:385 සහතිකලත්",
     
+    // Road Signs Quiz
     quizPill: "DMT ලිඛිත විභාග ආදර්ශ ප්‍රශ්න",
     quizTitle: "ශ්‍රී ලංකා DMT මාර්ග සංඥා ආදර්ශ ප්‍රශ්නාවලිය",
     quizSubtitle: "DMT ලිඛිත විභාගයට පහසුවෙන් සූදානම් වන්න!",
     quizRuleBadge: "ශ්‍රී ලංකා මාර්ග නීති",
     quizNextBtn: "මීළඟ ප්‍රශ්නය (Next Question)",
+    quizClassroomTitle: "අපගේ න්‍යායාත්මක පන්ති කාමරය",
+    quizClassroomSub: "සියලුම මාර්ග සංඥා සහ DMT නීති සෘජුවම ඉගෙන ගන්න",
     
+    // 4-Step Roadmap
     stepPill: "පියවරෙන් පියවර මගපෙන්වීම",
     stepTitle: "රියදුරු බලපත්‍රය ලබාගැනීමේ පහසු පියවර",
     stepSubtitle: "ලියාපදිංචියේ සිට රියදුරු බලපත්‍රය අතට ලැබෙන තෙක් දිනේෂ් රියදුරු පාසල ඔබ ළඟින්ම සිටී!",
@@ -681,6 +800,7 @@ const translations = {
     s4Title: "4. DMT ප්‍රායෝගික විභාගය සහ බලපත්‍රය!",
     s4Desc: "ආදර්ශ ධාවන පිටියේ පුහුණුව ලබා විශ්වාසයෙන් යුතුව රියදුරු බලපත්‍රය ලබාගන්න!",
     
+    // Why Choose Us
     whyPill: "අපගේ ශක්තිය",
     whyTitle: "ඇයි දිනේෂ් රියදුරු පාසල තෝරාගත යුත්තේ?",
     whySubtitle: "විශ්වාසනීය පළපුරුද්ද, නවීන පහසුකම් සහ පූර්ණ ශිෂ්‍ය ආරක්ෂාව!",
@@ -697,6 +817,7 @@ const translations = {
     w6Title: "ප්‍රධාන ස්ථානය (YMCA Jaffna)",
     w6Desc: "යාපනය නුවර පාරේ පැරණි උද්‍යානය ඉදිරිපිට, බස් සහ දුම්රිය ස්ථානවලට ඉතා ආසන්නව පිහිටා ඇත.",
     
+    // Testimonials
     revPill: "සිසුන්ගේ අදහස්",
     reviewTitle: "අපගේ සිසුන්ගේ අදහස්",
     reviewSubtitle: "පළමු වරම රියදුරු බලපත්‍රය ලබාගත් යාපනයේ සිසුන්ගේ අත්දැකීම්.",
@@ -710,6 +831,7 @@ const translations = {
     r3Name: "ජෙගදීස් ආර්.",
     r3Place: "චාවකච්චේරි • Heavy Bus Class D",
     
+    // Contact Section
     contactPill: "සම්බන්ධ වන්න",
     contactTitle: "අප වෙත පැමිණෙන්න හෝ අමතන්න",
     contactSubtitle: "ඔබගේ රියදුරු සිහිනය සැබෑ කරගැනීමට අපගේ කණ්ඩායම සැමවිටම සූදානම්.",
@@ -721,12 +843,15 @@ const translations = {
     cHoursLabel: "විවෘත වේලාවන්",
     cHoursSub: "සතියේ දින 7 ම විවෘතයි",
     ownerText: "අයිතිකරු: කේ. දිනේෂ්",
+    mapLocationText: "නුවර පාර • පැරණි උද්‍යානය ඉදිරිපිට • YMCA යාපනය",
+    callUsText: "අමතන්න: 021 4327 102 / 077 9227 102",
     footerQuickLinks: "පුහුණු පාඨමාලා",
     footerSupport: "ශිෂ්‍ය සහාය",
     footerContact: "සම්බන්ධ වීමට",
-    footerRights: "© 2026 Dinesh Learners (DMT DS:385). සියලුම හිමිකම් ඇවිරිණි.",
+    footerRights: "© 2026 දිනේෂ් රියදුරු පාසල (DMT DS:385). සියලුම හිමිකම් ඇවිරිණි.",
     footerLocation: "යාපනය • ශ්‍රී ලංකාව",
     
+    // Modal
     modalTitle: "නව සිසුන් ලියාපදිංචි කිරීම",
     modalSub: "ඔබගේ තොරතුරු පහතින් ඇතුළත් කරන්න, අපගේ කණ්ඩායම ඔබ හා සම්බන්ධ වනු ඇත.",
     mNameLabel: "සම්පූර්ණ නම*",
@@ -745,53 +870,147 @@ const translations = {
 
 // Fee Calculator Base Prices
 const basePrices = {
-  car_manual: { price: 28000, name: "Car (Manual - Dual Control)", nameTa: "கார் (Manual - Dual Control)", nameSi: "කාර් (මැනුවල් - Dual Control)", lessons: 15 },
-  car_auto: { price: 26000, name: "Car (Automatic - Dual Control)", nameTa: "கார் (Auto - Dual Control)", nameSi: "කාර් (ඔටෝ - Dual Control)", lessons: 12 },
-  bike: { price: 12000, name: "Motorcycle / Scooter", nameTa: "மோட்டார் பைக் / ஸ்கூட்டர்", nameSi: "යතුරුපැදි සහ ස්කූටර්", lessons: 8 },
-  tuktuk: { price: 14000, name: "Three-Wheeler (Tuk Tuk)", nameTa: "முச்சக்கரவண்டி (Tuk-Tuk)", nameSi: "ත්‍රිරෝද රථ (Tuk-Tuk)", lessons: 8 },
-  bus: { price: 38000, name: "Heavy Bus & Lorry", nameTa: "கனரக பஸ் & லொறி", nameSi: "බර වාහන (බස් සහ ලොරි)", lessons: 18 },
+  car_manual: { 
+    price: 28000, 
+    name: "Car (Manual - Dual Control)", 
+    nameTa: "கார் (Manual - Dual Control)", 
+    nameSi: "කාර් (මැනුවල් - Dual Control)", 
+    lessons: 15 
+  },
+  car_auto: { 
+    price: 26000, 
+    name: "Car (Automatic - Dual Control)", 
+    nameTa: "கார் (Auto - Dual Control)", 
+    nameSi: "කාර් (ඔටෝ - Dual Control)", 
+    lessons: 12 
+  },
+  bike: { 
+    price: 12000, 
+    name: "Motorcycle / Scooter", 
+    nameTa: "மோட்டார் பைக் / ஸ்கூட்டர்", 
+    nameSi: "යතුරුපැදි සහ ස්කූටර්", 
+    lessons: 8 
+  },
+  tuktuk: { 
+    price: 14000, 
+    name: "Three-Wheeler (Tuk-Tuk)", 
+    nameTa: "முச்சக்கரவண்டி (Tuk-Tuk)", 
+    nameSi: "ත්‍රිරෝද රථය (Tuk-Tuk)", 
+    lessons: 10 
+  },
+  bus: { 
+    price: 38000, 
+    name: "Heavy Vehicle (Bus & Truck)", 
+    nameTa: "கனரக வாகனம் (பஸ் & லொறி)", 
+    nameSi: "බර වාහන (බස් සහ ලොරි)", 
+    lessons: 20 
+  }
 };
 
-// Road Signs Quiz Questions
+// Interactive Road Signs Quiz Data
 const quizQuestions = [
   {
-    signSvg: `<svg class="w-16 h-16 mx-auto text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 22 22 22" fill="#FEF08A" stroke="#DC2626"/><circle cx="12" cy="15" r="1.5" fill="#DC2626"/><line x1="12" y1="8" x2="12" y2="12" stroke="#DC2626"/></svg>`,
-    titleTa: "முக்கோண வடிவ எச்சரிக்கை சமிக்கை என்ன உணர்த்துகிறது?",
-    titleEn: "What does this triangular warning sign indicate?",
-    titleSi: "ත්‍රිකෝණාකාර අනතුරු ඇඟවීමේ සංඥාවෙන් දැක්වෙන්නේ කුමක්ද?",
-    optionsTa: ["முன்னால் ஆபத்து / எச்சரிக்கை (General Hazard Ahead)", "வேக வரம்பு 60km/h", "வாகனங்களை நிறுத்த தடை", "ஒரு வழி பாதை"],
-    optionsEn: ["General Hazard / Caution Ahead", "Speed limit 60km/h", "No Parking", "One Way Street"],
-    optionsSi: ["ඉදිරියෙන් ඇති අනතුරක් පිළිබඳ අවවාදයයි", "වේග සීමාව 60km/h", "නැවැත්වීම තහනම්", "එක් අතකට පමණක් මාර්ගය"],
-    answer: 0,
-    explanationTa: "சிவப்பு விளிம்புடன் கூடிய முக்கோண சமிக்கைகள் எச்சரிக்கையைக் குறிக்கும் (Danger Warning Signs).",
-    explanationEn: "Red border triangular signs are danger warnings alerting drivers to hazards ahead.",
-    explanationSi: "රතු මායිමක් සහිත ත්‍රිකෝණාකාර සංඥා මගින් ඉදිරියේ ඇති අනතුරු පිළිබඳ අවවාද කෙරේ."
-  },
-  {
-    signSvg: `<svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#DC2626"/><rect x="4" y="10" width="16" height="4" fill="#FFFFFF" rx="1"/></svg>`,
-    titleTa: "சிவப்பு வட்டத்தில் வெள்ளை கிடைமட்ட கோடு எதைக் குறிக்கிறது?",
-    titleEn: "What does a red circle with a horizontal white bar signify?",
-    titleSi: "රතු රවුමක් තුළ සුදු තිරස් තීරුවකින් දැක්වෙන්නේ කුමක්ද?",
-    optionsTa: ["பாதசாரிகள் கடவை", "உட்செல்ல தடை (No Entry)", "வழி விடுக (Give Way)", "வேகத்தடை"],
-    optionsEn: ["Pedestrian Crossing", "No Entry for All Vehicles", "Give Way", "Speed Bump"],
-    optionsSi: ["පදික මාරුව", "ඇතුළුවීම තහනම් (No Entry)", "ඉඩ දෙන්න (Give Way)", "වේග බාධකය"],
+    id: 1,
+    signSvg: `
+      <svg width="100" height="90" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 95,85 5,85" fill="#FACC15" stroke="#DC2626" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M50 28V56M50 67V72" stroke="#000000" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+    `,
+    titleTa: "முக்கோண வடிவ மஞ்சள்/சிவப்பு சமிக்கை பலகை என்ன குறிக்கிறது?",
+    titleEn: "What does an equilateral triangular road sign with a red border indicate?",
+    titleSi: "රතු දාරයක් සහිත ත්‍රිකෝණාකාර මාර්ග සංඥාවකින් පෙන්නුම් කරන්නේ කුමක්ද?",
+    optionsTa: [
+      "கட்டாய கட்டளை சமிக்கை (Mandatory Sign)",
+      "முன்னெச்சரிக்கை அல்லது ஆபத்து சமிக்கை (Danger Warning Sign)",
+      "தகவல் அல்லது வழிகாட்டி சமிக்கை (Informative Sign)",
+      "வேக எல்லை சமிக்கை (Speed Limit)"
+    ],
+    optionsEn: [
+      "Mandatory Command Sign",
+      "Danger Warning or Hazard Ahead Sign",
+      "Informative / Directional Sign",
+      "Speed Limit Enforcement Sign"
+    ],
+    optionsSi: [
+      "අනිවාර්ය නියෝග සංඥාවකි",
+      "අන්තරාය අනතුරු ඇඟවීමේ සංඥාවකි",
+      "තොරතුරු හෝ මඟපෙන්වීමේ සංඥාවකි",
+      "වේග සීමා සංඥාවකි"
+    ],
     answer: 1,
-    explanationTa: "இது 'உட்செல்ல தடை' (No Entry) சமிக்கையாகும். எந்த வாகனமும் உட்செல்ல அனுமதி இல்லை.",
-    explanationEn: "This indicates 'No Entry'. No vehicles are permitted to enter this road.",
-    explanationSi: "මෙයින් සියලුම වාහන සඳහා ඇතුළුවීම තහනම් බව දැක්වේ."
+    explanationTa: "இலங்கை மோட்டார் போக்குவரத்து விதிகளின்படி முக்கோண வடிவ சமிக்கைகள் வீதி ஆபத்துகள் பற்றிய முன்னெச்சரிக்கையை உணர்த்துகின்றன.",
+    explanationEn: "Under the Sri Lanka Highway Code, triangular signs with red borders warn drivers of imminent road hazards ahead.",
+    explanationSi: "ශ්‍රී ලංකා මාර්ග නීතියට අනුව රතු දාරයක් සහිත ත්‍රිකෝණාකාර සංඥා මගින් ඉදිරියේ ඇති අනතුරු පිළිබඳව අනතුරු අඟවයි."
   },
   {
-    signSvg: `<svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none"><polygon points="12 22 2 4 22 4" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/><text x="12" y="12" font-size="5" text-anchor="middle" font-weight="bold" fill="#DC2626">GIVE WAY</text></svg>`,
-    titleTa: "கீழ்நோக்கிய தலைகீழ் முக்கோணம் (Give Way) குறிப்பது?",
-    titleEn: "What does the inverted triangle (Give Way) mean?",
-    titleSi: "යටිකුරු ත්‍රිකෝණය (Give Way) මගින් අදහස් වන්නේ කුමක්ද?",
-    optionsTa: ["பிரதான வீதிக்கு முன்னுரிமை கொடுத்து வழி விடுக", "வாகனத்தை முந்திச் செல்க", "வலதுபுறம் மட்டும் திரும்புக", "வாகனம் பழுதுபார்க்கும் இடம்"],
-    optionsEn: ["Give way to traffic on main road", "Overtake vehicles safely", "Turn right only", "Vehicle repair station"],
-    optionsSi: ["ප්‍රධාන මාර්ගයේ වාහන සඳහා ඉඩ දෙන්න", "ඉස්සර කරන්න", "දකුණට පමණක් හරවන්න", "වාහන අලුත්වැඩියා ස්ථානය"],
-    answer: 0,
-    explanationTa: "பிரதான வீதியில் வரும் வாகனங்களுக்கு முன்னுரிமை அளித்து தேவைப்பட்டால் நிறுத்தி வழிவிட வேண்டும்.",
-    explanationEn: "Drivers must yield right of way to vehicles traveling on the priority road.",
-    explanationSi: "ප්‍රමුඛතා මාර්ගයේ ධාවනය වන වාහන සඳහා ප්‍රමුඛතාව ලබාදිය යුතුය."
+    id: 2,
+    signSvg: `
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="45" cy="45" r="40" fill="#FFFFFF" stroke="#DC2626" stroke-width="8"/>
+        <line x1="20" y1="20" x2="70" y2="70" stroke="#DC2626" stroke-width="8" stroke-linecap="round"/>
+        <path d="M45 25L58 38M45 25L32 38M45 25V65" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `,
+    titleTa: "வட்ட வடிவ சிவப்பு எல்லையுடைய, குறுக்கு கோடுடைய சமிக்கை பலகை எதை குறிக்கிறது?",
+    titleEn: "What does a circular sign with a red border and a diagonal slash indicate?",
+    titleSi: "රතු දාරයක් සහ හරස් ඉරක් සහිත වෘත්තාකාර සංඥාවකින් අදහස් වන්නේ කුමක්ද?",
+    optionsTa: [
+      "வாகனம் செலுத்த அனுமதிக்கப்பட்ட பகுதி",
+      "தடைசெய்யப்பட்ட செயல் (Prohibitory Sign)",
+      "பரிந்துரைக்கப்பட்ட வேகம்",
+      "பாதசாரிகள் கடவை"
+    ],
+    optionsEn: [
+      "Permitted Vehicle Action",
+      "Prohibited / Forbidden Action",
+      "Recommended Driving Speed",
+      "Pedestrian Crossing Ahead"
+    ],
+    optionsSi: [
+      "අවසර ලත් ක්‍රියාවකි",
+      "තහනම් නියෝග සංඥාවකි (Prohibitory Sign)",
+      "නිර්දේශිත වේග සීමාවකි",
+      "පදික මාරුවකි"
+    ],
+    answer: 1,
+    explanationTa: "வட்ட வடிவ சிவப்பு குறுக்கு கோடு கொண்டவை அந்த குறிப்பிட்ட செயல் (எ.கா: உள்நுழைவு தடை, திருப்பம் தடை) தடைசெய்யப்பட்டுள்ளது என்பதை குறிக்கும்.",
+    explanationEn: "Red circular signs with diagonal crossbars represent prohibition (e.g. No Entry, No Right Turn).",
+    explanationSi: "රතු දාරයක් සහ හරස් ඉරක් සහිත වෘත්තාකාර සංඥා මගින් කිසියම් ක්‍රියාවක් තහනම් කර ඇති බව පෙන්නුම් කරයි."
+  },
+  {
+    id: 3,
+    signSvg: `
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="45" cy="45" r="40" fill="#2563EB" stroke="#FFFFFF" stroke-width="4"/>
+        <path d="M45 22L62 38M45 22L28 38M45 22V68" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `,
+    titleTa: "நீல நிற வட்ட வடிவில் வெள்ளை அம்பு குறி எதைக் குறிக்கிறது?",
+    titleEn: "What does a circular blue sign with a white arrow indicate?",
+    titleSi: "නිල් පැහැති වෘත්තාකාර සංඥාවක සුදු පැහැති ඊතලයකින් අදහස් වන්නේ කුමක්ද?",
+    optionsTa: [
+      "விரும்பினால் செல்லலாம்",
+      "கட்டாயமாக அம்புக்குறி காட்டும் திசையில் செல்ல வேண்டும் (Mandatory Direction)",
+      "வலதுபுறம் திரும்ப தடை",
+      "வேகத்தை அதிகரிக்கவும்"
+    ],
+    optionsEn: [
+      "Optional Lane Direction",
+      "Mandatory Direction to Follow (Must proceed straight)",
+      "Prohibited Right Turn",
+      "Minimum Speed Limit"
+    ],
+    optionsSi: [
+      "කැමති නම් යා හැක",
+      "අනිවාර්යයෙන්ම ඊතලය පෙන්වන දිශාවට පමණක් ගමන් කළ යුතුය",
+      "දකුණට හැරවීම තහනම්",
+      "අවම වේග සීමාවකි"
+    ],
+    answer: 1,
+    explanationTa: "நீல நிற வட்ட சமிக்கைகள் கட்டாயமாக பின்பற்றப்பட வேண்டிய ஒழுங்குகளை (Mandatory Signs) குறிக்கின்றன.",
+    explanationEn: "Blue circular signs are mandatory regulatory signs instructing drivers of an action they MUST follow.",
+    explanationSi: "නිල් පැහැති වෘත්තාකාර සංඥා මගින් රියදුරන් අනිවාර්යයෙන්ම පිළිපැදිය යුතු විධානයන් පෙන්නුම් කරයි."
   }
 ];
 
@@ -807,7 +1026,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupEnrollModal();
   setupMobileMenu();
   setupSmoothScrolling();
-  applyTranslations();
+  applyTranslations(); // Set initial language state
 });
 
 // Trilingual Language Switcher
@@ -827,8 +1046,13 @@ function setupLanguageSwitcher() {
 
 function applyTranslations() {
   const t = translations[currentLang];
+  if (!t) return;
 
-  // 1. Update all data-i18n elements
+  // 1. Update documentElement attributes and body classes
+  document.documentElement.lang = currentLang;
+  document.body.className = `lang-${currentLang} bg-slate-50 text-slate-900 selection:bg-red-500 selection:text-white`;
+
+  // 2. Update all data-i18n elements
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (t[key] !== undefined) {
@@ -836,17 +1060,17 @@ function applyTranslations() {
     }
   });
 
-  // 2. Update active style on language buttons
+  // 3. Update active style on language buttons (desktop & mobile)
   document.querySelectorAll(".lang-select-btn").forEach(btn => {
-    if (btn.getAttribute("data-lang") === currentLang) {
+    const btnLang = btn.getAttribute("data-lang");
+    if (btnLang === currentLang) {
       btn.className = "lang-select-btn px-3 py-1.5 rounded-lg bg-red-600 text-white font-bold text-xs shadow-md transition-all";
     } else {
       btn.className = "lang-select-btn px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-200 font-bold text-xs transition-all";
     }
   });
 
-  // 3. Update document language & title
-  document.documentElement.lang = currentLang;
+  // 4. Update document title
   if (currentLang === 'ta') {
     document.title = "தினேஷ் லேணர்ஸ் - யாழ்ப்பாணம் | Dinesh Driving School (DMT: DS:385)";
   } else if (currentLang === 'en') {
@@ -855,9 +1079,54 @@ function applyTranslations() {
     document.title = "දිනේෂ් රියදුරු පාසල - යාපනය | Dinesh Learners (DMT: DS:385)";
   }
 
-  // 4. Update dynamic Fee Calculator & Quiz
+  // 5. Update Dropdown Options (Calculator & Modal)
+  updateDropdownLanguage();
+
+  // 6. Update dynamic Fee Calculator & Quiz
   updateFeeCalculation();
   renderQuizQuestion();
+}
+
+function updateDropdownLanguage() {
+  // Update Fee Calculator Vehicle Select
+  const calcSelect = document.getElementById("calcVehicle");
+  if (calcSelect) {
+    const prevVal = calcSelect.value;
+    const optionsData = {
+      car_manual: {
+        ta: "🚗 கார் - Manual கியர் (Dual Control)",
+        en: "🚗 Car - Manual Transmission (Dual Control)",
+        si: "🚗 මෝටර් රථ - Manual Transmission (Dual Control)"
+      },
+      car_auto: {
+        ta: "🚗 கார் - Automatic கியர் (Dual Control)",
+        en: "🚗 Car - Automatic Transmission (Dual Control)",
+        si: "🚗 මෝටර් රථ - Automatic Transmission (Dual Control)"
+      },
+      bike: {
+        ta: "🏍️ மோட்டார் பைக் / ஸ்கூட்டர் (Class A/A1)",
+        en: "🏍️ Motorcycle / Scooter (Class A/A1)",
+        si: "🏍️ යතුරුපැදි / ස්කූටර් (Class A/A1)"
+      },
+      tuktuk: {
+        ta: "🛺 முச்சக்கரவண்டி Tuk-Tuk (Class B1)",
+        en: "🛺 Three-Wheeler Tuk-Tuk (Class B1)",
+        si: "🛺 ත්‍රිරෝද රථ Tuk-Tuk (Class B1)"
+      },
+      bus: {
+        ta: "🚌 கனரக வாகனம் - பஸ் & லொறி (Class D/CE)",
+        en: "🚌 Heavy Vehicle - Bus & Lorry (Class D/CE)",
+        si: "🚌 බර වාහන - බස් සහ ලොරි (Class D/CE)"
+      }
+    };
+
+    Array.from(calcSelect.options).forEach(opt => {
+      if (optionsData[opt.value]) {
+        opt.textContent = optionsData[opt.value][currentLang] || optionsData[opt.value].en;
+      }
+    });
+    calcSelect.value = prevVal;
+  }
 }
 
 // Fee Calculator Logic
