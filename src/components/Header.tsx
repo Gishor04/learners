@@ -74,18 +74,18 @@ export default function Header() {
       {/* MAIN HEADER WRAPPER (2-TIER: SEPARATE BRAND/ACTIONS & FULL NAV) */}
       <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all safe-header">
         {/* ROW 1: BRAND LOGO + PHONE + LANGUAGE SELECTOR + ENROLL CTA */}
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 w-full">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-15 sm:h-20 flex items-center justify-between gap-1 sm:gap-4 w-full">
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-xl sm:text-2xl font-sans tracking-tight group-hover:scale-105 transition-transform shrink-0">
+          <a href="#" className="flex items-center gap-1.5 sm:gap-3 group shrink-0 min-w-0">
+            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-lg sm:rounded-xl border-2 border-red-600 shadow-xs sm:shadow-md flex items-center justify-center font-black text-red-600 text-lg sm:text-2xl font-sans tracking-tight group-hover:scale-105 transition-transform shrink-0">
               L
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="text-base sm:text-xl font-black text-slate-900 tracking-tight font-heading whitespace-nowrap">
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="text-sm sm:text-xl font-black text-slate-900 tracking-tight font-heading whitespace-nowrap">
                   {t.brandTitle}
                 </span>
-                <span className="text-[9px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1.5 sm:px-2 py-0.5 rounded-full border border-red-200 shrink-0">
+                <span className="text-[8px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1 sm:px-2 py-0.5 rounded-full border border-red-200 shrink-0">
                   DS:385
                 </span>
               </div>
@@ -95,9 +95,9 @@ export default function Header() {
             </div>
           </a>
 
-          {/* Right Actions: Phone + Language Selector + Enroll CTA */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {/* Direct Call Button (Desktop) */}
+          {/* Right Actions: Phone + Language Selector + Enroll CTA + Hamburger */}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Direct Call Button (Desktop md+) */}
             <a
               href="tel:0775189963"
               className="hidden md:flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-red-50 text-slate-800 hover:text-red-600 rounded-xl transition-colors border border-slate-200 text-xs font-bold shrink-0 shadow-xs"
@@ -107,47 +107,48 @@ export default function Header() {
               <span>077 518 9963</span>
             </a>
 
-            {/* Language Selector: Clear, Prominent, 100% Accessible */}
-            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-inner shrink-0">
+            {/* Language Selector: Compact on mobile, spacious on tablet/desktop */}
+            <div className="flex items-center bg-slate-100 p-0.5 sm:p-1 rounded-lg sm:rounded-xl border border-slate-200 text-[10px] sm:text-xs font-bold shadow-inner shrink-0">
               <button
                 onClick={() => setLang("ta")}
-                className={'px-2.5 sm:px-3 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "ta" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
+                className={'px-1.5 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "ta" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="தமிழ்"
               >
                 தமிழ்
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={'px-2 sm:px-2.5 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "en" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
+                className={'px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "en" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="English"
               >
                 EN
               </button>
               <button
                 onClick={() => setLang("si")}
-                className={'px-2 sm:px-2.5 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "si" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
+                className={'px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "si" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="සිංහල"
               >
-                සිංහල
+                <span className="sm:hidden">සිං</span>
+                <span className="hidden sm:inline">සිංහල</span>
               </button>
             </div>
 
-            {/* Admission CTA Button */}
+            {/* Admission CTA Button (Visible on sm/tablet and up) */}
             <button
               onClick={() => openEnrollModal()}
-              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-red-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 shrink-0 whitespace-nowrap"
+              className="hidden sm:flex bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-red-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all items-center gap-1.5 shrink-0 whitespace-nowrap"
             >
               <i className="fa-solid fa-id-card text-xs"></i>
               <span>{t.btnEnroll}</span>
             </button>
 
-            {/* Mobile Menu Hamburger */}
+            {/* Mobile Menu Hamburger (Always 100% visible on mobile, lg:hidden) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 sm:p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors lg:hidden shrink-0 flex items-center justify-center min-w-[38px] min-h-[38px]"
+              className="p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors lg:hidden shrink-0 flex items-center justify-center min-w-[34px] min-h-[34px] sm:min-w-[38px] sm:min-h-[38px] border border-slate-200/80 shadow-xs"
               aria-label="Toggle navigation menu"
             >
-              <i className={'fa-solid ' + (mobileMenuOpen ? "fa-xmark" : "fa-bars") + ' text-base'}></i>
+              <i className={'fa-solid ' + (mobileMenuOpen ? "fa-xmark" : "fa-bars") + ' text-sm sm:text-base'}></i>
             </button>
           </div>
         </div>
