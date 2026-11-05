@@ -65,6 +65,26 @@ export default function CustomerNotice() {
           </div>
         </div>
 
+        {/* Quick Highlights Bar: Free Medical | Free Kachcheri Booking | Sunday Off | Buy 1% / Sell 2% */}
+        <div className="mt-4 p-3 bg-gradient-to-r from-emerald-50 via-blue-50 to-amber-50 rounded-2xl border border-emerald-200/80 flex flex-wrap items-center justify-around gap-2.5 text-xs font-black text-slate-800">
+          <div className="flex items-center gap-1.5 text-emerald-800">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>🩺 {t.heroTagFreeMed || "இலவச மருத்துவம்"}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-blue-800">
+            <i className="fa-solid fa-building-columns text-blue-600"></i>
+            <span>🏛️ {t.heroTagFreeKachcheri || "இலவச கச்சேரி முன்பதிவு"}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-amber-900">
+            <i className="fa-solid fa-clock text-amber-600"></i>
+            <span>🗓️ {t.hoursText}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-rose-800">
+            <i className="fa-solid fa-handshake text-rose-600"></i>
+            <span>🏡 {t.reCommissionTitle || "ரியல் எஸ்டேட்: வாங்க 1% • விற்க 2%"}</span>
+          </div>
+        </div>
+
         {/* Feature Grid: 4 Core Customer Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-6">
           {/* Feature 1: Modern Tech Training */}

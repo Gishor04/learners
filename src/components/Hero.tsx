@@ -47,17 +47,20 @@ export default function Hero() {
 
             {/* Key highlights bullet tags */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-slate-700">
+              <span className="bg-emerald-50 text-emerald-800 px-3 py-1.5 rounded-lg border border-emerald-300 shadow-xs flex items-center gap-1.5 font-bold">
+                <i className="fa-solid fa-stethoscope text-emerald-600"></i> <span>{t.heroTagFreeMed}</span>
+              </span>
+              <span className="bg-blue-50 text-blue-800 px-3 py-1.5 rounded-lg border border-blue-300 shadow-xs flex items-center gap-1.5 font-bold">
+                <i className="fa-solid fa-building-columns text-blue-600"></i> <span>{t.heroTagFreeKachcheri}</span>
+              </span>
               <span className="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center gap-1.5">
                 <i className="fa-solid fa-gamepad text-indigo-500"></i> <span>{t.heroTagSim}</span>
               </span>
               <span className="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center gap-1.5">
                 <i className="fa-solid fa-car text-red-500"></i> <span>{t.heroTagDual}</span>
               </span>
-              <span className="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center gap-1.5">
-                <i className="fa-solid fa-user-tie text-emerald-500"></i> <span>{t.heroTagLady}</span>
-              </span>
-              <span className="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center gap-1.5">
-                <i className="fa-regular fa-calendar-check text-amber-500"></i> <span>{t.heroTagDays}</span>
+              <span className="bg-amber-50 text-amber-900 px-3 py-1.5 rounded-lg border border-amber-300 shadow-xs flex items-center gap-1.5 font-bold">
+                <i className="fa-regular fa-calendar-xmark text-amber-600"></i> <span>{t.heroTagDays}</span>
               </span>
             </div>
 

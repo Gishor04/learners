@@ -48,10 +48,26 @@ export default function NoticeModal() {
             </div>
 
             <div className="flex items-start gap-3 pt-2 border-t border-slate-200/60">
-              <span className="text-xl">🚗</span>
+              <span className="text-xl">🩺</span>
               <div className="flex-1 text-xs">
                 <strong className="text-slate-900 block">{t.noticeMedTitle}</strong>
                 <p className="text-slate-600 mt-0.5">{t.noticeMedDesc}</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 pt-2 border-t border-slate-200/60">
+              <span className="text-xl">🏛️</span>
+              <div className="flex-1 text-xs">
+                <strong className="text-slate-900 block">{t.heroTagFreeKachcheri || "இலவச கச்சேரி பரீட்சை முன்பதிவு"}</strong>
+                <p className="text-slate-600 mt-0.5">DMT கச்சேரி பரீட்சைக்கான திகதி முன்பதிவு எம்மால் மாணவர்களுக்கு முற்றிலும் இலவசமாக ஒழுங்குபடுத்தப்படும்.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 pt-2 border-t border-slate-200/60">
+              <span className="text-xl">🗓️</span>
+              <div className="flex-1 text-xs">
+                <strong className="text-amber-800 font-black block">{t.hoursText}</strong>
+                <p className="text-slate-700 font-semibold mt-0.5">திங்கள் முதல் சனி வரை நேரடி பயிற்சி வகுப்புகள் நடைபெறும். ஞாயிற்றுக்கிழமை விடுமுறை தினமாகும்.</p>
               </div>
             </div>
 

@@ -79,7 +79,7 @@ export default function Footer() {
             <p className="font-bold text-white text-sm">{t.footerContact}</p>
             <p className="text-xs text-slate-300">{t.addressText}</p>
             <p className="text-xs text-white font-bold">{t.callUsText}</p>
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex items-center gap-2.5">
               <a
                 href="https://wa.me/94779227102"
                 target="_blank"
@@ -88,6 +88,24 @@ export default function Footer() {
                 title="WhatsApp"
               >
                 <i className="fa-brands fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@dinesh.niro?_r=1&_t=ZS-9B7EPz39NCr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-lg bg-slate-800 text-pink-400 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors border border-slate-700"
+                title="TikTok: @dinesh.niro"
+              >
+                <i className="fa-brands fa-tiktok"></i>
+              </a>
+              <a
+                href="https://youtube.com/@ngcsmartstove6985?si=BDX_E-pg2wXvarU6"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-lg bg-red-600/30 text-red-500 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors"
+                title="YouTube: @ngcsmartstove6985"
+              >
+                <i className="fa-brands fa-youtube"></i>
               </a>
               <a
                 href="tel:0779227102"

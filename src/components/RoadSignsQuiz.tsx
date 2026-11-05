@@ -12,6 +12,14 @@ export default function RoadSignsQuiz() {
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState(false);
 
+  // Local quiz language toggle (Tamil, English, Sinhala)
+  const [quizLang, setQuizLang] = useState<"ta" | "en" | "si">(lang);
+
+  // Keep quizLang in sync when global lang changes
+  useEffect(() => {
+    setQuizLang(lang);
+  }, [lang]);
+
   // Quiz state
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -62,13 +70,13 @@ export default function RoadSignsQuiz() {
   const q = quizQuestions[currentIndex];
 
   const questionTitle =
-    lang === "ta" ? q.titleTa : lang === "si" ? q.titleSi : q.titleEn;
+    quizLang === "ta" ? q.titleTa : quizLang === "si" ? q.titleSi : q.titleEn;
 
   const options =
-    lang === "ta" ? q.optionsTa : lang === "si" ? q.optionsSi : q.optionsEn;
+    quizLang === "ta" ? q.optionsTa : quizLang === "si" ? q.optionsSi : q.optionsEn;
 
   const explanation =
-    lang === "ta" ? q.explanationTa : lang === "si" ? q.explanationSi : q.explanationEn;
+    quizLang === "ta" ? q.explanationTa : quizLang === "si" ? q.explanationSi : q.explanationEn;
 
   const handleSelectOption = (idx: number) => {
     if (answered) return;
@@ -211,11 +219,45 @@ export default function RoadSignsQuiz() {
             ) : (
               /* STATE 2: UNLOCKED CANDIDATE QUIZ */
               <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
-                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                
+                {/* Header with Active Session & Logout */}
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
                     <span className="text-xs font-bold text-emerald-700">{t.examSessionActive}</span>
                   </div>
+
+                  {/* 3-Language Switcher Tabs */}
+                  <div className="flex items-center gap-1 p-1 bg-slate-100 rounded-xl border border-slate-200">
+                    <button
+                      type="button"
+                      onClick={() => setQuizLang("ta")}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
+                        quizLang === "ta" ? "bg-white text-emerald-700 shadow-sm font-black" : "text-slate-600 hover:text-slate-900"
+                      }`}
+                    >
+                      தமிழ்
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setQuizLang("en")}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
+                        quizLang === "en" ? "bg-white text-emerald-700 shadow-sm font-black" : "text-slate-600 hover:text-slate-900"
+                      }`}
+                    >
+                      English
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setQuizLang("si")}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
+                        quizLang === "si" ? "bg-white text-emerald-700 shadow-sm font-black" : "text-slate-600 hover:text-slate-900"
+                      }`}
+                    >
+                      සිංහල
+                    </button>
+                  </div>
+
                   <button
                     onClick={handleLogout}
                     className="px-3 py-1.5 bg-slate-100 hover:bg-rose-50 hover:text-rose-600 text-slate-700 font-bold rounded-xl text-xs flex items-center gap-1.5 transition-all"
@@ -241,7 +283,7 @@ export default function RoadSignsQuiz() {
                   dangerouslySetInnerHTML={{ __html: q.signSvg }}
                 />
 
-                <h3 className="font-extrabold text-slate-900 text-base sm:text-lg">
+                <h3 className="font-extrabold text-slate-900 text-base sm:text-lg leading-snug">
                   {questionTitle}
                 </h3>
 
@@ -267,10 +309,10 @@ export default function RoadSignsQuiz() {
                       >
                         <span>{opt}</span>
                         {answered && idx === q.answer && (
-                          <i className="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                          <i className="fa-solid fa-circle-check text-emerald-600 text-base shrink-0 ml-2"></i>
                         )}
                         {answered && idx === selectedOption && idx !== q.answer && (
-                          <i className="fa-solid fa-circle-xmark text-rose-500 text-base"></i>
+                          <i className="fa-solid fa-circle-xmark text-rose-500 text-base shrink-0 ml-2"></i>
                         )}
                       </button>
                     );
@@ -290,8 +332,8 @@ export default function RoadSignsQuiz() {
                       <i className={`fa-solid ${selectedOption === q.answer ? "fa-circle-check text-emerald-600" : "fa-triangle-exclamation text-amber-600"}`}></i>
                       <span>
                         {selectedOption === q.answer
-                          ? (lang === "ta" ? "சரியான விடை!" : lang === "si" ? "නිවැරදි පිළිතුරයි!" : "Correct Answer!")
-                          : (lang === "ta" ? "தவறான விடை!" : lang === "si" ? "වැරදි පිළිතුරයි!" : "Incorrect Answer!")}
+                          ? (quizLang === "ta" ? "சரியான விடை!" : quizLang === "si" ? "නිවැරදි පිළිතුරයි!" : "Correct Answer!")
+                          : (quizLang === "ta" ? "தவறான விடை!" : quizLang === "si" ? "වැරදි පිළිතුරයි!" : "Incorrect Answer!")}
                       </span>
                     </p>
                     <p>{explanation}</p>
@@ -307,9 +349,9 @@ export default function RoadSignsQuiz() {
                     <span>
                       {currentIndex + 1 < quizQuestions.length
                         ? t.quizNextBtn
-                        : (lang === "ta" ? "மீண்டும் ஆரம்பி" : lang === "si" ? "නැවත අරඹන්න" : "Restart Quiz")}
+                        : (quizLang === "ta" ? "மீண்டும் ஆரம்பி" : quizLang === "si" ? "නැවත අරඹන්න" : "Restart Quiz")}
                     </span>
-                    <i className="fa-solid fa-arrow-right text-xs"></i>
+                    <i className="fa-solid fa-arrow-right"></i>
                   </button>
                 )}
 

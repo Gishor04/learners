@@ -4,7 +4,7 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function RealEstateSection() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section id="real-estate" className="py-16 sm:py-24 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white relative overflow-hidden">
@@ -28,6 +28,61 @@ export default function RealEstateSection() {
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             {t.reSubtitle}
           </p>
+        </div>
+
+        {/* Transparent Commission Rates Highlight (User Request: Buy 1%, Sell 2%) */}
+        <div className="bg-gradient-to-r from-amber-500/10 via-rose-500/15 to-amber-500/10 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 backdrop-blur shadow-2xl">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-black uppercase tracking-wider">
+              <i className="fa-solid fa-handshake"></i>
+              <span>{t.reCommissionBadge}</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-white font-heading">
+              {t.reCommissionTitle}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300">
+              {t.reCommissionSubtitle}
+            </p>
+
+            {/* 2 Big Commission Percentage Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+              {/* Buy: 1% */}
+              <div className="p-6 bg-slate-900/90 rounded-2xl border border-emerald-500/50 shadow-lg text-center space-y-2 relative overflow-hidden group hover:border-emerald-400 transition-all">
+                <div className="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                  {t.reBuyBadge}
+                </div>
+                <div className="text-5xl font-black text-emerald-400 font-heading">
+                  1%
+                </div>
+                <h4 className="text-base sm:text-lg font-extrabold text-white">
+                  {t.reBuyTitle}
+                </h4>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  {t.reBuyDesc}
+                </p>
+              </div>
+
+              {/* Sell: 2% */}
+              <div className="p-6 bg-slate-900/90 rounded-2xl border border-rose-500/50 shadow-lg text-center space-y-2 relative overflow-hidden group hover:border-rose-400 transition-all">
+                <div className="absolute top-0 right-0 bg-rose-500 text-white text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                  {t.reSellBadge}
+                </div>
+                <div className="text-5xl font-black text-rose-400 font-heading">
+                  2%
+                </div>
+                <h4 className="text-base sm:text-lg font-extrabold text-white">
+                  {t.reSellTitle}
+                </h4>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  {t.reSellDesc}
+                </p>
+              </div>
+            </div>
+
+            <p className="text-xs text-amber-300 font-bold pt-2">
+              ⭐ {t.reCommissionTrust}
+            </p>
+          </div>
         </div>
 
         {/* Real Estate Visual Banner & Contact Box */}

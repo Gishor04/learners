@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function GallerySection() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const [selectedVideo, setSelectedVideo] = useState<"girl" | "tour">("girl");
 
   return (
     <section id="gallery" className="py-16 sm:py-24 bg-white relative">
@@ -27,25 +28,90 @@ export default function GallerySection() {
           
           {/* Video 1: Featured Live Training Video Player */}
           <div className="md:col-span-2 bg-slate-900 rounded-3xl overflow-hidden border border-red-500/40 shadow-xl group hover-glow-red transition-all flex flex-col">
+            
+            {/* Quick Toggle for Video */}
+            <div className="p-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+              <span className="text-xs font-bold text-red-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-circle-play text-red-500"></i>
+                <span>{selectedVideo === "girl" ? "3D Girl Simulator Video" : "Academy Training Video"}</span>
+              </span>
+              <div className="flex gap-2 text-[11px] font-bold">
+                <button
+                  onClick={() => setSelectedVideo("girl")}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    selectedVideo === "girl" ? "bg-red-600 text-white" : "bg-slate-800 text-slate-400 hover:text-white"
+                  }`}
+                >
+                  3D Girl Demo
+                </button>
+                <button
+                  onClick={() => setSelectedVideo("tour")}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    selectedVideo === "tour" ? "bg-red-600 text-white" : "bg-slate-800 text-slate-400 hover:text-white"
+                  }`}
+                >
+                  Full Academy Tour
+                </button>
+              </div>
+            </div>
+
             <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
               <video
+                key={selectedVideo}
                 controls
                 playsInline
                 preload="metadata"
                 poster="/assets/simulator-live-training.jpg"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-black"
               >
-                <source src="/assets/dinesh-learners-training-video.mp4" type="video/mp4" />
+                <source
+                  src={
+                    selectedVideo === "girl"
+                      ? "/assets/dinesh-3d-girl-driving-simulator.mp4"
+                      : "/assets/dinesh-learners-training-video.mp4"
+                  }
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
               <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 pointer-events-none">
                 <i className="fa-solid fa-video"></i>
-                <span>{t.galleryVideoBadge}</span>
+                <span>{selectedVideo === "girl" ? "3D பெண் சிமுலேட்டர் நேரடி பயிற்சி" : t.galleryVideoBadge}</span>
               </span>
             </div>
             <div className="p-4 flex-1 flex flex-col justify-between bg-slate-900 text-white">
-              <h4 className="font-extrabold text-sm sm:text-base text-white">{t.galleryVideoCaption}</h4>
-              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{t.galleryVideoSub}</p>
+              <h4 className="font-extrabold text-sm sm:text-base text-white">
+                {selectedVideo === "girl"
+                  ? (lang === "ta" ? "🎮 3D கணினி சிமுலேட்டரில் பெண் மாணவரின் நேரடி பயிற்சி" : lang === "si" ? "3D සිමියුලේටර් සජීවී පුහුණුව" : "3D Virtual Simulator Live Student Demo Session")
+                  : t.galleryVideoCaption}
+              </h4>
+              <p className="text-xs text-slate-300 mt-1 leading-relaxed">
+                {selectedVideo === "girl"
+                  ? (lang === "ta" ? "ஸ்டீயரிங் மற்றும் கிளட்ச் கட்டுப்பாட்டை அச்சமின்றி பழகும் நேரடி கணினி 3D சிமுலேட்டர் காட்சி." : lang === "si" ? "සුක්කානම් පාලනය පිළිබඳ සජීවී අත්දැකීම." : "Direct view of high-precision steering and brake handling inside the virtual cockpit.")
+                  : t.galleryVideoSub}
+              </p>
+            </div>
+          </div>
+
+          {/* Photo: Lanka Ashok Leyland Heavy Bus (New User Upload) */}
+          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+            <div className="relative h-60 overflow-hidden bg-slate-900">
+              <img
+                src="/assets/ashok-leyland-bus.jpg"
+                alt="Lanka Ashok Leyland Heavy Training Bus"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                {lang === "ta" ? "அசல் Ashok Leyland பஸ்" : lang === "si" ? "Ashok Leyland බස් රථය" : "Lanka Ashok Leyland"}
+              </span>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between">
+              <h4 className="font-bold text-sm text-slate-900">
+                {lang === "ta" ? "கனரக பேருந்து பயிற்சி (Ashok Leyland / TaTa)" : lang === "si" ? "බර වාහන බස් රථ පුහුණුව" : "Heavy Bus Training (Ashok Leyland)"}
+              </h4>
+              <p className="text-xs text-slate-500 mt-1">
+                {lang === "ta" ? "இலங்கை தரமுறை பேருந்து ஓட்டுநர் நேரடி பயிற்சி வாகனம்." : lang === "si" ? "සැබෑ බස් රථ පුහුණු අත්දැකීම." : "Real commercial bus training vehicle for heavy license candidates."}
+              </p>
             </div>
           </div>
 
@@ -172,60 +238,6 @@ export default function GallerySection() {
             <div className="p-4 flex-1 flex flex-col justify-between">
               <h4 className="font-bold text-sm text-slate-900">{t.g7Caption}</h4>
               <p className="text-xs text-slate-500 mt-1">{t.g7Sub}</p>
-            </div>
-          </div>
-
-          {/* Photo 8: Official DMT Banner */}
-          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
-            <div className="relative h-60 overflow-hidden bg-slate-900 flex items-center justify-center p-2">
-              <img
-                src="/assets/banner.jpg"
-                alt="Dinesh Learners Official Govt Registered Banner"
-                className="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
-              />
-              <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                {t.g8Badge}
-              </span>
-            </div>
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <h4 className="font-bold text-sm text-slate-900">{t.g8Caption}</h4>
-              <p className="text-xs text-slate-500 mt-1">{t.g8Sub}</p>
-            </div>
-          </div>
-
-          {/* Photo 9: Live VR Experience */}
-          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
-            <div className="relative h-60 overflow-hidden bg-slate-900">
-              <img
-                src="/assets/dinesh-owner-vr.jpg"
-                alt="Founder Dinesh Testing 3D VR Simulator"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span className="absolute top-3 left-3 bg-purple-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                {t.g9Badge}
-              </span>
-            </div>
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <h4 className="font-bold text-sm text-slate-900">{t.g9Caption}</h4>
-              <p className="text-xs text-slate-500 mt-1">{t.g9Sub}</p>
-            </div>
-          </div>
-
-          {/* Photo 10: Opening Ceremony Poster (2-03-2027) */}
-          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
-            <div className="relative h-60 overflow-hidden bg-slate-900 flex items-center justify-center p-2">
-              <img
-                src="/assets/opening-ceremony-poster.jpg"
-                alt="Dinesh Learners New Technology Driving School Opening Ceremony"
-                className="w-full h-auto max-h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
-              />
-              <span className="absolute top-3 left-3 bg-indigo-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                {t.g10Badge}
-              </span>
-            </div>
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <h4 className="font-bold text-sm text-slate-900">{t.g10Caption}</h4>
-              <p className="text-xs text-slate-500 mt-1">{t.g10Sub}</p>
             </div>
           </div>
 

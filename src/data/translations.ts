@@ -1,8 +1,8 @@
-﻿export const translations = {
+export const translations = {
   ta: {
     // Top Announcement Bar
-    topNotice: "📢 2027 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!",
-    hoursText: "திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00",
+    topNotice: "📢 2027 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! 🩺 இலவச மருத்துவம் | 🏛️ இலவச கச்சேரி முன்பதிவு | 🗓️ ஞாயிறு விடுமுறை",
+    hoursText: "திங்கள் - சனி: காலை 7:00 - மாலை 7:00 | ஞாயிறு: விடுமுறை (Sunday Off)",
     newBadge: "புதியது 2027",
     
     // Header & Navigation
@@ -31,14 +31,14 @@
     noticeTechDesc: "இலங்கையில் முதன் முறையாக விசேட தொழில்நுட்பத்துடன் கூடிய சாரதி பயிற்சி!",
     noticeExamTitle: "பரீட்சை விசேட ஒழுங்குபடுத்தல்கள்",
     noticeExamDesc: "பரீட்சை எழுத முடியாதவர்களுக்கு விசேட ஒழுங்கு படுத்தல்கள்.",
-    noticeMedTitle: "மருத்துவ சான்றிதழ் உதவி",
-    noticeMedDesc: "மருத்துவ சான்றுதலுக்கான ஒழுங்கு படுத்தல்கள்.",
+    noticeMedTitle: "🩺 இலவச மருத்துவ சான்றிதழ் உதவி",
+    noticeMedDesc: "DMT மருத்துவ சான்றிதழ் பெறுவதற்கான அனைத்து நடைமுறைகளும் எம்மால் மாணவர்களுக்கு முற்றிலும் இலவசமாக ஒழுங்குபடுத்தப்படும்.",
     noticeInstallmentTitle: "தவணை முறை கட்டண வசதி",
     noticeInstallmentDesc: "கட்டணங்கள் தவனை முறையில் செலுத்தும் வசதி!",
     noticeGovApproved: "அரச அங்கீகாரம் பெற்றது",
     noticeTechFeature: "3D சிமுலேட்டர் + Dual-Control",
     noticeExamFeature: "100% DMT வழிகாட்டல்",
-    noticeMedFeature: "விரைவான நடைமுறைகள்",
+    noticeMedFeature: "100% இலவச மருத்துவம் (Free Medical)",
     noticeInstallmentFeature: "இலகு தவணைகள் • Easy Installments",
     noticeContactText: "🚗 TP. 0779227102 (whatsapp) தொடர்பு கொள்ளவும். நன்றி🙏",
     noticeWaBtn: "077 9227 102 (WhatsApp)",
@@ -63,7 +63,9 @@
     heroTagSim: "நவீன 3D சிமுலேட்டர்",
     heroTagDual: "இரட்டை பிரேக் வாகனங்கள்",
     heroTagLady: "பெண் பயிற்றுநர்கள் வசதி",
-    heroTagDays: "7 நாட்களும் (காலை 7 - மாலை 7)",
+    heroTagDays: "திங்கள் - சனி (ஞாயிறு விடுமுறை)",
+    heroTagFreeMed: "🩺 இலவச மருத்துவம்",
+    heroTagFreeKachcheri: "🏛️ இலவச கச்சேரி முன்பதிவு",
     btnHeroTrial: "இலவச சிமுலேட்டர் சோதனை",
     btnHeroWhatsapp: "WhatsApp-ல் உரையாட",
     heroLocation: "YMCA கட்டடம், கண்டி வீதி, யாழ்ப்பாணம்",
@@ -291,8 +293,8 @@
     w2Desc: "மோட்டார் போக்குவரத்து திணைக்களத்தின் (DMT) முழுமையான அங்கீகாரம் மற்றும் 15+ வருட கற்பித்தல் அனுபவம் கொண்ட நிபுணர்கள்.",
     w3Title: "Lady Instructors வசதி",
     w3Desc: "பெண்கள் மற்றும் மாணவிகள் எவ்வித தயக்கமுமின்றி நிதானமாக கற்றுக்கொள்ள அனுபவமுள்ள பெண் பயிற்சியாளர்கள் உள்ளனர்.",
-    w4Title: "வாரம் 7 நாட்களும் (காலை 7 - மாலை 7)",
-    w4Desc: "பல்கலைக்கழக மாணவர்கள், உத்தியோகத்தர்கள் மற்றும் தொழிலதிபர்களுக்கான நெகிழ்வான பயிற்சி நேர தெரிவுகள்.",
+    w4Title: "திங்கள் - சனி (ஞாயிறு விடுமுறை)",
+    w4Desc: "திங்கள் முதல் சனி வரை காலை 7 முதல் மாலை 7 வரை உங்கள் வசதிக்கேற்ப நெகிழ்வான நேரங்களில் வகுப்புகள். ஞாயிறு விடுமுறை.",
     w5Title: "முழுமையான Dual Control கார்கள்",
     w5Desc: "Dual-Pedal பிரேக் சிஸ்டம் கொண்ட புதிய கார்கள் மூலம் 100% பாதுகாப்பான வீதிப் பயிற்சி உறுதி செய்யப்படுகிறது.",
     w6Title: "மையப் பகுதி அமைவிடம் (YMCA Jaffna)",
@@ -325,7 +327,7 @@
     cLocLabel: "முகவரி (Branch Location)",
     addressText: "இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழைய பூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)",
     cHoursLabel: "செயற்பாட்டு நேரம் (Operating Hours)",
-    cHoursSub: "வாரத்தின் 7 நாட்களும் திறந்திருக்கும்",
+    cHoursSub: "வாரத்தின் 6 நாட்களும் திறந்திருக்கும் (ஞாயிறு விடுமுறை)",
     ownerText: "உரிமையாளர்: நட. தினேஷ்",
     mapLocationText: "கண்டி வீதி • பழையபூங்கா முன்பாக • YMCA யாழ்ப்பாணம் (1ம் மாடி)",
     callUsText: "அழைக்க: 021 4327 102 / 077 9227 102",
@@ -336,6 +338,25 @@
     footerLocation: "யாழ்ப்பாணம் • இலங்கை",
     
     // Real Estate Section
+    // Real Estate Commission Rates (User Request: Buy 1%, Sell 2%)
+    reCommissionBadge: "வெளிப்படையான தரகு வீதம் • Fair Commission",
+    reCommissionTitle: "ரியல் எஸ்டேட் வாங்க 1% • விற்க 2% மட்டுமே!",
+    reCommissionSubtitle: "யாழ்ப்பாணத்திலேயே மிகக் குறைந்த, நியாயமான மற்றும் வெளிப்படையான முகவர் தரகுக் கட்டணம்.",
+    reBuyBadge: "வாங்கும்போது (BUYING)",
+    reBuyTitle: "வெறும் 1% கட்டணம் மட்டுமே",
+    reBuyDesc: "நீங்கள் காணி, வீடு அல்லது வியாபாரம் வாங்கும்போது மொத்த விற்பனைத் தொகையில் வெறும் 1% மட்டுமே செலுத்த வேண்டும்.",
+    reSellBadge: "விற்கும்போது (SELLING)",
+    reSellTitle: "வெறும் 2% கட்டணம் மட்டுமே",
+    reSellDesc: "உங்கள் சொத்து வெற்றிகரமாக விற்கப்பட்ட பின்னர் மொத்த விற்பனைத் தொகையில் வெறும் 2% மட்டுமே செலுத்த வேண்டும்.",
+    reCommissionTrust: "மறைமுகக் கட்டணங்கள் ஏதுமில்லை • தெளிவான உறுதிப் பத்திர வழிகாட்டல் • நேரடி முகவரி",
+    
+    // Fee Calculator Extra Labels
+    calcOptKachcheri: "இலவச கச்சேரி பரீட்சை முன்பதிவு",
+    calcInstallTitle: "எளிய 2 கட்ட தவணை வசதி (Easy Installments)",
+    calcInst1: "1ம் தவணை (பதிவின் போது):",
+    calcInst2: "2ம் தவணை (ட்ரையலுக்கு முன்):",
+    calcEnrollBtn: "இந்தத் திட்டத்தில் இப்போதே பதியவும்",
+    calcTrust: "மறைமுகக் கட்டணங்கள் ஏதுமில்லை • DMT DS:385 அரச அங்கீகாரம்",
     reBadge: "அரச அங்கீகாரம் பெற்ற முகவர் • Government Approved",
     reBadgeShort: "தினேஷ் ரியல் எஸ்டேட் (Buy & Sell)",
     reTitle: "தினேஷ் ரியல் எஸ்டேட்",
@@ -395,8 +416,8 @@
   
   en: {
     // Top Announcement Bar
-    topNotice: "📢 2027 Driving Batches Now Enrolling! Modern 3D Simulator & Practical Dual-Control Fleet | Book Now!",
-    hoursText: "Monday - Sunday: 7:00 AM - 7:00 PM",
+    topNotice: "📢 2027 Driving Batches Enrolling! 🩺 Free Medical | 🏛️ Free Kachcheri Booking | 🗓️ Sunday Off",
+    hoursText: "Mon - Sat: 7:00 AM - 7:00 PM | Sunday: Closed (Holiday)",
     newBadge: "NEW 2027",
     
     // Header & Navigation
@@ -425,8 +446,8 @@
     noticeTechDesc: "For the first time in Sri Lanka, Driving Training equipped with special modern technology!",
     noticeExamTitle: "Special Exam Assistance",
     noticeExamDesc: "Special arrangements and guidance for those unable to write exams.",
-    noticeMedTitle: "Medical Certificate Assistance",
-    noticeMedDesc: "Full arrangements and guidance for Medical Certificates.",
+    noticeMedTitle: "🩺 Free Medical Certificate Assistance",
+    noticeMedDesc: "Complete NTMI medical examination arrangements handled completely free of charge for students.",
     noticeInstallmentTitle: "Easy Installment Facility",
     noticeInstallmentDesc: "Convenient payment facility with easy installment options!",
     noticeGovApproved: "Government Approved",
@@ -457,7 +478,9 @@
     heroTagSim: "3D VR Simulator",
     heroTagDual: "Dual-Control Fleet",
     heroTagLady: "Lady Instructors Available",
-    heroTagDays: "Open 7 Days (7am-7pm)",
+    heroTagDays: "Mon - Sat (Sunday Closed)",
+    heroTagFreeMed: "🩺 Free Medical Assistance",
+    heroTagFreeKachcheri: "🏛️ Free Kachcheri Booking",
     btnHeroTrial: "Book Free Simulator Trial",
     btnHeroWhatsapp: "Chat on WhatsApp",
     heroLocation: "YMCA Building, Kandy Road, Jaffna",
@@ -685,8 +708,8 @@
     w2Desc: "Fully certified by the Department of Motor Traffic with 15+ years of teaching excellence.",
     w3Title: "Dedicated Lady Instructors",
     w3Desc: "Female instructors available for women and girl students to learn comfortably and patiently.",
-    w4Title: "Open 7 Days (7:00 AM - 7:00 PM)",
-    w4Desc: "Flexible time slots tailored for university students, employees, and busy professionals.",
+    w4Title: "Monday - Saturday (Sunday Closed)",
+    w4Desc: "Flexible time slots tailored for university students, employees, and busy professionals from 7:00 AM to 7:00 PM. Sunday is a weekly holiday.",
     w5Title: "100% Dual-Control Safety Fleet",
     w5Desc: "Brand new dual-pedal vehicles ensure instructors can brake and assist at any second.",
     w6Title: "Prime Location (YMCA Jaffna)",
@@ -719,7 +742,7 @@
     cLocLabel: "Branch Address",
     addressText: "No. 107A, 1/1, Kandy Road, Jaffna. (Opposite Old Park, YMCA Building, 1st Floor)",
     cHoursLabel: "Operating Hours",
-    cHoursSub: "Open 7 Days a Week",
+    cHoursSub: "Open 6 Days a Week (Sunday Closed)",
     ownerText: "Proprietor: N. Dinesh",
     mapLocationText: "Kandy Road • Opposite Old Park • YMCA Jaffna (1st Floor)",
     callUsText: "Call: 021 4327 102 / 077 9227 102",
@@ -730,6 +753,25 @@
     footerLocation: "Jaffna • Sri Lanka",
     
     // Real Estate Section
+    // Real Estate Commission Rates (User Request: Buy 1%, Sell 2%)
+    reCommissionBadge: "Transparent Brokerage Fees",
+    reCommissionTitle: "Real Estate: 1% on Buying • 2% on Selling!",
+    reCommissionSubtitle: "Fair, transparent, and the most affordable property brokerage rates in Jaffna.",
+    reBuyBadge: "WHEN BUYING",
+    reBuyTitle: "Only 1% Commission",
+    reBuyDesc: "When purchasing land, residential home, or commercial space, pay only 1% transparent fee upon transaction.",
+    reSellBadge: "WHEN SELLING",
+    reSellTitle: "Only 2% Commission",
+    reSellDesc: "When your property or building is successfully sold through us, pay only 2% professional fee.",
+    reCommissionTrust: "Zero hidden costs • Complete title deed verification • Direct office in Jaffna",
+    
+    // Fee Calculator Extra Labels
+    calcOptKachcheri: "Free Kachcheri Exam Slot Booking",
+    calcInstallTitle: "Easy 2-Part Installment Plan",
+    calcInst1: "1st Installment (At Registration):",
+    calcInst2: "2nd Installment (Before Practical Trial):",
+    calcEnrollBtn: "Enroll in this Course Now",
+    calcTrust: "No hidden fees • DMT DS:385 Government Registered",
     reBadge: "Govt. Approved Real Estate Agency • Jaffna",
     reBadgeShort: "Dinesh Real Estate (Buy & Sell)",
     reTitle: "Dinesh Real Estate",
@@ -789,8 +831,8 @@
   
   si: {
     // Top Announcement Bar
-    topNotice: "📢 2027 නව රියදුරු පුහුණු පාඨමාලා ආරම්භ විය! නවීන 3D සිමියුලේටර් සහ ප්‍රායෝගික පුහුණුව | අදම ලියාපදිංචි වන්න!",
-    hoursText: "සඳුදා - ඉරිදා: පෙ.ව. 7:00 - ප.ව. 7:00",
+    topNotice: "📢 2027 නව රියදුරු පුහුණු පාඨමාලා! 🩺 නොමිලේ වෛද්‍ය සහතිකය | 🏛️ නොමිලේ කච්චේරි වෙන්කිරීම | 🗓️ ඉරිදා නිවාඩු (Sunday Off)",
+    hoursText: "සඳුදා - සෙනසුරාදා: පෙ.ව. 7:00 - ප.ව. 7:00 | ඉරිදා: නිවාඩු (Sunday Off)",
     newBadge: "නව 2027",
     
     // Header & Navigation
@@ -851,7 +893,9 @@
     heroTagSim: "3D VR සිමියුලේටරය",
     heroTagDual: "ද්විත්ව තිරිංග වාහන",
     heroTagLady: "කාන්තා උපදේශිකාවන්",
-    heroTagDays: "දින 7 ම විවෘතයි (පෙ.ව. 7 - ප.ව. 7)",
+    heroTagDays: "සඳුදා - සෙනසුරාදා (ඉරිදා නිවාඩු)",
+    heroTagFreeMed: "🩺 නොමිලේ වෛද්‍ය සහතිකය",
+    heroTagFreeKachcheri: "🏛️ නොමිලේ කච්චේරි වෙන්කිරීම",
     btnHeroTrial: "නොමිලේ සිමියුලේටර් අත්හදාබැලීමක්",
     btnHeroWhatsapp: "WhatsApp මගින් විමසන්න",
     heroLocation: "YMCA ගොඩනැගිල්ල, නුවර පාර, යාපනය",
@@ -1079,8 +1123,8 @@
     w2Desc: "මෝටර් රථ ප්‍රවාහන දෙපාර්තමේන්තුවේ පූර්ණ අනුමැතිය සහ වසර 15ක පළපුරුද්ද.",
     w3Title: "කාන්තා උපදේශිකාවන් (Lady Instructors)",
     w3Desc: "කාන්තාවන්ට සහ දැරියන්ට නොබියව ඉගෙන ගැනීමට පළපුරුදු කාන්තා උපදේශිකාවන් සිටී.",
-    w4Title: "දින 7 ම විවෘතයි (පෙ.ව. 7 - ප.ව. 7)",
-    w4Desc: "විශ්වවිද්‍යාල සිසුන්ට, රැකියාවල නියුතු අයට ගැලපෙන නම්‍යශීලී වේලාවන්.",
+    w4Title: "සඳුදා - සෙනසුරාදා (ඉරිදා නිවාඩු)",
+    w4Desc: "සඳුදා සිට සෙනසුරාදා දක්වා පෙ.ව. 7 සිට ප.ව. 7 දක්වා නම්‍යශීලී වේලාවන්. ඉරිදා නිවාඩු දිනයකි.",
     w5Title: "100% ද්විත්ව තිරිංග වාහන",
     w5Desc: "ද්විත්ව පෙඩල් පද්ධතිය සහිත නවීන කාර් මගින් උපරිම ආරක්ෂාව සහතික කෙරේ.",
     w6Title: "ප්‍රධාන ස්ථානය (YMCA Jaffna)",
@@ -1124,6 +1168,25 @@
     footerLocation: "යාපනය • ශ්‍රී ලංකාව",
     
     // Real Estate Section
+    // Real Estate Commission Rates (User Request: Buy 1%, Sell 2%)
+    reCommissionBadge: "විනිවිද පෙනෙන තැරැව්කාර ගාස්තු",
+    reCommissionTitle: "දේපළ මිලදී ගැනීමේදී 1% • විකිණීමේදී 2% පමණි!",
+    reCommissionSubtitle: "යාපනයේ වඩාත්ම සාධාරණ හා විනිවිද පෙනෙන දේපළ කොමිස් මුදල.",
+    reBuyBadge: "මිලදී ගැනීමේදී",
+    reBuyTitle: "1% ගෙවීමක් පමණි",
+    reBuyDesc: "ඔබ ඉඩමක්, නිවසක් හෝ ව්‍යාපාරයක් මිලදී ගැනීමේදී ගෙවිය යුත්තේ 1% කොමිස් මුදලක් පමණි.",
+    reSellBadge: "විකිණීමේදී",
+    reSellTitle: "2% ගෙවීමක් පමණි",
+    reSellDesc: "ඔබේ දේපළ සාර්ථකව විකිණීමෙන් පසු සම්පූර්ණ මුදලින් 2% පමණක් ගෙවන්න.",
+    reCommissionTrust: "සැඟවුණු ගාස්තු නැත • නීත්‍යානුකූල ඔප්පු පරීක්ෂාව • යාපනයේ ප්‍රධාන කාර්යාලය",
+    
+    // Fee Calculator Extra Labels
+    calcOptKachcheri: "නොමිලේ DMT කච්චේරි විභාග දිනය වෙන්කිරීම",
+    calcInstallTitle: "පහසු වාරික 2කින් ගෙවීම",
+    calcInst1: "1 වන වාරිකය (ලියාපදිංචියේදී):",
+    calcInst2: "2 වන වාරිකය (විභාගයට පෙර):",
+    calcEnrollBtn: "මෙම පාඨමාලාවට දැන්ම ලියාපදිංචි වන්න",
+    calcTrust: "කිසිදු සැඟවුණු ගාස්තුවක් නැත • DMT DS:385 රජයේ අනුමැතිය",
     reBadge: "රජයේ අනුමත ආයතනය • යාපනය",
     reBadgeShort: "දිනේෂ් රියල් එස්ටේට් (Buy & Sell)",
     reTitle: "දිනේෂ් රියල් එස්ටේට්",

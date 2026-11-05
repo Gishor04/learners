@@ -58,6 +58,39 @@ export default function ContactSection() {
               </a>
             </div>
 
+            {/* Social Media Channels: TikTok & YouTube */}
+            <div className="p-5 bg-gradient-to-r from-slate-900 to-slate-950 text-white rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl shrink-0 border border-pink-500/30">
+                  <i className="fa-brands fa-tiktok"></i>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Social Channels</p>
+                  <p className="text-sm font-black text-white mt-0.5">TikTok & YouTube</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <a
+                  href="https://www.tiktok.com/@dinesh.niro?_r=1&_t=ZS-9B7EPz39NCr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 sm:flex-none px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-pink-400 hover:text-white text-xs font-bold rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <i className="fa-brands fa-tiktok"></i>
+                  <span>@dinesh.niro</span>
+                </a>
+                <a
+                  href="https://youtube.com/@ngcsmartstove6985?si=BDX_E-pg2wXvarU6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 sm:flex-none px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow transition-all flex items-center justify-center gap-1.5"
+                >
+                  <i className="fa-brands fa-youtube"></i>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl shrink-0 mt-1">
                 <i className="fa-solid fa-map-location-dot"></i>

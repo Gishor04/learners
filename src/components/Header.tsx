@@ -40,6 +40,25 @@ export default function Header() {
             >
               <i className="fa-solid fa-phone text-[10px]"></i> 021 4327 102
             </a>
+            <span className="opacity-60 text-[10px]">|</span>
+            <a
+              href="https://www.tiktok.com/@dinesh.niro?_r=1&_t=ZS-9B7EPz39NCr"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white hover:text-pink-300 transition-colors"
+              title="TikTok: @dinesh.niro"
+            >
+              <i className="fa-brands fa-tiktok text-xs"></i>
+            </a>
+            <a
+              href="https://youtube.com/@ngcsmartstove6985?si=BDX_E-pg2wXvarU6"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white hover:text-red-300 transition-colors"
+              title="YouTube: @ngcsmartstove6985"
+            >
+              <i className="fa-brands fa-youtube text-xs"></i>
+            </a>
             <button
               onClick={() => setIsAdminSignInOpen(true)}
               className="bg-black/25 hover:bg-black/45 text-amber-200 hover:text-white px-2.5 py-1 rounded-lg font-bold transition-all flex items-center gap-1.5 border border-white/20 text-[11px]"
