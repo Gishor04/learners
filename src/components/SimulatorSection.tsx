@@ -1,76 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function SimulatorSection() {
   const { lang, t, openEnrollModal } = useLanguage();
-  const [activeVideo, setActiveVideo] = useState<"girl" | "clip2" | "clip3" | "clip4" | "tour">("girl");
 
-  const videoList = [
-    {
-      id: "girl" as const,
-      tabLabel: "🎮 3D Girl Demo",
-      titleTa: "🎮 3D பெண் சிமுலேட்டர் நேரடி பயிற்சி (3D Girl Simulator Demo)",
-      titleEn: "🎮 3D Girl Virtual Simulator Live Demo",
-      titleSi: "🎮 3D සිමියුලේටර් සජීවී පුහුණුව",
-      badge: "Clean Video • 3D Girl Simulator",
-      src: "/assets/dinesh-3d-girl-driving-simulator.mp4",
-      descTa: "கணினி 3D சிமுலேட்டரில் பெண் மாணவர் பயமின்றி ஸ்டீயரிங் மற்றும் கியர் சமநிலையை கற்கும் அசல் பயிற்சி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
-      descEn: "Live showcase of a student comfortably operating steering and gear shifting inside our 3D simulator rig.",
-      descSi: "අපගේ 3D සිමියුලේටරය තුළ සිසුවියක රිය පැදවීමේ මුලික කරුණු ප්‍රගුණ කරන ආකාරය."
-    },
-    {
-      id: "clip2" as const,
-      tabLabel: "Clip 2",
-      titleTa: "🎬 சிமுலேட்டர் செய்முறை காட்சி (Demo Clip 2)",
-      titleEn: "🎬 Simulator Hands-On Session (Clip 2)",
-      titleSi: "🎬 සිමියුලේටර් ප්‍රායෝගික සැසිය (කොටස 2)",
-      badge: "Live Training Clip",
-      src: "/assets/dinesh-3d-simulator-clip2.mp4",
-      descTa: "சிமுலேட்டர் காக்பிட் கட்டுப்பாடுகள் மற்றும் வீதி சவால்களை எதிர்கொள்ளும் பயிற்சி காட்சி.",
-      descEn: "Close-up perspective of cockpit controls, steering resistance, and road hazard reactions.",
-      descSi: "සුක්කානම සහ තිරිංග හැසිරවීමේ සමීප දසුන්."
-    },
-    {
-      id: "clip3" as const,
-      tabLabel: "Clip 3",
-      titleTa: "🚗 நேரடி வீதிப் பயிற்சி காட்சி (Training Clip 3)",
-      titleEn: "🚗 Live Practical Driving Session (Clip 3)",
-      titleSi: "🚗 ප්‍රායෝගික රියදුරු පුහුණු දර්ශනය (කොටස 3)",
-      badge: "Practical Training",
-      src: "/assets/dinesh-training-video-clip3.mp4",
-      descTa: "மாணவர்களின் தன்னம்பிக்கை மிக்க நேரடி வீதிப் பயிற்சி மற்றும் கட்டுப்பாட்டு முறைமைகள்.",
-      descEn: "Student live training showcasing clutch balance, smooth turning and mirror checks.",
-      descSi: "ප්‍රායෝගික පුහුණු සැසි හා සුක්කානම් හැසිරවීම."
-    },
-    {
-      id: "clip4" as const,
-      tabLabel: "Clip 4",
-      titleTa: "⚡ சிமுலேட்டர் & பிராக்டிகல் பயிற்சி (Training Clip 4)",
-      titleEn: "⚡ Simulator & Road Practice (Clip 4)",
-      titleSi: "⚡ සිමියුලේටර් සහ මාර්ග පුහුණුව (කොටස 4)",
-      badge: "Academy Live Session",
-      src: "/assets/dinesh-training-video-clip4.mp4",
-      descTa: "நவீன 3D சிமுலேட்டரில் ஆரம்பித்து நிஜ வீதிக்குச் செல்லும் முழுமையான பயிற்சி தொகுப்பு.",
-      descEn: "Comprehensive demo highlighting transition from 3D cockpit to live vehicle practice.",
-      descSi: "3D සිමියුලේටරයේ සිට සැබෑ මාර්ගය දක්වා සම්පූර්ණ පුහුණුව."
-    },
-    {
-      id: "tour" as const,
-      tabLabel: "Full Tour",
-      titleTa: "🏛️ அகாதமி முழுமையான பயிற்சி விபரம் (Full Academy Session)",
-      titleEn: "🏛️ Dinesh Learners Full Practical Academy Session",
-      titleSi: "🏛️ ආයතනික පුහුණු සැසිය",
-      badge: "Academy Overview",
-      src: "/assets/dinesh-learners-training-video.mp4",
-      descTa: "தினேஷ் லேணர்ஸ் யாழ்ப்பாணத்தின் முழுமையான தியரி, சிமுலேட்டர் மற்றும் இரட்டை பிரேக் வாகன பயிற்சி தொகுப்பு.",
-      descEn: "Full practical overview featuring dual-control fleet training and theory classroom.",
-      descSi: "ප්‍රායෝගික පුහුණු සැසි හා පන්ති කාමර පුහුණුව."
-    }
-  ];
-
-  const currentVid = videoList.find((v) => v.id === activeVideo) || videoList[0];
+  const simVideo = {
+    src: "/assets/dinesh-3d-girl-driving-simulator.mp4",
+    badge: "3D Driving Simulator",
+    titleTa: "🎮 3D பெண் சிமுலேட்டர் நேரடி பயிற்சி (3D Driving Simulator Demo)",
+    titleEn: "🎮 3D Virtual Driving Simulator Live Student Demo",
+    titleSi: "🎮 3D සිමියුලේටර් සජීවී පුහුණුව",
+    descTa: "கணினி 3D சிமுலேட்டரில் பெண் மாணவர் பயமின்றி ஸ்டீயரிங் மற்றும் கிளட்ச் கட்டுப்பாட்டை கற்கும் அசல் நேரடி பயிற்சி வீடியோ (சினிமா பாடல் நீக்கப்பட்டு சுத்தமான வடிவில்).",
+    descEn: "Live showcase of a student comfortably operating steering, pedals, and gear shifting inside our high-tech 3D simulator cockpit.",
+    descSi: "අපගේ 3D සිමියුලේටරය තුළ සිසුවියක රිය පැදවීමේ මුලික කරුණු ප්‍රගුණ කරන ආකාරය."
+  };
 
   return (
     <section id="simulator" className="py-20 bg-slate-900 text-white relative overflow-hidden">
@@ -158,32 +103,13 @@ export default function SimulatorSection() {
             </div>
           </div>
 
-          {/* Right: Simulator Video & Photo Showcase */}
+          {/* Right: ONLY the 3D Simulator Video */}
           <div className="lg:col-span-6 space-y-4">
             
-            {/* Video Selector Tabs */}
-            <div className="flex flex-wrap gap-2 p-1.5 bg-slate-800/90 rounded-2xl border border-slate-700">
-              {videoList.map((v) => (
-                <button
-                  key={v.id}
-                  onClick={() => setActiveVideo(v.id)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
-                    activeVideo === v.id
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 shadow-md"
-                      : "text-slate-300 hover:text-white hover:bg-slate-700/60"
-                  }`}
-                >
-                  <i className="fa-solid fa-play text-[10px]"></i>
-                  <span>{v.tabLabel}</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Main Video Box */}
+            {/* Main 3D Simulator Video Box */}
             <div className="relative rounded-3xl overflow-hidden border border-cyan-500/40 bg-slate-950 p-2 sm:p-2.5 shadow-2xl group shadow-cyan-500/10">
               <div className="relative rounded-2xl overflow-hidden aspect-video bg-black flex items-center justify-center">
                 <video
-                  key={currentVid.src}
                   controls
                   playsInline
                   autoPlay={false}
@@ -191,7 +117,7 @@ export default function SimulatorSection() {
                   poster="/assets/simulator-live-training.jpg"
                   className="w-full h-full object-contain bg-black"
                 >
-                  <source src={currentVid.src} type="video/mp4" />
+                  <source src={simVideo.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -201,7 +127,7 @@ export default function SimulatorSection() {
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
                     <span className="text-[11px] font-extrabold text-cyan-400 uppercase tracking-wider">
-                      {currentVid.badge}
+                      {simVideo.badge}
                     </span>
                   </div>
                   <span className="px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-lg border border-emerald-500/30">
@@ -209,10 +135,10 @@ export default function SimulatorSection() {
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm font-black text-white">
-                  {lang === "ta" ? currentVid.titleTa : lang === "si" ? currentVid.titleSi : currentVid.titleEn}
+                  {lang === "ta" ? simVideo.titleTa : lang === "si" ? simVideo.titleSi : simVideo.titleEn}
                 </p>
                 <p className="text-[11px] text-slate-400 leading-relaxed">
-                  {lang === "ta" ? currentVid.descTa : lang === "si" ? currentVid.descSi : currentVid.descEn}
+                  {lang === "ta" ? simVideo.descTa : lang === "si" ? simVideo.descSi : simVideo.descEn}
                 </p>
               </div>
             </div>
@@ -226,7 +152,7 @@ export default function SimulatorSection() {
                   className="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute bottom-1 left-2 text-[10px] bg-cyan-500 font-black text-slate-950 px-2 py-0.5 rounded shadow">
-                  🎮 Live Simulator
+                  🎮 Live 3D Rig
                 </span>
               </div>
               <div className="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">
