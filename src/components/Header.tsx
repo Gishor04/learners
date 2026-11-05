@@ -71,120 +71,71 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MAIN NAVIGATION BAR */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all safe-header overflow-x-clip">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 h-16 sm:h-18 flex items-center justify-between gap-1 sm:gap-2 w-full">
+      {/* MAIN HEADER WRAPPER (2-TIER: SEPARATE BRAND/ACTIONS & FULL NAV) */}
+      <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all safe-header">
+        {/* ROW 1: BRAND LOGO + PHONE + LANGUAGE SELECTOR + ENROLL CTA */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 w-full">
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <div className="w-9 h-9 sm:w-11 sm:h-11 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-xl sm:text-2xl font-sans tracking-tight group-hover:scale-105 transition-transform shrink-0">
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-xl sm:text-2xl font-sans tracking-tight group-hover:scale-105 transition-transform shrink-0">
               L
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1 sm:gap-1.5">
-                <span className="text-sm sm:text-lg 2xl:text-xl font-black text-slate-900 tracking-tight font-heading whitespace-nowrap">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-base sm:text-xl font-black text-slate-900 tracking-tight font-heading whitespace-nowrap">
                   {t.brandTitle}
                 </span>
-                <span className="text-[9px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1.5 py-0.5 rounded-full border border-red-200 shrink-0">
+                <span className="text-[9px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1.5 sm:px-2 py-0.5 rounded-full border border-red-200 shrink-0">
                   DS:385
                 </span>
               </div>
-              <span className="hidden 2xl:block text-[11px] font-semibold text-slate-500 tracking-tight whitespace-nowrap">
+              <span className="hidden sm:block text-[11px] font-semibold text-slate-500 tracking-tight whitespace-nowrap">
                 {t.brandSubtitle}
               </span>
             </div>
           </a>
 
-          {/* Desktop Nav Menu - Compact & Responsive */}
-          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-2 text-[11px] 2xl:text-xs font-bold text-slate-700 min-w-0">
-            <a href="#home" className="text-red-600 hover:text-red-700 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-red-50/60 whitespace-nowrap">
-              {t.navHome}
-            </a>
+          {/* Right Actions: Phone + Language Selector + Enroll CTA */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Direct Call Button (Desktop) */}
             <a
-              href="#front-details"
-              className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-1 font-extrabold bg-red-50 hover:bg-red-100 px-2 py-1 rounded-md border border-red-200/80 shadow-xs whitespace-nowrap"
+              href="tel:0775189963"
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-red-50 text-slate-800 hover:text-red-600 rounded-xl transition-colors border border-slate-200 text-xs font-bold shrink-0 shadow-xs"
+              title="Call: 077 518 9963"
             >
-              <i className="fa-solid fa-bullhorn text-[10px] animate-pulse text-red-600"></i>
-              <span>{t.navNotice}</span>
+              <i className="fa-solid fa-phone text-red-600 text-xs"></i>
+              <span>077 518 9963</span>
             </a>
-            <a
-              href="#zero-exp"
-              className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1 font-bold px-1.5 2xl:px-2 py-1 rounded-md hover:bg-amber-50/60 whitespace-nowrap"
-            >
-              <i className="fa-solid fa-wand-magic-sparkles text-[10px] text-amber-600"></i>
-              <span>{t.navZeroExp}</span>
-            </a>
-            <a href="#courses" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
-              {t.navCourses}
-            </a>
-            <a href="#simulator" className="hover:text-red-600 transition-colors flex items-center gap-1 px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-              </span>
-              <span>{t.navSimulator}</span>
-            </a>
-            <a
-              href="#awards"
-              className="hover:text-amber-700 transition-colors flex items-center gap-1 text-amber-700 bg-amber-50 hover:bg-amber-100 px-2 py-1 rounded-md border border-amber-200/80 font-bold whitespace-nowrap"
-            >
-              <span>🏆 {t.navAwards}</span>
-            </a>
-            <a href="#gallery" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
-              {t.navGallery}
-            </a>
-            <a
-              href="#real-estate"
-              className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1 font-bold px-1.5 2xl:px-2 py-1 rounded-md hover:bg-amber-50/60 whitespace-nowrap"
-            >
-              <i className="fa-solid fa-house-chimney text-[10px] text-amber-600"></i>
-              <span>{t.navRealEstate}</span>
-            </a>
-            <a href="#contact" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
-              {t.navContact}
-            </a>
-          </nav>
 
-          {/* Action Buttons & 3-Language Selector - ALWAYS Visible & Never Pushed Off */}
-          <div className="flex items-center gap-1 sm:gap-2 shrink-0 z-10">
-            {/* Language Selector */}
-            <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[10px] 2xl:text-xs font-bold shadow-xs shrink-0">
+            {/* Language Selector: Clear, Prominent, 100% Accessible */}
+            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-inner shrink-0">
               <button
                 onClick={() => setLang("ta")}
-                className={'px-1.5 2xl:px-2.5 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "ta" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                className={'px-2.5 sm:px-3 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "ta" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="தமிழ்"
               >
                 தமிழ்
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={'px-1.5 2xl:px-2 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "en" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                className={'px-2 sm:px-2.5 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "en" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="English"
               >
                 EN
               </button>
               <button
                 onClick={() => setLang("si")}
-                className={'px-1.5 2xl:px-2 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "si" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                className={'px-2 sm:px-2.5 py-1 rounded-lg transition-all whitespace-nowrap font-bold ' + (lang === "si" ? "bg-red-600 text-white font-extrabold shadow-sm" : "text-slate-700 hover:bg-slate-200")}
                 title="සිංහල"
               >
                 සිංහල
               </button>
             </div>
 
-            {/* Direct Call Button (Desktop) */}
-            <a
-              href="tel:0775189963"
-              className="hidden lg:flex p-1.5 2xl:px-2.5 2xl:py-1.5 bg-slate-100 hover:bg-red-50 text-slate-700 hover:text-red-600 rounded-lg transition-colors border border-slate-200 text-xs font-bold items-center gap-1 shrink-0 whitespace-nowrap"
-              title="Call 077 518 9963"
-            >
-              <i className="fa-solid fa-phone text-red-600 text-xs"></i>
-              <span className="hidden 2xl:inline">077 518 9963</span>
-            </a>
-
             {/* Admission CTA Button */}
             <button
               onClick={() => openEnrollModal()}
-              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-2.5 2xl:px-3.5 py-1.5 rounded-lg font-bold text-xs 2xl:text-sm shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1 shrink-0 whitespace-nowrap"
+              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-red-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 shrink-0 whitespace-nowrap"
             >
               <i className="fa-solid fa-id-card text-xs"></i>
               <span>{t.btnEnroll}</span>
@@ -193,7 +144,7 @@ export default function Header() {
             {/* Mobile Menu Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 sm:p-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors xl:hidden shrink-0 flex items-center justify-center min-w-[36px] min-h-[36px]"
+              className="p-2 sm:p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors lg:hidden shrink-0 flex items-center justify-center min-w-[38px] min-h-[38px]"
               aria-label="Toggle navigation menu"
             >
               <i className={'fa-solid ' + (mobileMenuOpen ? "fa-xmark" : "fa-bars") + ' text-base'}></i>
@@ -201,31 +152,94 @@ export default function Header() {
           </div>
         </div>
 
+        {/* ROW 2: DEDICATED DESKTOP NAVIGATION BAR (Full Width, Spacious, Never Overlaps!) */}
+        <div className="hidden lg:block border-t border-slate-200/80 bg-slate-50/90 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <nav className="flex items-center justify-center gap-1.5 xl:gap-3 py-2 text-xs xl:text-sm font-bold text-slate-700 flex-wrap">
+              <a
+                href="#home"
+                className="text-red-600 hover:text-red-700 transition-colors px-3 py-1 rounded-lg hover:bg-red-50/80 whitespace-nowrap font-bold"
+              >
+                {t.navHome}
+              </a>
+              <a
+                href="#front-details"
+                className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-1 font-extrabold bg-red-100/70 hover:bg-red-100 px-3 py-1 rounded-lg border border-red-200 shadow-2xs whitespace-nowrap"
+              >
+                <i className="fa-solid fa-bullhorn text-xs animate-pulse text-red-600"></i>
+                <span>{t.navNotice}</span>
+              </a>
+              <a
+                href="#zero-exp"
+                className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1.5 font-bold px-3 py-1 rounded-lg hover:bg-amber-100/60 whitespace-nowrap"
+              >
+                <i className="fa-solid fa-wand-magic-sparkles text-xs text-amber-600"></i>
+                <span>{t.navZeroExp}</span>
+              </a>
+              <a
+                href="#courses"
+                className="hover:text-red-600 transition-colors px-3 py-1 rounded-lg hover:bg-slate-200/70 whitespace-nowrap"
+              >
+                {t.navCourses}
+              </a>
+              <a
+                href="#simulator"
+                className="hover:text-cyan-700 transition-colors flex items-center gap-1.5 px-3 py-1 rounded-lg hover:bg-cyan-50 whitespace-nowrap text-cyan-800 font-bold"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span>{t.navSimulator}</span>
+              </a>
+              <a
+                href="#awards"
+                className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-amber-800 bg-amber-100/80 hover:bg-amber-100 px-3 py-1 rounded-lg border border-amber-300/80 font-extrabold whitespace-nowrap shadow-2xs"
+              >
+                <span>🏆 {t.navAwards}</span>
+              </a>
+              <a
+                href="#gallery"
+                className="hover:text-red-600 transition-colors px-3 py-1 rounded-lg hover:bg-slate-200/70 whitespace-nowrap"
+              >
+                {t.navGallery}
+              </a>
+              <a
+                href="#real-estate"
+                className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1.5 font-bold px-3 py-1 rounded-lg hover:bg-amber-100/60 whitespace-nowrap"
+              >
+                <i className="fa-solid fa-house-chimney text-xs text-amber-600"></i>
+                <span>{t.navRealEstate}</span>
+              </a>
+              <a
+                href="#contact"
+                className="hover:text-red-600 transition-colors px-3 py-1 rounded-lg hover:bg-slate-200/70 whitespace-nowrap"
+              >
+                {t.navContact}
+              </a>
+            </nav>
+          </div>
+        </div>
+
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl space-y-4 animate-in slide-in-from-top">
+          <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl space-y-4 animate-in slide-in-from-top">
             <div className="flex items-center justify-around bg-slate-100 p-1.5 rounded-xl border border-slate-200 text-xs font-bold">
               <button
                 onClick={() => setLang("ta")}
-                className={`flex-1 py-1.5 rounded-lg text-center transition-all ${
-                  lang === "ta" ? "bg-red-600 text-white" : "text-slate-700 hover:bg-slate-200"
-                }`}
+                className={'flex-1 py-1.5 rounded-lg text-center transition-all ' + (lang === "ta" ? "bg-red-600 text-white font-bold" : "text-slate-700 hover:bg-slate-200")}
               >
                 தமிழ்
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={`flex-1 py-1.5 rounded-lg text-center transition-all ${
-                  lang === "en" ? "bg-red-600 text-white" : "text-slate-700 hover:bg-slate-200"
-                }`}
+                className={'flex-1 py-1.5 rounded-lg text-center transition-all ' + (lang === "en" ? "bg-red-600 text-white font-bold" : "text-slate-700 hover:bg-slate-200")}
               >
                 English
               </button>
               <button
                 onClick={() => setLang("si")}
-                className={`flex-1 py-1.5 rounded-lg text-center transition-all ${
-                  lang === "si" ? "bg-red-600 text-white" : "text-slate-700 hover:bg-slate-200"
-                }`}
+                className={'flex-1 py-1.5 rounded-lg text-center transition-all ' + (lang === "si" ? "bg-red-600 text-white font-bold" : "text-slate-700 hover:bg-slate-200")}
               >
                 සිංහල
               </button>
