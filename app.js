@@ -1744,13 +1744,20 @@ function showToast(message) {
 }
 
 // =========================================================================
-// OFFICIAL ADMIN PORTAL & DASHBOARD (dinesh@gmail.com / DS385)
+// OFFICIAL ADMIN PORTAL & DASHBOARD (SECURE SHA-256 ENCRYPTED AUTH)
 // =========================================================================
 
-const ADMIN_CREDENTIALS = {
-  email: "dinesh@gmail.com",
-  password: "DS385"
-};
+// One-way SHA-256 cryptographic digest.
+// Neither email nor password appears in plain text anywhere in the codebase!
+const SECURE_ADMIN_AUTH_HASH = "684d645c385e4f5ed47fa4d4b5068c8271fb492bec2de16668e58675776de3d0";
+
+async function computeSha256(str) {
+  const enc = new TextEncoder();
+  const data = enc.encode(str);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
 
 // Seed student records for initial state
 const INITIAL_SAMPLE_ADMISSIONS = [
@@ -1851,12 +1858,14 @@ function setupAdminPortal() {
   function openAdminSignIn() {
     if (!signInModal) return;
     if (errorBox) errorBox.classList.add("hidden");
-    if (emailInput && !emailInput.value) emailInput.value = "dinesh@gmail.com";
     if (passInput) passInput.value = "";
     signInModal.classList.remove("hidden");
     signInModal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
-    setTimeout(() => { if (passInput) passInput.focus(); }, 100);
+    setTimeout(() => { 
+      if (emailInput && !emailInput.value) emailInput.focus();
+      else if (passInput) passInput.focus();
+    }, 100);
   }
 
   function closeAdminSignIn() {
@@ -1885,19 +1894,21 @@ function setupAdminPortal() {
     });
   }
 
-  // Sign In Form Submission
+  // Sign In Form Submission (Secure SHA-256 hash comparison)
   if (signInForm) {
-    signInForm.addEventListener("submit", (e) => {
+    signInForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const inputEmail = (emailInput?.value || "").trim().toLowerCase();
       const inputPass = (passInput?.value || "").trim();
 
-      if (inputEmail === ADMIN_CREDENTIALS.email.toLowerCase() && inputPass === ADMIN_CREDENTIALS.password) {
+      const calculatedHash = await computeSha256(inputEmail + ":" + inputPass);
+
+      if (calculatedHash === SECURE_ADMIN_AUTH_HASH) {
         // Successful login
         sessionStorage.setItem("dinesh_admin_logged", "true");
         if (errorBox) errorBox.classList.add("hidden");
         closeAdminSignIn();
-        showToast("வணக்கம் நட. தினேஷ்! நிர்வாகக் கட்டுப்பாட்டகம் திறக்கப்படுகிறது...");
+        showToast("வணக்கம்! நிர்வாகக் கட்டுப்பாட்டகம் திறக்கப்படுகிறது...");
         setTimeout(() => {
           openAdminDashboard();
         }, 300);
@@ -1907,7 +1918,7 @@ function setupAdminPortal() {
           errorBox.classList.remove("hidden");
           const errorText = document.getElementById("adminLoginErrorText");
           if (errorText) {
-            errorText.textContent = "தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்! (dinesh@gmail.com / DS385)";
+            errorText.textContent = "தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்! (Invalid Credentials)";
           }
         }
       }

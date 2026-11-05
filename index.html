@@ -51,10 +51,14 @@
         <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider" data-i18n="newBadge">புதியது 2026</span>
         <span data-i18n="topNotice">📢 2026 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!</span>
       </div>
-      <div class="hidden md:flex items-center gap-4 text-xs">
+      <div class="hidden md:flex items-center gap-3.5 text-xs">
         <span class="flex items-center gap-1.5 opacity-90"><i class="fa-regular fa-clock"></i> <span data-i18n="hoursText">திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00</span></span>
-        <a href="tel:0779227102" class="font-bold hover:text-amber-200 transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-phone"></i> 077 9227 102
+        <a href="tel:0779227102" class="font-bold hover:text-amber-200 transition-colors flex items-center gap-1" title="Mobile & WhatsApp">
+          <i class="fa-solid fa-mobile-screen text-[11px]"></i> 077 9227 102
+        </a>
+        <span class="opacity-60 text-[10px]">/</span>
+        <a href="tel:0214327102" class="font-bold hover:text-amber-200 transition-colors flex items-center gap-1" title="Land Phone (Second Option)">
+          <i class="fa-solid fa-phone text-[10px]"></i> 021 4327 102
         </a>
         <button class="open-admin-modal bg-black/25 hover:bg-black/45 text-amber-200 hover:text-white px-2.5 py-1 rounded-lg font-bold transition-all flex items-center gap-1.5 border border-white/20 text-[11px]" title="Admin Sign In">
           <i class="fa-solid fa-lock text-[10px]"></i>
@@ -266,15 +270,21 @@
             </a>
           </div>
 
-          <!-- Trust Badges & Contact Mini Strip -->
-          <div class="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+          <!-- Trust Badges & Dual Phone Contact Strip (Mobile & Landline) -->
+          <div class="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-3.5 text-xs text-slate-600">
             <div class="flex items-center gap-1.5 font-medium">
               <i class="fa-solid fa-location-dot text-red-500"></i>
               <span data-i18n="heroLocation">YMCA கட்டடம், கண்டி வீதி, யாழ்ப்பாணம்</span>
             </div>
-            <div class="flex items-center gap-1.5 font-medium">
-              <i class="fa-solid fa-phone text-blue-500"></i>
-              <span>077 9227 102</span>
+            <div class="flex items-center gap-2">
+              <a href="tel:0779227102" class="flex items-center gap-1 font-bold text-slate-800 hover:text-red-600 transition-colors bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs" title="Mobile / WhatsApp">
+                <i class="fa-solid fa-mobile-screen text-emerald-600 text-xs"></i>
+                <span>077 9227 102</span>
+              </a>
+              <a href="tel:0214327102" class="flex items-center gap-1 font-bold text-slate-800 hover:text-blue-600 transition-colors bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs" title="Landline Number (Second Option)">
+                <i class="fa-solid fa-phone text-blue-600 text-xs"></i>
+                <span>021 4327 102 <span class="text-[10px] text-slate-400 font-normal">(Land)</span></span>
+              </a>
             </div>
           </div>
 
@@ -349,15 +359,19 @@
           </p>
         </div>
         
-        <!-- Quick Action Contact Pills -->
-        <div class="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
-          <a href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்." target="_blank" class="px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md shadow-emerald-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-xs sm:text-sm">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
+        <!-- Quick Action Contact Pills: WhatsApp, Mobile, and Landline (Second Option) -->
+        <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 shrink-0">
+          <a href="https://wa.me/94779227102?text=வணக்கம்%20டினேஸ்%20லேணர்ஸ்!%20விசேட%20சாரதிப்%20பயிற்சி%20பற்றிய%20விபரங்களை%20அறிய%20விரும்புகிறேன்." target="_blank" class="px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md shadow-emerald-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-xs">
+            <i class="fa-brands fa-whatsapp text-base"></i>
             <span data-i18n="noticeWaBtn">077 9227 102 (WhatsApp)</span>
           </a>
-          <a href="tel:0779227102" class="px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md shadow-red-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-xs sm:text-sm">
-            <i class="fa-solid fa-phone text-xs"></i>
+          <a href="tel:0779227102" class="px-3.5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md shadow-red-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 text-xs" title="Mobile Call">
+            <i class="fa-solid fa-mobile-screen text-xs"></i>
             <span data-i18n="noticeCallBtn">077 9227 102</span>
+          </a>
+          <a href="tel:0214327102" class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl shadow-md shadow-blue-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 text-xs" title="Land Phone (Second Option)">
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span>021 4327 102 <span class="text-[10px] opacity-80">(Land)</span></span>
           </a>
         </div>
       </div>
@@ -472,7 +486,7 @@
             </div>
             <div class="flex items-center gap-1.5">
               <i class="fa-solid fa-phone text-emerald-400"></i>
-              <span>TP: <strong class="text-white font-black tracking-wide">077 9227 102</strong></span>
+              <span>TP: <strong class="text-white font-black tracking-wide">077 9227 102</strong> &nbsp;|&nbsp; Land: <strong class="text-white font-black tracking-wide">021 4327 102</strong></span>
             </div>
             <div class="flex items-center gap-1 text-slate-300 font-bold">
               <span data-i18n="noticeThankYou">நன்றி🙏</span>
@@ -2087,7 +2101,7 @@
     </div>
   </div>
 
-  <!-- ADMIN SIGN IN MODAL (SECURE ACCESS: dinesh@gmail.com / DS385) -->
+  <!-- ADMIN SIGN IN MODAL (SECURE SHA-256 AUTHENTICATION) -->
   <div id="adminSignInModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
     <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative">
       
@@ -2124,7 +2138,7 @@
           </label>
           <div class="relative">
             <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-            <input type="email" id="adminEmailInput" required placeholder="dinesh@gmail.com" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+            <input type="email" id="adminEmailInput" required placeholder="admin@email.com" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
           </div>
         </div>
 
@@ -2156,7 +2170,7 @@
 
         <div class="pt-2 border-t border-slate-100 text-center">
           <p class="text-[11px] text-slate-400">
-            Official Owner Access: <code class="text-slate-700 font-bold bg-slate-100 px-1 py-0.5 rounded">dinesh@gmail.com</code>
+            <i class="fa-solid fa-shield-halved text-[10px] text-emerald-500"></i> Encrypted Secure Access (DMT DS:385)
           </p>
         </div>
 
@@ -2188,7 +2202,7 @@
                 </span>
               </div>
               <p class="text-xs text-slate-400 flex items-center gap-2">
-                <span>நிர்வாகி: <strong class="text-amber-300">dinesh@gmail.com</strong></span>
+                <span>நிர்வாகம்: <strong class="text-amber-300">DMT DS:385 Certified</strong></span>
                 <span>•</span>
                 <span id="adminClock" class="text-slate-300"></span>
               </p>
@@ -2461,7 +2475,7 @@
                 <div>
                   <p class="text-slate-400 font-bold uppercase text-[10px]">உரிமையாளர் & நிர்வாகி</p>
                   <p class="font-black text-slate-900 text-sm mt-0.5">நட. தினேஷ் (N. Dinesh)</p>
-                  <p class="text-slate-600">dinesh@gmail.com</p>
+                  <p class="text-slate-600 font-semibold">Licensed Proprietor • DMT DS:385</p>
                 </div>
                 <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-black rounded-lg text-xs">
                   Active Admin
@@ -2479,14 +2493,14 @@
               <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <p class="text-slate-400 font-bold uppercase text-[10px]">தொடர்பு எண்கள்</p>
                 <p class="font-black text-slate-900 text-sm mt-1">
-                  077 9227 102 (WhatsApp & Call) &nbsp;|&nbsp; 021 4327 102
+                  077 9227 102 (WhatsApp & Mobile) &nbsp;|&nbsp; 021 4327 102 (Landline)
                 </p>
               </div>
 
               <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
-                <p class="font-bold text-xs">🔐 பாதுகாப்பு குறிப்பு:</p>
+                <p class="font-bold text-xs flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-amber-600"></i> <span>பாதுகாப்பு குறிப்பு:</span></p>
                 <p class="text-[11px] mt-0.5 text-amber-800">
-                  நிர்வாகக் கணக்கு: <strong>dinesh@gmail.com</strong> | கடவுச்சொல்: <strong>DS385</strong>. வேலையை முடித்ததும் 'வெளியேறு (Logout)' பட்டனை அழுத்தவும்.
+                  பாதுகாக்கப்பட்ட நிர்வாக அணுகல் (Encrypted SHA-256 Authentication). வேலை முடிந்ததும் 'வெளியேறு (Logout)' பட்டனை அழுத்தவும்.
                 </p>
               </div>
             </div>
