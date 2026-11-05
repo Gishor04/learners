@@ -5,9 +5,9 @@ let currentLang = 'ta'; // Default language
 const translations = {
   ta: {
     // Top Announcement Bar
-    topNotice: "📢 2026 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!",
+    topNotice: "📢 2027 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!",
     hoursText: "திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00",
-    newBadge: "புதியது 2026",
+    newBadge: "புதியது 2027",
     
     // Header & Navigation
     brandTitle: "தினேஷ் லேணர்ஸ்",
@@ -137,7 +137,7 @@ const translations = {
     g9Sub: "உரிமையாளர் நட. தினேஷ் 3D VR சிமுலேட்டரை பரீட்சித்துப் பார்க்கிறார்",
     g10Badge: "ஆரம்ப விழா",
     g10Caption: "நவீன தொழில்நுட்ப சாரதிப் பள்ளி ஆரம்ப விழா அழைப்பிதழ்",
-    g10Sub: "இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம் (2-03-2026)",
+    g10Sub: "இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம் (2-03-2027)",
     
     // Courses & Fleet Section
     coursePill: "பயிற்சி வாகனங்கள்",
@@ -336,7 +336,7 @@ const translations = {
     footerQuickLinks: "பயிற்சி வாகனங்கள்",
     footerSupport: "மாணவர் உதவிகள்",
     footerContact: "தொடர்புகளுக்கு",
-    footerRights: "© 2026 தினேஷ் லேணர்ஸ் (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+    footerRights: "© 2027 தினேஷ் லேணர்ஸ் (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     footerLocation: "யாழ்ப்பாணம் • இலங்கை",
     
     // Real Estate Section
@@ -399,9 +399,9 @@ const translations = {
   
   en: {
     // Top Announcement Bar
-    topNotice: "📢 2026 Driving Batches Now Enrolling! Modern 3D Simulator & Practical Dual-Control Fleet | Book Now!",
+    topNotice: "📢 2027 Driving Batches Now Enrolling! Modern 3D Simulator & Practical Dual-Control Fleet | Book Now!",
     hoursText: "Monday - Sunday: 7:00 AM - 7:00 PM",
-    newBadge: "NEW 2026",
+    newBadge: "NEW 2027",
     
     // Header & Navigation
     brandTitle: "Dinesh Learners",
@@ -531,7 +531,7 @@ const translations = {
     g9Sub: "Founder N. Dinesh experiencing the 3D VR driving cockpit",
     g10Badge: "Opening Ceremony",
     g10Caption: "New Technology Driving School Opening Ceremony",
-    g10Sub: "No. 107A, 1/1, Kandy Road, Jaffna (2-03-2026)",
+    g10Sub: "No. 107A, 1/1, Kandy Road, Jaffna (2-03-2027)",
     
     // Courses & Fleet Section
     coursePill: "Our Training Fleet",
@@ -730,7 +730,7 @@ const translations = {
     footerQuickLinks: "Training Fleet",
     footerSupport: "Student Resources",
     footerContact: "Contact Info",
-    footerRights: "© 2026 Dinesh Learners (DMT DS:385). All Rights Reserved.",
+    footerRights: "© 2027 Dinesh Learners (DMT DS:385). All Rights Reserved.",
     footerLocation: "Jaffna • Sri Lanka",
     
     // Real Estate Section
@@ -793,9 +793,9 @@ const translations = {
   
   si: {
     // Top Announcement Bar
-    topNotice: "📢 2026 නව රියදුරු පුහුණු පාඨමාලා ආරම්භ විය! නවීන 3D සිමියුලේටර් සහ ප්‍රායෝගික පුහුණුව | අදම ලියාපදිංචි වන්න!",
+    topNotice: "📢 2027 නව රියදුරු පුහුණු පාඨමාලා ආරම්භ විය! නවීන 3D සිමියුලේටර් සහ ප්‍රායෝගික පුහුණුව | අදම ලියාපදිංචි වන්න!",
     hoursText: "සඳුදා - ඉරිදා: පෙ.ව. 7:00 - ප.ව. 7:00",
-    newBadge: "නව 2026",
+    newBadge: "නව 2027",
     
     // Header & Navigation
     brandTitle: "දිනේෂ් රියදුරු පාසල",
@@ -925,7 +925,7 @@ const translations = {
     g9Sub: "ආයතන ප්‍රධානී එන්. දිනේෂ් 3D VR පද්ධතිය පරික්ෂා කරයි",
     g10Badge: "විවෘත කිරීමේ උත්සවය",
     g10Caption: "නවීන තාක්ෂණික රියදුරු පාසලේ සමාරම්භක ආරාධනය",
-    g10Sub: "අංක 107A, 1/1, නුවර පාර, යාපනය (2-03-2026)",
+    g10Sub: "අංක 107A, 1/1, නුවර පාර, යාපනය (2-03-2027)",
     
     // Courses & Fleet Section
     coursePill: "පුහුණු වාහන පෙළ",
@@ -1124,7 +1124,7 @@ const translations = {
     footerQuickLinks: "පුහුණු පාඨමාලා",
     footerSupport: "ශිෂ්‍ය සහාය",
     footerContact: "සම්බන්ධ වීමට",
-    footerRights: "© 2026 දිනේෂ් රියදුරු පාසල (DMT DS:385). සියලුම හිමිකම් ඇවිරිණි.",
+    footerRights: "© 2027 දිනේෂ් රියදුරු පාසල (DMT DS:385). සියලුම හිමිකම් ඇවිරිණි.",
     footerLocation: "යාපනය • ශ්‍රී ලංකාව",
     
     // Real Estate Section
@@ -1924,7 +1924,7 @@ async function computeSha256(str) {
 const INITIAL_SAMPLE_ADMISSIONS = [
   {
     id: "ADM-101",
-    date: "30/10/2026 09:30 AM",
+    date: "30/10/2027 09:30 AM",
     name: "எஸ். சிவகுமார் (S. Sivakumaran)",
     phone: "0771234567",
     course: "Car (Dual-Control)",
@@ -1934,7 +1934,7 @@ const INITIAL_SAMPLE_ADMISSIONS = [
   },
   {
     id: "ADM-102",
-    date: "29/10/2026 04:15 PM",
+    date: "29/10/2027 04:15 PM",
     name: "டி. பிரியா (T. Priya)",
     phone: "0778901234",
     course: "3D Driving Simulator",
@@ -1944,7 +1944,7 @@ const INITIAL_SAMPLE_ADMISSIONS = [
   },
   {
     id: "ADM-103",
-    date: "28/10/2026 11:20 AM",
+    date: "28/10/2027 11:20 AM",
     name: "எம். கபிலன் (M. Kabilan)",
     phone: "0765432109",
     course: "Three-Wheeler (Tuk Tuk)",
