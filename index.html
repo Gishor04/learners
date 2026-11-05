@@ -51,11 +51,15 @@
         <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider" data-i18n="newBadge">புதியது 2026</span>
         <span data-i18n="topNotice">📢 2026 புதிய சாரதிப் பயிற்சி வகுப்புகள் ஆரம்பம்! நவீன சிமுலேட்டர் & பிராக்டிகல் பயிற்சி | உடனே முன்பதிவு செய்யுங்கள்!</span>
       </div>
-      <div class="hidden md:flex items-center gap-5 text-xs">
+      <div class="hidden md:flex items-center gap-4 text-xs">
         <span class="flex items-center gap-1.5 opacity-90"><i class="fa-regular fa-clock"></i> <span data-i18n="hoursText">திங்கள் - ஞாயிறு: காலை 7:00 - மாலை 7:00</span></span>
         <a href="tel:0779227102" class="font-bold hover:text-amber-200 transition-colors flex items-center gap-1">
           <i class="fa-solid fa-phone"></i> 077 9227 102
         </a>
+        <button class="open-admin-modal bg-black/25 hover:bg-black/45 text-amber-200 hover:text-white px-2.5 py-1 rounded-lg font-bold transition-all flex items-center gap-1.5 border border-white/20 text-[11px]" title="Admin Sign In">
+          <i class="fa-solid fa-lock text-[10px]"></i>
+          <span data-i18n="adminPortalBtn">நிர்வாகம்</span>
+        </button>
       </div>
     </div>
   </div>
@@ -189,6 +193,9 @@
         </a>
         <button class="open-enroll-modal w-full py-3 bg-red-600 text-white font-bold rounded-xl text-sm shadow-md flex items-center justify-center gap-2">
           <i class="fa-solid fa-id-card"></i> <span data-i18n="btnEnroll">இப்போதே பதிவு செய்</span>
+        </button>
+        <button class="open-admin-modal w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-amber-300 font-bold rounded-xl text-xs flex items-center justify-center gap-2 border border-slate-700">
+          <i class="fa-solid fa-shield-halved text-amber-400"></i> <span data-i18n="adminPortalBtn">நிர்வாகம் (Admin Sign In)</span>
         </button>
       </div>
     </div>
@@ -1878,7 +1885,14 @@
       <!-- Copyright Row -->
       <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
         <p data-i18n="footerRights">© 2026 தினேஷ் லேணர்ஸ் (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-        <p class="text-xs" data-i18n="footerLocation">யாழ்ப்பாணம் • இலங்கை</p>
+        <div class="flex items-center gap-4 text-xs">
+          <p data-i18n="footerLocation">யாழ்ப்பாணம் • இலங்கை</p>
+          <span>•</span>
+          <button class="open-admin-modal text-slate-400 hover:text-white transition-colors flex items-center gap-1 font-bold">
+            <i class="fa-solid fa-lock text-[10px]"></i>
+            <span data-i18n="adminPortalBtn">நிர்வாகம்</span>
+          </button>
+        </div>
       </div>
 
       <!-- PIRA AI AURA OFFICIAL BRANDING FOOTER (KELAPODU / AT THE VERY BOTTOM) -->
@@ -2069,6 +2083,417 @@
           </button>
         </div>
       </div>
+
+    </div>
+  </div>
+
+  <!-- ADMIN SIGN IN MODAL (SECURE ACCESS: dinesh@gmail.com / DS385) -->
+  <div id="adminSignInModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative">
+      
+      <!-- Modal Top Header -->
+      <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 p-6 text-white relative border-b border-slate-800">
+        <button id="closeAdminSignInBtn" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-sm transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="inline-flex items-center gap-2 bg-red-600/30 text-red-300 border border-red-500/40 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider mb-2">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>DMT: DS:385 • ADMIN PORTAL</span>
+        </div>
+        <h3 class="text-xl font-black font-heading text-white flex items-center gap-2" data-i18n="adminLoginTitle">
+          <i class="fa-solid fa-lock text-red-500 text-lg"></i>
+          <span>நிர்வாகி உள்நுழைவு</span>
+        </h3>
+        <p class="text-xs text-slate-400 mt-1" data-i18n="adminSubtitle">
+          டினேஸ் லேணர்ஸ் நிர்வாகக் கட்டுப்பாட்டகம் (DMT DS:385)
+        </p>
+      </div>
+
+      <!-- Sign In Form -->
+      <form id="adminSignInForm" class="p-6 space-y-4">
+        
+        <!-- Error Banner -->
+        <div id="adminLoginError" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-bold flex items-center gap-2">
+          <i class="fa-solid fa-circle-exclamation text-red-500 text-sm shrink-0"></i>
+          <span id="adminLoginErrorText">மின்னஞ்சல் அல்லது கடவுச்சொல் தவறானது!</span>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5" data-i18n="adminEmailLabel">
+            மின்னஞ்சல் (Email)*
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+            <input type="email" id="adminEmailInput" required placeholder="dinesh@gmail.com" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5" data-i18n="adminPassLabel">
+            கடவுச்சொல் (Password)*
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-key absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+            <input type="password" id="adminPassInput" required placeholder="••••••••" class="w-full pl-11 pr-11 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+            <button type="button" id="toggleAdminPassBtn" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1" title="Show / Hide Password">
+              <i class="fa-solid fa-eye text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs pt-1">
+          <label class="flex items-center gap-2 cursor-pointer text-slate-600 font-medium">
+            <input type="checkbox" id="adminRememberMe" checked class="rounded text-red-600 focus:ring-red-500">
+            <span>Remember login</span>
+          </label>
+          <span class="text-slate-400 text-[11px]">DS:385 Verified</span>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-700 hover:to-rose-800 text-white font-extrabold rounded-xl shadow-lg shadow-red-500/30 text-sm transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span data-i18n="adminSignInBtn">உள்நுழைக</span>
+        </button>
+
+        <div class="pt-2 border-t border-slate-100 text-center">
+          <p class="text-[11px] text-slate-400">
+            Official Owner Access: <code class="text-slate-700 font-bold bg-slate-100 px-1 py-0.5 rounded">dinesh@gmail.com</code>
+          </p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- COMPREHENSIVE ADMIN PANEL FULLSCREEN DASHBOARD (WHEN AUTHENTICATED) -->
+  <div id="adminPanelModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden overflow-y-auto">
+    <div class="min-h-screen bg-slate-100 text-slate-900 pb-12">
+      
+      <!-- Admin Top Navigation Bar -->
+      <header class="sticky top-0 z-40 bg-slate-900 text-white shadow-xl border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          
+          <!-- Brand Info -->
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white rounded-xl border-2 border-red-600 flex items-center justify-center font-black text-red-600 text-2xl shadow-md">
+              L
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-black text-base sm:text-lg tracking-tight font-heading" data-i18n="adminPanelTitle">
+                  டினேஸ் லேணர்ஸ் நிர்வாகக் கட்டுப்பாட்டகம்
+                </span>
+                <span class="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">
+                  DS:385
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 flex items-center gap-2">
+                <span>நிர்வாகி: <strong class="text-amber-300">dinesh@gmail.com</strong></span>
+                <span>•</span>
+                <span id="adminClock" class="text-slate-300"></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Header Actions -->
+          <div class="flex items-center gap-2.5">
+            <button id="closeAdminPanelBtn" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-xl text-xs font-bold transition-all border border-slate-700 flex items-center gap-1.5" title="View Public Website">
+              <i class="fa-solid fa-globe text-xs"></i>
+              <span class="hidden sm:inline">தளத்தைப் பார்க்க</span>
+            </button>
+            <button id="adminLogoutBtn" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold shadow-md shadow-red-600/30 transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-power-off text-xs"></i>
+              <span data-i18n="adminLogoutBtn">வெளியேறு</span>
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Dashboard Main Container -->
+      <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-6">
+        
+        <!-- Quick Overview Stats 4-Cards Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">மொத்த சேர்க்கைகள்</p>
+              <h4 id="statTotalAdmissions" class="text-2xl font-black text-slate-900 font-heading">0</h4>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 border border-cyan-200 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">3D சிமுலேட்டர்</p>
+              <h4 id="statSimulatorAdmissions" class="text-2xl font-black text-slate-900 font-heading">0</h4>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">ரியல் எஸ்டேட் கோரிக்கைகள்</p>
+              <h4 class="text-2xl font-black text-slate-900 font-heading">12</h4>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">அரசு சான்றிதழ்</p>
+              <h4 class="text-base font-black text-emerald-600 font-heading">DMT: DS:385</h4>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Admin Tab Navigation Pills -->
+        <div class="bg-white p-2 rounded-2xl border border-slate-200 shadow-sm flex flex-wrap items-center gap-2 text-xs font-bold">
+          <button class="admin-tab-btn active px-4 py-2.5 rounded-xl bg-red-600 text-white transition-all flex items-center gap-2" data-tab="tabAdmissions">
+            <i class="fa-solid fa-users"></i>
+            <span>மாணவர் சேர்க்கைகள் (Admissions)</span>
+            <span id="admissionsBadgeCount" class="bg-white/20 text-white text-[10px] px-2 py-0.5 rounded-full">0</span>
+          </button>
+          
+          <button class="admin-tab-btn px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-2" data-tab="tabAddStudent">
+            <i class="fa-solid fa-user-plus text-red-600"></i>
+            <span>புதிய மாணவரைச் சேர்க்க (Add Student)</span>
+          </button>
+
+          <button class="admin-tab-btn px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-2" data-tab="tabRealEstate">
+            <i class="fa-solid fa-building text-amber-600"></i>
+            <span>ரியல் எஸ்டேட் பதிவுகள் (Real Estate)</span>
+          </button>
+
+          <button class="admin-tab-btn px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-2" data-tab="tabSettings">
+            <i class="fa-solid fa-sliders text-indigo-600"></i>
+            <span>அறிவித்தல் & அமைப்புகள் (Settings)</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: STUDENT ADMISSIONS TABLE VIEW -->
+        <div id="tabAdmissions" class="admin-tab-content space-y-4">
+          
+          <!-- Filters & Actions Header Bar -->
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+            
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+              <span class="text-slate-500 font-bold">வடிகட்டல்:</span>
+              <button class="admin-filter-btn active px-3 py-1.5 rounded-lg bg-slate-900 text-white font-bold" data-filter="all">அனைத்தும்</button>
+              <button class="admin-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold" data-filter="Car">கார் (Car)</button>
+              <button class="admin-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold" data-filter="Simulator">3D சிமுலேட்டர்</button>
+              <button class="admin-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold" data-filter="Bike">பைக்</button>
+              <button class="admin-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold" data-filter="Three-Wheeler">முச்சக்கரவண்டி</button>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="relative flex-1 sm:w-64">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="adminSearchInput" placeholder="பெயர் அல்லது தொலைபேசி..." class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-red-500 focus:outline-none">
+              </div>
+
+              <button id="adminExportCsvBtn" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 flex items-center gap-1.5 shrink-0" title="Download Excel/CSV Sheet">
+                <i class="fa-solid fa-file-csv text-emerald-600"></i>
+                <span class="hidden sm:inline">CSV ஏற்றுமதி</span>
+              </button>
+
+              <button id="adminPrintBtn" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 flex items-center gap-1.5 shrink-0" title="Print Leads">
+                <i class="fa-solid fa-print"></i>
+                <span class="hidden sm:inline">அச்சிடுக</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Table Card -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase font-black tracking-wider text-[11px]">
+                    <th class="py-3.5 px-4">தேதி / நேரம்</th>
+                    <th class="py-3.5 px-4">மாணவர் பெயர்</th>
+                    <th class="py-3.5 px-4">தொலைபேசி எண்</th>
+                    <th class="py-3.5 px-4">பயிற்சிப் பிரிவு</th>
+                    <th class="py-3.5 px-4">விருப்ப நேரம்</th>
+                    <th class="py-3.5 px-4">குறிப்பு</th>
+                    <th class="py-3.5 px-4">நிலை (Status)</th>
+                    <th class="py-3.5 px-4 text-center">செயல்கள்</th>
+                  </tr>
+                </thead>
+                <tbody id="adminAdmissionsTableBody" class="divide-y divide-slate-100 font-medium text-slate-700">
+                  <!-- Dynamically rendered rows -->
+                </tbody>
+              </table>
+            </div>
+
+            <div id="adminEmptyState" class="hidden p-12 text-center text-slate-400 space-y-2">
+              <i class="fa-solid fa-folder-open text-4xl text-slate-300"></i>
+              <p class="font-bold text-sm text-slate-600">பதிவுகள் எதுவும் கிடைக்கவில்லை</p>
+              <p class="text-xs">புதிய சேர்க்கை பதிவு செய்யப்பட்டதும் இங்கு தோன்றும்.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: ADD NEW STUDENT MANUAL ENTRY FORM -->
+        <div id="tabAddStudent" class="admin-tab-content hidden max-w-2xl mx-auto">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
+            <div>
+              <h3 class="text-lg font-black text-slate-900 font-heading">புதிய மாணவர் சேர்க்கை பதிவு</h3>
+              <p class="text-xs text-slate-500 mt-1">நேரில் அல்லது தொலைபேசி மூலம் வந்த மாணவர் விபரங்களை உள்ளிடவும்.</p>
+            </div>
+
+            <form id="adminManualAddForm" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">முழுப் பெயர் (Student Name)*</label>
+                <input type="text" id="manualStudentName" required placeholder="Ex: K. சிவகுமார்" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">தொலைபேசி / WhatsApp எண்*</label>
+                <input type="tel" id="manualStudentPhone" required placeholder="077 XXXXXXX" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">பயிற்சி வாகனம் (Course)*</label>
+                  <select id="manualStudentCourse" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    <option value="Car (Dual-Control)">🚗 Car (Auto / Manual Dual Control)</option>
+                    <option value="3D Driving Simulator">🕹️ 3D Virtual Cockpit Simulator</option>
+                    <option value="Motorcycle (Class A)">🏍️ Motorcycle / Scooter</option>
+                    <option value="Three-Wheeler (Tuk Tuk)">🛺 Three Wheeler (Tuk Tuk)</option>
+                    <option value="Heavy Bus & Lorry">🚌 Heavy Bus & Lorry (Class D/CE)</option>
+                    <option value="Car + Bike Combo">🔥 Car + Bike Combo Package</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">விருப்பமான நேரம் (Slot)</label>
+                  <select id="manualStudentSlot" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    <option value="காலை (Morning 7am-10am)">காலை (Morning 7am - 10am)</option>
+                    <option value="நண்பகல் (Mid-day 10am-2pm)">நண்பகல் (Mid-day 10am - 2pm)</option>
+                    <option value="மாலை (Evening 3pm-7pm)">மாலை (Evening 3pm - 7pm)</option>
+                    <option value="வார இறுதி (Weekend Only)">வார இறுதி (Weekend Only)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">மேலதிக விபரங்கள் / முன்பணம் (Notes)</label>
+                <textarea id="manualStudentNote" rows="3" placeholder="முன்பணம் அல்லது குறிப்புகள்..." class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-medium focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+              </div>
+
+              <div class="flex items-center gap-3 pt-2">
+                <button type="submit" class="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-md text-sm transition-all flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-floppy-disk"></i>
+                  <span>பதிவைச் சேமிக்க</span>
+                </button>
+                <button type="reset" class="px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-sm transition-colors">
+                  அழிக்க
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB 3: REAL ESTATE INQUIRIES -->
+        <div id="tabRealEstate" class="admin-tab-content hidden space-y-4">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-amber-500 text-lg"><i class="fa-solid fa-house-chimney"></i></span>
+                <h3 class="text-base font-black text-slate-900 font-heading">தினேஷ் ரியல் எஸ்டேட் கோரிக்கைகள்</h3>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">யாழ்ப்பாணத்தில் காணி, வீடு மற்றும் வியாபார நிலையங்கள் வாங்குவது மற்றும் விற்பதற்கான வினவல்கள்.</p>
+            </div>
+            <a href="https://wa.me/94779227102" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-md flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>ரியல் எஸ்டேட் WhatsApp-ல் பார்க்க</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase">காணி விற்பனை</span>
+              <h4 class="font-black text-sm text-slate-900">கண்டி வீதி குடியிருப்பு மனை</h4>
+              <p class="text-xs text-slate-600">கச்சேரிடி பழைய பூங்கா அருகே 10 பரப்பு மனை நிலம் விற்பனைக்கு.</p>
+              <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100">தொடர்பு: 077 9227 102</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-black uppercase">வீடு விற்பனை</span>
+              <h4 class="font-black text-sm text-slate-900">யாழ் நகரில் சொகுசு வீடு</h4>
+              <p class="text-xs text-slate-600">4 படுக்கையறைகள் கொண்ட நவீன வீடு, சுற்றுமதில், கார் பார்கிங் வசதி.</p>
+              <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100">தொடர்பு: 077 9227 102</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-black uppercase">வணிகக் கட்டிடம்</span>
+              <h4 class="font-black text-sm text-slate-900">கண்டி வீதி வணிக இடம்</h4>
+              <p class="text-xs text-slate-600">கடைகள் மற்றும் அலுவலகங்களுக்கான வாடகை மற்றும் விற்பனை கட்டிடம்.</p>
+              <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100">தொடர்பு: 077 9227 102</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: SETTINGS & NOTICE INFO -->
+        <div id="tabSettings" class="admin-tab-content hidden max-w-3xl mx-auto space-y-5">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
+            <div>
+              <h3 class="text-lg font-black text-slate-900 font-heading">நிர்வாகக் கணக்கு & விசேட அறிவித்தல் விபரங்கள்</h3>
+              <p class="text-xs text-slate-500 mt-1">தளத்தில் இயங்கும் தொடர்பு மற்றும் முகவரி அமைப்புகள்.</p>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <div>
+                  <p class="text-slate-400 font-bold uppercase text-[10px]">உரிமையாளர் & நிர்வாகி</p>
+                  <p class="font-black text-slate-900 text-sm mt-0.5">நட. தினேஷ் (N. Dinesh)</p>
+                  <p class="text-slate-600">dinesh@gmail.com</p>
+                </div>
+                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 font-black rounded-lg text-xs">
+                  Active Admin
+                </span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <p class="text-slate-400 font-bold uppercase text-[10px]">உத்தியோகபூர்வ முகவரி (Single Address)</p>
+                <p class="font-bold text-slate-900 text-sm mt-1">
+                  இல -107A1/1 கண்டி வீதி கச்சேரிடி பழைய பூங்கா முன்பா 1ம் மாடி யாழ்
+                </p>
+                <p class="text-slate-500 mt-0.5">DMT Registration DS:385 • YMCA Building 1st Floor</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <p class="text-slate-400 font-bold uppercase text-[10px]">தொடர்பு எண்கள்</p>
+                <p class="font-black text-slate-900 text-sm mt-1">
+                  077 9227 102 (WhatsApp & Call) &nbsp;|&nbsp; 021 4327 102
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                <p class="font-bold text-xs">🔐 பாதுகாப்பு குறிப்பு:</p>
+                <p class="text-[11px] mt-0.5 text-amber-800">
+                  நிர்வாகக் கணக்கு: <strong>dinesh@gmail.com</strong> | கடவுச்சொல்: <strong>DS385</strong>. வேலையை முடித்ததும் 'வெளியேறு (Logout)' பட்டனை அழுத்தவும்.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
 
     </div>
   </div>
