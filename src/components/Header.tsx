@@ -72,51 +72,51 @@ export default function Header() {
       </div>
 
       {/* MAIN NAVIGATION BAR */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all safe-header">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all safe-header overflow-x-clip">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 h-16 sm:h-18 flex items-center justify-between gap-1 sm:gap-2 w-full">
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-2xl sm:text-3xl font-sans tracking-tight group-hover:scale-105 transition-transform">
+          <a href="#" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 bg-white rounded-xl border-2 border-red-600 shadow-md flex items-center justify-center font-black text-red-600 text-xl sm:text-2xl font-sans tracking-tight group-hover:scale-105 transition-transform shrink-0">
               L
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="text-base sm:text-xl font-black text-slate-900 tracking-tight font-heading">
+              <div className="flex items-center gap-1 sm:gap-1.5">
+                <span className="text-sm sm:text-lg 2xl:text-xl font-black text-slate-900 tracking-tight font-heading whitespace-nowrap">
                   {t.brandTitle}
                 </span>
-                <span className="text-[9px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1.5 sm:px-2 py-0.5 rounded-full border border-red-200">
+                <span className="text-[9px] sm:text-[10px] bg-red-100 text-red-700 font-bold px-1.5 py-0.5 rounded-full border border-red-200 shrink-0">
                   DS:385
                 </span>
               </div>
-              <span className="hidden sm:block text-[11px] font-semibold text-slate-500 tracking-tight">
+              <span className="hidden 2xl:block text-[11px] font-semibold text-slate-500 tracking-tight whitespace-nowrap">
                 {t.brandSubtitle}
               </span>
             </div>
           </a>
 
-          {/* Desktop Nav Menu */}
-          <nav className="hidden xl:flex items-center gap-4 text-xs xl:text-sm font-semibold text-slate-700">
-            <a href="#home" className="text-red-600 hover:text-red-700 transition-colors font-bold">
+          {/* Desktop Nav Menu - Compact & Responsive */}
+          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-2 text-[11px] 2xl:text-xs font-bold text-slate-700 min-w-0">
+            <a href="#home" className="text-red-600 hover:text-red-700 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-red-50/60 whitespace-nowrap">
               {t.navHome}
             </a>
             <a
               href="#front-details"
-              className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-1 font-extrabold bg-red-50 hover:bg-red-100 px-2.5 py-1 rounded-lg border border-red-200 shadow-xs"
+              className="text-red-600 hover:text-red-700 transition-colors flex items-center gap-1 font-extrabold bg-red-50 hover:bg-red-100 px-2 py-1 rounded-md border border-red-200/80 shadow-xs whitespace-nowrap"
             >
-              <i className="fa-solid fa-bullhorn text-xs animate-pulse text-red-600"></i>
+              <i className="fa-solid fa-bullhorn text-[10px] animate-pulse text-red-600"></i>
               <span>{t.navNotice}</span>
             </a>
             <a
               href="#zero-exp"
-              className="text-amber-600 hover:text-amber-700 transition-colors flex items-center gap-1 font-bold"
+              className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1 font-bold px-1.5 2xl:px-2 py-1 rounded-md hover:bg-amber-50/60 whitespace-nowrap"
             >
-              <i className="fa-solid fa-wand-magic-sparkles text-xs"></i>
+              <i className="fa-solid fa-wand-magic-sparkles text-[10px] text-amber-600"></i>
               <span>{t.navZeroExp}</span>
             </a>
-            <a href="#courses" className="hover:text-red-600 transition-colors">
+            <a href="#courses" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
               {t.navCourses}
             </a>
-            <a href="#simulator" className="hover:text-red-600 transition-colors flex items-center gap-1">
+            <a href="#simulator" className="hover:text-red-600 transition-colors flex items-center gap-1 px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
@@ -125,56 +125,47 @@ export default function Header() {
             </a>
             <a
               href="#awards"
-              className="hover:text-amber-600 transition-colors flex items-center gap-1 text-amber-700 bg-amber-50 hover:bg-amber-100 px-2 py-0.5 rounded-lg border border-amber-200/80 font-bold"
+              className="hover:text-amber-700 transition-colors flex items-center gap-1 text-amber-700 bg-amber-50 hover:bg-amber-100 px-2 py-1 rounded-md border border-amber-200/80 font-bold whitespace-nowrap"
             >
               <span>🏆 {t.navAwards}</span>
             </a>
-            <a href="#gallery" className="hover:text-red-600 transition-colors">
+            <a href="#gallery" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
               {t.navGallery}
             </a>
             <a
               href="#real-estate"
-              className="text-amber-600 hover:text-amber-700 transition-colors flex items-center gap-1 font-bold"
+              className="text-amber-700 hover:text-amber-800 transition-colors flex items-center gap-1 font-bold px-1.5 2xl:px-2 py-1 rounded-md hover:bg-amber-50/60 whitespace-nowrap"
             >
-              <i className="fa-solid fa-house-chimney text-xs"></i>
+              <i className="fa-solid fa-house-chimney text-[10px] text-amber-600"></i>
               <span>{t.navRealEstate}</span>
             </a>
-            <a href="#contact" className="hover:text-red-600 transition-colors">
+            <a href="#contact" className="hover:text-red-600 transition-colors px-1.5 2xl:px-2 py-1 rounded-md hover:bg-slate-100 whitespace-nowrap">
               {t.navContact}
             </a>
           </nav>
 
-          {/* Action Buttons & 3-Language Selector */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          {/* Action Buttons & 3-Language Selector - ALWAYS Visible & Never Pushed Off */}
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0 z-10">
             {/* Language Selector */}
-            <div className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200 text-[11px] sm:text-xs font-bold shadow-inner shrink-0">
+            <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[10px] 2xl:text-xs font-bold shadow-xs shrink-0">
               <button
                 onClick={() => setLang("ta")}
-                className={`px-2 sm:px-3 py-1 rounded-lg transition-all ${
-                  lang === "ta"
-                    ? "bg-red-600 text-white font-extrabold shadow-sm"
-                    : "text-slate-700 hover:bg-slate-200 font-bold"
-                }`}
+                className={'px-1.5 2xl:px-2.5 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "ta" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                title="தமிழ்"
               >
                 தமிழ்
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={`px-1.5 sm:px-2.5 py-1 rounded-lg transition-all ${
-                  lang === "en"
-                    ? "bg-red-600 text-white font-extrabold shadow-sm"
-                    : "text-slate-700 hover:bg-slate-200 font-bold"
-                }`}
+                className={'px-1.5 2xl:px-2 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "en" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                title="English"
               >
                 EN
               </button>
               <button
                 onClick={() => setLang("si")}
-                className={`px-1.5 sm:px-2.5 py-1 rounded-lg transition-all ${
-                  lang === "si"
-                    ? "bg-red-600 text-white font-extrabold shadow-sm"
-                    : "text-slate-700 hover:bg-slate-200 font-bold"
-                }`}
+                className={'px-1.5 2xl:px-2 py-1 rounded-md transition-all whitespace-nowrap ' + (lang === "si" ? "bg-red-600 text-white font-extrabold shadow-xs" : "text-slate-700 hover:bg-slate-200 font-bold")}
+                title="සිංහල"
               >
                 සිංහල
               </button>
@@ -183,7 +174,7 @@ export default function Header() {
             {/* Direct Call Button (Desktop) */}
             <a
               href="tel:0775189963"
-              className="hidden sm:flex p-2 sm:px-3 sm:py-2 bg-slate-100 hover:bg-red-50 text-slate-700 hover:text-red-600 rounded-xl transition-colors border border-slate-200 text-xs font-bold items-center gap-1.5 shrink-0"
+              className="hidden lg:flex p-1.5 2xl:px-2.5 2xl:py-1.5 bg-slate-100 hover:bg-red-50 text-slate-700 hover:text-red-600 rounded-lg transition-colors border border-slate-200 text-xs font-bold items-center gap-1 shrink-0 whitespace-nowrap"
               title="Call 077 518 9963"
             >
               <i className="fa-solid fa-phone text-red-600 text-xs"></i>
@@ -193,7 +184,7 @@ export default function Header() {
             {/* Admission CTA Button */}
             <button
               onClick={() => openEnrollModal()}
-              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-red-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap"
+              className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-2.5 2xl:px-3.5 py-1.5 rounded-lg font-bold text-xs 2xl:text-sm shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1 shrink-0 whitespace-nowrap"
             >
               <i className="fa-solid fa-id-card text-xs"></i>
               <span>{t.btnEnroll}</span>
@@ -202,10 +193,10 @@ export default function Header() {
             {/* Mobile Menu Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 sm:p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors xl:hidden shrink-0 flex items-center justify-center min-w-[38px] min-h-[38px]"
+              className="p-1.5 sm:p-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors xl:hidden shrink-0 flex items-center justify-center min-w-[36px] min-h-[36px]"
               aria-label="Toggle navigation menu"
             >
-              <i className={`fa-solid ${mobileMenuOpen ? "fa-xmark" : "fa-bars"} text-base`}></i>
+              <i className={'fa-solid ' + (mobileMenuOpen ? "fa-xmark" : "fa-bars") + ' text-base'}></i>
             </button>
           </div>
         </div>
