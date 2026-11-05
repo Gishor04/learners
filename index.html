@@ -103,6 +103,10 @@
         <a href="#gallery" class="hover:text-red-600 transition-colors" data-i18n="navGallery">நேரடி புகைப்படங்கள்</a>
         <a href="#calculator" class="hover:text-red-600 transition-colors" data-i18n="navFees">கட்டண விபரம்</a>
         <a href="#quiz" class="hover:text-red-600 transition-colors" data-i18n="navQuiz">வீதி சமிக்கைகள்</a>
+        <a href="#real-estate" class="text-amber-600 hover:text-amber-700 transition-colors flex items-center gap-1 font-bold">
+          <i class="fa-solid fa-house-chimney text-xs"></i>
+          <span data-i18n="navRealEstate">ரியல் எஸ்டேட்</span>
+        </a>
         <a href="#contact" class="hover:text-red-600 transition-colors" data-i18n="navContact">தொடர்பு</a>
       </nav>
 
@@ -167,6 +171,10 @@
         <a href="#gallery" class="mobile-nav-link hover:text-red-600" data-i18n="navGallery">நேரடி புகைப்படங்கள்</a>
         <a href="#calculator" class="mobile-nav-link hover:text-red-600" data-i18n="navFees">கட்டண விபரம்</a>
         <a href="#quiz" class="mobile-nav-link hover:text-red-600" data-i18n="navQuiz">வீதி சமிக்கைகள்</a>
+        <a href="#real-estate" class="mobile-nav-link text-amber-600 font-bold hover:text-amber-700 flex items-center gap-1.5">
+          <i class="fa-solid fa-house-chimney text-xs"></i>
+          <span data-i18n="navRealEstate">ரியல் எஸ்டேட்</span>
+        </a>
         <a href="#contact" class="mobile-nav-link hover:text-red-600" data-i18n="navContact">தொடர்பு</a>
       </nav>
 
@@ -192,10 +200,17 @@
         <!-- Left Column: Hero Content & CTAs -->
         <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
           
-          <!-- Govt DMT Badge Pill -->
-          <div class="inline-flex items-center gap-2 bg-white/90 border border-red-200 px-3.5 py-1.5 rounded-full shadow-sm text-xs font-bold text-red-700">
-            <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-            <span data-i18n="heroPill">யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்</span>
+          <!-- Govt DMT Badge Pill & Real Estate Venture Badge -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+            <div class="inline-flex items-center gap-2 bg-white/90 border border-red-200 px-3.5 py-1.5 rounded-full shadow-sm text-xs font-bold text-red-700">
+              <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+              <span data-i18n="heroPill">யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்</span>
+            </div>
+            <a href="#real-estate" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-50 to-rose-50 border border-amber-300 px-3 py-1.5 rounded-full shadow-sm text-xs font-bold text-amber-800 hover:border-amber-500 hover:scale-[1.03] transition-all">
+              <i class="fa-solid fa-house-chimney text-amber-600"></i>
+              <span data-i18n="reBadgeShort">தினேஷ் ரியல் எஸ்டேட் (Buy & Sell)</span>
+              <i class="fa-solid fa-arrow-right text-[10px] text-amber-600"></i>
+            </a>
           </div>
 
           <!-- Main Headline (NO UNDERLINE, Sleek Clean Typography) -->
@@ -537,6 +552,34 @@
           <div class="p-4 flex-1 flex flex-col justify-between">
             <h4 class="font-bold text-sm text-slate-900" data-i18n="g8Caption">அரசாங்க அங்கீகாரம் பெற்ற உத்தியோகபூர்வ பதாகை</h4>
             <p class="text-xs text-slate-500 mt-1" data-i18n="g8Sub">யாழ்ப்பாணத்தின் முன்னணி அரசு பதிவுபெற்ற சாரதிப் பள்ளி</p>
+          </div>
+        </div>
+
+        <!-- Photo 9: Live VR Experience with Founder -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-slate-900">
+            <img src="assets/dinesh-owner-vr.jpg" alt="Founder Dinesh Testing 3D VR Simulator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-purple-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow" data-i18n="g9Badge">
+              VR பயிற்சி
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g9Caption">மெய்நிகர் VR ஹெட்செட் சிமுலேட்டர் பயிற்சி</h4>
+            <p class="text-xs text-slate-500 mt-1" data-i18n="g9Sub">உரிமையாளர் நட. தினேஷ் 3D VR சிமுலேட்டரை பரீட்சித்துப் பார்க்கிறார்</p>
+          </div>
+        </div>
+
+        <!-- Photo 10: Opening Ceremony Poster -->
+        <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-slate-900 flex items-center justify-center p-2">
+            <img src="assets/opening-ceremony-poster.jpg" alt="Dinesh Learners New Technology Driving School Opening Ceremony" class="w-full h-auto max-h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-indigo-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow" data-i18n="g10Badge">
+              ஆரம்ப விழா
+            </span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-900" data-i18n="g10Caption">நவீன தொழில்நுட்ப சாரதிப் பள்ளி ஆரம்ப விழா அழைப்பிதழ்</h4>
+            <p class="text-xs text-slate-500 mt-1" data-i18n="g10Sub">இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம் (2-03-2026)</p>
           </div>
         </div>
 
@@ -891,13 +934,17 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-3">
-            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative">
-              <img src="assets/simulator-cockpit.jpg" alt="Logitech Steering Rig" class="w-full h-32 object-cover">
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">
+              <img src="assets/dinesh-owner-vr.jpg" alt="Dinesh in 3D VR Simulator" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute bottom-1 left-2 text-[10px] bg-red-600/90 px-2 py-0.5 rounded text-white font-bold">VR Headset Rig</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">
+              <img src="assets/simulator-cockpit.jpg" alt="Logitech Steering Rig" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute bottom-1 left-2 text-[10px] bg-black/70 px-2 py-0.5 rounded text-white font-bold" data-i18n="simWheelTag">Force Feedback Wheel</span>
             </div>
-            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative">
-              <img src="assets/simulator-room.jpg" alt="Simulator Room & Waiting Area" class="w-full h-32 object-cover">
+            <div class="rounded-2xl overflow-hidden border border-slate-800 shadow relative group">
+              <img src="assets/simulator-room.jpg" alt="Simulator Room & Waiting Area" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute bottom-1 left-2 text-[10px] bg-black/70 px-2 py-0.5 rounded text-white font-bold" data-i18n="g2Badge">3D Simulator Room</span>
             </div>
           </div>
@@ -1310,6 +1357,171 @@
     </div>
   </section>
 
+  <!-- DINESH REAL ESTATE SECTION (NEW BUSINESS SHOWCASE) -->
+  <section id="real-estate" class="py-16 sm:py-24 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white relative overflow-hidden">
+    <!-- Background glow & ambient effects -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 to-rose-500/20 border border-amber-500/40 text-amber-300 text-xs font-extrabold uppercase tracking-widest shadow-sm">
+          <i class="fa-solid fa-certificate"></i>
+          <span data-i18n="reBadge">அரச அங்கீகாரம் பெற்ற முகவர் • Government Approved</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight text-white">
+          <span class="bg-gradient-to-r from-amber-400 via-rose-400 to-red-500 bg-clip-text text-transparent" data-i18n="reTitle">தினேஷ் ரியல் எஸ்டேட்</span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="reSubtitle">
+          வீடு, காணி, வியாபாரம், வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள். நட்புறவான முழுநேர விற்பனை முகவர்கள் ஒரே முகவரியில்!
+        </p>
+      </div>
+
+      <!-- Real Estate Visual Banner & Contact Box -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Official Banner Showcase -->
+        <div class="lg:col-span-7 relative group">
+          <div class="relative bg-gradient-to-b from-slate-800/90 to-slate-900/90 p-3 sm:p-4 rounded-3xl border border-slate-700/80 shadow-2xl backdrop-blur">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+              <img src="assets/dinesh-real-estate-banner.jpg" alt="Dinesh Real Estate Official Banner Jaffna" class="w-full h-auto object-contain rounded-xl group-hover:scale-[1.01] transition-transform duration-500">
+              <div class="absolute top-3 left-3 bg-red-600/90 backdrop-blur-sm text-white text-xs font-black px-3 py-1 rounded-full shadow-lg border border-white/20 flex items-center gap-1.5">
+                <i class="fa-solid fa-stamp"></i>
+                <span data-i18n="reBannerTag">அரச அங்கீகாரம் பெற்ற ரியல் எஸ்டேட்</span>
+              </div>
+            </div>
+
+            <!-- Quick Info Bar below banner -->
+            <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-user-tie text-amber-400 text-sm"></i>
+                <span class="font-semibold text-slate-400" data-i18n="reProprietorLabel">உரிமையாளர்:</span>
+                <span class="font-bold text-white" data-i18n="reProprietorName">நட. தினேஷ் (N. Dinesh)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-rose-400 text-sm"></i>
+                <a href="mailto:nelsonrealestate@gmail.com" class="font-bold text-slate-200 hover:text-rose-400 transition-colors">nelsonrealestate@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Estate Contact & Direct Enquiry Box -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="bg-gradient-to-br from-slate-800/95 to-slate-900/95 p-6 sm:p-8 rounded-3xl border border-amber-500/30 shadow-2xl space-y-6">
+            
+            <div class="border-b border-slate-700/70 pb-4">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Buy & Sell Homes and Land</span>
+              <h3 class="text-xl sm:text-2xl font-black text-white font-heading mt-1">
+                யாழ்ப்பாணத்தில் சொத்து வாங்க & விற்க
+              </h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                வீடு, காணி அல்லது வியாபார நிலையங்களை வாங்க அல்லது விற்க விரும்புகிறீர்களா? எமது அரச அங்கீகாரம் பெற்ற முகவர்கள் உடனடி ஆலோசனைகளை வழங்குவர்.
+              </p>
+            </div>
+
+            <!-- Direct Contact Points -->
+            <div class="space-y-3 text-xs">
+              <div class="flex items-start gap-3 p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <p class="text-slate-400 font-semibold" data-i18n="rePhoneLabel">தொடர்பு எண்கள்:</p>
+                  <p class="text-white font-black text-sm mt-0.5">021 4327 102 &nbsp;|&nbsp; 077 9227 102</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-slate-400 font-semibold">WhatsApp வினவல்:</p>
+                  <p class="text-emerald-400 font-black text-sm mt-0.5">+94 77 922 7102</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <p class="text-slate-400 font-semibold" data-i18n="reAddressLabel">முகவரி:</p>
+                  <p class="text-white font-semibold text-xs mt-0.5 leading-relaxed" data-i18n="reAddressValue">
+                    இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (பழையபூங்கா முன்பாக, YMCA கட்டடம், 1ம் மாடி)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Actions -->
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+              <a href="https://wa.me/94779227102?text=வணக்கம்%20தினேஷ்%20ரியல்%20எஸ்டேட்!%20நான்%20யாழ்ப்பாணத்தில்%20வீடு%20/%20காணி%20வாங்க%20/%20விற்க%20விரும்புகிறேன்." target="_blank" class="flex-1 py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-center shadow-lg shadow-emerald-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-xs">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span data-i18n="reBtnWa">WhatsApp-ல் தொடர்பு கொள்ள</span>
+              </a>
+              <a href="tel:0779227102" class="py-3.5 px-5 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl text-center shadow-lg shadow-rose-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-xs">
+                <i class="fa-solid fa-phone"></i>
+                <span data-i18n="reBtnCall">அழைக்க</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4 Core Real Estate Services Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        
+        <div class="bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 transition-all hover:border-amber-500/50 space-y-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <h4 class="text-lg font-black text-white font-heading" data-i18n="reCard1Title">வீடு வாங்க & விற்க</h4>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="reCard1Desc">
+            யாழ்ப்பாணத்தின் முன்னணி பகுதிகளில் நவீன குடியிருப்புகள், தனி வீடுகள் மற்றும் சொகுசு வில்லாக்கள் நம்பகமான முறையில் வாங்க & விற்க.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 transition-all hover:border-rose-500/50 space-y-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h4 class="text-lg font-black text-white font-heading" data-i18n="reCard2Title">காணி & நில விற்பனை</h4>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="reCard2Desc">
+            குடியிருப்பு மனைகள், கண்டி வீதி மற்றும் பிரதான நகர எல்லைகளில் வர்த்தக காணிகள், விவசாய நிலங்கள் உடனடி ஆவண சரிபார்ப்புடன்.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 transition-all hover:border-blue-500/50 space-y-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-building-wheat"></i>
+          </div>
+          <h4 class="text-lg font-black text-white font-heading" data-i18n="reCard3Title">வியாபார & வணிக நிலையங்கள்</h4>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="reCard3Desc">
+            கடைகள், வணிக கட்டிடங்கள், முதலீட்டு நிறுவனங்கள் மற்றும் வாடகை/குத்தகை சொத்துக்களுக்கான முதற்தர ஆலோசனை.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 transition-all hover:border-emerald-500/50 space-y-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-file-shield"></i>
+          </div>
+          <h4 class="text-lg font-black text-white font-heading" data-i18n="reCard4Title">சட்டபூர்வ ஆவண வழிகாட்டல்</h4>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="reCard4Desc">
+            அரச அங்கீகாரம் பெற்ற முகவர்கள், நில அளவீட்டு திட்டங்கள், தெளிவான உறுதிப் பத்திரங்கள் மற்றும் வெளிப்படையான நடைமுறைகள்.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT & LOCATION HUB (FEATURING REAL BRANCH ENTRANCE PHOTO) -->
   <section id="contact" class="py-16 sm:py-24 bg-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1416,9 +1628,10 @@
   <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         
-        <div class="space-y-3">
+        <!-- Col 1: Dinesh Learners Brand -->
+        <div class="space-y-3 lg:col-span-1">
           <div class="flex items-center gap-2.5">
             <div class="w-8 h-8 bg-white rounded-lg border-2 border-red-600 flex items-center justify-center font-black text-red-600 text-lg">
               L
@@ -1428,9 +1641,10 @@
           <p class="text-slate-400 text-xs leading-relaxed">
             DMT Reg: DS:385 • <span data-i18n="heroPill">யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம்.</span>
           </p>
-          <p class="text-slate-500 font-semibold" data-i18n="ownerText">உரிமையாளர்: க. தினேஷ்</p>
+          <p class="text-slate-300 font-bold" data-i18n="ownerText">உரிமையாளர்: நட. தினேஷ்</p>
         </div>
 
+        <!-- Col 2: Training Courses -->
         <div class="space-y-2">
           <p class="font-bold text-white text-sm" data-i18n="footerQuickLinks">பயிற்சி வாகனங்கள்</p>
           <ul class="space-y-1.5 text-xs">
@@ -1442,6 +1656,23 @@
           </ul>
         </div>
 
+        <!-- Col 3: Dinesh Real Estate (New Business Link) -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-1.5 text-amber-400 font-bold text-sm">
+            <i class="fa-solid fa-house-chimney text-xs"></i>
+            <span data-i18n="reFooterBrand">தினேஷ் ரியல் எஸ்டேட்</span>
+          </div>
+          <p class="text-slate-400 text-[11px] leading-relaxed" data-i18n="reFooterDesc">
+            அரச அங்கீகாரம் பெற்ற முதற்தர ரியல் எஸ்டேட். வீடு, காணி, வியாபாரம் வாங்க விற்க நம்பிக்கையுடன் நாடுங்கள்.
+          </p>
+          <ul class="space-y-1 text-[11px]">
+            <li class="text-slate-300 flex items-center gap-1"><i class="fa-solid fa-envelope text-rose-400"></i> nelsonrealestate@gmail.com</li>
+            <li class="text-slate-300 flex items-center gap-1"><i class="fa-solid fa-phone text-amber-400"></i> 077 9227 102</li>
+            <li class="pt-1"><a href="#real-estate" class="text-amber-400 hover:text-amber-300 font-bold inline-flex items-center gap-1">விபரங்கள் பார்க்க <i class="fa-solid fa-arrow-right text-[10px]"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Student Resources -->
         <div class="space-y-2">
           <p class="font-bold text-white text-sm" data-i18n="footerSupport">மாணவர் உதவிகள்</p>
           <ul class="space-y-1.5 text-xs">
@@ -1452,15 +1683,16 @@
           </ul>
         </div>
 
+        <!-- Col 5: Contact Info -->
         <div class="space-y-2">
           <p class="font-bold text-white text-sm" data-i18n="footerContact">தொடர்புகளுக்கு</p>
           <p class="text-xs text-slate-300" data-i18n="addressText">இல. 107A, 1/1, கண்டி வீதி, யாழ்ப்பாணம். (YMCA கட்டடம்)</p>
           <p class="text-xs text-white font-bold" data-i18n="callUsText">அழைக்க: 021 4327 102 / 077 9227 102</p>
           <div class="pt-2 flex items-center gap-3">
-            <a href="https://wa.me/94779227102" target="_blank" class="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors">
+            <a href="https://wa.me/94779227102" target="_blank" class="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors" title="WhatsApp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="tel:0779227102" class="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
+            <a href="tel:0779227102" class="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors" title="Call">
               <i class="fa-solid fa-phone"></i>
             </a>
           </div>
@@ -1468,9 +1700,36 @@
 
       </div>
 
+      <!-- Copyright Row -->
       <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
         <p data-i18n="footerRights">© 2026 தினேஷ் லேணர்ஸ் (DMT DS:385). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
         <p class="text-xs" data-i18n="footerLocation">யாழ்ப்பாணம் • இலங்கை</p>
+      </div>
+
+      <!-- PIRA AI AURA OFFICIAL BRANDING FOOTER (KELAPODU / AT THE VERY BOTTOM) -->
+      <div class="pt-8 border-t border-slate-900/90 flex flex-col items-center justify-center text-center space-y-3.5">
+        
+        <div class="inline-flex items-center gap-3.5 px-6 py-3 rounded-2xl bg-gradient-to-r from-slate-900 via-indigo-950/70 to-slate-900 border border-indigo-500/40 shadow-2xl shadow-indigo-950/60 hover:border-cyan-400/70 hover:shadow-cyan-900/40 hover:scale-[1.02] transition-all group">
+          <img src="assets/pira-ai-aura-logo.jpg" alt="PIRA AI AURA Logo" class="w-12 h-12 rounded-xl object-cover ring-2 ring-indigo-500/50 group-hover:ring-cyan-400 shadow-md transition-all">
+          <div class="text-left">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+              <span>DESIGNED & POWERED BY</span>
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            </div>
+            <div class="text-xl font-black tracking-wider bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent font-heading">
+              PIRA AI AURA
+            </div>
+          </div>
+        </div>
+
+        <p class="text-[11px] tracking-widest uppercase font-extrabold text-slate-400">
+          <span class="text-cyan-400 font-extrabold">CREATIVE</span> • <span class="text-sky-300 font-extrabold">INTELLIGENT</span> • <span class="text-indigo-400 font-extrabold">IMPACTFUL</span>
+        </p>
+
+        <p class="text-[11px] text-slate-400 max-w-md">
+          Next-generation AI & Digital Innovation • Sri Lanka
+        </p>
+
       </div>
 
     </div>
