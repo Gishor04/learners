@@ -11,6 +11,7 @@ export default function FeeCalculator() {
   const [includeKachcheri, setIncludeKachcheri] = useState(true);
   const [includeSimulator, setIncludeSimulator] = useState(true);
   const [includeFastTrack, setIncludeFastTrack] = useState(false);
+  const [isPriceModalOpen, setIsPriceModalOpen] = useState(false);
 
   const base = basePrices[vehicleKey] || basePrices.van;
   let total = base.price;
@@ -218,7 +219,129 @@ export default function FeeCalculator() {
           </div>
         </div>
 
+
+        {/* Official DMT Price Board Display Card */}
+        <div className="max-w-4xl mx-auto mt-12 bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl border border-red-500/30 p-6 sm:p-8 shadow-2xl text-white">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="w-full md:w-5/12 shrink-0">
+              <div 
+                onClick={() => setIsPriceModalOpen(true)}
+                className="relative rounded-2xl overflow-hidden border-2 border-red-500/50 shadow-xl cursor-pointer group aspect-[3/4] bg-slate-950 flex items-center justify-center"
+              >
+                <img
+                  src="/assets/dinesh-learners-price-board.jpg"
+                  alt="Dinesh Learners Official Govt Price Board DS:385"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <span className="bg-white text-slate-950 text-xs font-black px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                    <i className="fa-solid fa-expand"></i>
+                    <span>{lang === "ta" ? "பெரிதாக்கிக் காண்க (Zoom)" : lang === "si" ? "විශාල කර බලන්න" : "Click to Zoom Full Board"}</span>
+                  </span>
+                </div>
+                <span className="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
+                  DMT DS:385 • Official
+                </span>
+              </div>
+            </div>
+
+            <div className="w-full md:w-7/12 space-y-4">
+              <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 border border-red-500/40 px-3 py-1 rounded-full text-xs font-black">
+                <i className="fa-solid fa-clipboard-check"></i>
+                <span>{lang === "ta" ? "அரசு அங்கீகாரம் பெற்ற கட்டணப் பட்டியல் பலகை" : lang === "si" ? "රජයේ ලියාපදිංචි නිල ගාස්තු පුවරුව" : "Official Govt Registered Fee Rate Board"}</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-black text-white font-heading">
+                {lang === "ta" ? "நேரடி அலுவலக கட்டண விபரம் (அரச அங்கீகாரம் பெற்றது)" : lang === "si" ? "කාර්යාලීය නිල ගාස්තු විස්තරය (DMT අනුමතයි)" : "Dinesh Learners Official Academy Fee Board"}
+              </h3>
+
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                {lang === "ta"
+                  ? "எமது தினேஷ் லேணர்ஸ் (DMT DS:385) யாழ்ப்பாண அலுவலகத்தில் காட்சிப்படுத்தப்பட்டுள்ள வெளிப்படையான, அரச அங்கீகாரம் பெற்ற உத்தியோகபூர்வ கட்டணப் பலகையை மேலே காணலாம்."
+                  : lang === "si"
+                  ? "දිනේෂ් ලර්නර්ස් (DMT DS:385) යාපනය ප්‍රධාන කාර්යාලයේ ප්‍රදර්ශනය කර ඇති නිල ගාස්තු පුවරුව මෙහිදී සෘජුවම නැරඹිය හැකිය."
+                  : "View our completely transparent, government-approved official fee rate sheet displayed at our main Jaffna academy premises."}
+              </p>
+
+              {/* Quick Table Summary / Key Rates */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2">
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Class A (Bike)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 12,000</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 3,000" : lang === "si" ? "මූලික: 3,000" : "Advance: 3,000"}</span>
+                </div>
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Class B (Car/Van)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 25,000</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 5,000" : lang === "si" ? "මූලික: 5,000" : "Advance: 5,000"}</span>
+                </div>
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Class B1 (3-Wheel)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 15,000</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 5,000" : lang === "si" ? "මූලික: 5,000" : "Advance: 5,000"}</span>
+                </div>
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Auto+Van (BB1)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 30,000</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 5,000" : lang === "si" ? "මූලික: 5,000" : "Advance: 5,000"}</span>
+                </div>
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Combo (ABB1)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 35,000</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 5,000" : lang === "si" ? "මූලික: 5,000" : "Advance: 5,000"}</span>
+                </div>
+                <div className="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700">
+                  <span className="text-[10px] font-bold text-slate-400 block">Heavy (D / AD)</span>
+                  <span className="text-sm font-black text-amber-400">LKR 35,000+</span>
+                  <span className="text-[9px] text-emerald-400 block">{lang === "ta" ? "முற்பணம்: 7,000" : lang === "si" ? "මූලික: 7,000" : "Advance: 7,000"}</span>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <button
+                  onClick={() => setIsPriceModalOpen(true)}
+                  className="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-2 shadow"
+                >
+                  <i className="fa-solid fa-magnifying-glass-plus"></i>
+                  <span>{lang === "ta" ? "முழு கட்டண பலகையை பெரிதாகப் பார்க்க" : lang === "si" ? "සම්පූර්ණ ගාස්තු පුවරුව විශාල කර බලන්න" : "Open Full Resolution Fee Board"}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Price Board Full-Screen Modal */}
+      {isPriceModalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+          onClick={() => setIsPriceModalOpen(false)}
+        >
+          <div
+            className="relative bg-slate-900 border border-red-500/40 rounded-3xl max-w-2xl w-full p-4 sm:p-6 shadow-2xl overflow-hidden space-y-4 max-h-[92vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-2 border-b border-slate-800">
+              <span className="text-sm font-black text-white">
+                {lang === "ta" ? "தினேஷ் லேணர்ஸ் - அதிகாரபூர்வ கட்டணப் பட்டியல்" : lang === "si" ? "දිනේෂ් ලර්නර්ස් - නිල ගාස්තු ලේඛනය" : "Dinesh Learners Official Fee Board"}
+              </span>
+              <button
+                onClick={() => setIsPriceModalOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-600 text-white flex items-center justify-center transition-colors"
+              >
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div className="flex-1 overflow-auto bg-black rounded-xl p-2 flex items-center justify-center">
+              <img
+                src="/assets/dinesh-learners-price-board.jpg"
+                alt="Dinesh Learners Official Price Board"
+                className="max-h-[75vh] w-auto object-contain rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

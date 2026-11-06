@@ -265,6 +265,28 @@ export default function GallerySection() {
               <h4 className="font-bold text-sm text-slate-900">{t.g6Caption}</h4>
               <p className="text-xs text-slate-500 mt-1">{t.g6Sub}</p>
             </div>
+
+          {/* Photo 7: Official Govt Fee Rate Board */}
+          <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm group hover-glow-red transition-all flex flex-col">
+            <div className="relative h-60 overflow-hidden bg-slate-950 flex items-center justify-center p-2">
+              <img
+                src="/assets/dinesh-learners-price-board.jpg"
+                alt="Dinesh Learners Official Govt Price Board"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xl"
+              />
+              <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                DMT DS:385 • {lang === "ta" ? "கட்டணப் பலகை" : lang === "si" ? "ගාස්තු පුවරුව" : "Fee Board"}
+              </span>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between">
+              <h4 className="font-bold text-sm text-slate-900">
+                {lang === "ta" ? "அதிகாரபூர்வ கட்டணப் பட்டியல் பலகை" : lang === "si" ? "නිල ගාස්තු ලේඛන පුවරුව" : "Official Govt Fee Rate Board"}
+              </h4>
+              <p className="text-xs text-slate-500 mt-1">
+                {lang === "ta" ? "யாழ்ப்பாணம் அலுவலகத்தில் காட்சிப்படுத்தப்பட்டுள்ள வெளிப்படையான கட்டண விபரம்." : lang === "si" ? "කාර්යාලයේ ප්‍රදර්ශනය කර ඇති විනිවිදභාවයෙන් යුත් ගාස්තු විස්තරය." : "Transparent, govt-registered fees displayed at our Jaffna premises."}
+              </p>
+            </div>
+          </div>
           </div>
 
         </div>
