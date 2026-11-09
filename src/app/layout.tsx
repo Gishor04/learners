@@ -13,12 +13,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://dineshlearners.lk"),
   title: {
-    default: "Dinesh Learners Jaffna | #1 Driving School in Jaffna (DMT: DS:385)",
-    template: "%s | Dinesh Learners Jaffna",
+    default: "Jaffna Learners - Dinesh Driving School Jaffna | #1 Driving School (DMT: DS:385)",
+    template: "%s | Jaffna Learners - Dinesh Driving School",
   },
   description:
-    "தினேஷ் லேணர்ஸ் யாழ்ப்பாணம் (DMT DS:385) – Jaffna's #1 modern driving school. 3D Virtual Cockpit Simulator, Dual-Control Fleet (Auto & Manual Cars, Motorbikes, Tuk-Tuks, Heavy Bus/Lorry), Lady Instructors, 100% Free Medical Exam & Kachcheri Booking. Call 077 518 9963 / 021 4327 102.",
+    "Jaffna Learners - தினேஷ் லேணர்ஸ் யாழ்ப்பாணம் (DMT DS:385). Best Driving School in Jaffna with 3D Virtual Cockpit Simulator, Dual-Control Fleet (Auto/Manual Cars, Motorbikes, Tuk-Tuks, Heavy Vehicles) & Lady Instructors. Free Medical & Kachcheri Booking. Call 077 518 9963 / 021 4327 102.",
   keywords: [
+    // Top Broad Queries
+    "Jaffna Learners",
+    "Jaffna learners driving school",
+    "Learners in Jaffna",
+    "Driving school in Jaffna",
+    "Best driving school in Jaffna",
+    "Best learners in Jaffna",
+    "யாழ்ப்பாணம் லேணர்ஸ்",
+    "சாரதி பயிற்சி நிலையம் யாழ்ப்பாணம்",
+    "යාපනය රියදුරු පාසල",
     // Brand names
     "Dinesh Learners",
     "Dinesh Learners Jaffna",
@@ -29,17 +39,6 @@ export const metadata: Metadata = {
     "தினேஷ் சாரதிப் பயிற்சி நிலையம்",
     "දිනේෂ් රියදුරු පාසල",
     "දිනේෂ් ලර්නර්ස් යාපනය",
-    // Primary Jaffna Driving School Queries
-    "Driving school in Jaffna",
-    "Best driving school in Jaffna",
-    "Driving school Jaffna",
-    "Learners in Jaffna",
-    "Jaffna Learners",
-    "Driving classes Jaffna",
-    "Driving license Jaffna",
-    "சாரதி பயிற்சி நிலையம் யாழ்ப்பாணம்",
-    "யாழ்ப்பாணம் லேணர்ஸ்",
-    "යාපනය රියදුරු පාසල",
     // Special Features
     "3D driving simulator Jaffna",
     "Dual control car driving school Jaffna",
@@ -75,22 +74,22 @@ export const metadata: Metadata = {
     locale: "ta_LK",
     alternateLocale: ["en_US", "si_LK"],
     url: "https://dineshlearners.lk",
-    siteName: "Dinesh Learners & Driving School Jaffna",
-    title: "Dinesh Learners Jaffna | #1 Modern Driving School (DMT: DS:385)",
+    siteName: "Dinesh Learners - Jaffna Learners Driving School",
+    title: "Jaffna Learners - Dinesh Driving School Jaffna | #1 Driving School (DMT: DS:385)",
     description:
-      "யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம். Modern 3D Simulator, Dual-Control Cars, Lady Instructors, Free Medical & Kachcheri Assistance. DMT Reg: DS:385.",
+      "யாழ்ப்பாணத்தின் முன்னணி நவீன சாரதிப் பயிற்சி நிலையம் (Jaffna Learners). Modern 3D Simulator, Dual-Control Cars, Lady Instructors, Free Medical & Kachcheri Assistance. DMT Reg: DS:385.",
     images: [
       {
         url: "/assets/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Dinesh Learners Driving School Jaffna - Dual Control Fleet & 3D Simulator",
+        alt: "Jaffna Learners - Dinesh Driving School Jaffna",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dinesh Learners Jaffna | Leading Driving School (DMT: DS:385)",
+    title: "Jaffna Learners - Dinesh Driving School Jaffna (DMT: DS:385)",
     description:
       "Jaffna's leading driving academy. 3D VR Simulator, Dual-Control fleet, Lady instructors, 99.4% exam pass rate. Call 077 518 9963.",
     images: ["/assets/banner.jpg"],
