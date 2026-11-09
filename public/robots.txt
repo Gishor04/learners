@@ -1,0 +1,10 @@
+# Robots.txt for Dinesh Learners & Driving School Jaffna
+User-agent: *
+Allow: /
+
+# Disallow admin modal / internal hashes from crawling if needed
+Disallow: /admin
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://dineshlearners.com/sitemap.xml

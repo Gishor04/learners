@@ -12,6 +12,7 @@ import GallerySection from "@/components/GallerySection";
 import FeeCalculator from "@/components/FeeCalculator";
 import RoadSignsQuiz from "@/components/RoadSignsQuiz";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import FaqSection from "@/components/FaqSection";
 import RealEstateSection from "@/components/RealEstateSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -35,6 +36,7 @@ export default function HomePage() {
       <FeeCalculator />
       <RoadSignsQuiz />
       <WhyChooseUs />
+      <FaqSection />
       <RealEstateSection />
       <ContactSection />
       <Footer />

@@ -68,6 +68,7 @@ export default function Footer() {
             <p className="font-bold text-white text-sm">{t.footerSupport}</p>
             <ul className="space-y-1.5 text-xs">
               <li><a href="#calculator" className="hover:text-white transition-colors">{t.navFees}</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors font-semibold text-rose-300">FAQ / கேள்விகள்</a></li>
               <li><a href="#quiz" className="hover:text-white transition-colors">{t.navQuiz}</a></li>
               <li><a href="#gallery" className="hover:text-white transition-colors">{t.navGallery}</a></li>
               <li><a href="#zero-exp" className="hover:text-white transition-colors">{t.zeroExpBadge}</a></li>
