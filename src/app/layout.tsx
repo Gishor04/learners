@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dineshlearners.com"),
+  metadataBase: new URL("https://dineshlearners.lk"),
   title: {
     default: "Dinesh Learners Jaffna | #1 Driving School in Jaffna (DMT: DS:385)",
     template: "%s | Dinesh Learners Jaffna",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     "YMCA Jaffna driving school",
     "Kandy Road Jaffna learners"
   ],
-  authors: [{ name: "K. Dinesh (க. தினேஷ்)", url: "https://dineshlearners.com" }],
+  authors: [{ name: "K. Dinesh (க. தினேஷ்)", url: "https://dineshlearners.lk" }],
   creator: "K. Dinesh",
   publisher: "Dinesh Learners & Driving School",
   formatDetection: {
@@ -62,19 +62,19 @@ export const metadata: Metadata = {
     email: true,
   },
   alternates: {
-    canonical: "https://dineshlearners.com",
+    canonical: "https://dineshlearners.lk",
     languages: {
-      "ta-LK": "https://dineshlearners.com?lang=ta",
-      "en-US": "https://dineshlearners.com?lang=en",
-      "si-LK": "https://dineshlearners.com?lang=si",
-      "x-default": "https://dineshlearners.com",
+      "ta-LK": "https://dineshlearners.lk?lang=ta",
+      "en-US": "https://dineshlearners.lk?lang=en",
+      "si-LK": "https://dineshlearners.lk?lang=si",
+      "x-default": "https://dineshlearners.lk",
     },
   },
   openGraph: {
     type: "website",
     locale: "ta_LK",
     alternateLocale: ["en_US", "si_LK"],
-    url: "https://dineshlearners.com",
+    url: "https://dineshlearners.lk",
     siteName: "Dinesh Learners & Driving School Jaffna",
     title: "Dinesh Learners Jaffna | #1 Modern Driving School (DMT: DS:385)",
     description:

@@ -6,7 +6,7 @@ export default function JsonLdSchema() {
     "@graph": [
       {
         "@type": ["DrivingSchool", "LocalBusiness", "EducationalOrganization"],
-        "@id": "https://dineshlearners.com/#business",
+        "@id": "https://dineshlearners.lk/#business",
         "name": "Dinesh Learners & Driving School",
         "alternateName": [
           "தினேஷ் லேணர்ஸ்",
@@ -17,11 +17,11 @@ export default function JsonLdSchema() {
           "දිනේෂ් රියදුරු පාසල",
           "දිනේෂ් ලර්නර්ස්"
         ],
-        "url": "https://dineshlearners.com",
+        "url": "https://dineshlearners.lk",
         "telephone": ["+94775189963", "+94214327102"],
         "priceRange": "LKR 12000 - 45000",
-        "image": "https://dineshlearners.com/assets/banner.jpg",
-        "logo": "https://dineshlearners.com/assets/branch-entrance.jpg",
+        "image": "https://dineshlearners.lk/assets/banner.jpg",
+        "logo": "https://dineshlearners.lk/assets/branch-entrance.jpg",
         "description": "Jaffna's leading DMT registered driving school (DS:385). Features modern 3D VR Simulator, dual-control car fleet (Auto & Manual), motorcycle, three-wheeler, and heavy vehicle training with dedicated lady instructors.",
         "address": {
           "@type": "PostalAddress",
@@ -125,7 +125,7 @@ export default function JsonLdSchema() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://dineshlearners.com/#faq",
+        "@id": "https://dineshlearners.lk/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -179,50 +179,50 @@ export default function JsonLdSchema() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://dineshlearners.com/#breadcrumb",
+        "@id": "https://dineshlearners.lk/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://dineshlearners.com/"
+            "item": "https://dineshlearners.lk/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Courses",
-            "item": "https://dineshlearners.com/#courses"
+            "item": "https://dineshlearners.lk/#courses"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "3D Simulator",
-            "item": "https://dineshlearners.com/#simulator"
+            "item": "https://dineshlearners.lk/#simulator"
           },
           {
             "@type": "ListItem",
             "position": 4,
             "name": "Fee Calculator",
-            "item": "https://dineshlearners.com/#calculator"
+            "item": "https://dineshlearners.lk/#calculator"
           },
           {
             "@type": "ListItem",
             "position": 5,
             "name": "FAQ",
-            "item": "https://dineshlearners.com/#faq"
+            "item": "https://dineshlearners.lk/#faq"
           },
           {
             "@type": "ListItem",
             "position": 6,
             "name": "Contact",
-            "item": "https://dineshlearners.com/#contact"
+            "item": "https://dineshlearners.lk/#contact"
           }
         ]
       },
       {
         "@type": "WebSite",
-        "@id": "https://dineshlearners.com/#website",
-        "url": "https://dineshlearners.com",
+        "@id": "https://dineshlearners.lk/#website",
+        "url": "https://dineshlearners.lk",
         "name": "Dinesh Learners Jaffna",
         "alternateName": ["தினேஷ் லேணர்ஸ்", "Dinesh Driving School"],
         "inLanguage": ["ta-LK", "en-US", "si-LK"]

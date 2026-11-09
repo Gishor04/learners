@@ -7,4 +7,4 @@ Disallow: /admin
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://dineshlearners.com/sitemap.xml
+Sitemap: https://dineshlearners.lk/sitemap.xml

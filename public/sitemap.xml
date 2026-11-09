@@ -3,25 +3,25 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://dineshlearners.com/</loc>
+    <loc>https://dineshlearners.lk/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ta" href="https://dineshlearners.com/?lang=ta" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://dineshlearners.com/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="si" href="https://dineshlearners.com/?lang=si" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dineshlearners.com/" />
+    <xhtml:link rel="alternate" hreflang="ta" href="https://dineshlearners.lk/?lang=ta" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dineshlearners.lk/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="si" href="https://dineshlearners.lk/?lang=si" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dineshlearners.lk/" />
     <image:image>
-      <image:loc>https://dineshlearners.com/assets/banner.jpg</image:loc>
+      <image:loc>https://dineshlearners.lk/assets/banner.jpg</image:loc>
       <image:title>Dinesh Learners Jaffna Driving School</image:title>
       <image:caption>Best Driving School in Jaffna with 3D VR Simulator and Dual-Control Fleet</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dineshlearners.com/assets/simulator-live-training.jpg</image:loc>
+      <image:loc>https://dineshlearners.lk/assets/simulator-live-training.jpg</image:loc>
       <image:title>3D VR Simulator Driving Training Jaffna</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dineshlearners.com/assets/real-fleet-bikes.jpg</image:loc>
+      <image:loc>https://dineshlearners.lk/assets/real-fleet-bikes.jpg</image:loc>
       <image:title>Motorcycle Training Dinesh Learners Jaffna</image:title>
     </image:image>
   </url>
