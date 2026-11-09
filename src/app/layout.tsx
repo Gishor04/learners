@@ -111,12 +111,15 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   manifest: "/site.webmanifest",
+  verification: {
+    google: "520mORiQEUN1ksnLdampjFYp7FcOA2uUe1vr1cuR4u4",
+  },
   other: {
     "geo.region": "LK-41",
     "geo.placename": "Jaffna, Northern Province, Sri Lanka",
     "geo.position": "9.6644;80.0210",
     ICBM: "9.6644, 80.0210",
-    "google-site-verification": "REPLACE_WITH_YOUR_SEARCH_CONSOLE_CODE",
+    "google-site-verification": "520mORiQEUN1ksnLdampjFYp7FcOA2uUe1vr1cuR4u4",
   },
 };
 
@@ -128,6 +131,9 @@ export default function RootLayout({
   return (
     <html lang="ta" className="scroll-smooth">
       <head>
+        {/* Google Search Console Verification Meta Tag */}
+        <meta name="google-site-verification" content="520mORiQEUN1ksnLdampjFYp7FcOA2uUe1vr1cuR4u4" />
+
         {/* Preconnect Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
